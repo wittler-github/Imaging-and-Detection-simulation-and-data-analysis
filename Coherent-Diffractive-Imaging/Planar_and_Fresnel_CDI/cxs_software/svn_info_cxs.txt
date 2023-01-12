@@ -1,0 +1,15 @@
+CXS.daily_temp.tar.gz created: 
+Fri Mar 18 17:36:18 EST 2011
+**********************************
+Output from svn info: 
+Path: .
+URL: svn+ssh://ndavidson@baker/home/ndavidson/cxs/cxs_software_repository/trunk/cxs_software
+Repository Root: svn+ssh://ndavidson@baker/home/ndavidson/cxs/cxs_software_repository
+Repository UUID: e2443e7a-f055-4d1b-89e6-b9f8f3df07da
+Revision: 172
+Node Kind: directory
+Schedule: normal
+Last Changed Author: ndavidson
+Last Changed Rev: 172
+Last Changed Date: 2011-03-18 17:36:08 +1100 (Fri, 18 Mar 2011)
+

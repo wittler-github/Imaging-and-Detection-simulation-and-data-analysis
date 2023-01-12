@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Set name of job shown in showq
+#PBS -N test
+
+# Use submission environment
+# PBS -V
+
+#PBS -l nodes=1:ppn=1,pmem=1000MB,walltime=00:10:00
+
+# Start job from the directory it was submitted
+cd $PBS_O_WORKDIR
+# Run the job on one node, with one processor per node and one GPU per node
+
+ #If you need to load the environment
+
+module load lapack/3.3.1
+module load hdf/4.2.9
+module load fftw/3.2.2-gcc-thread
+module load nadia/latest
+
+# Run a commmand that shows where the job ran
+hostname
+# Lets also look at what PBS ennvironment variabls our environment has
+env | grep PBS
+echo "Job completed ok!"
+
+
+./PlanarCDI_example.exe

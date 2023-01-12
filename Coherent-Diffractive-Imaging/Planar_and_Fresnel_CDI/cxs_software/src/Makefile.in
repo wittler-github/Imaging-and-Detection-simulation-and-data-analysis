@@ -1,0 +1,34 @@
+
+SOURCE_FILES_CXX=Complex_2D.c++ Double_2D.c++ FourierT.c++ \
+	PlanarCDI.c++ Config.c++ FresnelCDI_WF.c++ FresnelCDI.c++
+SOURCE_FILES_C=io_hdf.c io_ppm.c io_tiff.c io_dbin.c \
+	io_cplx.c
+OBJECT_FILES=$(SOURCE_FILES_CXX:.c++=.o) $(SOURCE_FILES_C:.c=.o)
+HEADER_FILES=$(SOURCE_FILES_CXX:.c++=.h) io.h 
+
+LIB_A= @BASE@/lib/libCOECXS.a
+LIB_SO= @BASE@/lib/libCOECXS.so
+
+all: $(LIB_A) $(LIB_SO) install_headers 
+
+$(LIB_A): $(OBJECT_FILES) *.h
+	ar cr $(LIB_A)$  $(OBJECT_FILES)
+
+$(LIB_SO): $(OBJECT_FILES) *.h
+	@CXX@ -shared @LDFLAGS@ -o $(LIB_SO) $(OBJECT_FILES) @LIBS@
+
+install_headers: $(HEADER_FILES)
+	cp $(HEADER_FILES) @BASE@/include
+
+%.o: %.c++
+	@CXX@ @CXXFLAGS@ -c $< -o $@
+
+
+%.o: %.c
+	@CXX@ @CXXFLAGS@ @DEFS@ -c $< -o $@
+
+clean:                                                     
+	rm -f *.o *~ 
+
+clobber: clean
+	rm -f *.exe 

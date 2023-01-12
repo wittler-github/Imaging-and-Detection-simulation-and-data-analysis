@@ -1,0 +1,7 @@
+This directory contains the source files needed to compile the CXS
+software tools (i.e. the command line executable programs). In
+general, users should not need to modify this code. A short
+description of each of the tools available, and their command line
+arguments can be found on the doxygen page.
+
+Nadia Davidson - nadiamd@unimelb.edu.au - 5/1/2011

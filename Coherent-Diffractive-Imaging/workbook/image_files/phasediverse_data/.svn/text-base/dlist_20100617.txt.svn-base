@@ -1,0 +1,7 @@
+../data/A.dbin ../data/wf_A_1024.cplx ../params_A.txt 0 -150
+../data/B.dbin ../data/wf_B_1024.cplx ../params_B.txt 26 -150
+../data/C.dbin ../data/wf_C_1024.cplx ../params_C.txt 6 -132
+../data/D.dbin ../data/wf_D_1024.cplx ../params_D.txt 28 -128
+../data/E.dbin ../data/wf_E_1024.cplx ../params_E.txt -14 -136
+../data/F.dbin ../data/wf_F_1024.cplx ../params_F.txt 34 -96
+../data/G.dbin ../data/wf_G_1024.cplx ../params_G.txt 38 212

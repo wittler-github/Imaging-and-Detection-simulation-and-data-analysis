@@ -1,0 +1,7 @@
+This directory contains the source files which form the CXS software
+library. In general, users should not need to modify this code.  The
+library should be automatically compiled when typing "make" in the
+base directory of the package. The resulting library can be found in
+the ../lib directory.
+
+Nadia Davidson - nadiamd@unimelb.edu.au - 5/1/2011
