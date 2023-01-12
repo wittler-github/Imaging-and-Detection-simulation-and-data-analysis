@@ -1,0 +1,79 @@
+---------------------------------------------------------------
+5/1/2011  Nadia Davidson
+	* rel_0
+	* First version. To be used for testing purposes. 
+	Only contains core functionality (planar and Fresnel
+	CDI reconstruction)
+	
+---------------------------------------------------------------
+25/1/2011 Nadia Davidson
+	* rel_0.1
+	* all: Some bug fixes to the last version. Most of them small.	
+	* io_tiff.c (read_tiff): a major bug causing seg. faults in
+	the file io_tiff.c was fixed.
+	* interfaces/idl: interface for idl has been created, but remains 
+	to be documented and cleaned up.
+
+----------------------------------------------------------------
+24/2/2011 Nadia Davidson
+	* rel_0.2
+	* clean up of examples and code in interfaces/idl
+	* optimisation of the PlanarCDI code. Fourier transforms
+	are now performed in the Complex_2D class.
+	* FresnelCDI_simulation_example.exe added and corresponding 
+	image files.
+	* write_tiff() written
+	* fixed the scaling of images when output using write_tiff
+	of write_ppm. The phase can not be viewed better.
+	* PlanarCDI::set_beam_stop() added so that a beam-stop region 
+	can be excluded when scaling the intensity in planar 
+	reconstruction.
+-----------------------------------------------------------------
+17/3/2011 Nadia Davidson
+	* rel_0.2.5
+	* Fixed an issue with Fresnel simulation. It previously wasn't
+	being done correctly. The simulation example has also been improved 
+	to demonstrate how a transmission function can be set up if the
+	material and maximum thickness are known.
+	* Initialisation in Fresnel and Fresnel_WF CDI is done slightly
+	differently now. This fixed a problem with speckle in the
+	white-field reconstruction, and also allows FresnelCDI to be
+	initialised (at least partially) randomly.
+	* Soft support edges are now allowed.
+------------------------------------------------------------------
+28/3/2011 Nadia Davidson
+	* rel_0.3
+	* complex constraints can now be enforced during reconstruction:
+	* src/TransmissionConstraint.h added
+	* src/TransmissionConstrain.cxx added
+	* examples/ComplexConstraint.c added
+------------------------------------------------------------------
+22/6/2011 Nadia Davidson
+	* rel_0.4
+	* src/PhaseDiverseCDI.c++ and src/PhaseDiverseCDI.h added. These
+	  allow phase-diver and ptycographic reconstructions to be carried
+	  out. Note however, this is only working for Fresnel data
+	  current, and needs some testing with plane-wave data.
+	* example/PhaseDiverse_example.c has been added
+	* tools/PhaseDiverseFresnelRec.c has been added
+	* interfaces/idl/phase_diverse_example.pro has been added and the
+	  IDL interface has been modified to allow for phase-diversity.
+	* src/BaseCDI.c++ and src/BaseCDI.h have been added to replace
+	  PlanarCDI as the base class. No major change in functionality 
+	  was introduced.
+	* configure.in and configure was modified (and some src/ files) to
+	  make fftwf (the floating point fftw library) the default. The old
+	  configuration can still be used through the configure option
+	  --enable-double-precision
+-------------------------------------------------------------------
+07/12/2012 T'Mir Julius
+	* rel_0.5
+	* src/PartialCDI.c++ and src/PolyCDI.c++ added. These allow 
+	  reconstruction of Partially Spatially Coherent and 
+	  Polychromatic data.
+	* example/PolyCDI_example.c, example/PolyCDI_simulation_example.c
+	  example/PartialCDI_example.c and example/Partial_simulation_example.c
+	  have been added.
+	* interfaces/idl/partial_example.pro and idl/poly_example.pro and
+	  the IDL interface has been modified to allow for partial coherence
+--------------------------------------------------------------------

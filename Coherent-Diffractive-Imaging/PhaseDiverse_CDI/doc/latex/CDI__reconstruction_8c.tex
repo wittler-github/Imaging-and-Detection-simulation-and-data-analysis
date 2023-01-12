@@ -1,0 +1,92 @@
+\section{CDI\_\-reconstruction.c File Reference}
+\label{CDI__reconstruction_8c}\index{CDI_reconstruction.c@{CDI\_\-reconstruction.c}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$fstream$>$}\par
+{\tt \#include $<$sstream$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$cstring$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$fftw3.h$>$}\par
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$io.h$>$}\par
+{\tt \#include $<$Complex\_\-2D.h$>$}\par
+{\tt \#include $<$Double\_\-2D.h$>$}\par
+{\tt \#include $<$Base\-CDI.h$>$}\par
+{\tt \#include $<$Planar\-CDI.h$>$}\par
+{\tt \#include $<$Fresnel\-CDI.h$>$}\par
+{\tt \#include $<$Fresnel\-CDI\_\-WF.h$>$}\par
+{\tt \#include $<$Partial\-CDI.h$>$}\par
+{\tt \#include $<$Poly\-CDI.h$>$}\par
+{\tt \#include $<$Config.h$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \bf{OUTPUT\_\-MINIMAL}~0\label{CDI__reconstruction_8c_8ea18ab1b2e4de8e2d87eb43f87df319}
+
+\item 
+\#define \bf{OUTPUT\_\-ITER}~1\label{CDI__reconstruction_8c_5498ecc4b09810cda4c215d65c01926c}
+
+\item 
+\#define \bf{OUTPUT\_\-ERROR}~2\label{CDI__reconstruction_8c_35424d5bbd0726b8dc0395732aaf38eb}
+
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \bf{print\_\-usage} ()\label{CDI__reconstruction_8c_1f3584ed6af78d8b74199544ff9e1096}
+
+\item 
+int \bf{main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+static const string \bf{planar\_\-string} = \char`\"{}planar\char`\"{}\label{CDI__reconstruction_8c_978d2982a16e4b93a5bf7ead17b6f625}
+
+\item 
+static const string \bf{fresnel\_\-string} = \char`\"{}fresnel\char`\"{}\label{CDI__reconstruction_8c_a238c64d671d656d47ba84e893078f64}
+
+\item 
+static const string \bf{fresnel\_\-wf\_\-string} = \char`\"{}fresnel\_\-wf\char`\"{}\label{CDI__reconstruction_8c_ff96b6bfc4bdf22e4c3ee3d86bc66b64}
+
+\item 
+static const string \bf{partial\_\-string} = \char`\"{}partial\char`\"{}\label{CDI__reconstruction_8c_2b9da71283dc070f2b66093a03798ab6}
+
+\item 
+static const string \bf{poly\_\-string} = \char`\"{}poly\char`\"{}\label{CDI__reconstruction_8c_5373d32c9d79ff9bb5112bc5c867b474}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+{\em CDI\_\-reconstruction.exe\/} A tool for performing Planar, Fresnel or Partial Coherent (spatial and temporal) ESW reconstruction. This tool is provided as a demonstrative tool and to obtain results quickly.
+
+\begin{Desc}
+\item[Usage: CDI\_\-reconstruction.exe $<$config filename$>$ $<$reco\_\-type$>$ $<$seed$>$]\end{Desc}
+where reco\_\-type may be:\begin{itemize}
+\item \char`\"{}planar\char`\"{} - planar\item \char`\"{}fresnel\_\-wf\char`\"{} - fresnel white-field reconstruction (3-plane propagation)\item \char`\"{}fresnel\char`\"{} - fresnel object reconstruction. with the white-field previously reconstructed.\item \char`\"{}partial\char`\"{} - partial spatial reconstruction.\item \char`\"{}poly\char`\"{} - polychromatic or partially temporally coherent reconstruction.\end{itemize}
+
+
+The seed should be an integer. If the seed is excluded from the command line arguments, it is assumed to be \char`\"{}0\char`\"{}. If reco\_\-type is also excluded, it is assumed to be \char`\"{}planar\char`\"{}.
+
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}CDI_reconstruction.exe planar_example.config "planar" 3 \end{verbatim}
+\normalsize
+ Perform planar CDI reconstruction using the configuration given in the file, \char`\"{}planar\_\-example.config\char`\"{}. The random number generator (used to initial the first guess) is given a seed value of 3. \end{Desc}
+
+
+Definition in file \bf{CDI\_\-reconstruction.c}.
+
+\subsection{Function Documentation}
+\index{CDI_reconstruction.c@{CDI\_\-reconstruction.c}!main@{main}}
+\index{main@{main}!CDI_reconstruction.c@{CDI\_\-reconstruction.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, char $\ast$ {\em argv}[$\,$])}\label{CDI__reconstruction_8c_28052c36c3b61c6c0eaa18f5d226118f}
+
+
+
+
+Definition at line 90 of file CDI\_\-reconstruction.c.
+
+References Base\-CDI::apply\_\-shrinkwrap(), Complex\_\-2D::clone(), FAILURE, fresnel\_\-string, fresnel\_\-wf\_\-string, Complex\_\-2D::get\_\-2d(), Base\-CDI::get\_\-error(), Complex\_\-2D::get\_\-value(), Base\-CDI::get\-Alg\-From\-Name(), Config::get\-Double(), Config::get\-Int(), Config::get\-Int\-List(), Config::get\-Status(), Config::get\-String(), Config::get\-String\-List(), Base\-CDI::initialise\_\-estimate(), Base\-CDI::iterate(), MAG, MAG\_\-SQ, OUTPUT\_\-ERROR, OUTPUT\_\-MINIMAL, partial\_\-string, planar\_\-string, poly\_\-string, print\_\-usage(), Base\-CDI::propagate\_\-to\_\-detector(), Base\-CDI::set\_\-algorithm(), Base\-CDI::set\_\-intensity(), and Base\-CDI::set\_\-support().
