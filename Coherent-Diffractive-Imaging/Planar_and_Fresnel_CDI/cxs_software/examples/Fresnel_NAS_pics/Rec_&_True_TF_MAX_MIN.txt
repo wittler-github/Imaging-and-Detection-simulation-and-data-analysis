@@ -1,0 +1,8 @@
+MAX true_t_f mag 1
+MIN true_t_f mag 0.997531
+MAX true_t_f phase -0
+MIN true_t_f phase -0.139628
+MAX 1 mod TF ER mag 1
+MIN nr 1 mod TF ER mag 0.0153883
+MAX 1 mod TF ER phase 3.13782
+MIN nr 1 mod TF ER phase -3.13575
