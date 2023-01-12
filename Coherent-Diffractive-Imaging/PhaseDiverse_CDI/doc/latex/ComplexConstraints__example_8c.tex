@@ -1,0 +1,45 @@
+\section{Complex\-Constraints\_\-example.c File Reference}
+\label{ComplexConstraints__example_8c}\index{ComplexConstraints_example.c@{ComplexConstraints\_\-example.c}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$sstream$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$io.h$>$}\par
+{\tt \#include $<$Transmission\-Constraint.h$>$}\par
+{\tt \#include $<$Complex\_\-2D.h$>$}\par
+{\tt \#include $<$Double\_\-2D.h$>$}\par
+{\tt \#include $<$Fresnel\-CDI.h$>$}\par
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$cmath$>$}\par
+{\tt \#include $<$cstring$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \bf{my\_\-charge\_\-flipping} (\bf{Complex\_\-2D} \&transmission)\label{ComplexConstraints__example_8c_f6691d2c53b18fa4eb0c56a09798d522}
+
+\item 
+int \bf{main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This example aims at demonstrating how complex costraints can be inforced during a reconstruction. The example requires that Fresnel\-CDI\_\-WF\_\-example.exe and \doxyref{Fresnel\-CDI\_\-simulation\_\-example.c}{p.}{FresnelCDI__simulation__example_8c} have been previously run.
+
+Here, the complex constraint is apply to the transmission function during Fresnel reconstruction, but constraints such as charge flipping can be achieve in the same way on th exit-surface wave for plane-wave reconstruction.
+
+\begin{Desc}
+\item[Author:]Nadia Davidson $<$\tt{nadiamd@unimelb.edu.au}$>$\end{Desc}
+Last modified on 25/3/2011 
+
+Definition in file \bf{Complex\-Constraints\_\-example.c}.
+
+\subsection{Function Documentation}
+\index{ComplexConstraints_example.c@{Complex\-Constraints\_\-example.c}!main@{main}}
+\index{main@{main}!ComplexConstraints_example.c@{Complex\-Constraints\_\-example.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, char $\ast$ {\em argv}[$\,$])}\label{ComplexConstraints__example_8c_28052c36c3b61c6c0eaa18f5d226118f}
+
+
+
+
+Definition at line 68 of file Complex\-Constraints\_\-example.c.
+
+References Transmission\-Constraint::add\_\-complex\_\-constraint(), Fresnel\-CDI::auto\_\-set\_\-norm(), Complex\_\-2D::get\_\-2d(), Complex\-Constraint::get\_\-c\_\-mean(), Base\-CDI::get\_\-error(), Fresnel\-CDI::get\_\-transmission\_\-function(), Fresnel\-CDI::initialise\_\-estimate(), Base\-CDI::iterate(), MAG, my\_\-charge\_\-flipping(), PHASE, Base\-CDI::set\_\-algorithm(), Transmission\-Constraint::set\_\-charge\_\-flipping(), Base\-CDI::set\_\-complex\_\-constraint(), Transmission\-Constraint::set\_\-custom\_\-constraint(), Transmission\-Constraint::set\_\-enforce\_\-unity(), Complex\-Constraint::set\_\-fixed\_\-c(), Base\-CDI::set\_\-intensity(), and Base\-CDI::set\_\-support().

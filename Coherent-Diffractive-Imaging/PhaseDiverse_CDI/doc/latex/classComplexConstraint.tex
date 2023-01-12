@@ -1,0 +1,243 @@
+\section{Complex\-Constraint Class Reference}
+\label{classComplexConstraint}\index{ComplexConstraint@{ComplexConstraint}}
+Create a constraint on the refractive index in one region of the reconstruction.  
+
+
+{\tt \#include $<$Transmission\-Constraint.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Complex\-Constraint} (\bf{Double\_\-2D} \&\bf{region}, double \bf{alpha1}, double \bf{alpha2})
+\item 
+void \bf{set\_\-fixed\_\-c} (double \bf{c\_\-mean})
+\item 
+void \bf{set\_\-c\_\-mean} (double \bf{c\_\-mean})
+\item 
+double \bf{get\_\-c\_\-mean} ()
+\item 
+void \bf{set\_\-alpha1} (double \bf{alpha1})
+\item 
+void \bf{set\_\-alpha2} (double \bf{alpha2})
+\item 
+double \bf{get\_\-new\_\-mag} (double old\_\-mag, double old\_\-phase)
+\item 
+double \bf{get\_\-new\_\-phase} (double old\_\-mag, double old\_\-phase)
+\item 
+\bf{Double\_\-2D} $\ast$ \bf{get\_\-region} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+double \bf{alpha1}
+\item 
+double \bf{alpha2}
+\item 
+\bf{Double\_\-2D} $\ast$ \bf{region}
+\item 
+double \bf{c\_\-mean}
+\item 
+bool \bf{fixed\_\-c}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Nadia Davidson $<$\tt{nadiamd@unimelb.edu.au}$>$\end{Desc}
+This class is based on the paper \char`\"{}Use of a complex constraint in coherent diffractive imaging\char`\"{}, J. N. Clark et. al., 2010. The notation used there is also used here. Users should have knowledge of this or similar papers before using this class.
+
+A section of the reconstructed transmission function will be updated according to a restriction on the value of c (c = beta/delta). If the material is of a known element, then c can be fixed to the know value, and the phase and magnitude of the transmission function updated accordingly. Alternatively, c can be left to float, and calculated for each iteration from a mean over the defined region. The parameters alpha1 and alpha2 are used to control the strength of the constraint.
+
+Instances of this class should be pass to a \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} object. If a sample consists of different regions which are locally homogeneous in element, multiple instances of this class should be created, each one defining a different region of the sample, and then each should be added to the \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} object. 
+
+
+
+Definition at line 51 of file Transmission\-Constraint.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ComplexConstraint@{Complex\-Constraint}!ComplexConstraint@{ComplexConstraint}}
+\index{ComplexConstraint@{ComplexConstraint}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\-Constraint} (\bf{Double\_\-2D} \& {\em region}, double {\em alpha1}, double {\em alpha2})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_b8a249662794c830f8c6016fcdc34fad}
+
+
+Construct a complex constraint.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em region}]A \doxyref{Double\_\-2D}{p.}{classDouble__2D} array with positive element values defining the region for which this constraint should be applied. Once set, it can not be reset. \item[{\em alpha1}]The constraint strength parameter for the magnitude. \item[{\em alpha2}]The constraint strength parameter for the phase. \end{description}
+\end{Desc}
+
+
+Definition at line 81 of file Transmission\-Constraint.h.
+
+References fixed\_\-c, and region.
+
+\subsection{Member Function Documentation}
+\index{ComplexConstraint@{Complex\-Constraint}!set_fixed_c@{set\_\-fixed\_\-c}}
+\index{set_fixed_c@{set\_\-fixed\_\-c}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-fixed\_\-c (double {\em c\_\-mean})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_3c8e29041e17c6f8ea39bbaf971f062d}
+
+
+Set a fixed value of c = beta/delta. If set, you will no longer be able to use the \doxyref{set\_\-c\_\-mean()}{p.}{classComplexConstraint_f0d7f8969fce40c6fb51cc6fa040cc27} method. This value will be used for all iterations.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-mean}]The value of c = beta/delta. \end{description}
+\end{Desc}
+
+
+Definition at line 97 of file Transmission\-Constraint.h.
+
+References fixed\_\-c.\index{ComplexConstraint@{Complex\-Constraint}!set_c_mean@{set\_\-c\_\-mean}}
+\index{set_c_mean@{set\_\-c\_\-mean}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-c\_\-mean (double {\em c\_\-mean})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_f0d7f8969fce40c6fb51cc6fa040cc27}
+
+
+Set the value C = beta/delta. This function is used by \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} to set the value of C, and does probably not need to be called by a user. The function \doxyref{Transmission\-Constraint::apply\_\-constraint()}{p.}{classTransmissionConstraint_4277e187c5b61d84756ade7f3405c628} calculated C as:
+
+\[ \bar{C} = \frac{\sum{lnA}}{\sum{\phi}} \]
+
+Where A is the transmission function amplitude, $\phi$ is the phase and the summation runs over all values in the transmission function array for the defined region.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-mean}]The value of C = beta/delta. \end{description}
+\end{Desc}
+
+
+Definition at line 118 of file Transmission\-Constraint.h.
+
+References fixed\_\-c.\index{ComplexConstraint@{Complex\-Constraint}!get_c_mean@{get\_\-c\_\-mean}}
+\index{get_c_mean@{get\_\-c\_\-mean}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-c\_\-mean ()\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_11ca1df3f902cdfd7f2d13a87fd90a90}
+
+
+Get the value c = beta/delta. This function may be useful when c has been left to float, and the user wishes to fine out what is can be reconstructed as.
+
+\begin{Desc}
+\item[Returns:]The value of c = beta/delta. \end{Desc}
+
+
+Definition at line 130 of file Transmission\-Constraint.h.
+
+References c\_\-mean.\index{ComplexConstraint@{Complex\-Constraint}!set_alpha1@{set\_\-alpha1}}
+\index{set_alpha1@{set\_\-alpha1}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-alpha1 (double {\em alpha1})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_e7393aa6559a245639442f93c749a74b}
+
+
+Set the constraint strength parameter for the magnitude.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em alpha1}]The strength parameter for the magnitude. \end{description}
+\end{Desc}
+
+
+Definition at line 139 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!set_alpha2@{set\_\-alpha2}}
+\index{set_alpha2@{set\_\-alpha2}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-alpha2 (double {\em alpha2})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_c697c79993f0e042dd269d085dc01408}
+
+
+Set the constraint strength parameter for the phase.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em alpha2}]The strength parameter for the phase. \end{description}
+\end{Desc}
+
+
+Definition at line 148 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!get_new_mag@{get\_\-new\_\-mag}}
+\index{get_new_mag@{get\_\-new\_\-mag}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-new\_\-mag (double {\em old\_\-mag}, double {\em old\_\-phase})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_0ff3310b2c92b029c96d86f5218d2562}
+
+
+Get a new magnitude (amplitude) value calculated according to:
+
+\[ A' = exp[ (1-\alpha_1)lnA + \alpha_1 \bar{C} \phi ] \]
+
+Where A' is the new magnitude, A is the old magnitude, $ \phi $ is the old phase, $\alpha_1$ controls the strength of the constraint and $ \bar{C} $ is either the mean beta/delta, as calculated in the parent \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} object, or the fixed value passed by the use.
+
+\begin{Desc}
+\item[Returns:]The new magnitude of the transmission function. \end{Desc}
+
+
+Definition at line 165 of file Transmission\-Constraint.h.
+
+References alpha1, and c\_\-mean.\index{ComplexConstraint@{Complex\-Constraint}!get_new_phase@{get\_\-new\_\-phase}}
+\index{get_new_phase@{get\_\-new\_\-phase}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-new\_\-phase (double {\em old\_\-mag}, double {\em old\_\-phase})\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_7ef2aa16079dc399405edd9631c67335}
+
+
+Get a new phase value according to:
+
+\[ \phi' = (1-\alpha_2)\phi + \alpha_2 \bar{C^{-1}} \ln A \]
+
+Where $ \phi' $ is the new phase, A is the old magnitude, $ \phi $ is the old phase, $\alpha_2$ controls the strength of the constraint and $ \bar{C^{-1}} $ is the inverse of either the mean beta/delta, as calculated in the parent \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} object, or the fixed value passed by the use.
+
+\begin{Desc}
+\item[Returns:]The new phase of the transmission function. \end{Desc}
+
+
+Definition at line 185 of file Transmission\-Constraint.h.
+
+References alpha2, and c\_\-mean.\index{ComplexConstraint@{Complex\-Constraint}!get_region@{get\_\-region}}
+\index{get_region@{get\_\-region}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D}$\ast$ get\_\-region ()\hspace{0.3cm}{\tt  [inline]}}\label{classComplexConstraint_28b7d30925c8c79664264489bac0bba2}
+
+
+Get the array which marks which elements of the transmission function array should have this constraint applied. Values of 0 or less are excluded from the constraint. Positive values will have the constraint applied. This function is used by the \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint} object to which it's given.
+
+\begin{Desc}
+\item[Returns:]A pointer to the array which maps which regions this constraint should be applied to. \end{Desc}
+
+
+Definition at line 199 of file Transmission\-Constraint.h.
+
+References region.
+
+\subsection{Field Documentation}
+\index{ComplexConstraint@{Complex\-Constraint}!alpha1@{alpha1}}
+\index{alpha1@{alpha1}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{alpha1}\hspace{0.3cm}{\tt  [protected]}}\label{classComplexConstraint_6c574b90d73df0bda87c1b031968f824}
+
+
+constraint strength parameter for the amplitude 
+
+Definition at line 56 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!alpha2@{alpha2}}
+\index{alpha2@{alpha2}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{alpha2}\hspace{0.3cm}{\tt  [protected]}}\label{classComplexConstraint_cb32902232ecb3dd8ca0f3b671606c7a}
+
+
+constraint strength parameter for the phase 
+
+Definition at line 59 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!region@{region}}
+\index{region@{region}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D}$\ast$ \bf{region}\hspace{0.3cm}{\tt  [protected]}}\label{classComplexConstraint_abffac22d2f9d021ca9510cbd0e98843}
+
+
+region over which the constraint should be applied 
+
+Definition at line 62 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!c_mean@{c\_\-mean}}
+\index{c_mean@{c\_\-mean}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{c\_\-mean}\hspace{0.3cm}{\tt  [protected]}}\label{classComplexConstraint_ccb7843b75fa63df1d3df2cd5dc0bd60}
+
+
+the value of c = beta / delta 
+
+Definition at line 65 of file Transmission\-Constraint.h.\index{ComplexConstraint@{Complex\-Constraint}!fixed_c@{fixed\_\-c}}
+\index{fixed_c@{fixed\_\-c}!ComplexConstraint@{Complex\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool \bf{fixed\_\-c}\hspace{0.3cm}{\tt  [protected]}}\label{classComplexConstraint_0624fd56b22213c2ca5b62861553dafe}
+
+
+flag as to whether c is fixed or allowed to be updated 
+
+Definition at line 68 of file Transmission\-Constraint.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\bf{Transmission\-Constraint.h}\end{CompactItemize}

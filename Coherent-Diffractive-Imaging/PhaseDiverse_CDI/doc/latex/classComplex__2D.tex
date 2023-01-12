@@ -1,0 +1,589 @@
+\section{Complex\_\-2D Class Reference}
+\label{classComplex__2D}\index{Complex_2D@{Complex\_\-2D}}
+A 2-dimensional array of complex numbers.  
+
+
+{\tt \#include $<$Complex\_\-2D.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Complex\_\-2D} (int x\_\-size, int y\_\-size)
+\item 
+\bf{$\sim$Complex\_\-2D} ()
+\item 
+\bf{Complex\_\-2D} (const \bf{Complex\_\-2D} \&object)
+\item 
+\bf{Complex\_\-2D} \& \bf{operator=} (const \bf{Complex\_\-2D} \&rhs)
+\item 
+void \bf{set\_\-value} (int x, int y, int type, double value)
+\item 
+void \bf{set\_\-real} (int x, int y, double value)
+\item 
+void \bf{set\_\-imag} (int x, int y, double value)
+\item 
+void \bf{set\_\-mag} (int x, int y, double value)
+\item 
+void \bf{set\_\-phase} (int x, int y, double value)
+\item 
+double \bf{get\_\-real} (int x, int y) const 
+\item 
+double \bf{get\_\-imag} (int x, int y) const 
+\item 
+double \bf{get\_\-mag} (int x, int y) const 
+\item 
+double \bf{get\_\-phase} (int x, int y) const 
+\item 
+double \bf{get\_\-value} (int x, int y, int type) const 
+\item 
+int \bf{get\_\-size\_\-x} () const 
+\item 
+int \bf{get\_\-size\_\-y} () const 
+\item 
+void \bf{get\_\-2d} (int type, \bf{Double\_\-2D} \&result) const 
+\item 
+void \bf{scale} (double scale\_\-factor)
+\item 
+void \bf{add} (\bf{Complex\_\-2D} \&c2, double scale=1)
+\item 
+void \bf{multiply} (\bf{Complex\_\-2D} \&c2, double scale=1)
+\item 
+double \bf{get\_\-norm} () const 
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{clone} () const 
+\item 
+void \bf{copy} (const \bf{Complex\_\-2D} \&c)
+\item 
+void \bf{invert} (bool scale=false)
+\item 
+void \bf{conjugate} ()\label{classComplex__2D_c61342c0b02c970283dfb4d919942e51}
+
+\item 
+void \bf{perform\_\-forward\_\-fft} ()
+\item 
+void \bf{perform\_\-backward\_\-fft} ()
+\item 
+void \bf{perform\_\-backward\_\-fft\_\-real} (\bf{Double\_\-2D} \&result)\label{classComplex__2D_6f11779fa74e403b0692b1bda07b4eeb}
+
+\item 
+void \bf{perform\_\-forward\_\-fft\_\-real} (\bf{Double\_\-2D} \&input)\label{classComplex__2D_55ea5787d144db24f543639ea2187d8c}
+
+\item 
+void \bf{set\_\-fftw\_\-type} (int type)
+\item 
+\bf{Complex\_\-2D} \bf{get\_\-padded} (int x\_\-add, int y\_\-add)
+\item 
+\bf{Complex\_\-2D} \bf{get\_\-unpadded} (int x\_\-add, int y\_\-add)
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+int \bf{check\_\-bounds} (int x, int y) const 
+\item 
+void \bf{initialise\_\-fft} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \bf{nx}
+\item 
+int \bf{ny}\label{classComplex__2D_c00b6399ae98f2f721909222a5370f02}
+
+\item 
+int \bf{fftw\_\-type}\label{classComplex__2D_190cee84ce33c531b123368dccd7d52d}
+
+\item 
+fftwf\_\-complex $\ast$ \bf{array}
+\item 
+fftwf\_\-plan \bf{f\_\-forward}\label{classComplex__2D_d35a5d1d88c280f112af8b9efce8c56b}
+
+\item 
+fftwf\_\-plan \bf{f\_\-backward}\label{classComplex__2D_f360772e79f364629fbd941fdb4b1397}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Nadia Davidson \end{Desc}
+\begin{Desc}
+\item[Date:]Last Modified on 21/2/2011\end{Desc}
+This class represents a 2D complex field. Setter and getter methods are provided along with some other useful functions (add, multiplying and fast fourier transforming). \doxyref{Complex\_\-2D}{p.}{classComplex__2D} objects are used in the CDI reconstruction to represent the ESW in a single plane. 
+
+
+
+Definition at line 54 of file Complex\_\-2D.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Complex_2D@{Complex\_\-2D}!Complex_2D@{Complex\_\-2D}}
+\index{Complex_2D@{Complex\_\-2D}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} (int {\em x\_\-size}, int {\em y\_\-size})}\label{classComplex__2D_1384e07fac2057d01c6f55e76035cde8}
+
+
+Constructor that creates a 2D object with the given dimensions.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-size}]The number of samplings in the horizontal direction \item[{\em y\_\-size}]The number of samplings in the vertical direction \end{description}
+\end{Desc}
+
+
+Definition at line 14 of file Complex\_\-2D.c++.
+
+References array, f\_\-backward, f\_\-forward, fftw\_\-type, nx, and ny.\index{Complex_2D@{Complex\_\-2D}!~Complex_2D@{$\sim$Complex\_\-2D}}
+\index{~Complex_2D@{$\sim$Complex\_\-2D}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Complex\_\-2D} ()}\label{classComplex__2D_a9c843c908addca4ca5a20d69bb61852}
+
+
+Destructor 
+
+Definition at line 62 of file Complex\_\-2D.c++.
+
+References array, f\_\-backward, and f\_\-forward.\index{Complex_2D@{Complex\_\-2D}!Complex_2D@{Complex\_\-2D}}
+\index{Complex_2D@{Complex\_\-2D}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} (const \bf{Complex\_\-2D} \& {\em object})}\label{classComplex__2D_2af900fe6b273db8b05a7461a425ec64}
+
+
+Copy Constructor 
+
+Definition at line 34 of file Complex\_\-2D.c++.
+
+References array, f\_\-backward, f\_\-forward, fftw\_\-type, get\_\-imag(), get\_\-real(), get\_\-size\_\-x(), get\_\-size\_\-y(), nx, ny, set\_\-imag(), and set\_\-real().
+
+\subsection{Member Function Documentation}
+\index{Complex_2D@{Complex\_\-2D}!operator=@{operator=}}
+\index{operator=@{operator=}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}\& operator= (const \bf{Complex\_\-2D} \& {\em rhs})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_d5a052ec25a708ea5c00f992f4d13f0d}
+
+
+Assignment Operator 
+
+Definition at line 115 of file Complex\_\-2D.h.
+
+References array, f\_\-backward, f\_\-forward, fftw\_\-type, get\_\-imag(), get\_\-real(), get\_\-size\_\-x(), get\_\-size\_\-y(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!set_value@{set\_\-value}}
+\index{set_value@{set\_\-value}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-value (int {\em x}, int {\em y}, int {\em type}, double {\em value})}\label{classComplex__2D_e51c57e7b70a123b436eae7e0dccc03a}
+
+
+Set the value at point x,y. Note that this is the slow method. For fast, but unsafe, methods use set\_\-real or set\_\-imag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em type}]Which component to set. The options are either: \char`\"{}REAL\char`\"{} or \char`\"{}IMAG\char`\"{} \item[{\em value}]The value which it will be set to \end{description}
+\end{Desc}
+
+
+Definition at line 90 of file Complex\_\-2D.c++.
+
+References check\_\-bounds(), FAILURE, IMAG, MAG, PHASE, REAL, set\_\-imag(), set\_\-mag(), set\_\-phase(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!set_real@{set\_\-real}}
+\index{set_real@{set\_\-real}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-real (int {\em x}, int {\em y}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_e020291ebc48d17a3d96d025b848d6a6}
+
+
+Set the real components at point x,y. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em value}]The value which it will be set to \end{description}
+\end{Desc}
+
+
+Definition at line 191 of file Complex\_\-2D.h.
+
+References array, ny, and REAL.\index{Complex_2D@{Complex\_\-2D}!set_imag@{set\_\-imag}}
+\index{set_imag@{set\_\-imag}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-imag (int {\em x}, int {\em y}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_c03ce80e5de9df55f841d30ebe258db7}
+
+
+Set the imaginary components at point x,y. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em value}]The value which it will be set to \end{description}
+\end{Desc}
+
+
+Definition at line 204 of file Complex\_\-2D.h.
+
+References array, IMAG, and ny.\index{Complex_2D@{Complex\_\-2D}!set_mag@{set\_\-mag}}
+\index{set_mag@{set\_\-mag}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-mag (int {\em x}, int {\em y}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_9b91a2b1d98aa4104378adb9a881ae51}
+
+
+Set the magnitude at point x,y, while preserving the phase. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em value}]The value which it will be set to \end{description}
+\end{Desc}
+
+
+Definition at line 217 of file Complex\_\-2D.h.
+
+References array, get\_\-mag(), IMAG, ny, REAL, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!set_phase@{set\_\-phase}}
+\index{set_phase@{set\_\-phase}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-phase (int {\em x}, int {\em y}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_4d078bae92ff29da0d8772d7dca97557}
+
+
+Set the phase at point x,y, while preserving the magnitude. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em value}]The value which it will be set to \end{description}
+\end{Desc}
+
+
+Definition at line 238 of file Complex\_\-2D.h.
+
+References get\_\-mag(), set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!get_real@{get\_\-real}}
+\index{get_real@{get\_\-real}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-real (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_1469473ab9a2e18caeda6448518bdc40}
+
+
+Get the real components at point x,y. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value at (x,y) \end{Desc}
+
+
+Definition at line 253 of file Complex\_\-2D.h.
+
+References array, ny, and REAL.\index{Complex_2D@{Complex\_\-2D}!get_imag@{get\_\-imag}}
+\index{get_imag@{get\_\-imag}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-imag (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_7064a7696dcc6a05e3f9664efd91f205}
+
+
+Get the imaginary components at point x,y. Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value at (x,y) \end{Desc}
+
+
+Definition at line 265 of file Complex\_\-2D.h.
+
+References array, IMAG, and ny.\index{Complex_2D@{Complex\_\-2D}!get_mag@{get\_\-mag}}
+\index{get_mag@{get\_\-mag}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-mag (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_e33594dc6d9a94c4f1d1f6cda51f6f85}
+
+
+Get the magnitude at point x,y, $ \sqrt{\mathrm{real}^2 + \mathrm{imag}^2} $ Note that this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value at (x,y) \end{Desc}
+
+
+Definition at line 277 of file Complex\_\-2D.h.
+
+References array, IMAG, ny, and REAL.\index{Complex_2D@{Complex\_\-2D}!get_phase@{get\_\-phase}}
+\index{get_phase@{get\_\-phase}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-phase (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_25b3504b323fad9229d6a03bedc018f4}
+
+
+Get the phase at point x,y. It goes between -pi and pi. Please note that this method is ineffectual when the magnitude is 0. Hence, if you are setting values in a \doxyref{Complex\_\-2D}{p.}{classComplex__2D} array for the first time, you must use set\_\-mag and then set\_\-phase. Also not, this is an unsafe method as no bounds checking is performed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value at (x,y) \end{Desc}
+
+
+Definition at line 293 of file Complex\_\-2D.h.
+
+References get\_\-imag(), and get\_\-real().\index{Complex_2D@{Complex\_\-2D}!get_value@{get\_\-value}}
+\index{get_value@{get\_\-value}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-value (int {\em x}, int {\em y}, int {\em type}) const}\label{classComplex__2D_b4dc2d0d3f42ac0b21f4995781e26450}
+
+
+Get the value at point x,y. Note that this is the slow method. For fast, but unsafe, methods use get\_\-real, get\_\-imag or get\_\-mag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The x position \item[{\em y}]The y position \item[{\em type}]Which component to set. The options are either: \char`\"{}REAL\char`\"{},\char`\"{}IMAG\char`\"{},\char`\"{}MAG\char`\"{},\char`\"{}MAG\_\-SQ\char`\"{} or \char`\"{}PHASE\char`\"{} \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 119 of file Complex\_\-2D.c++.
+
+References check\_\-bounds(), FAILURE, get\_\-imag(), get\_\-mag(), get\_\-phase(), get\_\-real(), IMAG, MAG, MAG\_\-SQ, PHASE, and REAL.\index{Complex_2D@{Complex\_\-2D}!get_size_x@{get\_\-size\_\-x}}
+\index{get_size_x@{get\_\-size\_\-x}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-x () const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_f1888c4cbbc8b3912cdf345cb76731e4}
+
+
+Get the size in x;
+
+\begin{Desc}
+\item[Returns:]The number of horizontal points. \end{Desc}
+
+
+Definition at line 325 of file Complex\_\-2D.h.
+
+References nx.\index{Complex_2D@{Complex\_\-2D}!get_size_y@{get\_\-size\_\-y}}
+\index{get_size_y@{get\_\-size\_\-y}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-y () const\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_9649c49d36017be77d9728a7e471b126}
+
+
+Get the size in y;
+
+\begin{Desc}
+\item[Returns:]The number of vertical points. \end{Desc}
+
+
+Definition at line 335 of file Complex\_\-2D.h.
+
+References ny.\index{Complex_2D@{Complex\_\-2D}!get_2d@{get\_\-2d}}
+\index{get_2d@{get\_\-2d}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void get\_\-2d (int {\em type}, \bf{Double\_\-2D} \& {\em result}) const}\label{classComplex__2D_662bfff692ecd36b6df90b2130fb9a9f}
+
+
+Get a 2D array of real numbers.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]Which type of value is wanted. The options are either: \char`\"{}REAL\char`\"{},\char`\"{}IMAG\char`\"{},\char`\"{}MAG\char`\"{},\char`\"{}MAG\_\-SQ\char`\"{} or \char`\"{}PHASE\char`\"{} \item[{\em result}]A 2D array. The array will be filled with the result. Note: This method does not allocated memory for the array, so this should be done before making the call. \end{description}
+\end{Desc}
+
+
+Definition at line 144 of file Complex\_\-2D.c++.
+
+References get\_\-value(), nx, and ny.\index{Complex_2D@{Complex\_\-2D}!scale@{scale}}
+\index{scale@{scale}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale (double {\em scale\_\-factor})}\label{classComplex__2D_ea42a2dfb5010bf5d52d577438b24e0e}
+
+
+Scale the real and imaginary components of the array by a factor.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale\_\-factor}]Number which is multiplied by all components of the field. \end{description}
+\end{Desc}
+
+
+Definition at line 154 of file Complex\_\-2D.c++.
+
+References array, IMAG, nx, ny, and REAL.\index{Complex_2D@{Complex\_\-2D}!add@{add}}
+\index{add@{add}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add (\bf{Complex\_\-2D} \& {\em c2}, double {\em scale} = {\tt 1})}\label{classComplex__2D_08d442bedb52b5e9a32415d9ab848d58}
+
+
+Add another \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to this \doxyref{Complex\_\-2D}{p.}{classComplex__2D}. The values in this object will be modified.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c2}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to add. \item[{\em scale}]If this value is non-empty, or not 1, c2 will be scaled before being added to the \doxyref{Complex\_\-2D}{p.}{classComplex__2D},  \$\{this\} = \{this\} + \{scale\}  \{c2\} \$  . Using this function is more efficient than calling \doxyref{Complex\_\-2D::scale()}{p.}{classComplex__2D_ea42a2dfb5010bf5d52d577438b24e0e} followed by \doxyref{Complex\_\-2D}{p.}{classComplex__2D}:\doxyref{add()}{p.}{classComplex__2D_08d442bedb52b5e9a32415d9ab848d58} separately. \end{description}
+\end{Desc}
+
+
+Definition at line 167 of file Complex\_\-2D.c++.
+
+References array, get\_\-imag(), get\_\-real(), get\_\-size\_\-x(), get\_\-size\_\-y(), IMAG, nx, ny, and REAL.\index{Complex_2D@{Complex\_\-2D}!multiply@{multiply}}
+\index{multiply@{multiply}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void multiply (\bf{Complex\_\-2D} \& {\em c2}, double {\em scale} = {\tt 1})}\label{classComplex__2D_57d44a021ec68f7f30eabee134cf366a}
+
+
+Multiple another \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to this \doxyref{Complex\_\-2D}{p.}{classComplex__2D}. The values in this object will be modified.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c2}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to add. \item[{\em scale}]If this value is non-empty, or not 1, c2 will be scaled before being added to the \doxyref{Complex\_\-2D}{p.}{classComplex__2D},  \$\{this\} = \{this\}  \{scale\}  \{c2\} \$  . Using this function is more efficient than calling \doxyref{Complex\_\-2D::scale()}{p.}{classComplex__2D_ea42a2dfb5010bf5d52d577438b24e0e} followed by \doxyref{Complex\_\-2D}{p.}{classComplex__2D}:\doxyref{multiply()}{p.}{classComplex__2D_57d44a021ec68f7f30eabee134cf366a} separately. \end{description}
+\end{Desc}
+
+
+Definition at line 185 of file Complex\_\-2D.c++.
+
+References get\_\-imag(), get\_\-real(), get\_\-size\_\-x(), get\_\-size\_\-y(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!get_norm@{get\_\-norm}}
+\index{get_norm@{get\_\-norm}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-norm () const}\label{classComplex__2D_8d0df33584a150bfb6b43fb83d3eddd1}
+
+
+Get the norm of this \doxyref{Complex\_\-2D}{p.}{classComplex__2D}:  \$ \$ .
+
+\begin{Desc}
+\item[Returns:]\$ \{ \{x,y\}\{ \{$|$C(x,y)$|$$^\wedge$2\} \} \} \$ . \end{Desc}
+
+
+Definition at line 212 of file Complex\_\-2D.c++.
+
+References get\_\-imag(), get\_\-real(), nx, and ny.\index{Complex_2D@{Complex\_\-2D}!clone@{clone}}
+\index{clone@{clone}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} $\ast$ clone () const}\label{classComplex__2D_6b69ed6ba3badecd34630878aa58820f}
+
+
+Create a new \doxyref{Complex\_\-2D}{p.}{classComplex__2D} with the same values as this one.
+
+\begin{Desc}
+\item[Returns:]The new \doxyref{Complex\_\-2D}{p.}{classComplex__2D} \end{Desc}
+
+
+Definition at line 235 of file Complex\_\-2D.c++.
+
+References Complex\_\-2D(), get\_\-imag(), get\_\-real(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!copy@{copy}}
+\index{copy@{copy}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void copy (const \bf{Complex\_\-2D} \& {\em c})}\label{classComplex__2D_4980fb66a2f632ffc4a74eaebc30cca5}
+
+
+Copy the values from another \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to this one.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} which will be copied from. \end{description}
+\end{Desc}
+
+
+Definition at line 250 of file Complex\_\-2D.c++.
+
+References array, get\_\-size\_\-x(), get\_\-size\_\-y(), nx, and ny.\index{Complex_2D@{Complex\_\-2D}!invert@{invert}}
+\index{invert@{invert}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void invert (bool {\em scale} = {\tt false})}\label{classComplex__2D_fc11339d954638fd173648ca4fc01f44}
+
+
+Rearrange the matrix so that the corners are placed in the center. This is used after fourier transforming. i.e. if the array is represented by as 4 quadrants: \par
+ 1 2 \par
+ 3 4 
+
+It becomes: \par
+ 4 3 \par
+ 2 1
+
+This function may also scale the array while it inverts it, required. This is aimed at reducing the CPU time needed, as both tasks are often performed after fourier transforming.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale}]Turn the scaling on-true or off-false. If on, the matrix will be scaled to 1/sqrt(nx$\ast$ny) while it is being inverted. By default the array is not scaled. \end{description}
+\end{Desc}
+
+
+Definition at line 271 of file Complex\_\-2D.c++.
+
+References get\_\-imag(), get\_\-real(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!perform_forward_fft@{perform\_\-forward\_\-fft}}
+\index{perform_forward_fft@{perform\_\-forward\_\-fft}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void perform\_\-forward\_\-fft ()}\label{classComplex__2D_ba6f6a74fb4cbca1f7c1575cbd5fd4e4}
+
+
+Forward fourier transform the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} object. The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} is not scaled to give the same normalisation as before the transform. The \doxyref{invert()}{p.}{classComplex__2D_fc11339d954638fd173648ca4fc01f44} function can be used to acheive this. 
+
+Definition at line 419 of file Complex\_\-2D.c++.
+
+References f\_\-forward, and initialise\_\-fft().\index{Complex_2D@{Complex\_\-2D}!perform_backward_fft@{perform\_\-backward\_\-fft}}
+\index{perform_backward_fft@{perform\_\-backward\_\-fft}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void perform\_\-backward\_\-fft ()}\label{classComplex__2D_77f051ad175bb2716ec6a61c90831e15}
+
+
+Backward fourier transform the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} object. The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} is not scaled to give the same normalisation as before the transform. The \doxyref{invert()}{p.}{classComplex__2D_fc11339d954638fd173648ca4fc01f44} function can be used to acheive this. 
+
+Definition at line 433 of file Complex\_\-2D.c++.
+
+References f\_\-backward, and initialise\_\-fft().\index{Complex_2D@{Complex\_\-2D}!set_fftw_type@{set\_\-fftw\_\-type}}
+\index{set_fftw_type@{set\_\-fftw\_\-type}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\-type (int {\em type})\hspace{0.3cm}{\tt  [inline]}}\label{classComplex__2D_5bf4618dd19f4e64a78a510d6f242d35}
+
+
+A flag which is passed to fftw when plans are created. It maybe either FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT. See the fftw documentation for a description of each. By default we use FFTW\_\-MEASURE. FFTW\_\-ESTIMATE is used for testing purposes.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]- FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT \end{description}
+\end{Desc}
+
+
+Definition at line 467 of file Complex\_\-2D.h.
+
+References fftw\_\-type.\index{Complex_2D@{Complex\_\-2D}!get_padded@{get\_\-padded}}
+\index{get_padded@{get\_\-padded}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} get\_\-padded (int {\em x\_\-add}, int {\em y\_\-add})}\label{classComplex__2D_4eda1f705cf419aad25f6578a50bf79f}
+
+
+Create the same complex with some padding. The padding is filled with 0s 
+
+Definition at line 317 of file Complex\_\-2D.c++.
+
+References get\_\-imag(), get\_\-real(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!get_unpadded@{get\_\-unpadded}}
+\index{get_unpadded@{get\_\-unpadded}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} get\_\-unpadded (int {\em x\_\-add}, int {\em y\_\-add})}\label{classComplex__2D_d848ac07a2c79121ddd4d91723cc7b91}
+
+
+Create the same complex without the some padding. 
+
+Definition at line 360 of file Complex\_\-2D.c++.
+
+References get\_\-imag(), get\_\-real(), nx, ny, set\_\-imag(), and set\_\-real().\index{Complex_2D@{Complex\_\-2D}!check_bounds@{check\_\-bounds}}
+\index{check_bounds@{check\_\-bounds}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int check\_\-bounds (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [private]}}\label{classComplex__2D_5ca1509159af514259ea556cdebf0df0}
+
+
+Check that an (x,y) position is within the bounds of the array
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position to check \item[{\em y}]The vertical position to check \end{description}
+\end{Desc}
+
+
+Definition at line 309 of file Complex\_\-2D.c++.
+
+References FAILURE, nx, ny, and SUCCESS.\index{Complex_2D@{Complex\_\-2D}!initialise_fft@{initialise\_\-fft}}
+\index{initialise_fft@{initialise\_\-fft}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-fft ()\hspace{0.3cm}{\tt  [private]}}\label{classComplex__2D_5b41c988eba1434bc7a0acb40c2aa62d}
+
+
+Create the fftw plans for forward and backward fast fourier transforms 
+
+Definition at line 378 of file Complex\_\-2D.c++.
+
+References array, f\_\-backward, f\_\-forward, fftw\_\-type, nx, and ny.
+
+\subsection{Field Documentation}
+\index{Complex_2D@{Complex\_\-2D}!nx@{nx}}
+\index{nx@{nx}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nx}\hspace{0.3cm}{\tt  [private]}}\label{classComplex__2D_9515687a9dece1086de8ff1baec11196}
+
+
+nx/ny are number of samplings in x/y 
+
+Definition at line 57 of file Complex\_\-2D.h.\index{Complex_2D@{Complex\_\-2D}!array@{array}}
+\index{array@{array}!Complex_2D@{Complex\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}fftwf\_\-complex$\ast$ \bf{array}\hspace{0.3cm}{\tt  [private]}}\label{classComplex__2D_c49e6dc0ee83bd7d4d36c029720d5169}
+
+
+\char`\"{}array\char`\"{} holds the data 
+
+Definition at line 66 of file Complex\_\-2D.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Complex\_\-2D.h}\item 
+Complex\_\-2D.c++\end{CompactItemize}

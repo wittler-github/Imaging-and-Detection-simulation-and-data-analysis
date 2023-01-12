@@ -1,0 +1,312 @@
+\section{Real\_\-2D Class Template Reference}
+\label{classReal__2D}\index{Real_2D@{Real\_\-2D}}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Real\_\-2D} ()
+\item 
+\bf{Real\_\-2D} (int x\_\-size, int y\_\-size)
+\item 
+\bf{$\sim$Real\_\-2D} ()
+\item 
+void \bf{allocate\_\-memory} (int x\_\-size, int y\_\-size)
+\item 
+void \bf{copy} (const \bf{Real\_\-2D}$<$ T $>$ \&other\_\-array)
+\item 
+void \bf{set} (int x, int y, T value)
+\item 
+T \bf{get} (int x, int y) const 
+\item 
+int \bf{get\_\-size\_\-x} () const 
+\item 
+int \bf{get\_\-size\_\-y} () const 
+\item 
+T \bf{get\_\-sum} () const 
+\item 
+T \bf{get\_\-abs\_\-sum} () const 
+\item 
+T \bf{get\_\-max} () const 
+\item 
+T \bf{get\_\-min} () const 
+\item 
+void \bf{add} (const \bf{Real\_\-2D}$<$ T $>$ \&other\_\-array, double norm=1.0)\label{classReal__2D_4664c72b89efb2f61931e6efb5ef62b0}
+
+\item 
+void \bf{scale} (double scale\_\-by)\label{classReal__2D_4c41b81edacf5db89ab69e31f9a056b3}
+
+\item 
+void \bf{square} ()
+\item 
+void \bf{sq\_\-root} ()
+\item 
+\bf{Real\_\-2D} (const \bf{Real\_\-2D} \&object)
+\item 
+\bf{Real\_\-2D} \& \bf{operator=} (const \bf{Real\_\-2D} \&rhs)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+T $\ast$ \bf{array}
+\item 
+int \bf{nx}
+\item 
+int \bf{ny}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class Real\_\-2D$<$ T $>$}
+
+
+
+
+
+Definition at line 33 of file Double\_\-2D.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Real\_\-2D} ()\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_4e2feb2047f5d0fb11e1ebb8cf1eb4c8}
+
+
+A constructor which creates an empty array (of no size). Note that memory has not been allocated if this method is used. 
+
+Definition at line 54 of file Double\_\-2D.h.\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Real\_\-2D} (int {\em x\_\-size}, int {\em y\_\-size})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_a46bb5a6f0c46c29a9f07ed7a02a0e4f}
+
+
+Constructor that creates a 2D object with the given dimensions.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-size}]The number of samplings in the horizontal direction \item[{\em y\_\-size}]The number of samplings in the vertical direction \end{description}
+\end{Desc}
+
+
+Definition at line 62 of file Double\_\-2D.h.
+
+References allocate\_\-memory().\index{Real_2D@{Real\_\-2D}!~Real_2D@{$\sim$Real\_\-2D}}
+\index{~Real_2D@{$\sim$Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Real\_\-2D} ()\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_10e7b81cfd996e04775277bdf4d5223d}
+
+
+Destructor. Memory is deallocated here. 
+
+Definition at line 69 of file Double\_\-2D.h.
+
+References array, and nx.\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\index{Real_2D@{Real\_\-2D}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Real\_\-2D} (const \bf{Real\_\-2D}$<$ T $>$ \& {\em object})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_8e44fe4128584411c880398eb575b12f}
+
+
+Set the copy constructor 
+
+Definition at line 260 of file Double\_\-2D.h.
+
+References allocate\_\-memory(), get(), get\_\-size\_\-x(), get\_\-size\_\-y(), and set().
+
+\subsection{Member Function Documentation}
+\index{Real_2D@{Real\_\-2D}!allocate_memory@{allocate\_\-memory}}
+\index{allocate_memory@{allocate\_\-memory}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void allocate\_\-memory (int {\em x\_\-size}, int {\em y\_\-size})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_c542126f982654c5622b2f7114588943}
+
+
+Allocate memory for the array. This should only be used if the constructor was called with no parameters!
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-size}]The number of samplings in the horizontal direction \item[{\em y\_\-size}]The number of samplings in the vertical direction \end{description}
+\end{Desc}
+
+
+if(!array)\{ std::cout $<$$<$ \char`\"{}Could not allocated memory. Exiting..\char`\"{}$<$$<$std::endl; exit(); \} 
+
+Definition at line 83 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!copy@{copy}}
+\index{copy@{copy}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void copy (const \bf{Real\_\-2D}$<$ T $>$ \& {\em other\_\-array})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_5fd205a7f1d8d8599e50f8c92c00f343}
+
+
+Copy the contents of another \doxyref{Real\_\-2D}{p.}{classReal__2D} array to this one. Note that this is a quick copy method and no bounds checking is done.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em other\_\-array}]The array to copy from \end{description}
+\end{Desc}
+
+
+Definition at line 104 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!set@{set}}
+\index{set@{set}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set (int {\em x}, int {\em y}, T {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_f6d67a1210932d7a01c5a96b57c527a7}
+
+
+Set the value at positions (x,y) WARNING: no bound checking is done!
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \item[{\em value}]The value to set \end{description}
+\end{Desc}
+
+
+Definition at line 116 of file Double\_\-2D.h.
+
+References array, and ny.\index{Real_2D@{Real\_\-2D}!get@{get}}
+\index{get@{get}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T get (int {\em x}, int {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_8e893d835e94ba76c6043fed0cb026a3}
+
+
+Get the value at positions (x,y) WARNING: no bound checking is done!
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]The horizontal position \item[{\em y}]The vertical position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value at (x,y) \end{Desc}
+
+
+Definition at line 129 of file Double\_\-2D.h.
+
+References array, and ny.\index{Real_2D@{Real\_\-2D}!get_size_x@{get\_\-size\_\-x}}
+\index{get_size_x@{get\_\-size\_\-x}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-x () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_f1888c4cbbc8b3912cdf345cb76731e4}
+
+
+Get the size in x;
+
+\begin{Desc}
+\item[Returns:]The number of horizontal points. \end{Desc}
+
+
+Definition at line 139 of file Double\_\-2D.h.
+
+References nx.\index{Real_2D@{Real\_\-2D}!get_size_y@{get\_\-size\_\-y}}
+\index{get_size_y@{get\_\-size\_\-y}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-y () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_9649c49d36017be77d9728a7e471b126}
+
+
+Get the size in y;
+
+\begin{Desc}
+\item[Returns:]The number of vertical points. \end{Desc}
+
+
+Definition at line 149 of file Double\_\-2D.h.
+
+References ny.\index{Real_2D@{Real\_\-2D}!get_sum@{get\_\-sum}}
+\index{get_sum@{get\_\-sum}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T get\_\-sum () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_5112dc1c15dda48a773c503ec0bac7b5}
+
+
+Get the sum of all values in the array. This is useful to determine normalisation values.
+
+\begin{Desc}
+\item[Returns:]The sum of all values in the array \end{Desc}
+
+
+Definition at line 161 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!get_abs_sum@{get\_\-abs\_\-sum}}
+\index{get_abs_sum@{get\_\-abs\_\-sum}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T get\_\-abs\_\-sum () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_ea5103807147778bc0c3a07a5860a813}
+
+
+Get the sum of the abolute value of all elements in the array.
+
+\begin{Desc}
+\item[Returns:]The sum of the abosulute values of all elements in the array \end{Desc}
+
+
+Definition at line 175 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!get_max@{get\_\-max}}
+\index{get_max@{get\_\-max}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T get\_\-max () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_79784e567dbf2d80238e1b7bb966b39b}
+
+
+Get the maximum of all values in the array.
+
+\begin{Desc}
+\item[Returns:]The maximum value in the array \end{Desc}
+
+
+Definition at line 190 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!get_min@{get\_\-min}}
+\index{get_min@{get\_\-min}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T get\_\-min () const\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_2f338b37dfdafbf58f54b5a7abab6f5f}
+
+
+Get the minimum of all values in the array.
+
+\begin{Desc}
+\item[Returns:]The minimum value in the array \end{Desc}
+
+
+Definition at line 210 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!square@{square}}
+\index{square@{square}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void square ()\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_0552bf116348dbf81fc4092562a39ae0}
+
+
+Square all array values in-place. 
+
+Definition at line 241 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!sq_root@{sq\_\-root}}
+\index{sq_root@{sq\_\-root}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void sq\_\-root ()\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_dd3ac3f09b11241a5b2777c721f0af49}
+
+
+Square-root all array values in-place. 
+
+Definition at line 250 of file Double\_\-2D.h.
+
+References array, nx, and ny.\index{Real_2D@{Real\_\-2D}!operator=@{operator=}}
+\index{operator=@{operator=}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Real\_\-2D}\& operator= (const \bf{Real\_\-2D}$<$ T $>$ \& {\em rhs})\hspace{0.3cm}{\tt  [inline]}}\label{classReal__2D_343cc311d20dbaf3dcb0b15c216c3004}
+
+
+Set the assignment operator 
+
+Definition at line 272 of file Double\_\-2D.h.
+
+References allocate\_\-memory(), array, get(), get\_\-size\_\-x(), get\_\-size\_\-y(), nx, and set().
+
+\subsection{Field Documentation}
+\index{Real_2D@{Real\_\-2D}!array@{array}}
+\index{array@{array}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}T$\ast$ \bf{array}\hspace{0.3cm}{\tt  [protected]}}\label{classReal__2D_5fce8f92f668366ab55cf41438fdecae}
+
+
+the underlying 2-D array 
+
+Definition at line 38 of file Double\_\-2D.h.\index{Real_2D@{Real\_\-2D}!nx@{nx}}
+\index{nx@{nx}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nx}\hspace{0.3cm}{\tt  [protected]}}\label{classReal__2D_9515687a9dece1086de8ff1baec11196}
+
+
+the size in x 
+
+Definition at line 41 of file Double\_\-2D.h.\index{Real_2D@{Real\_\-2D}!ny@{ny}}
+\index{ny@{ny}!Real_2D@{Real\_\-2D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{ny}\hspace{0.3cm}{\tt  [protected]}}\label{classReal__2D_c00b6399ae98f2f721909222a5370f02}
+
+
+the size in y 
+
+Definition at line 44 of file Double\_\-2D.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\bf{Double\_\-2D.h}\end{CompactItemize}

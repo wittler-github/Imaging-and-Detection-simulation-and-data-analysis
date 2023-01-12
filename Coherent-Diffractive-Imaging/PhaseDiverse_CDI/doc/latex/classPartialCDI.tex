@@ -1,0 +1,1090 @@
+\section{Partial\-CDI Class Reference}
+\label{classPartialCDI}\index{PartialCDI@{PartialCDI}}
+The class which performs partially coherent reconstruction.  
+
+
+{\tt \#include $<$Partial\-CDI.h$>$}
+
+Inheritance diagram for Partial\-CDI::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPartialCDI}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+\textbf{CROSS\_\-CORRELATION}\label{classPartialCDI_d3ad298af5d072057b84f2f0e1bd8ea8482250489824a04e2ed9933840892bf1}
+
+\item 
+\textbf{MINIMUM\_\-ERROR}\label{classPartialCDI_d3ad298af5d072057b84f2f0e1bd8ea8530a140fd13648216bc0b9dc1b3af176}
+
+\item 
+enum \{ \textbf{CROSS\_\-CORRELATION}, 
+\textbf{MINIMUM\_\-ERROR}
+ \}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Partial\-CDI} (\bf{Complex\_\-2D} \&initial\_\-guess, double \bf{lcx}=1.0, double \bf{lcy}=1.0, double \bf{pxsize}=1.0, double \bf{pysize}=1.0, double \bf{energy}=1.0, double \bf{zsd}=1.0, int \bf{nleg}=2, int \bf{nmode}=2, unsigned int \bf{n\_\-best}=0)\label{classPartialCDI_059bcc7b00b2542558ab2c32b4dcd343}
+
+\item 
+\bf{$\sim$Partial\-CDI} ()
+\item 
+void \bf{initialise\_\-estimate} ()
+\item 
+void \bf{initialise\_\-estimate} (int seed)
+\item 
+int \bf{iterate} ()
+\item 
+void \bf{initialise\_\-matrices} (int leg, int modes)
+\item 
+\bf{Complex\_\-2D} \bf{get\_\-transmission} ()
+\item 
+void \bf{set\_\-transmission} (\bf{Complex\_\-2D} \&new\_\-transmission)
+\item 
+\bf{Double\_\-2D} \bf{propagate\_\-modes\_\-to\_\-detector} ()
+\item 
+\bf{Complex\_\-2D} \bf{get\_\-mode} (int mode)
+\item 
+void \bf{set\_\-threshold} (double d)
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{get\_\-best\_\-result} (double \&error, int index=0)
+\item 
+void \bf{set\_\-support} (const \bf{Double\_\-2D} \&object\_\-support, bool soften=false)
+\item 
+void \bf{set\_\-intensity} (const \bf{Double\_\-2D} \&detector\_\-intensity)
+\item 
+void \bf{set\_\-beam\_\-stop} (const \bf{Double\_\-2D} \&beam\_\-stop\_\-region)
+\item 
+void \bf{set\_\-relaxation\_\-parameter} (double relaxation\_\-parameter)
+\item 
+int \bf{get\_\-size\_\-x} ()
+\item 
+int \bf{get\_\-size\_\-y} ()
+\item 
+const \bf{Complex\_\-2D} \& \bf{get\_\-exit\_\-surface\_\-wave} ()\label{classBaseCDI_8c6add0215552640496dd143c037e32d}
+
+\item 
+void \bf{set\_\-exit\_\-surface\_\-wave} (\bf{Complex\_\-2D} \&esw)\label{classBaseCDI_9b9683ab74a9759b7a449264d0c530f4}
+
+\item 
+void \bf{set\_\-algorithm} (int alg)
+\item 
+void \bf{set\_\-custom\_\-algorithm} (double m1, double m2, double m3, double m4, double m5, double m6, double m7, double m8, double m9, double m10)
+\item 
+void \bf{print\_\-algorithm} ()
+\item 
+double \bf{get\_\-error} ()
+\item 
+virtual void \bf{apply\_\-shrinkwrap} (double gauss\_\-width=1.5, double \bf{threshold}=0.1)
+\item 
+const \bf{Double\_\-2D} \& \bf{get\_\-support} ()
+\item 
+virtual void \bf{apply\_\-support} (\bf{Complex\_\-2D} \&c)
+\item 
+virtual void \bf{project\_\-intensity} (\bf{Complex\_\-2D} \&c)
+\item 
+virtual void \bf{scale\_\-intensity} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{set\_\-fftw\_\-type} (int type)
+\item 
+virtual void \bf{set\_\-complex\_\-constraint} (\bf{Transmission\-Constraint} \&trans\_\-constraint)
+\item 
+void \bf{reset\_\-best} ()\label{classBaseCDI_575a9bdc868c230c734c68bb5ffa657b}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static int \bf{get\-Alg\-From\-Name} (std::string algorithm\_\-name)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{apply\_\-threshold} (\bf{Double\_\-2D} \&array, double \bf{threshold})
+\item 
+void \bf{convolve} (\bf{Double\_\-2D} \&array, double gauss\_\-width, int pixel\_\-cut\_\-off=4)
+\item 
+void \bf{support\_\-constraint} (\bf{Complex\_\-2D} \&c)\label{classBaseCDI_3bd94fddd7474977f7a69600f276aa44}
+
+\item 
+void \bf{reallocate\_\-temp\_\-complex\_\-memory} ()\label{classBaseCDI_a5d53d9a28a4edd3e320fbe29d17782f}
+
+\item 
+void \bf{update\_\-n\_\-best} ()\label{classBaseCDI_77ca159159d8fc644d987c629a64f499}
+
+\end{CompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{CompactItemize}
+\item 
+static std::map$<$ std::string, int $>$ $\ast$ \bf{set\_\-up\_\-algorithm\_\-name\_\-map} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+std::vector$<$ \bf{Complex\_\-2D} $>$ \bf{single\-CDI}
+\item 
+std::vector$<$ \bf{Complex\_\-2D} $>$ \bf{singlemode}
+\item 
+std::vector$<$ \bf{Double\_\-2D} $\ast$ $>$ \bf{weights}
+\item 
+std::vector$<$ double $>$ \bf{x\_\-position}
+\item 
+std::vector$<$ double $>$ \bf{y\_\-position}
+\item 
+\bf{Complex\_\-2D} \bf{transmission}
+\item 
+std::vector$<$ double $>$ \bf{eigen}
+\item 
+int \bf{iterations\_\-per\_\-cycle}
+\item 
+int \bf{nleg}
+\item 
+int \bf{nmode}
+\item 
+double \bf{lcy}
+\item 
+double \bf{lcx}
+\item 
+double \bf{pxsize}
+\item 
+double \bf{pysize}
+\item 
+double \bf{zsd}
+\item 
+double \bf{energy}
+\item 
+double \bf{threshold}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{jmatrix}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{hmatrix}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{smatrix}
+\item 
+\bf{Complex\_\-2D} \& \bf{complex}
+\item 
+int \bf{nx}
+\item 
+int \bf{ny}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PFS}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PF}\label{classBaseCDI_fdf6f4568ed3475dc94e49887327c2ff}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PS}\label{classBaseCDI_fc480ef7ebfb0971c0ecfa1a3a2f9395}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PSF}\label{classBaseCDI_0db0cbd1918b540113b56bfe459fb37a}
+
+\item 
+double \bf{beta}
+\item 
+\bf{Double\_\-2D} \bf{support}
+\item 
+\bf{Double\_\-2D} \bf{intensity\_\-sqrt}
+\item 
+\bf{Double\_\-2D} $\ast$ \bf{beam\_\-stop}
+\item 
+int \bf{algorithm}
+\item 
+double \bf{algorithm\_\-structure} [NTERMS]
+\item 
+double \bf{current\_\-error}
+\item 
+int \bf{n\_\-best}
+\item 
+\bf{Complex\_\-2D} $\ast$$\ast$ \bf{best\_\-array}
+\item 
+double $\ast$ \bf{best\_\-error\_\-array}
+\item 
+\bf{Transmission\-Constraint} $\ast$ \bf{transmission\_\-constraint}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static std::map$<$ std::string, int $>$ $\ast$ \bf{alg\-Name\-Map} = Base\-CDI::set\_\-up\_\-algorithm\_\-name\_\-map()
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{reallocate\_\-transmission\_\-memory} (int new\_\-nx, int new\_\-ny)
+\item 
+void \bf{scale\_\-object} (double factor)
+\item 
+void \bf{propagate\_\-from\_\-detector} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{propagate\_\-to\_\-detector} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{apply\_\-transmission} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{scale\_\-intensity} (std::vector$<$ \bf{Complex\_\-2D} $>$ \&c)
+\item 
+\bf{Double\_\-2D} \bf{sum\_\-intensity} (std::vector$<$ \bf{Complex\_\-2D} $>$ \&c)
+\item 
+void \bf{update\_\-transmission} ()
+\item 
+void \bf{fill\_\-jmatrix} (\bf{Double\_\-2D} legmatrix, \bf{Double\_\-2D} roots)
+\item 
+void \bf{fill\_\-smatrix} (\bf{Double\_\-2D} legmatrix, \bf{Double\_\-2D} roots)
+\item 
+void \bf{fill\_\-modes} (\bf{Complex\_\-2D} \&c)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]T'Mir Julius $<$\tt{cxs-softwarse@physics.unimelb.edu.au}$>$\end{Desc}
+This class can be used to perform partially coherent reconstruction of plane-wave partialy CDI data. The number of modes and legendre polynomials used is defined by the user. The number of Legendre polynomial $\ast$ must exceed the number of modes. 
+
+
+
+Definition at line 28 of file Partial\-CDI.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{PartialCDI@{Partial\-CDI}!~PartialCDI@{$\sim$PartialCDI}}
+\index{~PartialCDI@{$\sim$PartialCDI}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Partial\-CDI} ()}\label{classPartialCDI_4c882fb8b870aa4b4b1e32a9f7b00c61}
+
+
+Destructor for \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI} 
+
+Definition at line 84 of file Partial\-CDI.c++.
+
+\subsection{Member Function Documentation}
+\index{PartialCDI@{Partial\-CDI}!initialise_estimate@{initialise\_\-estimate}}
+\index{initialise_estimate@{initialise\_\-estimate}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-estimate ()}\label{classPartialCDI_fa0d7e8561b9c517bd75b34d6e3d33c6}
+
+
+Initialise the estimate of the 'global' object function. The initialisation is performed using the current estimate for each 'local' frame. For this reason you must first initialise each Fresnel\-CDI/Planar\-CDI object individually before calling this function. \index{PartialCDI@{Partial\-CDI}!initialise_estimate@{initialise\_\-estimate}}
+\index{initialise_estimate@{initialise\_\-estimate}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-estimate (int {\em seed})\hspace{0.3cm}{\tt  [virtual]}}\label{classPartialCDI_d629e919fe33674df03157370190d32e}
+
+
+Set the values in the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} to an initial estimate. For \doxyref{Base\-CDI}{p.}{classBaseCDI}, this is set to random numbers inside the support for both the real and complex components, and zero outside the support.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em seed}]The seed for the random number generator. By default this is 0. \end{description}
+\end{Desc}
+
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+
+Definition at line 118 of file Partial\-CDI.c++.
+
+References Base\-CDI::complex, IMAG, Base\-CDI::intensity\_\-sqrt, nleg, nmode, Base\-CDI::nx, Base\-CDI::ny, REAL, Complex\_\-2D::set\_\-value(), Base\-CDI::support, and transmission.\index{PartialCDI@{Partial\-CDI}!iterate@{iterate}}
+\index{iterate@{iterate}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int iterate ()\hspace{0.3cm}{\tt  [virtual]}}\label{classPartialCDI_9e3435f91897cd401e77d56919e51da2}
+
+
+The iterate the algorithm. This overwrites the the class of the same name in \doxyref{Base\-CDI}{p.}{classBaseCDI}. 
+
+Reimplemented from \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_9e3435f91897cd401e77d56919e51da2}.
+
+Definition at line 156 of file Partial\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::algorithm\_\-structure, Base\-CDI::apply\_\-support(), apply\_\-transmission(), Base\-CDI::nx, Base\-CDI::ny, propagate\_\-from\_\-detector(), propagate\_\-to\_\-detector(), scale\_\-intensity(), single\-CDI, singlemode, SUCCESS, Base\-CDI::temp\_\-complex\_\-PF, Base\-CDI::temp\_\-complex\_\-PFS, Base\-CDI::temp\_\-complex\_\-PS, Base\-CDI::temp\_\-complex\_\-PSF, Base\-CDI::update\_\-n\_\-best(), and update\_\-transmission().\index{PartialCDI@{Partial\-CDI}!initialise_matrices@{initialise\_\-matrices}}
+\index{initialise_matrices@{initialise\_\-matrices}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-matrices (int {\em leg}, int {\em modes})}\label{classPartialCDI_f5934c059916e556b61c719b9c8b36a1}
+
+
+generate the S and J matrices for the decomposition of the partially coherent wave where JC=n\-SC where H = integral(P$\ast$l(r1)J(r1, r2)Pm(r2)) dr1 dr2 and S=integral(P$\ast$l(r)pm(r))dr where Pl is an orhtonormal basis set, in this case, the Legendre polynomials 
+
+Definition at line 408 of file Partial\-CDI.c++.
+
+References Base\-CDI::complex, eigen, fill\_\-jmatrix(), fill\_\-modes(), fill\_\-smatrix(), jmatrix, nleg, nmode, Base\-CDI::nx, Base\-CDI::ny, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), singlemode, and smatrix.\index{PartialCDI@{Partial\-CDI}!get_transmission@{get\_\-transmission}}
+\index{get_transmission@{get\_\-transmission}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} get\_\-transmission ()}\label{classPartialCDI_6f7047fb1fbe51d5da808218239d04a2}
+
+
+This function allows you to access the 'global' sample function.
+
+\begin{Desc}
+\item[Returns:]The current estimate of either the transmission (for \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or exit-surface-wave (for \doxyref{Planar\-CDI}{p.}{classPlanarCDI}) \end{Desc}
+
+
+Definition at line 89 of file Partial\-CDI.c++.
+
+References transmission.\index{PartialCDI@{Partial\-CDI}!set_transmission@{set\_\-transmission}}
+\index{set_transmission@{set\_\-transmission}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-transmission (\bf{Complex\_\-2D} \& {\em new\_\-transmission})}\label{classPartialCDI_b57cd431633adee595b0ebaeee293939}
+
+
+Set the 'global' sample function. This method could be used, for example, instead of 'initialise\_\-estimate' to initialise the results to those from a previous reconstruction.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-transmission}]The transmission function exit-surface-wave to copy. \end{description}
+\end{Desc}
+
+
+Definition at line 95 of file Partial\-CDI.c++.
+
+References Base\-CDI::complex, Complex\_\-2D::copy(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), Base\-CDI::nx, Base\-CDI::ny, and transmission.\index{PartialCDI@{Partial\-CDI}!propagate_modes_to_detector@{propagate\_\-modes\_\-to\_\-detector}}
+\index{propagate_modes_to_detector@{propagate\_\-modes\_\-to\_\-detector}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} propagate\_\-modes\_\-to\_\-detector ()}\label{classPartialCDI_be8a5c476885c5712eff32f478e81cd0}
+
+
+Propagates the modes to the detector. Specifically for use with the simulations 
+
+Definition at line 647 of file Partial\-CDI.c++.
+
+References apply\_\-transmission(), eigen, Base\-CDI::nx, Base\-CDI::ny, propagate\_\-to\_\-detector(), single\-CDI, and singlemode.\index{PartialCDI@{Partial\-CDI}!get_mode@{get\_\-mode}}
+\index{get_mode@{get\_\-mode}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} get\_\-mode (int {\em mode})}\label{classPartialCDI_691c0d8b4704995fcd75de49f409ea33}
+
+
+Returns a given mode. If the mode requested is too big, it returns the final mode 
+
+Definition at line 674 of file Partial\-CDI.c++.
+
+References eigen, Complex\_\-2D::multiply(), Base\-CDI::nx, Base\-CDI::ny, and singlemode.\index{PartialCDI@{Partial\-CDI}!set_threshold@{set\_\-threshold}}
+\index{set_threshold@{set\_\-threshold}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-threshold (double {\em d})\hspace{0.3cm}{\tt  [inline]}}\label{classPartialCDI_3d5864e78a9e6ac8cb59d0f7243a4920}
+
+
+Set the minimum contribution of a mode as a proportion of the dominant mode for it to be included in the reconstruction 
+
+Definition at line 190 of file Partial\-CDI.h.
+
+References threshold.\index{PartialCDI@{Partial\-CDI}!reallocate_transmission_memory@{reallocate\_\-transmission\_\-memory}}
+\index{reallocate_transmission_memory@{reallocate\_\-transmission\_\-memory}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void reallocate\_\-transmission\_\-memory (int {\em new\_\-nx}, int {\em new\_\-ny})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_ce70108ade8db78d0e37b86ed0e8b8f6}
+
+
+This function is used to reallocate memory for the 'global' sample object. It is only used when add\_\-new\_\-position is called, in the case that the frame does not fit within the bounds of the current object array. \index{PartialCDI@{Partial\-CDI}!scale_object@{scale\_\-object}}
+\index{scale_object@{scale\_\-object}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale\_\-object (double {\em factor})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_327e5dcff4fae2ba0d23ecabc4aef037}
+
+
+This function is used during reconstruction in parallel mode. It is similar to simply scaling all the elements of the 'global' sample array, (e.g. with object.scale(factor). However, this method preserves the value of the elements outside the boundary of the sample. ie. it checks the weights of all the local frames to work out which area to scale.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em factor}]The scaled elements go from 'a' to 'factor$\ast$a'. \end{description}
+\end{Desc}
+\index{PartialCDI@{Partial\-CDI}!propagate_from_detector@{propagate\_\-from\_\-detector}}
+\index{propagate_from_detector@{propagate\_\-from\_\-detector}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void propagate\_\-from\_\-detector (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [private, virtual]}}\label{classPartialCDI_c98ac38c2b63e5f7deba5316e772db9f}
+
+
+Propagate the CDI's 
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_1f673f0f756def2e645a5c6dc654803d}.
+
+Definition at line 638 of file Partial\-CDI.c++.
+
+References Complex\_\-2D::invert(), and Complex\_\-2D::perform\_\-backward\_\-fft().\index{PartialCDI@{Partial\-CDI}!propagate_to_detector@{propagate\_\-to\_\-detector}}
+\index{propagate_to_detector@{propagate\_\-to\_\-detector}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void propagate\_\-to\_\-detector (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [private, virtual]}}\label{classPartialCDI_5adde93a2b66b1bf8597fdb2e120c9b7}
+
+
+Propagate to the sample plane using a fast fourier transform.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} field to propagate \end{description}
+\end{Desc}
+
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_a8b5944739fc612a5c495804b7587686}.
+
+Definition at line 630 of file Partial\-CDI.c++.
+
+References Complex\_\-2D::invert(), and Complex\_\-2D::perform\_\-forward\_\-fft().\index{PartialCDI@{Partial\-CDI}!apply_transmission@{apply\_\-transmission}}
+\index{apply_transmission@{apply\_\-transmission}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-transmission (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_d2878b45fc642fb89cbf79e38c8f3bba}
+
+
+uses the complex\_\-2d multiply function to apply the transmission function 
+
+Definition at line 280 of file Partial\-CDI.c++.
+
+References Base\-CDI::complex, and Complex\_\-2D::multiply().\index{PartialCDI@{Partial\-CDI}!scale_intensity@{scale\_\-intensity}}
+\index{scale_intensity@{scale\_\-intensity}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale\_\-intensity (std::vector$<$ \bf{Complex\_\-2D} $>$ \& {\em c})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_2ff818c55abc76eadc9ef6bfd7a4e25b}
+
+
+scale the highest occupancy mode this overwrites the function of the same name in \doxyref{Base\-CDI}{p.}{classBaseCDI}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The Complex\_\-2d to be scaled \end{description}
+\end{Desc}
+
+
+Definition at line 287 of file Partial\-CDI.c++.
+
+References Base\-CDI::beam\_\-stop, Base\-CDI::current\_\-error, Base\-CDI::intensity\_\-sqrt, Base\-CDI::nx, Base\-CDI::ny, and sum\_\-intensity().\index{PartialCDI@{Partial\-CDI}!sum_intensity@{sum\_\-intensity}}
+\index{sum_intensity@{sum\_\-intensity}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} sum\_\-intensity (std::vector$<$ \bf{Complex\_\-2D} $>$ \& {\em c})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_52f728fc512072e46c25d3b5387ea63d}
+
+
+add the intensities across all modes 
+
+Definition at line 339 of file Partial\-CDI.c++.
+
+References eigen, Base\-CDI::nx, and Base\-CDI::ny.\index{PartialCDI@{Partial\-CDI}!update_transmission@{update\_\-transmission}}
+\index{update_transmission@{update\_\-transmission}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void update\_\-transmission ()\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_e227f1a45c57b9f3468c5ac65646d44d}
+
+
+calculate the transmission function by dividing the highest occupacy mode at the source by the highest occupancy mode at the detector 
+
+Definition at line 371 of file Partial\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::apply\_\-support(), Base\-CDI::complex, Base\-CDI::nx, Base\-CDI::ny, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), single\-CDI, singlemode, and transmission.\index{PartialCDI@{Partial\-CDI}!fill_jmatrix@{fill\_\-jmatrix}}
+\index{fill_jmatrix@{fill\_\-jmatrix}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill\_\-jmatrix (\bf{Double\_\-2D} {\em legmatrix}, \bf{Double\_\-2D} {\em roots})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_e55d1a47b8f89d7e87feded0714da98f}
+
+
+the J matrix where J = integral(P$\ast$l(r1)J(r1, r2)Pm(r2))dr1dr2 the x and y are computed seperately, then multiplied together. The result is a matrix of xn+y by in+j where 
+
+Definition at line 513 of file Partial\-CDI.c++.
+
+References Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), jmatrix, lcx, lcy, nleg, nmode, Complex\_\-2D::set\_\-imag(), and Complex\_\-2D::set\_\-real().\index{PartialCDI@{Partial\-CDI}!fill_smatrix@{fill\_\-smatrix}}
+\index{fill_smatrix@{fill\_\-smatrix}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill\_\-smatrix (\bf{Double\_\-2D} {\em legmatrix}, \bf{Double\_\-2D} {\em roots})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_407242be70fa121305d514dc7beaa52c}
+
+
+the S matrix = integral(P$\ast$l(r)pm(r))dr = 2/(2n+1) from the orthogonality requirments of Legendre Polynomials. We then turn it in to a 2D matrix for the x and y dimensions 
+
+Definition at line 471 of file Partial\-CDI.c++.
+
+References Complex\_\-2D::get\_\-real(), nleg, nmode, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and smatrix.\index{PartialCDI@{Partial\-CDI}!fill_modes@{fill\_\-modes}}
+\index{fill_modes@{fill\_\-modes}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill\_\-modes (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [private]}}\label{classPartialCDI_d970c98cbb1ae5332e3868ede687022d}
+
+
+fill a vector of \doxyref{Complex\_\-2D}{p.}{classComplex__2D} for single modes. These modes do not evolve over time, and so are not Base\-CDI's 
+
+Definition at line 585 of file Partial\-CDI.c++.
+
+References eigen, Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), nmode, Base\-CDI::nx, Base\-CDI::ny, singlemode, threshold, x\_\-position, and y\_\-position.\index{PartialCDI@{Partial\-CDI}!get_best_result@{get\_\-best\_\-result}}
+\index{get_best_result@{get\_\-best\_\-result}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} $\ast$ get\_\-best\_\-result (double \& {\em error}, int {\em index} = {\tt 0})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_9ca82195dc0f0adcd79fa391ae3ef821}
+
+
+While the reconstruction is running this object will store the \char`\"{}n\_\-best\char`\"{} number of best estimates according to the error metric. So, for example, if HIO is used and the error enters and leaves an error minima during reconstruction, the best (ie. lowest error) \doxyref{Complex\_\-2D}{p.}{classComplex__2D} results will be kept. They can then be retrieved using this method.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index}]get best result number \char`\"{}index\char`\"{}. 0 is the best, 1 is the 2nd best etc... \item[{\em error}]\char`\"{}error\char`\"{} is filled with the metric error of the selected best result \end{description}
+\end{Desc}
+
+
+Definition at line 82 of file Base\-CDI.c++.
+
+References Base\-CDI::best\_\-array, Base\-CDI::best\_\-error\_\-array, and Base\-CDI::n\_\-best.\index{PartialCDI@{Partial\-CDI}!set_support@{set\_\-support}}
+\index{set_support@{set\_\-support}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-support (const \bf{Double\_\-2D} \& {\em object\_\-support}, bool {\em soften} = {\tt false})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_49f77e650f9aa69e3fd5b70e3ec1378e}
+
+
+Set the sample support. A \char`\"{}0\char`\"{} value in the \doxyref{Double\_\-2D}{p.}{classDouble__2D} is interpreted as being outside the support. Pixels with the maximum value of the \doxyref{Double\_\-2D}{p.}{classDouble__2D} are considered inside the support. Values between 0 and the maximum indict the soft edge of the support. In this case, when the support is applied, the esw magnitude is scaled relative to the support edge value.
+
+By default, the edge of a given support will be softened by convolution with a 3 pixel wide gaussian. This feature can be turned off by setting the boolean flag to false.
+
+The support can be updated at anytime during reconstruction by calling this method.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em object\_\-support}]The sample support \item[{\em soften}]If true, the edges of the support will be softened by covolving it with a 3 pixel wide gaussian. By default this option is off. \end{description}
+\end{Desc}
+
+
+Definition at line 95 of file Base\-CDI.c++.
+
+References Base\-CDI::convolve(), Base\-CDI::nx, Base\-CDI::ny, and Base\-CDI::support.\index{PartialCDI@{Partial\-CDI}!set_intensity@{set\_\-intensity}}
+\index{set_intensity@{set\_\-intensity}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-intensity (const \bf{Double\_\-2D} \& {\em detector\_\-intensity})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_2abd04ba9abea4c339355d80cc38e754}
+
+
+Set the detector diffraction image (i.e. the square of the amplitude of the wavefield at the detector).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em detector\_\-intensity}]The intensity at the detector \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Partial\-Char\-CDI} \doxyref{p.}{classPartialCharCDI_2abd04ba9abea4c339355d80cc38e754}.
+
+Definition at line 115 of file Base\-CDI.c++.
+
+References Base\-CDI::intensity\_\-sqrt, Base\-CDI::nx, and Base\-CDI::ny.\index{PartialCDI@{Partial\-CDI}!set_beam_stop@{set\_\-beam\_\-stop}}
+\index{set_beam_stop@{set\_\-beam\_\-stop}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-beam\_\-stop (const \bf{Double\_\-2D} \& {\em beam\_\-stop\_\-region})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_9d062b4fd0397006d3238db8e3144f42}
+
+
+Set the beam-stop position in the detector plane. This region will be leaf to float when the intensity if scaled during reconstruction. A zero in the array provided represents the beam stop and all other values represent the region which should be scaled.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em beam\_\-stop\_\-region}]The region of the beam stop in the detector plane \end{description}
+\end{Desc}
+
+
+Definition at line 109 of file Base\-CDI.c++.
+
+References Base\-CDI::beam\_\-stop, Base\-CDI::nx, and Base\-CDI::ny.\index{PartialCDI@{Partial\-CDI}!set_relaxation_parameter@{set\_\-relaxation\_\-parameter}}
+\index{set_relaxation_parameter@{set\_\-relaxation\_\-parameter}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-relaxation\_\-parameter (double {\em relaxation\_\-parameter})\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_ae6d45b70404e602344fddadb389a3d9}
+
+
+Set the relaxation parameters of the reconstruction algorithm. This is $ \beta $ used exactly as it is in Harry's review paper. This maybe reset at anytime during the reconstruction by calling this method. The default value is 0.9.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em relaxation\_\-parameter}]The algorithm relaxation\_\-parameter \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_ae6d45b70404e602344fddadb389a3d9}.
+
+Definition at line 261 of file Base\-CDI.h.
+
+References Base\-CDI::algorithm, Base\-CDI::beta, and Base\-CDI::set\_\-algorithm().\index{PartialCDI@{Partial\-CDI}!get_size_x@{get\_\-size\_\-x}}
+\index{get_size_x@{get\_\-size\_\-x}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-x ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_3c05b2a3360707e3dc780d9f08350e43}
+
+
+\begin{Desc}
+\item[Returns:]the number of pixel along the x-axis. \end{Desc}
+
+
+Definition at line 270 of file Base\-CDI.h.
+
+References Base\-CDI::nx.\index{PartialCDI@{Partial\-CDI}!get_size_y@{get\_\-size\_\-y}}
+\index{get_size_y@{get\_\-size\_\-y}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-y ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_b18b6c819f488545c03625311c1405aa}
+
+
+\begin{Desc}
+\item[Returns:]the number of pixel along the y-axis. \end{Desc}
+
+
+Definition at line 278 of file Base\-CDI.h.
+
+References Base\-CDI::ny.\index{PartialCDI@{Partial\-CDI}!set_algorithm@{set\_\-algorithm}}
+\index{set_algorithm@{set\_\-algorithm}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-algorithm (int {\em alg})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_0f38f0faa7b34f3331d5591cac58b598}
+
+
+Set the algorithm. By default HIO is used.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em alg}]The algorithm. The options are: \par
+ ER - error reduction \par
+ BIO - basic input-output \par
+ BOO - basic output-output \par
+ HIO - hybrid input-output \par
+ DM - difference map \par
+ SF - solvent-flipping \par
+ ASR - averaged successive reflections \par
+ HPR - hybrid projection reflection \par
+ RAAR - relaxed averaged alternating reflectors \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+
+Definition at line 189 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::beta, and Base\-CDI::set\_\-custom\_\-algorithm().\index{PartialCDI@{Partial\-CDI}!set_custom_algorithm@{set\_\-custom\_\-algorithm}}
+\index{set_custom_algorithm@{set\_\-custom\_\-algorithm}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-custom\_\-algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_bef3f7cf18631094a2ed122e5a9902f6}
+
+
+Iterative reconstruction algorithms can be expressed as a combination of the following 5 operators:\par
+$ \hat{P}_S \hat{P}_F$, $\hat{P}_F \hat{P}_S$ , $ \hat{P}_S $ , $ \hat{P}_F $ and $ \hat{I} $ \par
+ Where $ \hat{P}_S $ is the support projection and $ \hat{P}_F $ is the intensity projection. These can be combined to form a basis of 10 vectors (see Harray's review). The parameters to this method set the coefficient for each of these vectors. Note: the vector set is linearly dependant.
+
+Please see page 22 of the H.M. Quiney review: TUTORIAL REVIEW, Coherent diffractive imaging using short wavelength light sources, Journal of Modern Optics, 2010, DOI: 10.1080/09500340.2010.495459
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em m1}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_F \hat{P}_S ]x_k $ term \item[{\em m2}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_F ]x_k $ term \item[{\em m3}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_S ]x_k $ term \item[{\em m4}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{I} ]x_k $ term \item[{\em m5}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{P}_F ]x_k $ term \item[{\em m6}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{P}_S ]x_k $ term \item[{\em m7}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{I} ]x_k $ term \item[{\em m8}]Coefficient to the $ [ \hat{P}_F - \hat{P}_S ]x_k $ term \item[{\em m9}]Coefficient to the $ [ \hat{P}_F - \hat{I} ]x_k $ term \item[{\em m10}]Coefficient to the $ [ \hat{P}_S - \hat{I} ]x_k $ term \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+
+Definition at line 237 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::algorithm\_\-structure, and Base\-CDI::reallocate\_\-temp\_\-complex\_\-memory().\index{PartialCDI@{Partial\-CDI}!print_algorithm@{print\_\-algorithm}}
+\index{print_algorithm@{print\_\-algorithm}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void print\_\-algorithm ()\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_8df60e88c8f12cc220608fa620419326}
+
+
+Print the current algorithm to standard output. The algorithm is in the form: \par
+ $ x_{k+1} = x_k + (a \hat{P}_S \hat{P}_F + b \hat{P}_F \hat{P}_S + c \hat{P}_S + d \hat{P}_F + e \hat{I} )x_k $ 
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_8df60e88c8f12cc220608fa620419326}.
+
+Definition at line 275 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, and Base\-CDI::algorithm\_\-structure.\index{PartialCDI@{Partial\-CDI}!get_error@{get\_\-error}}
+\index{get_error@{get\_\-error}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-error ()\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_96a694cad876c4211d68b9526ab2784b}
+
+
+Get the difference between the estimated diffraction and the actual diffraction pattern. \par
+ $ \chi^2 = \frac { \sum_{pixels} ( M_{pixel} - \sqrt{I_{pixel}} )^2 } { \sum_{pixels} {I_{pixel}} } $. \par
+ Where $ M $ is the magnitude of the current estimate and $ I $ is the measured intensity.
+
+NOTE: This method actually gives you the error for the previous iteration. This is because it's much faster to calculate the error during the intensity scaling step of the iteration rather than performing a FFT just for the error calculation.
+
+\begin{Desc}
+\item[Returns:]The error metric \end{Desc}
+
+
+Definition at line 123 of file Base\-CDI.c++.
+
+References Base\-CDI::current\_\-error.\index{PartialCDI@{Partial\-CDI}!getAlgFromName@{getAlgFromName}}
+\index{getAlgFromName@{getAlgFromName}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static int get\-Alg\-From\-Name (std::string {\em algorithm\_\-name})\hspace{0.3cm}{\tt  [inline, static, inherited]}}\label{classBaseCDI_0426fd4eb7431467169f5223e26cf0ae}
+
+
+Given the name of an algorithm, e.g. \char`\"{}HIO\char`\"{}, return the unique integer identifier. This is used by the configuration file reader, and probably won't be needed by users.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm\_\-name}]The algorithm name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The integer identifier \end{Desc}
+
+
+Definition at line 379 of file Base\-CDI.h.
+
+References Base\-CDI::alg\-Name\-Map.\index{PartialCDI@{Partial\-CDI}!apply_shrinkwrap@{apply\_\-shrinkwrap}}
+\index{apply_shrinkwrap@{apply\_\-shrinkwrap}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-shrinkwrap (double {\em gauss\_\-width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_7bfaaf0eb0f54efb3f2a53b9eb4e3093}
+
+
+Apply the shrinkwrap algorithm. The magnitude of the current ESW estimate will be convolved with a Gaussian, thresholded and set as the new support.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em gauss\_\-width}]The width ( $ \sigma $ ) of the Gaussian in pixels. The default is 1.5. \item[{\em threshold}]The threshold which is applied, as a fraction of the maximum pixel value. The default is 0.1 (10\%). \end{description}
+\end{Desc}
+
+
+Definition at line 413 of file Base\-CDI.c++.
+
+References Base\-CDI::apply\_\-threshold(), Base\-CDI::complex, Base\-CDI::convolve(), Complex\_\-2D::get\_\-2d(), MAG, Base\-CDI::nx, Base\-CDI::ny, and Base\-CDI::set\_\-support().\index{PartialCDI@{Partial\-CDI}!get_support@{get\_\-support}}
+\index{get_support@{get\_\-support}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Double\_\-2D}\& get\_\-support ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_a41c63a5fa56aac6ce58b77296093020}
+
+
+Get the current support. This might be useful if shrinkwrap has been applied, as it allows you to get the updated support.
+
+\begin{Desc}
+\item[Returns:]An object reference to the current support. \end{Desc}
+
+
+Definition at line 405 of file Base\-CDI.h.
+
+References Base\-CDI::support.\index{PartialCDI@{Partial\-CDI}!apply_support@{apply\_\-support}}
+\index{apply_support@{apply\_\-support}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-support (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_479c3b3c6c00d87ef7e9532cf9820364}
+
+
+Apply the support constraint.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The complex field to apply the support constraint on \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI} \doxyref{p.}{classFresnelCDI_d754847bcf0151ffcc0c52682c017120}.
+
+Definition at line 127 of file Base\-CDI.c++.
+
+References Transmission\-Constraint::apply\_\-constraint(), Base\-CDI::support\_\-constraint(), and Base\-CDI::transmission\_\-constraint.\index{PartialCDI@{Partial\-CDI}!project_intensity@{project\_\-intensity}}
+\index{project_intensity@{project\_\-intensity}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void project\_\-intensity (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_27de037bc8f7e4d4d07b3084570cd11b}
+
+
+Apply the intensity constraint. The ESW is projected to the detector plane, the intensity is scaled to match the measured data and the field is projected back into the sample plane.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The complex field to apply the intensity constraint on \end{description}
+\end{Desc}
+
+
+Definition at line 153 of file Base\-CDI.c++.
+
+References Base\-CDI::propagate\_\-from\_\-detector(), Base\-CDI::propagate\_\-to\_\-detector(), and Base\-CDI::scale\_\-intensity().\index{PartialCDI@{Partial\-CDI}!scale_intensity@{scale\_\-intensity}}
+\index{scale_intensity@{scale\_\-intensity}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale\_\-intensity (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_8aacc20f278648d3eba9648026d762b8}
+
+
+The intensity is scaled to match the measured data. The error is updated in this method.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The complex field to apply the scaling to \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI} \doxyref{p.}{classFresnelCDI_8aacc20f278648d3eba9648026d762b8}, \bf{Partial\-Char\-CDI} \doxyref{p.}{classPartialCharCDI_8aacc20f278648d3eba9648026d762b8}, and \bf{Poly\-CDI} \doxyref{p.}{classPolyCDI_8aacc20f278648d3eba9648026d762b8}.
+
+Definition at line 160 of file Base\-CDI.c++.
+
+References Base\-CDI::beam\_\-stop, Base\-CDI::current\_\-error, Complex\_\-2D::get\_\-mag(), Base\-CDI::intensity\_\-sqrt, Base\-CDI::nx, Base\-CDI::ny, and Complex\_\-2D::set\_\-mag().\index{PartialCDI@{Partial\-CDI}!set_fftw_type@{set\_\-fftw\_\-type}}
+\index{set_fftw_type@{set\_\-fftw\_\-type}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\-type (int {\em type})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_5bf4618dd19f4e64a78a510d6f242d35}
+
+
+A flag which is used for the fast fourier transforms to select the fft algorithm. It maybe either FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT. See the fftw documentation for a description of each. By default we use FFTW\_\-MEASURE. FFTW\_\-ESTIMATE is used for testing purposes.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]- FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT \end{description}
+\end{Desc}
+
+
+Definition at line 491 of file Base\-CDI.c++.
+
+References Base\-CDI::complex, Complex\_\-2D::set\_\-fftw\_\-type(), Base\-CDI::temp\_\-complex\_\-PF, and Base\-CDI::temp\_\-complex\_\-PFS.\index{PartialCDI@{Partial\-CDI}!set_complex_constraint@{set\_\-complex\_\-constraint}}
+\index{set_complex_constraint@{set\_\-complex\_\-constraint}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void set\_\-complex\_\-constraint (\bf{Transmission\-Constraint} \& {\em trans\_\-constraint})\hspace{0.3cm}{\tt  [inline, virtual, inherited]}}\label{classBaseCDI_378db5ad6d9d75f0740aa1e172873105}
+
+
+void set\_\-complex\_\-constraint\_\-function(void ($\ast$complex\_\-constraint)(\doxyref{Complex\_\-2D}{p.}{classComplex__2D} \& tranmission))\{ custom\_\-complex\_\-constraint = complex\_\-constraint; \} 
+
+Definition at line 468 of file Base\-CDI.h.
+
+References Base\-CDI::transmission\_\-constraint.\index{PartialCDI@{Partial\-CDI}!set_up_algorithm_name_map@{set\_\-up\_\-algorithm\_\-name\_\-map}}
+\index{set_up_algorithm_name_map@{set\_\-up\_\-algorithm\_\-name\_\-map}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, int $>$ $\ast$ set\_\-up\_\-algorithm\_\-name\_\-map ()\hspace{0.3cm}{\tt  [static, protected, inherited]}}\label{classBaseCDI_8d966dd417d8812968197d19e7cbcde7}
+
+
+Sets up the mapping between algorithm name and number. This is only called during the initialisation and should not be called elsewhere.
+
+\begin{Desc}
+\item[Returns:]The algorithm name-iteger mapping \end{Desc}
+
+
+Definition at line 14 of file Base\-CDI.c++.\index{PartialCDI@{Partial\-CDI}!apply_threshold@{apply\_\-threshold}}
+\index{apply_threshold@{apply\_\-threshold}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-threshold (\bf{Double\_\-2D} \& {\em array}, double {\em threshold})\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_6a7a3635d41f9ae8334f0f3ea36b37cb}
+
+
+Apply a threshold to the values in \char`\"{}array\char`\"{}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em array}]The array to be thresholded \item[{\em threshold}]The threshold which is applied, as a fraction of the maximum pixel value. The default is 0.1 (10\%). \end{description}
+\end{Desc}
+
+
+Definition at line 474 of file Base\-CDI.c++.
+
+References Base\-CDI::nx.\index{PartialCDI@{Partial\-CDI}!convolve@{convolve}}
+\index{convolve@{convolve}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void convolve (\bf{Double\_\-2D} \& {\em array}, double {\em gauss\_\-width}, int {\em pixel\_\-cut\_\-off} = {\tt 4})\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_100d38fcd65938f636a4ded00bd1ba98}
+
+
+Convolved \char`\"{}array\char`\"{} with a 2-D Gaussian function. To speed up computation we only convolve up to 4 pixels away from the Gaussian peak.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em array}]The array to be convolved \item[{\em gauss\_\-width}]The width ( $ \sigma $ ) of the Gaussian in pixels. The default is 1.5. \item[{\em pixel\_\-cut\_\-off}]Convolve up to 4 pixels away from the Gaussian peak. \end{description}
+\end{Desc}
+
+
+Definition at line 429 of file Base\-CDI.c++.
+
+References Base\-CDI::nx, and Base\-CDI::ny.
+
+\subsection{Field Documentation}
+\index{PartialCDI@{Partial\-CDI}!singleCDI@{singleCDI}}
+\index{singleCDI@{singleCDI}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$\bf{Complex\_\-2D}$>$ \bf{single\-CDI}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_e7e520424916665a654c5d23e396e99a}
+
+
+A vector holding a pointer to each of the Fresnel\-CDI/Planar\-CDI objects 
+
+Definition at line 35 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!singlemode@{singlemode}}
+\index{singlemode@{singlemode}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$\bf{Complex\_\-2D}$>$ \bf{singlemode}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_38a13c8bf0a42da35b3f305cc5cde719}
+
+
+A vector holding the initial wave described as a series of modes. 
+
+Definition at line 39 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!weights@{weights}}
+\index{weights@{weights}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$\bf{Double\_\-2D} $\ast$ $>$ \bf{weights}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_8c5d68f0b116886eb6f7941838843c96}
+
+
+A vector holding the weighting function for each frame 
+
+Definition at line 42 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!x_position@{x\_\-position}}
+\index{x_position@{x\_\-position}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ \bf{x\_\-position}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_2f1bba879ccca766e9ae9c30a7df1ea8}
+
+
+A vector of the transverse positions in x 
+
+Definition at line 46 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!y_position@{y\_\-position}}
+\index{y_position@{y\_\-position}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ \bf{y\_\-position}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_d2649dcef458974b4e7d92f5b6744a71}
+
+
+A vector of the transverse positions in y 
+
+Definition at line 50 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!transmission@{transmission}}
+\index{transmission@{transmission}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} \bf{transmission}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_3401edf99094ded25d754e80112ed214}
+
+
+The current estimate of the transmission function 
+
+Definition at line 53 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!eigen@{eigen}}
+\index{eigen@{eigen}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ \bf{eigen}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_9891b96bb9e4fb8f20c2b95906a05202}
+
+
+An array of the eigenvectors for the system of JC=n\-SC 
+
+Definition at line 56 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!iterations_per_cycle@{iterations\_\-per\_\-cycle}}
+\index{iterations_per_cycle@{iterations\_\-per\_\-cycle}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{iterations\_\-per\_\-cycle}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_50c6fe6e14991526ad8a354f8b678547}
+
+
+The number of iterations to perform for each 'local' frame 
+
+Definition at line 59 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!nleg@{nleg}}
+\index{nleg@{nleg}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nleg}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_9f833008550b5519f30fc730b2ee04a9}
+
+
+The number of orthogonal components for the light source. 
+
+Definition at line 62 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!nmode@{nmode}}
+\index{nmode@{nmode}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nmode}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_4e6a6ab3b4a8fe3f8770af0bc9c8b088}
+
+
+The number of component modes for the light source. nleg must be bigger than nmode 
+
+Definition at line 66 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!lcy@{lcy}}
+\index{lcy@{lcy}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{lcy}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_b2dee2b1b0ca58ae85b6499fafc5c32e}
+
+
+Coherence length x 
+
+Definition at line 69 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!lcx@{lcx}}
+\index{lcx@{lcx}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{lcx}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_63ffb6f536a4d56eceb2e422fe2ca49e}
+
+
+Coherence length y 
+
+Definition at line 71 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!pxsize@{pxsize}}
+\index{pxsize@{pxsize}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{pxsize}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_5c89ecc7813b1887726f3b74c6a8d770}
+
+
+The size of a pixel x 
+
+Definition at line 74 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!pysize@{pysize}}
+\index{pysize@{pysize}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{pysize}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_6b5ef26d38d25c17e1fa54c1987ece82}
+
+
+The size of a pixel y 
+
+Definition at line 76 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!zsd@{zsd}}
+\index{zsd@{zsd}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{zsd}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_8bcf35ee4ad71493b14a4c47aeed09d7}
+
+
+The distance between the sample and detector 
+
+Definition at line 79 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!energy@{energy}}
+\index{energy@{energy}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{energy}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_af20d88e22aa08bf80f00416670985a6}
+
+
+The energy of the beam 
+
+Definition at line 82 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!threshold@{threshold}}
+\index{threshold@{threshold}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{threshold}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_a21c6669dabf79aba8fdc162a39d4de2}
+
+
+The minimum value of the contribution of a mode as a proportion of the dominant mode 
+
+Definition at line 87 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!jmatrix@{jmatrix}}
+\index{jmatrix@{jmatrix}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{jmatrix}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_e07799421a42617055c6ed1ae9e7e9ea}
+
+
+The J matrix for the decomposition of the partially coherent wave where JC=n\-SC 
+
+Definition at line 92 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!hmatrix@{hmatrix}}
+\index{hmatrix@{hmatrix}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{hmatrix}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_41a5c28c17fa202cfca316da93349e11}
+
+
+The H matrix where H = integral(P$\ast$l(r1)J(r1, r2)Pm(r2)) dr1 dr2 
+
+Definition at line 97 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!smatrix@{smatrix}}
+\index{smatrix@{smatrix}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{smatrix}\hspace{0.3cm}{\tt  [protected]}}\label{classPartialCDI_7de77395da79bdbf7a6bc58276085d54}
+
+
+The S matrices for the decomposition of the partially coherent wave where JC=n\-SC where 
+
+Definition at line 102 of file Partial\-CDI.h.\index{PartialCDI@{Partial\-CDI}!complex@{complex}}
+\index{complex@{complex}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}\& \bf{complex}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_e835e888a027229f471e1d9948e614b1}
+
+
+a reference to the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} object which is altered during each iteration 
+
+Definition at line 91 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!nx@{nx}}
+\index{nx@{nx}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nx}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_9515687a9dece1086de8ff1baec11196}
+
+
+The samplings in x 
+
+Definition at line 94 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!ny@{ny}}
+\index{ny@{ny}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{ny}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_c00b6399ae98f2f721909222a5370f02}
+
+
+The samplings in y 
+
+Definition at line 97 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!temp_complex_PFS@{temp\_\-complex\_\-PFS}}
+\index{temp_complex_PFS@{temp\_\-complex\_\-PFS}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{temp\_\-complex\_\-PFS}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_1a68b43770ba0344d3e70131429595ac}
+
+
+temporary Complex\_\-2Ds which are used in the computation of the PFS and PF terms for each iteration. 
+
+Definition at line 105 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!beta@{beta}}
+\index{beta@{beta}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{beta}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_176bb7d2686d3fa6877f67812e905f7b}
+
+
+the relaxation parameter 
+
+Reimplemented in \bf{Poly\-CDI} \doxyref{p.}{classPolyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+
+Definition at line 111 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!support@{support}}
+\index{support@{support}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} \bf{support}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_e254fc00e9e66b321298e508d842e180}
+
+
+a copy of the support 
+
+Definition at line 114 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!intensity_sqrt@{intensity\_\-sqrt}}
+\index{intensity_sqrt@{intensity\_\-sqrt}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} \bf{intensity\_\-sqrt}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_ea6f01f8d72f1f998a2c365947d7cbdc}
+
+
+a copy of the square root of the intensity at the detector plane. 
+
+Definition at line 117 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!beam_stop@{beam\_\-stop}}
+\index{beam_stop@{beam\_\-stop}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D}$\ast$ \bf{beam\_\-stop}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_afd1497be2d976e569e47b2fc8f1041f}
+
+
+A mask of the beam-stop which is used when scaling the intensity 
+
+Definition at line 120 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{algorithm}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_b8e07ff9f4dadf7cb82768862906e015}
+
+
+the algorithm which is being used: ER, HIO etc. 
+
+Definition at line 123 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!algorithm_structure@{algorithm\_\-structure}}
+\index{algorithm_structure@{algorithm\_\-structure}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{algorithm\_\-structure}[NTERMS]\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_dbeb5c40e7fed5cb935c2e963993c6c7}
+
+
+an array which holds the structure of the algorithm. i.e. the coefficients for each term in the iteration equation. 
+
+Definition at line 127 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!current_error@{current\_\-error}}
+\index{current_error@{current\_\-error}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{current\_\-error}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_6696b5214420f280d20f210c4db49a44}
+
+
+the difference between the intensity in the detector plane the current estimated intensity. 
+
+Definition at line 131 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!n_best@{n\_\-best}}
+\index{n_best@{n\_\-best}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{n\_\-best}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_ed8a735b7380cad63538be8c999a5704}
+
+
+how many best estimates to store 
+
+Definition at line 134 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!best_array@{best\_\-array}}
+\index{best_array@{best\_\-array}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$$\ast$ \bf{best\_\-array}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_5b59179363fb7b609da4d4210955dc65}
+
+
+array of the best estimates 
+
+Definition at line 137 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!best_error_array@{best\_\-error\_\-array}}
+\index{best_error_array@{best\_\-error\_\-array}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ \bf{best\_\-error\_\-array}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_68844977e38b46e5dd99920ef12222c0}
+
+
+array of the error corresponding to each of the best estimates 
+
+Definition at line 141 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!transmission_constraint@{transmission\_\-constraint}}
+\index{transmission_constraint@{transmission\_\-constraint}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Transmission\-Constraint}$\ast$ \bf{transmission\_\-constraint}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_f0268756963c98567bdacff7b44229c4}
+
+
+a function pointer to a cumstomized complex constraint 
+
+Definition at line 145 of file Base\-CDI.h.\index{PartialCDI@{Partial\-CDI}!algNameMap@{algNameMap}}
+\index{algNameMap@{algNameMap}!PartialCDI@{Partial\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, int $>$ $\ast$ \bf{alg\-Name\-Map} = Base\-CDI::set\_\-up\_\-algorithm\_\-name\_\-map()\hspace{0.3cm}{\tt  [static, protected, inherited]}}\label{classBaseCDI_269759a649ad67cc691185b7b6b8462f}
+
+
+a mapping between the algorithm name (string) and identification number 
+
+Definition at line 149 of file Base\-CDI.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Partial\-CDI.h}\item 
+Partial\-CDI.c++\end{CompactItemize}

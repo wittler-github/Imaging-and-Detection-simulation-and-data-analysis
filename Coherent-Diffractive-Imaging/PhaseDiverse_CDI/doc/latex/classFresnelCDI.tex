@@ -1,0 +1,903 @@
+\section{Fresnel\-CDI Class Reference}
+\label{classFresnelCDI}\index{FresnelCDI@{FresnelCDI}}
+The class which performs Fresnel CDI reconstruction.  
+
+
+{\tt \#include $<$Fresnel\-CDI.h$>$}
+
+Inheritance diagram for Fresnel\-CDI::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFresnelCDI}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Fresnel\-CDI} (\bf{Complex\_\-2D} \&initial\_\-guess, \bf{Complex\_\-2D} \&white\_\-field, double beam\_\-wavelength, double \bf{focal\_\-detector\_\-length}, double \bf{focal\_\-sample\_\-length}, double pixel\_\-size, double normalisation=1.0, int \bf{n\_\-best}=0)
+\item 
+virtual \bf{$\sim$Fresnel\-CDI} ()
+\item 
+virtual void \bf{initialise\_\-estimate} (int seed=0)
+\item 
+virtual void \bf{auto\_\-set\_\-norm} ()\label{classFresnelCDI_ccc7c1b6a32be58be3d0dbb68977ad56}
+
+\item 
+virtual void \bf{get\_\-transmission\_\-function} (\bf{Complex\_\-2D} \&result, \bf{Complex\_\-2D} $\ast$esw=0)
+\item 
+virtual void \bf{apply\_\-support} (\bf{Complex\_\-2D} \&\bf{complex})
+\item 
+virtual void \bf{set\_\-transmission\_\-function} (\bf{Complex\_\-2D} \&\bf{transmission}, \bf{Complex\_\-2D} $\ast$esw=0)
+\item 
+virtual void \bf{scale\_\-intensity} (\bf{Complex\_\-2D} \&c)
+\item 
+virtual void \bf{propagate\_\-from\_\-detector} (\bf{Complex\_\-2D} \&c)
+\item 
+virtual void \bf{propagate\_\-to\_\-detector} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{set\_\-normalisation} (double normalisation)
+\item 
+void \bf{set\_\-experimental\_\-parameters} (double beam\_\-wavelength, double \bf{focal\_\-detector\_\-length}, double \bf{focal\_\-sample\_\-length}, double pixel\_\-size)
+\item 
+void \bf{set\_\-norm} (double new\_\-normalisation)\label{classFresnelCDI_4a9a723cbb598898c417596391e1d862}
+
+\item 
+const \bf{Complex\_\-2D} \& \bf{get\_\-illumination\_\-at\_\-sample} ()\label{classFresnelCDI_16d216debcc69280e652f872fa2a3b84}
+
+\item 
+virtual int \bf{iterate} ()
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{get\_\-best\_\-result} (double \&error, int index=0)
+\item 
+void \bf{set\_\-support} (const \bf{Double\_\-2D} \&object\_\-support, bool soften=false)
+\item 
+void \bf{set\_\-intensity} (const \bf{Double\_\-2D} \&detector\_\-intensity)
+\item 
+void \bf{set\_\-beam\_\-stop} (const \bf{Double\_\-2D} \&beam\_\-stop\_\-region)
+\item 
+void \bf{set\_\-relaxation\_\-parameter} (double relaxation\_\-parameter)
+\item 
+int \bf{get\_\-size\_\-x} ()
+\item 
+int \bf{get\_\-size\_\-y} ()
+\item 
+const \bf{Complex\_\-2D} \& \bf{get\_\-exit\_\-surface\_\-wave} ()\label{classBaseCDI_8c6add0215552640496dd143c037e32d}
+
+\item 
+void \bf{set\_\-exit\_\-surface\_\-wave} (\bf{Complex\_\-2D} \&esw)\label{classBaseCDI_9b9683ab74a9759b7a449264d0c530f4}
+
+\item 
+void \bf{set\_\-algorithm} (int alg)
+\item 
+void \bf{set\_\-custom\_\-algorithm} (double m1, double m2, double m3, double m4, double m5, double m6, double m7, double m8, double m9, double m10)
+\item 
+void \bf{print\_\-algorithm} ()
+\item 
+double \bf{get\_\-error} ()
+\item 
+virtual void \bf{apply\_\-shrinkwrap} (double gauss\_\-width=1.5, double threshold=0.1)
+\item 
+const \bf{Double\_\-2D} \& \bf{get\_\-support} ()
+\item 
+virtual void \bf{project\_\-intensity} (\bf{Complex\_\-2D} \&c)
+\item 
+void \bf{set\_\-fftw\_\-type} (int type)
+\item 
+virtual void \bf{set\_\-complex\_\-constraint} (\bf{Transmission\-Constraint} \&trans\_\-constraint)
+\item 
+void \bf{reset\_\-best} ()\label{classBaseCDI_575a9bdc868c230c734c68bb5ffa657b}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static int \bf{get\-Alg\-From\-Name} (std::string algorithm\_\-name)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{multiply\_\-factors} (\bf{Complex\_\-2D} \&c, int direction)
+\item 
+void \bf{check\_\-illumination\_\-at\_\-sample} ()\label{classFresnelCDI_78bc23eb0746fb2b4ef909f99df1caf1}
+
+\item 
+void \bf{apply\_\-threshold} (\bf{Double\_\-2D} \&array, double threshold)
+\item 
+void \bf{convolve} (\bf{Double\_\-2D} \&array, double gauss\_\-width, int pixel\_\-cut\_\-off=4)
+\item 
+void \bf{support\_\-constraint} (\bf{Complex\_\-2D} \&c)\label{classBaseCDI_3bd94fddd7474977f7a69600f276aa44}
+
+\item 
+void \bf{reallocate\_\-temp\_\-complex\_\-memory} ()\label{classBaseCDI_a5d53d9a28a4edd3e320fbe29d17782f}
+
+\item 
+void \bf{update\_\-n\_\-best} ()\label{classBaseCDI_77ca159159d8fc644d987c629a64f499}
+
+\end{CompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{CompactItemize}
+\item 
+static std::map$<$ std::string, int $>$ $\ast$ \bf{set\_\-up\_\-algorithm\_\-name\_\-map} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\bf{Complex\_\-2D} \bf{illumination}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{illumination\_\-at\_\-sample}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{transmission}
+\item 
+double \bf{wavelength}
+\item 
+double \bf{pixel\_\-length}
+\item 
+double \bf{focal\_\-detector\_\-length}\label{classFresnelCDI_8c3d1a534dea895bb38ba6844d9c86ec}
+
+\item 
+double \bf{focal\_\-sample\_\-length}\label{classFresnelCDI_1780adc4701b8e670a910856cd5d8219}
+
+\item 
+double \bf{norm}
+\item 
+\bf{Complex\_\-2D} \bf{coefficient}
+\item 
+\bf{Complex\_\-2D} \& \bf{complex}
+\item 
+int \bf{nx}
+\item 
+int \bf{ny}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PFS}
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PF}\label{classBaseCDI_fdf6f4568ed3475dc94e49887327c2ff}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PS}\label{classBaseCDI_fc480ef7ebfb0971c0ecfa1a3a2f9395}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{temp\_\-complex\_\-PSF}\label{classBaseCDI_0db0cbd1918b540113b56bfe459fb37a}
+
+\item 
+double \bf{beta}
+\item 
+\bf{Double\_\-2D} \bf{support}
+\item 
+\bf{Double\_\-2D} \bf{intensity\_\-sqrt}
+\item 
+\bf{Double\_\-2D} $\ast$ \bf{beam\_\-stop}
+\item 
+int \bf{algorithm}
+\item 
+double \bf{algorithm\_\-structure} [NTERMS]
+\item 
+double \bf{current\_\-error}
+\item 
+int \bf{n\_\-best}
+\item 
+\bf{Complex\_\-2D} $\ast$$\ast$ \bf{best\_\-array}
+\item 
+double $\ast$ \bf{best\_\-error\_\-array}
+\item 
+\bf{Transmission\-Constraint} $\ast$ \bf{transmission\_\-constraint}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static std::map$<$ std::string, int $>$ $\ast$ \bf{alg\-Name\-Map} = Base\-CDI::set\_\-up\_\-algorithm\_\-name\_\-map()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Nadia Davidson $<$\tt{nadiamd@unimelb.edu.au}$>$\end{Desc}
+The class used for performing Fresnel CDI reconstruction (for white-field reconstruction see \doxyref{Fresnel\-CDI\_\-WF}{p.}{classFresnelCDI__WF}). It inherits most methods from \doxyref{Base\-CDI}{p.}{classBaseCDI}, so please look at the documentation of this class also. Although there are some differences in the underlying code between this class and the planar case, the interface is generally unchanged. Therefore users should refer to the instructions for \doxyref{Base\-CDI}{p.}{classBaseCDI} to understand how to use a \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} object in their own code. Only the differences relevant to users will be documented here. 
+
+
+
+Definition at line 33 of file Fresnel\-CDI.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FresnelCDI@{Fresnel\-CDI}!FresnelCDI@{FresnelCDI}}
+\index{FresnelCDI@{FresnelCDI}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Fresnel\-CDI} (\bf{Complex\_\-2D} \& {\em initial\_\-guess}, \bf{Complex\_\-2D} \& {\em white\_\-field}, double {\em beam\_\-wavelength}, double {\em focal\_\-detector\_\-length}, double {\em focal\_\-sample\_\-length}, double {\em pixel\_\-size}, double {\em normalisation} = {\tt 1.0}, int {\em n\_\-best} = {\tt 0})}\label{classFresnelCDI_72ee0e7b01845efc7a3fe700960d21b2}
+
+
+Create a \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} object. All of the dimensions which are given as input should be in the same units. e.g metres.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em initial\_\-guess}]The complex 2-D field which is modified by this object. This represents the exit-surface-wave of the sample. It may be pre-initialised to a best first guess (e.g manually); it may be loaded from a file (e.g. the output from a previous reconstruction job); or it may be unitialised, and the default initialisation provided by \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} may be used. \item[{\em white\_\-field}]The reconstructed white-field (which has been previously determined using \doxyref{Fresnel\-CDI\_\-WF}{p.}{classFresnelCDI__WF} or otherwise) \item[{\em beam\_\-wavelength}]Wavelength of the beam \item[{\em focal\_\-detector\_\-length}]The distance from the focal point to the detector \item[{\em focal\_\-sample\_\-length}]The distance from the focal point to the sample \item[{\em pixel\_\-size}]The diameter of one of the detector pixels. \item[{\em normalisation}]The amount to scale the data before subtracting the white field illumination. By default this is 1.0. \end{description}
+\end{Desc}
+
+
+Definition at line 20 of file Fresnel\-CDI.c++.
+
+References Complex\_\-2D::copy(), illumination, illumination\_\-at\_\-sample, norm, Complex\_\-2D::scale(), Base\-CDI::set\_\-algorithm(), set\_\-experimental\_\-parameters(), and transmission.\index{FresnelCDI@{Fresnel\-CDI}!~FresnelCDI@{$\sim$FresnelCDI}}
+\index{~FresnelCDI@{$\sim$FresnelCDI}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Fresnel\-CDI} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_086e010e8e84b87f679ac73bd47c48b6}
+
+
+The destructor for this class 
+
+Definition at line 46 of file Fresnel\-CDI.c++.
+
+References illumination\_\-at\_\-sample, and transmission.
+
+\subsection{Member Function Documentation}
+\index{FresnelCDI@{Fresnel\-CDI}!initialise_estimate@{initialise\_\-estimate}}
+\index{initialise_estimate@{initialise\_\-estimate}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-estimate (int {\em seed} = {\tt 0})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_9f865b7d630be93ac2146b956197f224}
+
+
+Initialise the object esw (at the sample plane). The estimate is constructed by subtracting the white-field magnitude from the diffraction data. This forms the magnitude of the esw in the detector plane. The phase is set randomly and will lie within the range -0.1$\ast$2pi to 0.1$\ast$2pi. The esw is then propagated to the sample plane and the support is applied.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em seed}]The seed of the random number generator \end{description}
+\end{Desc}
+
+
+\doxyref{Double\_\-2D}{p.}{classDouble__2D} temp(nx,ny); illumination\_\-at\_\-sample-$>$get\_\-2d(REAL,temp); double max = temp.get\_\-max();
+
+for(int i=0; i$<$nx; i++)\{ for(int j=0; j$<$ny; j++)\{ complex.set\_\-phase(i,j,0.0); \} \}
+
+make the magnitude the difference of the intensity and white-field double amp = intensity\_\-sqrt.get(i,j)-illumination.get\_\-mag(i,j);
+
+perterb the phase a bit about zero to allow random starts. double phase = 0.2$\ast$2$\ast$M\_\-PI$\ast$(0.5-rand()/((double) RAND\_\-MAX) ); complex.set\_\-mag(i,j,amp); complex.set\_\-phase(i,j,phase);
+
+\} \}
+
+take the result to the sample plane and apply the support propagate\_\-from\_\-detector(complex); apply\_\-support(complex); 
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+
+Definition at line 152 of file Fresnel\-CDI.c++.
+
+References apply\_\-support(), Base\-CDI::complex, Base\-CDI::nx, Base\-CDI::ny, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and set\_\-transmission\_\-function().\index{FresnelCDI@{Fresnel\-CDI}!get_transmission_function@{get\_\-transmission\_\-function}}
+\index{get_transmission_function@{get\_\-transmission\_\-function}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void get\_\-transmission\_\-function (\bf{Complex\_\-2D} \& {\em result}, \bf{Complex\_\-2D} $\ast$ {\em esw} = {\tt 0})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_56813ec014771c33f84911663e5ede23}
+
+
+Get the transmission function from the current estimate of the ESW. The ESW is divided by the illuminating wavefield in the sample plane and unity is added.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em result}]The transmission function is copied into \char`\"{}result\char`\"{}. \end{description}
+\end{Desc}
+
+
+Definition at line 298 of file Fresnel\-CDI.c++.
+
+References Transmission\-Constraint::apply\_\-constraint(), check\_\-illumination\_\-at\_\-sample(), Base\-CDI::complex, Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), illumination\_\-at\_\-sample, Base\-CDI::nx, Base\-CDI::ny, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and Base\-CDI::transmission\_\-constraint.\index{FresnelCDI@{Fresnel\-CDI}!apply_support@{apply\_\-support}}
+\index{apply_support@{apply\_\-support}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-support (\bf{Complex\_\-2D} \& {\em complex})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_d754847bcf0151ffcc0c52682c017120}
+
+
+Apply the support constraint.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The complex field to apply the support constraint on \end{description}
+\end{Desc}
+
+
+Reimplemented from \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_479c3b3c6c00d87ef7e9532cf9820364}.
+
+Definition at line 203 of file Fresnel\-CDI.c++.
+
+References Complex\_\-2D::Complex\_\-2D(), get\_\-transmission\_\-function(), Base\-CDI::nx, Base\-CDI::ny, set\_\-transmission\_\-function(), Base\-CDI::support\_\-constraint(), transmission, and Base\-CDI::transmission\_\-constraint.\index{FresnelCDI@{Fresnel\-CDI}!set_transmission_function@{set\_\-transmission\_\-function}}
+\index{set_transmission_function@{set\_\-transmission\_\-function}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-transmission\_\-function (\bf{Complex\_\-2D} \& {\em transmission}, \bf{Complex\_\-2D} $\ast$ {\em esw} = {\tt 0})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_f4e69e5473b3764a58313a2255dde2ae}
+
+
+Set the 'global' sample function. This method could be used, for example, instead of 'initialise\_\-estimate' to initialise the results to those from a previous reconstruction.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-transmission}]The transmission function exit-surface-wave to copy. \end{description}
+\end{Desc}
+
+
+if(!illumination\_\-at\_\-sample)\{ illumination\_\-at\_\-sample = new Complex\_\-2D(nx,ny); illumination\_\-at\_\-sample-$>$copy(illumination); propagate\_\-from\_\-detector($\ast$illumination\_\-at\_\-sample); \} 
+
+Definition at line 253 of file Fresnel\-CDI.c++.
+
+References check\_\-illumination\_\-at\_\-sample(), Base\-CDI::complex, Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), illumination\_\-at\_\-sample, Base\-CDI::nx, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and transmission.\index{FresnelCDI@{Fresnel\-CDI}!scale_intensity@{scale\_\-intensity}}
+\index{scale_intensity@{scale\_\-intensity}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale\_\-intensity (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_8aacc20f278648d3eba9648026d762b8}
+
+
+This method overrides the one in \doxyref{Base\-CDI}{p.}{classBaseCDI} by adding/subtracting the white-field before/after applying the intensity constraint.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} object to apply the intensity constraint on. \end{description}
+\end{Desc}
+
+
+Reimplemented from \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_8aacc20f278648d3eba9648026d762b8}.
+
+Definition at line 217 of file Fresnel\-CDI.c++.
+
+References Complex\_\-2D::add(), illumination, and Base\-CDI::scale\_\-intensity().\index{FresnelCDI@{Fresnel\-CDI}!propagate_from_detector@{propagate\_\-from\_\-detector}}
+\index{propagate_from_detector@{propagate\_\-from\_\-detector}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void propagate\_\-from\_\-detector (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_c98ac38c2b63e5f7deba5316e772db9f}
+
+
+Propagate to the sample plane using the paraxial free-space equation. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} field to propagate \end{description}
+\end{Desc}
+
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_1f673f0f756def2e645a5c6dc654803d}.
+
+Definition at line 238 of file Fresnel\-CDI.c++.
+
+References Complex\_\-2D::invert(), multiply\_\-factors(), and Complex\_\-2D::perform\_\-backward\_\-fft().\index{FresnelCDI@{Fresnel\-CDI}!propagate_to_detector@{propagate\_\-to\_\-detector}}
+\index{propagate_to_detector@{propagate\_\-to\_\-detector}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void propagate\_\-to\_\-detector (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual]}}\label{classFresnelCDI_5adde93a2b66b1bf8597fdb2e120c9b7}
+
+
+Propagate to the detector plane using the paraxial free-space equation. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The \doxyref{Complex\_\-2D}{p.}{classComplex__2D} field to propagate \end{description}
+\end{Desc}
+
+
+Implements \bf{Base\-CDI} \doxyref{p.}{classBaseCDI_a8b5944739fc612a5c495804b7587686}.
+
+Definition at line 245 of file Fresnel\-CDI.c++.
+
+References Complex\_\-2D::invert(), multiply\_\-factors(), and Complex\_\-2D::perform\_\-forward\_\-fft().\index{FresnelCDI@{Fresnel\-CDI}!set_normalisation@{set\_\-normalisation}}
+\index{set_normalisation@{set\_\-normalisation}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-normalisation (double {\em normalisation})\hspace{0.3cm}{\tt  [inline]}}\label{classFresnelCDI_21180478dcb6bdfe16c94f23817e8fe0}
+
+
+Reset the normalisation factor which is used to scale the white-field data. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em normalisation}]The new normalisation \end{description}
+\end{Desc}
+
+
+Definition at line 188 of file Fresnel\-CDI.h.
+
+References norm.\index{FresnelCDI@{Fresnel\-CDI}!set_experimental_parameters@{set\_\-experimental\_\-parameters}}
+\index{set_experimental_parameters@{set\_\-experimental\_\-parameters}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-experimental\_\-parameters (double {\em beam\_\-wavelength}, double {\em focal\_\-detector\_\-length}, double {\em focal\_\-sample\_\-length}, double {\em pixel\_\-size})}\label{classFresnelCDI_a339579751a7b06e17be65b6ad500976}
+
+
+Reset the experimental parameters. This is called when an object of this type is constructed. I maybe called at any time during reconstruction, for example to refine the experimental parameters. This method resets the coefficient matricies which are used in the propagation between the detector and sample planes. All values should be given in the same length units.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em beam\_\-wavelength}]The beam wavelength \item[{\em focal\_\-detector\_\-length}]The distance between the focal plane and dector plane. \item[{\em focal\_\-sample\_\-length}]The distance between the focal plane and sample plane. \item[{\em pixel\_\-size}]The size of one detector pixel. \end{description}
+\end{Desc}
+
+
+Definition at line 57 of file Fresnel\-CDI.c++.
+
+References coefficient, Complex\_\-2D::Complex\_\-2D(), Complex\_\-2D::copy(), illumination, illumination\_\-at\_\-sample, Base\-CDI::nx, Base\-CDI::ny, pixel\_\-length, propagate\_\-from\_\-detector(), Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and wavelength.\index{FresnelCDI@{Fresnel\-CDI}!multiply_factors@{multiply\_\-factors}}
+\index{multiply_factors@{multiply\_\-factors}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void multiply\_\-factors (\bf{Complex\_\-2D} \& {\em c}, int {\em direction})\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_a221766d2d9fa30db365b879a3205b95}
+
+
+double refine\_\-sample\_\-to\_\-focal\_\-length(double min=0, double max=0, int points\_\-per\_\-scan=8, double precision=0, int iterations\_\-before\_\-comparison=1, int crop\_\-min\_\-x=0, int crop\_\-min\_\-y=0, int crop\_\-max\_\-x=0, int crop\_\-max\_\-y=0 ); 
+
+Definition at line 98 of file Fresnel\-CDI.c++.
+
+References coefficient, Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), Base\-CDI::nx, Base\-CDI::ny, Complex\_\-2D::set\_\-imag(), and Complex\_\-2D::set\_\-real().\index{FresnelCDI@{Fresnel\-CDI}!iterate@{iterate}}
+\index{iterate@{iterate}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int iterate ()\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_9e3435f91897cd401e77d56919e51da2}
+
+
+The main method for running the reconstruction! This method transforms the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} given to it according to: \par
+$ x_{k+1} = g ( x_{k} ) $ \par
+ Where $g()$ depends on the algorithm used. The current error is also updated when this method is called. 
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_9e3435f91897cd401e77d56919e51da2}, \bf{Partial\-CDI} \doxyref{p.}{classPartialCDI_9e3435f91897cd401e77d56919e51da2}, and \bf{Poly\-CDI} \doxyref{p.}{classPolyCDI_9e3435f91897cd401e77d56919e51da2}.
+
+Definition at line 294 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::algorithm\_\-structure, Base\-CDI::apply\_\-support(), Base\-CDI::complex, Complex\_\-2D::copy(), Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), Base\-CDI::nx, Base\-CDI::ny, Base\-CDI::project\_\-intensity(), Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), SUCCESS, Base\-CDI::temp\_\-complex\_\-PF, Base\-CDI::temp\_\-complex\_\-PFS, Base\-CDI::temp\_\-complex\_\-PS, Base\-CDI::temp\_\-complex\_\-PSF, and Base\-CDI::update\_\-n\_\-best().\index{FresnelCDI@{Fresnel\-CDI}!get_best_result@{get\_\-best\_\-result}}
+\index{get_best_result@{get\_\-best\_\-result}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} $\ast$ get\_\-best\_\-result (double \& {\em error}, int {\em index} = {\tt 0})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_9ca82195dc0f0adcd79fa391ae3ef821}
+
+
+While the reconstruction is running this object will store the \char`\"{}n\_\-best\char`\"{} number of best estimates according to the error metric. So, for example, if HIO is used and the error enters and leaves an error minima during reconstruction, the best (ie. lowest error) \doxyref{Complex\_\-2D}{p.}{classComplex__2D} results will be kept. They can then be retrieved using this method.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index}]get best result number \char`\"{}index\char`\"{}. 0 is the best, 1 is the 2nd best etc... \item[{\em error}]\char`\"{}error\char`\"{} is filled with the metric error of the selected best result \end{description}
+\end{Desc}
+
+
+Definition at line 82 of file Base\-CDI.c++.
+
+References Base\-CDI::best\_\-array, Base\-CDI::best\_\-error\_\-array, and Base\-CDI::n\_\-best.\index{FresnelCDI@{Fresnel\-CDI}!set_support@{set\_\-support}}
+\index{set_support@{set\_\-support}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-support (const \bf{Double\_\-2D} \& {\em object\_\-support}, bool {\em soften} = {\tt false})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_49f77e650f9aa69e3fd5b70e3ec1378e}
+
+
+Set the sample support. A \char`\"{}0\char`\"{} value in the \doxyref{Double\_\-2D}{p.}{classDouble__2D} is interpreted as being outside the support. Pixels with the maximum value of the \doxyref{Double\_\-2D}{p.}{classDouble__2D} are considered inside the support. Values between 0 and the maximum indict the soft edge of the support. In this case, when the support is applied, the esw magnitude is scaled relative to the support edge value.
+
+By default, the edge of a given support will be softened by convolution with a 3 pixel wide gaussian. This feature can be turned off by setting the boolean flag to false.
+
+The support can be updated at anytime during reconstruction by calling this method.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em object\_\-support}]The sample support \item[{\em soften}]If true, the edges of the support will be softened by covolving it with a 3 pixel wide gaussian. By default this option is off. \end{description}
+\end{Desc}
+
+
+Definition at line 95 of file Base\-CDI.c++.
+
+References Base\-CDI::convolve(), Base\-CDI::nx, Base\-CDI::ny, and Base\-CDI::support.\index{FresnelCDI@{Fresnel\-CDI}!set_intensity@{set\_\-intensity}}
+\index{set_intensity@{set\_\-intensity}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-intensity (const \bf{Double\_\-2D} \& {\em detector\_\-intensity})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_2abd04ba9abea4c339355d80cc38e754}
+
+
+Set the detector diffraction image (i.e. the square of the amplitude of the wavefield at the detector).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em detector\_\-intensity}]The intensity at the detector \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Partial\-Char\-CDI} \doxyref{p.}{classPartialCharCDI_2abd04ba9abea4c339355d80cc38e754}.
+
+Definition at line 115 of file Base\-CDI.c++.
+
+References Base\-CDI::intensity\_\-sqrt, Base\-CDI::nx, and Base\-CDI::ny.\index{FresnelCDI@{Fresnel\-CDI}!set_beam_stop@{set\_\-beam\_\-stop}}
+\index{set_beam_stop@{set\_\-beam\_\-stop}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-beam\_\-stop (const \bf{Double\_\-2D} \& {\em beam\_\-stop\_\-region})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_9d062b4fd0397006d3238db8e3144f42}
+
+
+Set the beam-stop position in the detector plane. This region will be leaf to float when the intensity if scaled during reconstruction. A zero in the array provided represents the beam stop and all other values represent the region which should be scaled.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em beam\_\-stop\_\-region}]The region of the beam stop in the detector plane \end{description}
+\end{Desc}
+
+
+Definition at line 109 of file Base\-CDI.c++.
+
+References Base\-CDI::beam\_\-stop, Base\-CDI::nx, and Base\-CDI::ny.\index{FresnelCDI@{Fresnel\-CDI}!set_relaxation_parameter@{set\_\-relaxation\_\-parameter}}
+\index{set_relaxation_parameter@{set\_\-relaxation\_\-parameter}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-relaxation\_\-parameter (double {\em relaxation\_\-parameter})\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_ae6d45b70404e602344fddadb389a3d9}
+
+
+Set the relaxation parameters of the reconstruction algorithm. This is $ \beta $ used exactly as it is in Harry's review paper. This maybe reset at anytime during the reconstruction by calling this method. The default value is 0.9.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em relaxation\_\-parameter}]The algorithm relaxation\_\-parameter \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_ae6d45b70404e602344fddadb389a3d9}.
+
+Definition at line 261 of file Base\-CDI.h.
+
+References Base\-CDI::algorithm, Base\-CDI::beta, and Base\-CDI::set\_\-algorithm().\index{FresnelCDI@{Fresnel\-CDI}!get_size_x@{get\_\-size\_\-x}}
+\index{get_size_x@{get\_\-size\_\-x}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-x ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_3c05b2a3360707e3dc780d9f08350e43}
+
+
+\begin{Desc}
+\item[Returns:]the number of pixel along the x-axis. \end{Desc}
+
+
+Definition at line 270 of file Base\-CDI.h.
+
+References Base\-CDI::nx.\index{FresnelCDI@{Fresnel\-CDI}!get_size_y@{get\_\-size\_\-y}}
+\index{get_size_y@{get\_\-size\_\-y}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-size\_\-y ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_b18b6c819f488545c03625311c1405aa}
+
+
+\begin{Desc}
+\item[Returns:]the number of pixel along the y-axis. \end{Desc}
+
+
+Definition at line 278 of file Base\-CDI.h.
+
+References Base\-CDI::ny.\index{FresnelCDI@{Fresnel\-CDI}!set_algorithm@{set\_\-algorithm}}
+\index{set_algorithm@{set\_\-algorithm}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-algorithm (int {\em alg})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_0f38f0faa7b34f3331d5591cac58b598}
+
+
+Set the algorithm. By default HIO is used.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em alg}]The algorithm. The options are: \par
+ ER - error reduction \par
+ BIO - basic input-output \par
+ BOO - basic output-output \par
+ HIO - hybrid input-output \par
+ DM - difference map \par
+ SF - solvent-flipping \par
+ ASR - averaged successive reflections \par
+ HPR - hybrid projection reflection \par
+ RAAR - relaxed averaged alternating reflectors \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+
+Definition at line 189 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::beta, and Base\-CDI::set\_\-custom\_\-algorithm().\index{FresnelCDI@{Fresnel\-CDI}!set_custom_algorithm@{set\_\-custom\_\-algorithm}}
+\index{set_custom_algorithm@{set\_\-custom\_\-algorithm}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-custom\_\-algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_bef3f7cf18631094a2ed122e5a9902f6}
+
+
+Iterative reconstruction algorithms can be expressed as a combination of the following 5 operators:\par
+$ \hat{P}_S \hat{P}_F$, $\hat{P}_F \hat{P}_S$ , $ \hat{P}_S $ , $ \hat{P}_F $ and $ \hat{I} $ \par
+ Where $ \hat{P}_S $ is the support projection and $ \hat{P}_F $ is the intensity projection. These can be combined to form a basis of 10 vectors (see Harray's review). The parameters to this method set the coefficient for each of these vectors. Note: the vector set is linearly dependant.
+
+Please see page 22 of the H.M. Quiney review: TUTORIAL REVIEW, Coherent diffractive imaging using short wavelength light sources, Journal of Modern Optics, 2010, DOI: 10.1080/09500340.2010.495459
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em m1}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_F \hat{P}_S ]x_k $ term \item[{\em m2}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_F ]x_k $ term \item[{\em m3}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{P}_S ]x_k $ term \item[{\em m4}]Coefficient to the $ [ \hat{P}_S \hat{P}_F - \hat{I} ]x_k $ term \item[{\em m5}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{P}_F ]x_k $ term \item[{\em m6}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{P}_S ]x_k $ term \item[{\em m7}]Coefficient to the $ [ \hat{P}_F \hat{P}_S - \hat{I} ]x_k $ term \item[{\em m8}]Coefficient to the $ [ \hat{P}_F - \hat{P}_S ]x_k $ term \item[{\em m9}]Coefficient to the $ [ \hat{P}_F - \hat{I} ]x_k $ term \item[{\em m10}]Coefficient to the $ [ \hat{P}_S - \hat{I} ]x_k $ term \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+
+Definition at line 237 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, Base\-CDI::algorithm\_\-structure, and Base\-CDI::reallocate\_\-temp\_\-complex\_\-memory().\index{FresnelCDI@{Fresnel\-CDI}!print_algorithm@{print\_\-algorithm}}
+\index{print_algorithm@{print\_\-algorithm}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void print\_\-algorithm ()\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_8df60e88c8f12cc220608fa620419326}
+
+
+Print the current algorithm to standard output. The algorithm is in the form: \par
+ $ x_{k+1} = x_k + (a \hat{P}_S \hat{P}_F + b \hat{P}_F \hat{P}_S + c \hat{P}_S + d \hat{P}_F + e \hat{I} )x_k $ 
+
+Reimplemented in \bf{Fresnel\-CDI\_\-WF} \doxyref{p.}{classFresnelCDI__WF_8df60e88c8f12cc220608fa620419326}.
+
+Definition at line 275 of file Base\-CDI.c++.
+
+References Base\-CDI::algorithm, and Base\-CDI::algorithm\_\-structure.\index{FresnelCDI@{Fresnel\-CDI}!get_error@{get\_\-error}}
+\index{get_error@{get\_\-error}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-error ()\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_96a694cad876c4211d68b9526ab2784b}
+
+
+Get the difference between the estimated diffraction and the actual diffraction pattern. \par
+ $ \chi^2 = \frac { \sum_{pixels} ( M_{pixel} - \sqrt{I_{pixel}} )^2 } { \sum_{pixels} {I_{pixel}} } $. \par
+ Where $ M $ is the magnitude of the current estimate and $ I $ is the measured intensity.
+
+NOTE: This method actually gives you the error for the previous iteration. This is because it's much faster to calculate the error during the intensity scaling step of the iteration rather than performing a FFT just for the error calculation.
+
+\begin{Desc}
+\item[Returns:]The error metric \end{Desc}
+
+
+Definition at line 123 of file Base\-CDI.c++.
+
+References Base\-CDI::current\_\-error.\index{FresnelCDI@{Fresnel\-CDI}!getAlgFromName@{getAlgFromName}}
+\index{getAlgFromName@{getAlgFromName}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static int get\-Alg\-From\-Name (std::string {\em algorithm\_\-name})\hspace{0.3cm}{\tt  [inline, static, inherited]}}\label{classBaseCDI_0426fd4eb7431467169f5223e26cf0ae}
+
+
+Given the name of an algorithm, e.g. \char`\"{}HIO\char`\"{}, return the unique integer identifier. This is used by the configuration file reader, and probably won't be needed by users.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm\_\-name}]The algorithm name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The integer identifier \end{Desc}
+
+
+Definition at line 379 of file Base\-CDI.h.
+
+References Base\-CDI::alg\-Name\-Map.\index{FresnelCDI@{Fresnel\-CDI}!apply_shrinkwrap@{apply\_\-shrinkwrap}}
+\index{apply_shrinkwrap@{apply\_\-shrinkwrap}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-shrinkwrap (double {\em gauss\_\-width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_7bfaaf0eb0f54efb3f2a53b9eb4e3093}
+
+
+Apply the shrinkwrap algorithm. The magnitude of the current ESW estimate will be convolved with a Gaussian, thresholded and set as the new support.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em gauss\_\-width}]The width ( $ \sigma $ ) of the Gaussian in pixels. The default is 1.5. \item[{\em threshold}]The threshold which is applied, as a fraction of the maximum pixel value. The default is 0.1 (10\%). \end{description}
+\end{Desc}
+
+
+Definition at line 413 of file Base\-CDI.c++.
+
+References Base\-CDI::apply\_\-threshold(), Base\-CDI::complex, Base\-CDI::convolve(), Complex\_\-2D::get\_\-2d(), MAG, Base\-CDI::nx, Base\-CDI::ny, and Base\-CDI::set\_\-support().\index{FresnelCDI@{Fresnel\-CDI}!get_support@{get\_\-support}}
+\index{get_support@{get\_\-support}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Double\_\-2D}\& get\_\-support ()\hspace{0.3cm}{\tt  [inline, inherited]}}\label{classBaseCDI_a41c63a5fa56aac6ce58b77296093020}
+
+
+Get the current support. This might be useful if shrinkwrap has been applied, as it allows you to get the updated support.
+
+\begin{Desc}
+\item[Returns:]An object reference to the current support. \end{Desc}
+
+
+Definition at line 405 of file Base\-CDI.h.
+
+References Base\-CDI::support.\index{FresnelCDI@{Fresnel\-CDI}!project_intensity@{project\_\-intensity}}
+\index{project_intensity@{project\_\-intensity}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void project\_\-intensity (\bf{Complex\_\-2D} \& {\em c})\hspace{0.3cm}{\tt  [virtual, inherited]}}\label{classBaseCDI_27de037bc8f7e4d4d07b3084570cd11b}
+
+
+Apply the intensity constraint. The ESW is projected to the detector plane, the intensity is scaled to match the measured data and the field is projected back into the sample plane.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]The complex field to apply the intensity constraint on \end{description}
+\end{Desc}
+
+
+Definition at line 153 of file Base\-CDI.c++.
+
+References Base\-CDI::propagate\_\-from\_\-detector(), Base\-CDI::propagate\_\-to\_\-detector(), and Base\-CDI::scale\_\-intensity().\index{FresnelCDI@{Fresnel\-CDI}!set_fftw_type@{set\_\-fftw\_\-type}}
+\index{set_fftw_type@{set\_\-fftw\_\-type}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\-type (int {\em type})\hspace{0.3cm}{\tt  [inherited]}}\label{classBaseCDI_5bf4618dd19f4e64a78a510d6f242d35}
+
+
+A flag which is used for the fast fourier transforms to select the fft algorithm. It maybe either FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT. See the fftw documentation for a description of each. By default we use FFTW\_\-MEASURE. FFTW\_\-ESTIMATE is used for testing purposes.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]- FFTW\_\-ESTIMATE, FFTW\_\-MEASURE or FFTW\_\-PATIENT \end{description}
+\end{Desc}
+
+
+Definition at line 491 of file Base\-CDI.c++.
+
+References Base\-CDI::complex, Complex\_\-2D::set\_\-fftw\_\-type(), Base\-CDI::temp\_\-complex\_\-PF, and Base\-CDI::temp\_\-complex\_\-PFS.\index{FresnelCDI@{Fresnel\-CDI}!set_complex_constraint@{set\_\-complex\_\-constraint}}
+\index{set_complex_constraint@{set\_\-complex\_\-constraint}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void set\_\-complex\_\-constraint (\bf{Transmission\-Constraint} \& {\em trans\_\-constraint})\hspace{0.3cm}{\tt  [inline, virtual, inherited]}}\label{classBaseCDI_378db5ad6d9d75f0740aa1e172873105}
+
+
+void set\_\-complex\_\-constraint\_\-function(void ($\ast$complex\_\-constraint)(\doxyref{Complex\_\-2D}{p.}{classComplex__2D} \& tranmission))\{ custom\_\-complex\_\-constraint = complex\_\-constraint; \} 
+
+Definition at line 468 of file Base\-CDI.h.
+
+References Base\-CDI::transmission\_\-constraint.\index{FresnelCDI@{Fresnel\-CDI}!set_up_algorithm_name_map@{set\_\-up\_\-algorithm\_\-name\_\-map}}
+\index{set_up_algorithm_name_map@{set\_\-up\_\-algorithm\_\-name\_\-map}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, int $>$ $\ast$ set\_\-up\_\-algorithm\_\-name\_\-map ()\hspace{0.3cm}{\tt  [static, protected, inherited]}}\label{classBaseCDI_8d966dd417d8812968197d19e7cbcde7}
+
+
+Sets up the mapping between algorithm name and number. This is only called during the initialisation and should not be called elsewhere.
+
+\begin{Desc}
+\item[Returns:]The algorithm name-iteger mapping \end{Desc}
+
+
+Definition at line 14 of file Base\-CDI.c++.\index{FresnelCDI@{Fresnel\-CDI}!apply_threshold@{apply\_\-threshold}}
+\index{apply_threshold@{apply\_\-threshold}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-threshold (\bf{Double\_\-2D} \& {\em array}, double {\em threshold})\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_6a7a3635d41f9ae8334f0f3ea36b37cb}
+
+
+Apply a threshold to the values in \char`\"{}array\char`\"{}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em array}]The array to be thresholded \item[{\em threshold}]The threshold which is applied, as a fraction of the maximum pixel value. The default is 0.1 (10\%). \end{description}
+\end{Desc}
+
+
+Definition at line 474 of file Base\-CDI.c++.
+
+References Base\-CDI::nx.\index{FresnelCDI@{Fresnel\-CDI}!convolve@{convolve}}
+\index{convolve@{convolve}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void convolve (\bf{Double\_\-2D} \& {\em array}, double {\em gauss\_\-width}, int {\em pixel\_\-cut\_\-off} = {\tt 4})\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_100d38fcd65938f636a4ded00bd1ba98}
+
+
+Convolved \char`\"{}array\char`\"{} with a 2-D Gaussian function. To speed up computation we only convolve up to 4 pixels away from the Gaussian peak.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em array}]The array to be convolved \item[{\em gauss\_\-width}]The width ( $ \sigma $ ) of the Gaussian in pixels. The default is 1.5. \item[{\em pixel\_\-cut\_\-off}]Convolve up to 4 pixels away from the Gaussian peak. \end{description}
+\end{Desc}
+
+
+Definition at line 429 of file Base\-CDI.c++.
+
+References Base\-CDI::nx, and Base\-CDI::ny.
+
+\subsection{Field Documentation}
+\index{FresnelCDI@{Fresnel\-CDI}!illumination@{illumination}}
+\index{illumination@{illumination}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} \bf{illumination}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_61e4485761fd7b5f5a9b6d08514e2500}
+
+
+the reconstructed white field 
+
+Definition at line 38 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!illumination_at_sample@{illumination\_\-at\_\-sample}}
+\index{illumination_at_sample@{illumination\_\-at\_\-sample}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{illumination\_\-at\_\-sample}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_8a56771dc602d40ff72f1bfa80043372}
+
+
+the white field in the sample plane 
+
+Definition at line 41 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!transmission@{transmission}}
+\index{transmission@{transmission}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{transmission}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_04e156bcf3b6f1bf2075f8084d277384}
+
+
+the transmission function 
+
+Definition at line 45 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!wavelength@{wavelength}}
+\index{wavelength@{wavelength}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{wavelength}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_39e6fd4eacf9e7c9955663f3c86de5f0}
+
+
+the beam wavelength 
+
+Definition at line 48 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!pixel_length@{pixel\_\-length}}
+\index{pixel_length@{pixel\_\-length}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{pixel\_\-length}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_5582a4e4f6a3ba3fe3d7d0e822619000}
+
+
+the pixel size 
+
+Definition at line 51 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!norm@{norm}}
+\index{norm@{norm}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{norm}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_f047120b009a4b29e2f44aba9a78cbb2}
+
+
+normalisation between the illumination with and without the sample placed in the beam 
+
+Definition at line 59 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!coefficient@{coefficient}}
+\index{coefficient@{coefficient}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} \bf{coefficient}\hspace{0.3cm}{\tt  [protected]}}\label{classFresnelCDI_39828cefb9f6cd57a47ebc20f4023698}
+
+
+an array which holds a constants we use when propagating between difference planes 
+
+Definition at line 63 of file Fresnel\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!complex@{complex}}
+\index{complex@{complex}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}\& \bf{complex}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_e835e888a027229f471e1d9948e614b1}
+
+
+a reference to the \doxyref{Complex\_\-2D}{p.}{classComplex__2D} object which is altered during each iteration 
+
+Definition at line 91 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!nx@{nx}}
+\index{nx@{nx}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nx}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_9515687a9dece1086de8ff1baec11196}
+
+
+The samplings in x 
+
+Definition at line 94 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!ny@{ny}}
+\index{ny@{ny}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{ny}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_c00b6399ae98f2f721909222a5370f02}
+
+
+The samplings in y 
+
+Definition at line 97 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!temp_complex_PFS@{temp\_\-complex\_\-PFS}}
+\index{temp_complex_PFS@{temp\_\-complex\_\-PFS}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{temp\_\-complex\_\-PFS}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_1a68b43770ba0344d3e70131429595ac}
+
+
+temporary Complex\_\-2Ds which are used in the computation of the PFS and PF terms for each iteration. 
+
+Definition at line 105 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!beta@{beta}}
+\index{beta@{beta}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{beta}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_176bb7d2686d3fa6877f67812e905f7b}
+
+
+the relaxation parameter 
+
+Reimplemented in \bf{Poly\-CDI} \doxyref{p.}{classPolyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+
+Definition at line 111 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!support@{support}}
+\index{support@{support}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} \bf{support}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_e254fc00e9e66b321298e508d842e180}
+
+
+a copy of the support 
+
+Definition at line 114 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!intensity_sqrt@{intensity\_\-sqrt}}
+\index{intensity_sqrt@{intensity\_\-sqrt}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D} \bf{intensity\_\-sqrt}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_ea6f01f8d72f1f998a2c365947d7cbdc}
+
+
+a copy of the square root of the intensity at the detector plane. 
+
+Definition at line 117 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!beam_stop@{beam\_\-stop}}
+\index{beam_stop@{beam\_\-stop}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D}$\ast$ \bf{beam\_\-stop}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_afd1497be2d976e569e47b2fc8f1041f}
+
+
+A mask of the beam-stop which is used when scaling the intensity 
+
+Definition at line 120 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{algorithm}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_b8e07ff9f4dadf7cb82768862906e015}
+
+
+the algorithm which is being used: ER, HIO etc. 
+
+Definition at line 123 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!algorithm_structure@{algorithm\_\-structure}}
+\index{algorithm_structure@{algorithm\_\-structure}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{algorithm\_\-structure}[NTERMS]\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_dbeb5c40e7fed5cb935c2e963993c6c7}
+
+
+an array which holds the structure of the algorithm. i.e. the coefficients for each term in the iteration equation. 
+
+Definition at line 127 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!current_error@{current\_\-error}}
+\index{current_error@{current\_\-error}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{current\_\-error}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_6696b5214420f280d20f210c4db49a44}
+
+
+the difference between the intensity in the detector plane the current estimated intensity. 
+
+Definition at line 131 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!n_best@{n\_\-best}}
+\index{n_best@{n\_\-best}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{n\_\-best}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_ed8a735b7380cad63538be8c999a5704}
+
+
+how many best estimates to store 
+
+Definition at line 134 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!best_array@{best\_\-array}}
+\index{best_array@{best\_\-array}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$$\ast$ \bf{best\_\-array}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_5b59179363fb7b609da4d4210955dc65}
+
+
+array of the best estimates 
+
+Definition at line 137 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!best_error_array@{best\_\-error\_\-array}}
+\index{best_error_array@{best\_\-error\_\-array}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ \bf{best\_\-error\_\-array}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_68844977e38b46e5dd99920ef12222c0}
+
+
+array of the error corresponding to each of the best estimates 
+
+Definition at line 141 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!transmission_constraint@{transmission\_\-constraint}}
+\index{transmission_constraint@{transmission\_\-constraint}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Transmission\-Constraint}$\ast$ \bf{transmission\_\-constraint}\hspace{0.3cm}{\tt  [protected, inherited]}}\label{classBaseCDI_f0268756963c98567bdacff7b44229c4}
+
+
+a function pointer to a cumstomized complex constraint 
+
+Definition at line 145 of file Base\-CDI.h.\index{FresnelCDI@{Fresnel\-CDI}!algNameMap@{algNameMap}}
+\index{algNameMap@{algNameMap}!FresnelCDI@{Fresnel\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, int $>$ $\ast$ \bf{alg\-Name\-Map} = Base\-CDI::set\_\-up\_\-algorithm\_\-name\_\-map()\hspace{0.3cm}{\tt  [static, protected, inherited]}}\label{classBaseCDI_269759a649ad67cc691185b7b6b8462f}
+
+
+a mapping between the algorithm name (string) and identification number 
+
+Definition at line 149 of file Base\-CDI.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Fresnel\-CDI.h}\item 
+Fresnel\-CDI.c++\end{CompactItemize}

@@ -1,0 +1,219 @@
+\section{Transmission\-Constraint Class Reference}
+\label{classTransmissionConstraint}\index{TransmissionConstraint@{TransmissionConstraint}}
+An instance of this class will contain a description of any constraints which should be applied to the transmission function (\doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or exit-surface-wave (\doxyref{Planar\-CDI}{p.}{classPlanarCDI}).  
+
+
+{\tt \#include $<$Transmission\-Constraint.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Transmission\-Constraint} ()
+\item 
+\bf{$\sim$Transmission\-Constraint} ()
+\item 
+void \bf{delete\_\-complex\_\-constraint\_\-regions} ()
+\item 
+virtual void \bf{add\_\-complex\_\-constraint} (\bf{Complex\-Constraint} \&new\_\-constraint)
+\item 
+void \bf{set\_\-charge\_\-flipping} (bool enable, int \bf{flip\_\-sign}=1)
+\item 
+void \bf{set\_\-enforce\_\-unity} (bool enable)
+\item 
+void \bf{set\_\-custom\_\-constraint} (void($\ast$\bf{custom\_\-constraint})(\bf{Complex\_\-2D} \&transmission))
+\item 
+virtual void \bf{apply\_\-constraint} (\bf{Complex\_\-2D} \&transmission)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+std::vector$<$ \bf{Complex\-Constraint} $\ast$ $>$ \bf{complex\_\-constraint\_\-list}
+\item 
+\bf{Double\_\-2D} $\ast$ \bf{region\_\-map}
+\item 
+bool \bf{do\_\-enforce\_\-unity}
+\item 
+bool \bf{do\_\-charge\_\-flip}
+\item 
+int \bf{flip\_\-sign}
+\item 
+void($\ast$ \bf{custom\_\-constraint} )(\bf{Complex\_\-2D} \&)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class allows constraints on the transmission function (\doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or exit-surface-wave (\doxyref{Planar\-CDI}{p.}{classPlanarCDI}), such as complex constraints to be used. To achieve this the user needs to:\begin{itemize}
+\item create an instance of this class\item configure it (for example by setting some \doxyref{Complex\-Constraint}{p.}{classComplexConstraint} objects\item and finally by passing this object to the reconstruction (through the \doxyref{Planar\-CDI}{p.}{classPlanarCDI} or \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} function \char`\"{}set\_\-complex\_\-constraint\char`\"{}).\end{itemize}
+
+
+\begin{Desc}
+\item[See also:]the example \char`\"{}Complex\-Constraints\_\-example.c\char`\"{}. \end{Desc}
+
+
+
+
+Definition at line 225 of file Transmission\-Constraint.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{TransmissionConstraint@{Transmission\-Constraint}!TransmissionConstraint@{TransmissionConstraint}}
+\index{TransmissionConstraint@{TransmissionConstraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Transmission\-Constraint} ()}\label{classTransmissionConstraint_24736424ac5b2755c1cc6d044aa3498d}
+
+
+The constructor, no parameters need to be passed 
+
+Definition at line 25 of file Transmission\-Constraint.c++.
+
+References custom\_\-constraint, region\_\-map, set\_\-charge\_\-flipping(), and set\_\-enforce\_\-unity().\index{TransmissionConstraint@{Transmission\-Constraint}!~TransmissionConstraint@{$\sim$TransmissionConstraint}}
+\index{~TransmissionConstraint@{$\sim$TransmissionConstraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Transmission\-Constraint} ()}\label{classTransmissionConstraint_4d5f0b7b471147c96d67688c9490e223}
+
+
+The destructor 
+
+Definition at line 34 of file Transmission\-Constraint.c++.
+
+References region\_\-map.
+
+\subsection{Member Function Documentation}
+\index{TransmissionConstraint@{Transmission\-Constraint}!delete_complex_constraint_regions@{delete\_\-complex\_\-constraint\_\-regions}}
+\index{delete_complex_constraint_regions@{delete\_\-complex\_\-constraint\_\-regions}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void delete\_\-complex\_\-constraint\_\-regions ()\hspace{0.3cm}{\tt  [inline]}}\label{classTransmissionConstraint_63dc686a5585c55625c5ef068cc5f106}
+
+
+delete all the complex constraints associated with this \doxyref{Transmission\-Constraint}{p.}{classTransmissionConstraint}. Use with care! 
+
+Definition at line 262 of file Transmission\-Constraint.h.
+
+References complex\_\-constraint\_\-list, and region\_\-map.\index{TransmissionConstraint@{Transmission\-Constraint}!add_complex_constraint@{add\_\-complex\_\-constraint}}
+\index{add_complex_constraint@{add\_\-complex\_\-constraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add\_\-complex\_\-constraint (\bf{Complex\-Constraint} \& {\em new\_\-constraint})\hspace{0.3cm}{\tt  [virtual]}}\label{classTransmissionConstraint_928f1ee4a6390b5678169039c1a608cc}
+
+
+A complex constraint. See \doxyref{Complex\-Constraint}{p.}{classComplexConstraint} for details of this class. Multiple regions can be defined by creating multiple \doxyref{Complex\-Constraint}{p.}{classComplexConstraint} objects, and by adding them one at a time using this function. All properties (other than the region) can be reset at any point during the reconstruction (i.e. after calling this function)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-constraint}]The complex constraint to add. \end{description}
+\end{Desc}
+
+
+Definition at line 40 of file Transmission\-Constraint.c++.
+
+References complex\_\-constraint\_\-list, Complex\-Constraint::get\_\-region(), and region\_\-map.\index{TransmissionConstraint@{Transmission\-Constraint}!set_charge_flipping@{set\_\-charge\_\-flipping}}
+\index{set_charge_flipping@{set\_\-charge\_\-flipping}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-charge\_\-flipping (bool {\em enable}, int {\em flip\_\-sign} = {\tt 1})\hspace{0.3cm}{\tt  [inline]}}\label{classTransmissionConstraint_53ecb921182ff71712027ca59e2986dd}
+
+
+Set whether charging flipping should or shouldn't be performed. i.e. unphysical phases will be changed from phi -$>$ -phi. By default it will be performed. This function also allows the user to set the sign of the phases which should be flipped.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em enable}]true - flipping is performed, false - it is not. \item[{\em flip\_\-sign}]The sign of the phase to flip. If the value passed is positive, all positive phases will be flipped to negative. If a negative value is passed, the converse is true. \end{description}
+\end{Desc}
+
+
+Definition at line 299 of file Transmission\-Constraint.h.
+
+References do\_\-charge\_\-flip, and flip\_\-sign.\index{TransmissionConstraint@{Transmission\-Constraint}!set_enforce_unity@{set\_\-enforce\_\-unity}}
+\index{set_enforce_unity@{set\_\-enforce\_\-unity}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-enforce\_\-unity (bool {\em enable})\hspace{0.3cm}{\tt  [inline]}}\label{classTransmissionConstraint_13d22573dd49bbae2c95cf57d6417213}
+
+
+Sets whether to enforce a unity constraint on the transmission magnitude. If true, magnitudes of the transmission function which are unphysical (above 1) will be reset to 1.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em enable}]true - this constraint is applied, false - it is not. \end{description}
+\end{Desc}
+
+
+Definition at line 314 of file Transmission\-Constraint.h.
+
+References do\_\-enforce\_\-unity.\index{TransmissionConstraint@{Transmission\-Constraint}!set_custom_constraint@{set\_\-custom\_\-constraint}}
+\index{set_custom_constraint@{set\_\-custom\_\-constraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-custom\_\-constraint (void($\ast$)(\bf{Complex\_\-2D} \&transmission) {\em custom\_\-constraint})\hspace{0.3cm}{\tt  [inline]}}\label{classTransmissionConstraint_57d90f4c60ad775a92db37079aa0fb0b}
+
+
+It's not possible to write code for every situation in which someone wants to apply a constraint on the transmission function or exit-surface-wave. For this reason, this function is provided. It allows users to write their own custom constraint function and have it executed without the need to recompiled the main libraries of the software. The user's function must be of the form: void function\_\-name(Complex\_\-2D \& array). Where 'array' is either the transmission function (\doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or the exit-surface-wave (\doxyref{Planar\-CDI}{p.}{classPlanarCDI}). 'array' is passed to the function, and is also the return object (i.e. it is expected that the function will alter 'array').
+
+It will be executed after the default constraints. To only have the user's function executed and no others, set this function and set set\_\-charge\_\-flipping(false) and set\_\-enforce\_\-unity(false).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em custom\_\-constraint}]A function pointer (the name of the function) \end{description}
+\end{Desc}
+
+
+Definition at line 337 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!apply_constraint@{apply\_\-constraint}}
+\index{apply_constraint@{apply\_\-constraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void apply\_\-constraint (\bf{Complex\_\-2D} \& {\em transmission})\hspace{0.3cm}{\tt  [virtual]}}\label{classTransmissionConstraint_4277e187c5b61d84756ade7f3405c628}
+
+
+This is the function which is executed each time the support constraint is applied in Fresnel or Planar CDI reconstruction. The user should not generally need to use this function. An exception would be if no constraint is applied during reconstruction, but some general clean-up is required on the final Transmission function. For example, applying the unity constraint.
+
+Before applying any constraints, the mean values of c=beta/delta will be calculated for each region defined through \doxyref{Complex\-Constraint}{p.}{classComplexConstraint} objects. The mean is calculated as:
+
+\[ \bar{C} = \frac{\sum{lnA}}{\sum{\phi}} \]
+
+Where A is the transmission function amplitude, $ \phi $ is the phase and the summation runs over all values in the transmission function array for the defined region.
+
+The constraints will be executed in the following order: - any complex constraints which have been passed to the object - charge flipping is performed - unity of the transmission function is enforced - custom constraints are applied. 
+
+now we start the main loop to alter the values in the transmission function array 
+
+Definition at line 79 of file Transmission\-Constraint.c++.
+
+References complex\_\-constraint\_\-list, custom\_\-constraint, do\_\-charge\_\-flip, do\_\-enforce\_\-unity, flip\_\-sign, Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-mag(), Complex\-Constraint::get\_\-new\_\-mag(), Complex\-Constraint::get\_\-new\_\-phase(), Complex\_\-2D::get\_\-phase(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), region\_\-map, Complex\-Constraint::set\_\-c\_\-mean(), Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-mag(), and Complex\_\-2D::set\_\-phase().
+
+\subsection{Field Documentation}
+\index{TransmissionConstraint@{Transmission\-Constraint}!complex_constraint_list@{complex\_\-constraint\_\-list}}
+\index{complex_constraint_list@{complex\_\-constraint\_\-list}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$\bf{Complex\-Constraint}$\ast$$>$ \bf{complex\_\-constraint\_\-list}\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_cb4565934f1fc78570a14c004267ad2e}
+
+
+a list of the complex\_\-constraints 
+
+Definition at line 230 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!region_map@{region\_\-map}}
+\index{region_map@{region\_\-map}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Double\_\-2D}$\ast$ \bf{region\_\-map}\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_7dd2124697d5762e8b7e7750cbf1f7ea}
+
+
+an array which hold the mapping between pixel and complex constraint 
+
+Definition at line 234 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!do_enforce_unity@{do\_\-enforce\_\-unity}}
+\index{do_enforce_unity@{do\_\-enforce\_\-unity}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool \bf{do\_\-enforce\_\-unity}\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_89605ab5c795e725ed9fa7cf427f374e}
+
+
+flag for whether unity on the transmission magnitude should be enforced 
+
+Definition at line 238 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!do_charge_flip@{do\_\-charge\_\-flip}}
+\index{do_charge_flip@{do\_\-charge\_\-flip}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool \bf{do\_\-charge\_\-flip}\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_400733d2f789484ef4b027822a28e0f9}
+
+
+flag for whether phase flipping should be enforced 
+
+Definition at line 241 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!flip_sign@{flip\_\-sign}}
+\index{flip_sign@{flip\_\-sign}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{flip\_\-sign}\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_05c5a0600ddc05a6cde5018209c08701}
+
+
+the sign of the phase (+1, -1) to be flipped 
+
+Definition at line 244 of file Transmission\-Constraint.h.\index{TransmissionConstraint@{Transmission\-Constraint}!custom_constraint@{custom\_\-constraint}}
+\index{custom_constraint@{custom\_\-constraint}!TransmissionConstraint@{Transmission\-Constraint}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ \bf{custom\_\-constraint})(\bf{Complex\_\-2D} \&)\hspace{0.3cm}{\tt  [protected]}}\label{classTransmissionConstraint_41a3129dcbdbcdbeba45f0b17284edd4}
+
+
+a function pointer to a cumstomized constraint 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Transmission\-Constraint.h}\item 
+Transmission\-Constraint.c++\end{CompactItemize}

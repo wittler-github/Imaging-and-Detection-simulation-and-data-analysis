@@ -1,0 +1,30 @@
+\section{dbin2ppm.c File Reference}
+\label{dbin2ppm_8c}\index{dbin2ppm.c@{dbin2ppm.c}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$Double\_\-2D.h$>$}\par
+{\tt \#include $<$io.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \bf{main} (int argc, char $\ast$argv[$\,$])\label{dbin2ppm_8c_28052c36c3b61c6c0eaa18f5d226118f}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+{\em dbin2ppm.exe\/} - Convert a binary file (2D double / 64 bit, format) to a ppm (grey-scale, 16 bit file). Note that this conversion loses information.
+
+\begin{Desc}
+\item[Usage: dbin2ppm.exe $<$input dbin file$>$ $<$output ppm file$>$]$<$pixels in x$>$ $<$pixels in y$>$\end{Desc}
+\begin{Desc}
+\item[]\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}dbin2ppm.exe my_reconstruction.dbin my_reconstruction.ppm 1024 1024 \end{verbatim}
+\normalsize
+ \end{Desc}
+
+
+Definition in file \bf{dbin2ppm.c}.

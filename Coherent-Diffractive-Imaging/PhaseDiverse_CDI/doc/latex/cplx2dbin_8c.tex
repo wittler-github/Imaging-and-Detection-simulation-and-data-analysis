@@ -1,0 +1,33 @@
+\section{cplx2dbin.c File Reference}
+\label{cplx2dbin_8c}\index{cplx2dbin.c@{cplx2dbin.c}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$io.h$>$}\par
+{\tt \#include $<$Complex\_\-2D.h$>$}\par
+{\tt \#include $<$Double\_\-2D.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \bf{main} (int argc, char $\ast$argv[$\,$])\label{cplx2dbin_8c_28052c36c3b61c6c0eaa18f5d226118f}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+{\em cplx2dbin.exe\/} - Extract part of a complex binary file (2D fftw format) and save as a real binary file (2D double / 64 bit, format). The real, imaginary, magnitude, phase and magnitude squared can be extracted.
+
+\begin{Desc}
+\item[Usage: cplx2dbin.exe $<$input cplx file$>$ $<$output dbin file$>$ $<$component type$>$ $<$size in x$>$ $<$size in y$>$ ]\end{Desc}
+\begin{Desc}
+\item[]where component type is one of:\begin{itemize}
+\item 0: REAL\item 1: IMAG\item 2: MAG\item 3: PHASE\item 4: MAG\_\-SQ\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}cplx2dbin.exe my_white_field.cplx my_white_field_illum.bin 4 1024 1024 \end{verbatim}
+\normalsize
+ Extract the magnitude squared from a reconstucted white-field file. \end{Desc}
+
+
+Definition in file \bf{cplx2dbin.c}.

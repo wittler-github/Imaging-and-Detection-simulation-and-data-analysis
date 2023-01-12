@@ -1,0 +1,33 @@
+\section{cplx2ppm.c File Reference}
+\label{cplx2ppm_8c}\index{cplx2ppm.c@{cplx2ppm.c}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$io.h$>$}\par
+{\tt \#include $<$Complex\_\-2D.h$>$}\par
+{\tt \#include $<$Double\_\-2D.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \bf{main} (int argc, char $\ast$argv[$\,$])\label{cplx2ppm_8c_28052c36c3b61c6c0eaa18f5d226118f}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+{\em cplx2ppm.exe\/} - Extract part of a complex binary file (2D fftw format) and save as a ppm file (grey scale P2 which is 16 bit per pixel). The real, imaginary, magnitude, phase and magnitude squared can be extracted.
+
+\begin{Desc}
+\item[Usage: cplx2ppm.exe $<$input cplx file$>$ $<$output ppm file$>$ $<$component type$>$ $<$size in x$>$ $<$size in y$>$ ]\end{Desc}
+\begin{Desc}
+\item[]where component type is one of:\begin{itemize}
+\item 0: REAL\item 1: IMAG\item 2: MAG\item 3: PHASE\item 4: MAG\_\-SQ\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}cplx2ppm.exe my_white_field.cplx my_white_field_illum.pgm 4 1024 1024 \end{verbatim}
+\normalsize
+ Extract the magnitude squared from a reconstucted white-field file. \end{Desc}
+
+
+Definition in file \bf{cplx2ppm.c}.

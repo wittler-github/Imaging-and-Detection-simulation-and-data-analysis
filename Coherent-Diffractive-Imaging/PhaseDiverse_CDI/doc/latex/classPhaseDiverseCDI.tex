@@ -1,0 +1,600 @@
+\section{Phase\-Diverse\-CDI Class Reference}
+\label{classPhaseDiverseCDI}\index{PhaseDiverseCDI@{PhaseDiverseCDI}}
+The class which performs phase diverse and ptychographic reconstruction.  
+
+
+{\tt \#include $<$Phase\-Diverse\-CDI.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+\textbf{CROSS\_\-CORRELATION}\label{classPhaseDiverseCDI_c903c6d6dff43627c254c7f1f2f3516e482250489824a04e2ed9933840892bf1}
+
+\item 
+\textbf{MINIMUM\_\-ERROR}\label{classPhaseDiverseCDI_c903c6d6dff43627c254c7f1f2f3516e530a140fd13648216bc0b9dc1b3af176}
+
+\item 
+enum \{ \textbf{CROSS\_\-CORRELATION}, 
+\textbf{MINIMUM\_\-ERROR}
+ \}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Phase\-Diverse\-CDI} (double \bf{beta}=1.0, double \bf{gamma}=1.0, bool \bf{parallel}=false, int granularity=1)
+\item 
+\bf{$\sim$Phase\-Diverse\-CDI} ()
+\item 
+void \bf{add\_\-new\_\-position} (\bf{Base\-CDI} $\ast$local, double x=0, double y=0, double \bf{alpha}=1)\label{classPhaseDiverseCDI_e293015a260fea9ecc6457fcf670bd84}
+
+\item 
+void \bf{initialise\_\-estimate} ()
+\item 
+void \bf{iterate} ()
+\item 
+void \bf{set\_\-iterations\_\-per\_\-cycle} (int iterations)
+\item 
+void \bf{set\_\-feedback\_\-parameter} (double \bf{beta})
+\item 
+void \bf{set\_\-amplification\_\-factor} (double \bf{gamma})\label{classPhaseDiverseCDI_5bfa97f071dde618900fa0c82206ca45}
+
+\item 
+void \bf{set\_\-probe\_\-scaling} (int n\_\-probe, double \bf{alpha})\label{classPhaseDiverseCDI_9f448479fdc435ed4e032d9f7c020e5f}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{get\_\-transmission} ()
+\item 
+void \bf{set\_\-transmission} (\bf{Complex\_\-2D} \&new\_\-transmission)
+\item 
+void \bf{adjust\_\-positions} (int type=CROSS\_\-CORRELATION, bool forwards=true, int \bf{x\_\-min}=-50, int x\_\-max=+50, int \bf{y\_\-min}=-50, int y\_\-max=+50, double step\_\-size=4)
+\item 
+double \bf{get\_\-final\_\-x\_\-position} (int n\_\-probe)
+\item 
+double \bf{get\_\-final\_\-y\_\-position} (int n\_\-probe)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+std::vector$<$ \bf{Base\-CDI} $\ast$ $>$ \bf{single\-CDI}\label{classPhaseDiverseCDI_f4b69a66b67fcb4cb73f0a7249df020f}
+
+\item 
+std::vector$<$ \bf{Complex\_\-2D} $\ast$ $>$ \bf{single\_\-result}\label{classPhaseDiverseCDI_69eeee88aa44eb9eb61aec8f8918842c}
+
+\item 
+std::vector$<$ \bf{Double\_\-2D} $\ast$ $>$ \bf{weights}
+\item 
+std::vector$<$ double $>$ \bf{x\_\-position}\label{classPhaseDiverseCDI_2f1bba879ccca766e9ae9c30a7df1ea8}
+
+\item 
+std::vector$<$ double $>$ \bf{y\_\-position}\label{classPhaseDiverseCDI_d2649dcef458974b4e7d92f5b6744a71}
+
+\item 
+double \bf{beta}\label{classPhaseDiverseCDI_176bb7d2686d3fa6877f67812e905f7b}
+
+\item 
+double \bf{gamma}\label{classPhaseDiverseCDI_d7af8d74a33645948d33c859b2d745d5}
+
+\item 
+std::vector$<$ double $>$ \bf{alpha}\label{classPhaseDiverseCDI_f88ad0b7527a90e3c3d18557b0739d4f}
+
+\item 
+\bf{Complex\_\-2D} $\ast$ \bf{object}
+\item 
+int \bf{iterations\_\-per\_\-cycle}
+\item 
+int \bf{scale}
+\item 
+int \bf{nx}
+\item 
+int \bf{ny}\label{classPhaseDiverseCDI_c00b6399ae98f2f721909222a5370f02}
+
+\item 
+int \bf{x\_\-min}
+\item 
+int \bf{y\_\-min}\label{classPhaseDiverseCDI_527526b891f2e3f294b554bc3a72cf40}
+
+\item 
+bool \bf{parallel}
+\item 
+bool \bf{weights\_\-set}
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{add\_\-to\_\-object} (int n\_\-probe)
+\item 
+void \bf{update\_\-from\_\-object} (int n\_\-probe)
+\item 
+void \bf{get\_\-result} (\bf{Base\-CDI} $\ast$local, \bf{Complex\_\-2D} \&result)
+\item 
+void \bf{set\_\-result} (\bf{Base\-CDI} $\ast$local, \bf{Complex\_\-2D} \&result)
+\item 
+void \bf{reallocate\_\-object\_\-memory} (int new\_\-nx, int new\_\-ny)
+\item 
+void \bf{scale\_\-object} (double factor)
+\item 
+void \bf{set\_\-up\_\-weights} ()
+\item 
+int \bf{check\_\-position} (int n\_\-probe, double step\_\-size=4, int min\_\-x=-50, int max\_\-x=50, int min\_\-y=-50, int max\_\-y=50, int tries=0)
+\item 
+int \bf{get\_\-global\_\-x\_\-pos} (int x, double x\_\-offset)
+\item 
+int \bf{get\_\-global\_\-y\_\-pos} (int y, double y\_\-offset)
+\item 
+int \bf{get\_\-local\_\-x\_\-pos} (int x, double x\_\-offset)
+\item 
+int \bf{get\_\-local\_\-y\_\-pos} (int y, double y\_\-offset)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Nadia Davidson $<$\tt{nadiamd@unimelb.edu.au}$>$\end{Desc}
+This class can be used to perform phase diverse or ptychographic reconstruction of either Fresnel or plane-wave CDI data. Any number of frames (also called local/single frames or probes in this documentation) may be added to the reconstruction. In order to perform a reconstruction, you will need to create either a new \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} or \doxyref{Planar\-CDI}{p.}{classPlanarCDI} object for each of these 'local' datasets. The \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} or \doxyref{Planar\-CDI}{p.}{classPlanarCDI} objects must then be passed to a \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI} object. Because the each sub-iteration (ie. each iteration of a local frame) is performed using the code in Fresnel\-CDI/Planar\-CDI, all the functionality available in these classes is also available here. For example complex constraint can be set, shrink-wrap can be used, the estimate can be initialised using the results from a previous reconstruction etc. An example can be found in the /examples directory, demonstrating how to use \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI}.
+
+The displacement in position between 'local' frames may be either transverse to the beam direction, or longitudinal, along the beam direction. The longitudinal position (for \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) is set when the \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} objects are initially constructed. Transverse positions are set when the Fresnel\-CDI/Planar\-CDI objects are added to the \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI} object. This class allows the transverse positions to be automatically adjusted during reconstruction using the \char`\"{}adjust\_\-positions\char`\"{} function.
+
+The code allows for several options in the type of reconstruction which is done: \begin{itemize}
+\item The reconstruction can be performed in series or parallel. \begin{itemize}
+\item In the case of series (see for example the paper....), a 'local' frame will undergo one or more iterations, the result will be updated to a 'global' estimate of the sample, and this estimate will form the starting point for the next frame. For each call to the method \char`\"{}iterate()\char`\"{} this process is repeated until each local frame is used once. The algorithm can be described by: \par
+ $ T_{k+1} = (1-\beta w^n)T_k + \beta w^n T^n_k$ \par
+ where $T_{k+1}$ is the updated global function, $T^n$ is the updated local function for the nth local frame. $\beta$ is the relaxation parameter and the weight is $ w^n(\rho) = \alpha^n (\frac{|T^n(\rho)|}{max|T^n(\rho)|} )^\gamma $ for Fresnel CDI or $w^n = \alpha^n$ for Plane-wave CDI. The weight is zero outside of the support.
+
+\item For a parallel reconstruction (see .....), each frame with independently undergo one of more iteration, the result from all frames will be merged to form a new estimate of the sample, this estimate then becomes the starting point for the next iteration of all frames. The algorithm can be described by: \par
+ $ T_{k+1} = (1-\beta)T_k + \beta \sum_n(w^n T^n_k)$ \par
+ where $T_{k+1}$, $T^n$, and $\beta$ were defined earlier. The weight, w, is similar to that used for series reconstruction, but the weight it normalised such that $ \sum_n w^n = 1 $. i.e. $ w^n_{parallel}= w^n_{series} / \sum_n w^n_{series} $ \end{itemize}
+
+
+\item The number of local iterations to perform before updating the result to the 'global' function can be set.
+
+\item The feedback parameter, beta, may be set. This quantity is used to set how much of the previous 'global' sample function will be left after the next 'global' iteration.
+
+\item The amplification factor, gamma, and the probe scaling, alpha, may also be see. These parameters control the weighting of one frame (and pixels within a frame) with respect to each other. \end{itemize}
+
+
+
+
+Definition at line 94 of file Phase\-Diverse\-CDI.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!PhaseDiverseCDI@{PhaseDiverseCDI}}
+\index{PhaseDiverseCDI@{PhaseDiverseCDI}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Phase\-Diverse\-CDI} (double {\em beta} = {\tt 1.0}, double {\em gamma} = {\tt 1.0}, bool {\em parallel} = {\tt false}, int {\em granularity} = {\tt 1})}\label{classPhaseDiverseCDI_09678feec53c84b6b78096e596c39346}
+
+
+Construct a \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI} object for phase diverse or ptychographic reconstruction. The data should be entered later using the 'add\_\-new\_\-position' function.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em beta}]The feedback parameter. By default this is 1 (no feedback). \item[{\em gamma}]The amplification factor. By default this is 1 (no amplification). \item[{\em parallel}]true - run in parallel mode, false - run in series mode. By default series mode is set. \item[{\em granularity}]A factor which controls sub-pixel alignment. 1 = regular, 2 = 2 'global' pixels for every 1 'local' pixel. i.e. 2 allows alignment to within half a pixel. NOTE: This is not currently working properly! \end{description}
+\end{Desc}
+
+
+Definition at line 27 of file Phase\-Diverse\-CDI.c++.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!~PhaseDiverseCDI@{$\sim$PhaseDiverseCDI}}
+\index{~PhaseDiverseCDI@{$\sim$PhaseDiverseCDI}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim$\bf{Phase\-Diverse\-CDI} ()}\label{classPhaseDiverseCDI_8869ea2e87f88441b5e00f0fd2999747}
+
+
+Destructor for \doxyref{Phase\-Diverse\-CDI}{p.}{classPhaseDiverseCDI} 
+
+Definition at line 47 of file Phase\-Diverse\-CDI.c++.
+
+References object, single\_\-result, and weights.
+
+\subsection{Member Function Documentation}
+\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!initialise_estimate@{initialise\_\-estimate}}
+\index{initialise_estimate@{initialise\_\-estimate}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void initialise\_\-estimate ()}\label{classPhaseDiverseCDI_fa0d7e8561b9c517bd75b34d6e3d33c6}
+
+
+Initialise the estimate of the 'global' object function. The initialisation is performed using the current estimate for each 'local' frame. For this reason you must first initialise each Fresnel\-CDI/Planar\-CDI object individually before calling this function. 
+
+Definition at line 174 of file Phase\-Diverse\-CDI.c++.
+
+References add\_\-to\_\-object(), nx, ny, object, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), and single\-CDI.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!iterate@{iterate}}
+\index{iterate@{iterate}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void iterate ()}\label{classPhaseDiverseCDI_d2a277e6b89ec8fcc5124fc683b22b8e}
+
+
+Perform one iteration. This with involve performing one or more iterations for each sub-set of data. The exact implementation depends on whether the reconstruction is being run in series or parallel mode. 
+
+static bool flag = false; if(!flag)\{ char buf[50]; \doxyref{Double\_\-2D}{p.}{classDouble__2D} result(nx,ny); \doxyref{Complex\_\-2D}{p.}{classComplex__2D} trans(nx,ny); sprintf(buf,\char`\"{}itr\_\-\%i\_\-\%i\_\-1.tiff\char`\"{},i,j); ((Fresnel\-CDI$\ast$)single\-CDI.at(i))-$>$get\_\-transmission\_\-function(trans); trans.copy($\ast$get\_\-transmission()); trans.get\_\-2d(MAG,result); write\_\-image(buf,result,false,0,1.0); flag=true; \} 
+
+Definition at line 194 of file Phase\-Diverse\-CDI.c++.
+
+References add\_\-to\_\-object(), beta, iterations\_\-per\_\-cycle, parallel, scale\_\-object(), single\-CDI, and update\_\-from\_\-object().\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!set_iterations_per_cycle@{set\_\-iterations\_\-per\_\-cycle}}
+\index{set_iterations_per_cycle@{set\_\-iterations\_\-per\_\-cycle}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-iterations\_\-per\_\-cycle (int {\em iterations})\hspace{0.3cm}{\tt  [inline]}}\label{classPhaseDiverseCDI_fa5fdace08712cf98e5a703e0d858dc7}
+
+
+Set the number of 'local' frame iterations before updating the result to the 'global' object function.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em iterations}]The number of 'local' iterations. \end{description}
+\end{Desc}
+
+
+Definition at line 209 of file Phase\-Diverse\-CDI.h.
+
+References iterations\_\-per\_\-cycle.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!set_feedback_parameter@{set\_\-feedback\_\-parameter}}
+\index{set_feedback_parameter@{set\_\-feedback\_\-parameter}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-feedback\_\-parameter (double {\em beta})\hspace{0.3cm}{\tt  [inline]}}\label{classPhaseDiverseCDI_8b15af5c47bbbc888a43482469c2702b}
+
+
+Set the feed-back parameter.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em beta}]The feedback parameter \end{description}
+\end{Desc}
+
+
+Definition at line 218 of file Phase\-Diverse\-CDI.h.
+
+References weights\_\-set.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_transmission@{get\_\-transmission}}
+\index{get_transmission@{get\_\-transmission}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} $\ast$ get\_\-transmission ()}\label{classPhaseDiverseCDI_a629f16cb31bef43a9882d766f53d3f5}
+
+
+This function allows you to access the 'global' sample function.
+
+\begin{Desc}
+\item[Returns:]The current estimate of either the transmission (for \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or exit-surface-wave (for \doxyref{Planar\-CDI}{p.}{classPlanarCDI}) \end{Desc}
+
+
+Definition at line 80 of file Phase\-Diverse\-CDI.c++.
+
+References object.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!set_transmission@{set\_\-transmission}}
+\index{set_transmission@{set\_\-transmission}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-transmission (\bf{Complex\_\-2D} \& {\em new\_\-transmission})}\label{classPhaseDiverseCDI_b57cd431633adee595b0ebaeee293939}
+
+
+Set the 'global' sample function. This method could be used, for example, instead of 'initialise\_\-estimate' to initialise the results to those from a previous reconstruction.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-transmission}]The transmission (for \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI}) or exit-surface-wave (for \doxyref{Planar\-CDI}{p.}{classPlanarCDI}) to copy. \end{description}
+\end{Desc}
+
+
+Definition at line 88 of file Phase\-Diverse\-CDI.c++.
+
+References Complex\_\-2D::copy(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), nx, ny, object, and reallocate\_\-object\_\-memory().\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!adjust_positions@{adjust\_\-positions}}
+\index{adjust_positions@{adjust\_\-positions}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void adjust\_\-positions (int {\em type} = {\tt CROSS\_\-CORRELATION}, bool {\em forwards} = {\tt true}, int {\em x\_\-min} = {\tt -50}, int {\em x\_\-max} = {\tt +50}, int {\em y\_\-min} = {\tt -50}, int {\em y\_\-max} = {\tt +50}, double {\em step\_\-size} = {\tt 4})}\label{classPhaseDiverseCDI_dd7d820db0a28fc48fd30382b1be60df}
+
+
+Align the frames with respect to each other. The transverse positions will be automatically adjusted and the new positions used for the remainder of the reconstruction run. If needed, the new positions can be retrieved using the \char`\"{}get\_\-final\_\-x(y)\_\-position\char`\"{} functions.
+
+Two methods to align the frames are provided:
+
+\begin{itemize}
+\item Phase\-Diverse::CROSS\_\-CORRELATION - implements the cross-correlation method using the magnitude of the transmission/exit-surface-wave. There is pleanty of documentation describing how cross-correlation can be used for alignment. see \tt{http://en.wikipedia.org/wiki/Cross-correlation} for example. We use the fourier transform implementation. This method is useful if the relative positions are unknown to great than 10 pixels. It is also much faster than the alternative.\end{itemize}
+
+
+\begin{itemize}
+\item Phase\-Diverse::MINIMUM\_\-ERROR - aligns the frames by looking for the position which gives the smallest error in the detector plane. The error metric is described in \doxyref{Planar\-CDI.h}{p.}{PlanarCDI_8h}. The algorithm works by checking the error in the 9 positions centered on the current positions: (x-step\_\-size, y-step\_\-size), (x, y-step\_\-size), (x+step\_\-size, y-step\_\-size), (x-step\_\-size, y) etc. Where \char`\"{}step\_\-size\char`\"{} is an input parameter which has a default of 4 pixels. The position with the minimum error becomes the new position, the step\_\-size is decreased to half, and the procedure is repeated. The algorithm ends when the step size is less than a pixel. This method of frame alignment is good for small refinement, but is less reliable if the relative differences are not known to within about 10-20 pixels. It is also significatly slower.\end{itemize}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]either Phase\-Diverse::CROSS\_\-CORRELATION or Phase\-Diverse::MINIMUM\_\-ERROR. Phase\-Diverse::CROSS\_\-CORRELATION is the default. \item[{\em forwards}]By default the alignment is done in order of the frames, with the second being aligned the the first, followed by the third to the second and so on. In you needed to run the alignment in reverse e.g. aligning initially to the last frame, then this parameter should be false. You might use this, for example, if you want to check that the alignment is consistent in both forward and backward directions. \item[{\em x\_\-min}]Positions below x+x\_\-min pixels are not allowed. For Phase\-Diverse::CROSS\_\-CORRELATION, the algorithm will only search within the range x+x\_\-min to x+x\_\-max. For Phase\-Diverse::MINIMUM\_\-ERROR, if a position below x\_\-min is encountered, the algorithm aborts and returns the positions to their original value. \item[{\em x\_\-max}]See x\_\-min. \item[{\em y\_\-min}]See y\_\-min. \item[{\em y\_\-max}]See y\_\-max. \item[{\em step\_\-size}]The initial step size to use in the case of Phase\-Diverse::MINIMUM\_\-ERROR. \end{description}
+\end{Desc}
+
+
+if(!parallel)\{ parallel = true; weights\_\-set=false; for(int i=0; i$<$10; i++) \doxyref{iterate()}{p.}{classPhaseDiverseCDI_d2a277e6b89ec8fcc5124fc683b22b8e}; \}
+
+char name[80]; \doxyref{Double\_\-2D}{p.}{classDouble__2D} pic(nx,ny); object-$>$get\_\-2d(MAG,pic); sprintf(name,\char`\"{}pic\_\-\%i.tiff\char`\"{},n); write\_\-image(name,pic,false, 0,1);
+
+static int counter = 0; char buff[90]; sprintf(buff,\char`\"{}temp\_\-single\_\-\%i.tiff\char`\"{},counter); write\_\-image(buff,$\ast$temp\_\-single\_\-int,false); cout $<$$<$ \char`\"{}not here\char`\"{}$<$$<$endl;
+
+sprintf(buff,\char`\"{}temp\_\-object\_\-\%i.tiff\char`\"{},counter); write\_\-image(buff,temp\_\-others,false); counter++;
+
+cout $<$$<$ \char`\"{}moving prob \char`\"{} $<$$<$ n $<$$<$ \char`\"{} from (\char`\"{} $<$$<$ before\_\-x $<$$<$ \char`\"{},\char`\"{} $<$$<$ before\_\-y $<$$<$ \char`\"{}) \char`\"{} $<$$<$ \char`\"{} $\rightarrow$  (\char`\"{} $<$$<$ x\_\-position.at(n) $<$$<$ \char`\"{},\char`\"{} $<$$<$ y\_\-position.at(n) $<$$<$ \char`\"{}).\char`\"{} $<$$<$ endl;
+
+for(int i=0; i$<$single\-CDI.size(); i++)\{ add\_\-to\_\-object(i); \} 
+
+Definition at line 329 of file Phase\-Diverse\-CDI.c++.
+
+References add\_\-to\_\-object(), beta, check\_\-position(), Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-mag(), Complex\_\-2D::get\_\-real(), get\_\-result(), nx, ny, object, parallel, scale, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), single\_\-result, single\-CDI, weights\_\-set, x\_\-min, x\_\-position, y\_\-min, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_final_x_position@{get\_\-final\_\-x\_\-position}}
+\index{get_final_x_position@{get\_\-final\_\-x\_\-position}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-final\_\-x\_\-position (int {\em n\_\-probe})\hspace{0.3cm}{\tt  [inline]}}\label{classPhaseDiverseCDI_39014f353d75a31e10dd606e07e1f679}
+
+
+Get the current position of the 'n\_\-probe'th frame.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\_\-probe}]The index of the frame you wish to retrieve the position for. 0=the first frame you added, 1=2nd frame added etc.... \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the transverse horizontal position \end{Desc}
+
+
+Definition at line 330 of file Phase\-Diverse\-CDI.h.
+
+References x\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_final_y_position@{get\_\-final\_\-y\_\-position}}
+\index{get_final_y_position@{get\_\-final\_\-y\_\-position}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\_\-final\_\-y\_\-position (int {\em n\_\-probe})\hspace{0.3cm}{\tt  [inline]}}\label{classPhaseDiverseCDI_6e69f39820a90fa53d0ba6205756a2a1}
+
+
+Get the current position of the 'n\_\-probe'th frame.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\_\-probe}]The index of the frame you wish to retrieve the position for. 0=the first frame you added, 1=2nd frame added etc.... \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the transverse vertical position \end{Desc}
+
+
+Definition at line 341 of file Phase\-Diverse\-CDI.h.
+
+References y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!add_to_object@{add\_\-to\_\-object}}
+\index{add_to_object@{add\_\-to\_\-object}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add\_\-to\_\-object (int {\em n\_\-probe})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_a054951b00149080ca02cd0b1d816884}
+
+
+Update a 'local' frame result to the 'global' object. The result is weighted before being added.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\_\-probe}]The local frame number. \end{description}
+\end{Desc}
+
+
+\doxyref{Double\_\-2D}{p.}{classDouble__2D} temp(nx,ny); object-$>$get\_\-2d(MAG,temp); write\_\-image(\char`\"{}before\_\-norm.tiff\char`\"{},temp,false,0,1);
+
+normalise if(scale!=1)\{ for(int i\_\-=1; i\_\-$<$ lnx-1; i\_\-++)\{ for(int j\_\-=1; j\_\-$<$ lny-1; j\_\-++)\{
+
+double weight = this\_\-weight.get(i\_\-,j\_\-);
+
+don't even bother to do anything is the weight at this pixel is zero. if(weight!=0)\{
+
+get the pixel positions in the global (object) frame. int i = get\_\-global\_\-x\_\-pos(i\_\-,x\_\-offset)$\ast$scale; int j = get\_\-global\_\-y\_\-pos(j\_\-,y\_\-offset)$\ast$scale;
+
+bounds check if(i$>$=0\&\&j$>$=0\&\&i$<$nx\&\&j$<$ny)\{
+
+double weight\_\-r = 0; double weight\_\-i = 0;
+
+for(int di=0; di $<$ scale; di++)\{ for(int dj=0; dj $<$ scale; dj++)\{ add to the sum for each pixel so we can normalise later weight\_\-r+=object-$>$get\_\-real(i+di,j+dj); weight\_\-i+=object-$>$get\_\-imag(i+di,j+dj); \} \}
+
+cout $<$$<$ weight\_\-i $<$$<$ \char`\"{} \char`\"{} $<$$<$ small-$>$get\_\-imag(i\_\-,j\_\-) $<$$<$ \char`\"{} \char`\"{}; if(weight\_\-r!=0\&\&weight\_\-i!=0)\{ weight\_\-r=small-$>$get\_\-real(i\_\-,j\_\-)$\ast$scale$\ast$scale/weight\_\-r; weight\_\-i=small-$>$get\_\-imag(i\_\-,j\_\-)$\ast$scale$\ast$scale/weight\_\-i;
+
+cout $<$$<$ weight\_\-i $<$$<$endl;
+
+for(int di=0; di $<$ scale; di++)\{ for(int dj=0; dj $<$ scale; dj++)\{ object-$>$set\_\-real(i+di,j+dj,weight\_\-r$\ast$object-$>$get\_\-real(i+di,j+dj)); object-$>$set\_\-imag(i+di,j+dj,weight\_\-i$\ast$object-$>$get\_\-imag(i+di,j+dj)); \} \} \} \} \} \} \} \} 
+
+Definition at line 843 of file Phase\-Diverse\-CDI.c++.
+
+References get\_\-global\_\-x\_\-pos(), get\_\-global\_\-y\_\-pos(), Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), get\_\-result(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), nx, ny, object, parallel, scale, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), set\_\-up\_\-weights(), single\_\-result, single\-CDI, weights, x\_\-min, x\_\-position, y\_\-min, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!update_from_object@{update\_\-from\_\-object}}
+\index{update_from_object@{update\_\-from\_\-object}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void update\_\-from\_\-object (int {\em n\_\-probe})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_6524625d708161800414866c609b3eb4}
+
+
+Update a 'local' frame result from the 'global' object.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\_\-probe}]The local frame number. \end{description}
+\end{Desc}
+
+
+Definition at line 1058 of file Phase\-Diverse\-CDI.c++.
+
+References get\_\-global\_\-x\_\-pos(), get\_\-global\_\-y\_\-pos(), Complex\_\-2D::get\_\-imag(), Complex\_\-2D::get\_\-real(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), nx, ny, object, scale, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), set\_\-result(), set\_\-up\_\-weights(), single\_\-result, single\-CDI, weights, x\_\-position, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_result@{get\_\-result}}
+\index{get_result@{get\_\-result}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void get\_\-result (\bf{Base\-CDI} $\ast$ {\em local}, \bf{Complex\_\-2D} \& {\em result})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_d5efd18f8d12322ac3aeac4b319527c9}
+
+
+This function is basically a wrapper to check the \doxyref{Base\-CDI}{p.}{classBaseCDI} type so that the correct type of sample function is retrieve (either transmission function or the exit-surface-wave.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em local}]A pointer to either a \doxyref{Planar\-CDI}{p.}{classPlanarCDI} or \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} object \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]result The estimate is copied from local to result \end{Desc}
+
+
+Definition at line 309 of file Phase\-Diverse\-CDI.c++.
+
+References Complex\_\-2D::copy().\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!set_result@{set\_\-result}}
+\index{set_result@{set\_\-result}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-result (\bf{Base\-CDI} $\ast$ {\em local}, \bf{Complex\_\-2D} \& {\em result})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_09994c3e02f52e99957c152326a02f99}
+
+
+This function is basically a wrapper to check the \doxyref{Base\-CDI}{p.}{classBaseCDI} type so that the correct type of sample function is set (either transmission function or the exit-surface-wave.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em local}]A pointer to either a \doxyref{Planar\-CDI}{p.}{classPlanarCDI} or \doxyref{Fresnel\-CDI}{p.}{classFresnelCDI} object \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]result The estimate is copied from result to local \end{Desc}
+
+
+Definition at line 318 of file Phase\-Diverse\-CDI.c++.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!reallocate_object_memory@{reallocate\_\-object\_\-memory}}
+\index{reallocate_object_memory@{reallocate\_\-object\_\-memory}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void reallocate\_\-object\_\-memory (int {\em new\_\-nx}, int {\em new\_\-ny})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_7b49c23eae2dea4b8f49f0abd03452c4}
+
+
+This function is used to reallocate memory for the 'global' sample object. It is only used when add\_\-new\_\-position is called, in the case that the frame does not fit within the bounds of the current object array. 
+
+Definition at line 67 of file Phase\-Diverse\-CDI.c++.
+
+References nx, ny, and object.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!scale_object@{scale\_\-object}}
+\index{scale_object@{scale\_\-object}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void scale\_\-object (double {\em factor})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_327e5dcff4fae2ba0d23ecabc4aef037}
+
+
+This function is used during reconstruction in parallel mode. It is similar to simply scaling all the elements of the 'global' sample array, (e.g. with object.scale(factor). However, this method preserves the value of the elements outside the boundary of the sample. ie. it checks the weights of all the local frames to work out which area to scale.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em factor}]The scaled elements go from 'a' to 'factor$\ast$a'. \end{description}
+\end{Desc}
+
+
+Definition at line 262 of file Phase\-Diverse\-CDI.c++.
+
+References Complex\_\-2D::get\_\-imag(), get\_\-local\_\-x\_\-pos(), get\_\-local\_\-y\_\-pos(), Complex\_\-2D::get\_\-real(), nx, ny, object, scale, Complex\_\-2D::set\_\-imag(), Complex\_\-2D::set\_\-real(), set\_\-up\_\-weights(), single\-CDI, weights, x\_\-position, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!set_up_weights@{set\_\-up\_\-weights}}
+\index{set_up_weights@{set\_\-up\_\-weights}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\_\-up\_\-weights ()\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_60bfba0f537287762d619728b4dd0ea0}
+
+
+Calculate the weights for each frame in the reconstruction. See a description above for how they are set. 
+
+Definition at line 713 of file Phase\-Diverse\-CDI.c++.
+
+References alpha, beta, gamma, Complex\_\-2D::get\_\-2d(), get\_\-global\_\-x\_\-pos(), get\_\-global\_\-y\_\-pos(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), MAG, nx, ny, object, parallel, single\_\-result, single\-CDI, weights, weights\_\-set, x\_\-position, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!check_position@{check\_\-position}}
+\index{check_position@{check\_\-position}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int check\_\-position (int {\em n\_\-probe}, double {\em step\_\-size} = {\tt 4}, int {\em min\_\-x} = {\tt -50}, int {\em max\_\-x} = {\tt 50}, int {\em min\_\-y} = {\tt -50}, int {\em max\_\-y} = {\tt 50}, int {\em tries} = {\tt 0})\hspace{0.3cm}{\tt  [private]}}\label{classPhaseDiverseCDI_a617317fc299f22fa7aad6d342f08b5e}
+
+
+A position alignment function. See \char`\"{}adjust\_\-positions\char`\"{} above for more detail.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\_\-probe}]The index to the local frame which needs to be aligned \item[{\em step\_\-size}]Check the 8 positions located around the current positions using a step size of \char`\"{}step\_\-size\char`\"{} pixels. \item[{\em min\_\-x}]The minimum distance horizontally, in pixel, for which the re-alignment will check. \item[{\em max\_\-x}]See min\_\-x. \item[{\em min\_\-y}]See min\_\-y. \item[{\em max\_\-y}]See max\_\-y. \item[{\em tries}]How many times has this function been called for this positions. After 10 tries the algorithm gives up and returns to the original position. \end{description}
+\end{Desc}
+
+
+cout $<$$<$ \char`\"{}checking probe \char`\"{}$<$$<$ n\_\-probe $<$$<$ \char`\"{} position, \char`\"{} $<$$<$ x $<$$<$ \char`\"{},\char`\"{} $<$$<$ y $<$$<$ \char`\"{} with step size \char`\"{} $<$$<$ step\_\-size $<$$<$ \char`\"{}. Try no.: \char`\"{}$<$$<$tries$<$$<$ endl;
+
+if(n\_\-probe==4\&\&new\_\-x==3294\&\&new\_\-y==2917)\{ static int h = 0; char blah[80]; \doxyref{Double\_\-2D}{p.}{classDouble__2D} temp(1024,1024); single\_\-result.at(n\_\-probe)-$>$get\_\-2d(PHASE,temp); sprintf(blah,\char`\"{}single\_\-prob\%i\_\-try\%i.tiff\char`\"{},n\_\-probe,h); write\_\-image(blah,temp,true,-0.1,0);
+
+object-$>$get\_\-2d(PHASE,temp); sprintf(blah,\char`\"{}object\_\-prob\%i\_\-try\%i.tiff\char`\"{},n\_\-probe,h); write\_\-image(blah,temp,true,-0.1,0);
+
+h++;
+
+cout $<$$<$ \char`\"{}error at (\char`\"{}$<$$<$new\_\-x$<$$<$\char`\"{},\char`\"{}$<$$<$new\_\-y $<$$<$ \char`\"{})\char`\"{}$<$$<$\char`\"{} is \char`\"{}$<$$<$single-$>$get\_\-error()$<$$<$endl;
+
+\}
+
+cout $<$$<$ \char`\"{}moving probe \char`\"{}$<$$<$ n\_\-probe $<$$<$ \char`\"{} by \char`\"{} $<$$<$ x\_\-position.at(n\_\-probe)-x $<$$<$\char`\"{} in x \char`\"{} $<$$<$ \char`\"{}and \char`\"{}$<$$<$ y\_\-position.at(n\_\-probe)-y$<$$<$\char`\"{} in y.\char`\"{} $<$$<$ endl; 
+
+Definition at line 574 of file Phase\-Diverse\-CDI.c++.
+
+References add\_\-to\_\-object(), beta, Complex\_\-2D::copy(), FAILURE, Base\-CDI::get\_\-error(), Complex\_\-2D::get\_\-size\_\-x(), Complex\_\-2D::get\_\-size\_\-y(), Base\-CDI::iterate(), object, scale, set\_\-result(), single\_\-result, single\-CDI, SUCCESS, update\_\-from\_\-object(), weights\_\-set, x\_\-position, and y\_\-position.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_global_x_pos@{get\_\-global\_\-x\_\-pos}}
+\index{get_global_x_pos@{get\_\-global\_\-x\_\-pos}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-global\_\-x\_\-pos (int {\em x}, double {\em x\_\-offset})\hspace{0.3cm}{\tt  [inline, private]}}\label{classPhaseDiverseCDI_2006aef3b84397c36f18c1499e2bfbd7}
+
+
+Get the global pixel \char`\"{}x\char`\"{} coordinate using a local frame \char`\"{}x\char`\"{} and the frame offset.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]the local frame pixel position in x \item[{\em x\_\-offset}]the offset of the local frame with respect to the other frames. \end{description}
+\end{Desc}
+
+
+Definition at line 441 of file Phase\-Diverse\-CDI.h.
+
+References x\_\-min.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_global_y_pos@{get\_\-global\_\-y\_\-pos}}
+\index{get_global_y_pos@{get\_\-global\_\-y\_\-pos}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-global\_\-y\_\-pos (int {\em y}, double {\em y\_\-offset})\hspace{0.3cm}{\tt  [inline, private]}}\label{classPhaseDiverseCDI_885be7bf5041c69b49221ffdd6773994}
+
+
+See get\_\-global\_\-x\_\-pos 
+
+Definition at line 448 of file Phase\-Diverse\-CDI.h.
+
+References y\_\-min.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_local_x_pos@{get\_\-local\_\-x\_\-pos}}
+\index{get_local_x_pos@{get\_\-local\_\-x\_\-pos}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-local\_\-x\_\-pos (int {\em x}, double {\em x\_\-offset})\hspace{0.3cm}{\tt  [inline, private]}}\label{classPhaseDiverseCDI_ae913a56e85b0aadab72112a7e85cfa9}
+
+
+See get\_\-global\_\-x\_\-pos 
+
+Definition at line 455 of file Phase\-Diverse\-CDI.h.
+
+References x\_\-min.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!get_local_y_pos@{get\_\-local\_\-y\_\-pos}}
+\index{get_local_y_pos@{get\_\-local\_\-y\_\-pos}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\_\-local\_\-y\_\-pos (int {\em y}, double {\em y\_\-offset})\hspace{0.3cm}{\tt  [inline, private]}}\label{classPhaseDiverseCDI_20ee81fe98e651100b398c10da163251}
+
+
+See get\_\-global\_\-x\_\-pos 
+
+Definition at line 462 of file Phase\-Diverse\-CDI.h.
+
+References y\_\-min.
+
+\subsection{Field Documentation}
+\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!weights@{weights}}
+\index{weights@{weights}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$\bf{Double\_\-2D} $\ast$$>$ \bf{weights}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_6ee90b66941292e2e51edad23313945e}
+
+
+A vector holding the weighting function for each frame 
+
+Definition at line 106 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!object@{object}}
+\index{object@{object}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D}$\ast$ \bf{object}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_cb7ce1feb23e069c486df8d7244bc24f}
+
+
+The current estimate of the 'global' sample function 
+
+Definition at line 120 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!iterations_per_cycle@{iterations\_\-per\_\-cycle}}
+\index{iterations_per_cycle@{iterations\_\-per\_\-cycle}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{iterations\_\-per\_\-cycle}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_50c6fe6e14991526ad8a354f8b678547}
+
+
+The number of iterations to perform for each 'local' frame 
+
+Definition at line 123 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!scale@{scale}}
+\index{scale@{scale}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{scale}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_fca34f67bd453e537e7e4005de09b8e6}
+
+
+A factor which controls sub-pixel alignment. 1=regular, 2 = 2 'global' pixels for every 1 'local' pixel. i.e. 2 allows alignment to within half a pixel. 
+
+Definition at line 128 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!nx@{nx}}
+\index{nx@{nx}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{nx}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_9515687a9dece1086de8ff1baec11196}
+
+
+The size in x and y of the 'global' sample function. 
+
+Definition at line 131 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!x_min@{x\_\-min}}
+\index{x_min@{x\_\-min}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{x\_\-min}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_ef85cb9efd2ef1c5a5e5efb198fc6741}
+
+
+Minimum coordinates of the 'global' function based on the positions entered by the user. 
+
+Definition at line 135 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!parallel@{parallel}}
+\index{parallel@{parallel}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool \bf{parallel}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_44a60ce5422c1f29cd3bbad4dad675cd}
+
+
+a flag for running in either series or parallel mode 
+
+Definition at line 139 of file Phase\-Diverse\-CDI.h.\index{PhaseDiverseCDI@{Phase\-Diverse\-CDI}!weights_set@{weights\_\-set}}
+\index{weights_set@{weights\_\-set}!PhaseDiverseCDI@{Phase\-Diverse\-CDI}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool \bf{weights\_\-set}\hspace{0.3cm}{\tt  [protected]}}\label{classPhaseDiverseCDI_2302664f55890be60836189f1f22c527}
+
+
+a flag indicating whether the weights need to be recalculated 
+
+Definition at line 142 of file Phase\-Diverse\-CDI.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Phase\-Diverse\-CDI.h}\item 
+Phase\-Diverse\-CDI.c++\end{CompactItemize}

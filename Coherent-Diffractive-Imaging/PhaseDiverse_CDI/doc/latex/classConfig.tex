@@ -1,0 +1,196 @@
+\section{Config Class Reference}
+\label{classConfig}\index{Config@{Config}}
+A configuration file parser.  
+
+
+{\tt \#include $<$Config.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Config} (std::string file\_\-name)
+\item 
+std::string \bf{get\-String} (std::string key)
+\item 
+double \bf{get\-Double} (std::string key)
+\item 
+int \bf{get\-Int} (std::string key)
+\item 
+std::list$<$ int $>$ $\ast$ \bf{get\-Int\-List} (std::string key)
+\item 
+std::list$<$ std::string $>$ $\ast$ \bf{get\-String\-List} (std::string key)
+\item 
+int \bf{get\-Status} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\bf{Map\-Type} \bf{mapping}
+\item 
+int \bf{status}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Nadia Davidson \end{Desc}
+\begin{Desc}
+\item[Date:]Last Modified on 6/1/2001\end{Desc}
+This class allows simple text files to be read and is used by the command line tool programs. The parser takes a file name and constructs key-value pairs for each line with the syntax:
+
+key = value or
+
+key = value\_\-1 value\_\-2 value\_\-3 ...
+
+White spaces are ignored and everything to the right of a \char`\"{}\#\char`\"{} symbol is also ignored (this allows comments to be included in the config file. See example.config to see how it looks. If a key (as given by any of the methods below) is not found in the file, the status is set to FAILURE and the method returns either 0, an empty string or list. 
+
+
+
+Definition at line 43 of file Config.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Config} (std::string {\em file\_\-name})}\label{classConfig_fbfdcfcf947043c7a60488d4921ea060}
+
+
+Construct a configuration object.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em file\_\-name}]The name of the file to parse. \end{description}
+\end{Desc}
+
+
+Definition at line 22 of file Config.c++.
+
+References FAILURE, mapping, status, and SUCCESS.
+
+\subsection{Member Function Documentation}
+\index{Config@{Config}!getString@{getString}}
+\index{getString@{getString}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string get\-String (std::string {\em key})}\label{classConfig_f04a92c8ff1cb58b31673be54f7bfa6f}
+
+
+Given a key, return the value from the config file as a string type.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]The key, or field name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 74 of file Config.c++.
+
+References FAILURE, mapping, and status.\index{Config@{Config}!getDouble@{getDouble}}
+\index{getDouble@{getDouble}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double get\-Double (std::string {\em key})}\label{classConfig_2041a0bdf570d8b82b91dca5f0b17c3d}
+
+
+Given a key, return the value from the config file as a double type.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]The key, or field name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 139 of file Config.c++.
+
+References FAILURE, mapping, and status.\index{Config@{Config}!getInt@{getInt}}
+\index{getInt@{getInt}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\-Int (std::string {\em key})}\label{classConfig_4172b0cb885929c29e77d77b37231774}
+
+
+Given a key, return the value from the config file as an integer type.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]The key, or field name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 151 of file Config.c++.
+
+References FAILURE, mapping, and status.\index{Config@{Config}!getIntList@{getIntList}}
+\index{getIntList@{getIntList}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list$<$ int $>$ $\ast$ get\-Int\-List (std::string {\em key})}\label{classConfig_356a8e983980a51463fc92bd64682f41}
+
+
+Given a key, return a list of values from the config file as integer types.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]The key, or field name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 115 of file Config.c++.
+
+References FAILURE, mapping, and status.\index{Config@{Config}!getStringList@{getStringList}}
+\index{getStringList@{getStringList}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list$<$ string $>$ $\ast$ get\-String\-List (std::string {\em key})}\label{classConfig_8c0eeb87c40f12b10be235fe5f52561e}
+
+
+Given a key, return a list of values from the config file as string types.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]The key, or field name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value \end{Desc}
+
+
+Definition at line 89 of file Config.c++.
+
+References FAILURE, mapping, and status.\index{Config@{Config}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\-Status ()\hspace{0.3cm}{\tt  [inline]}}\label{classConfig_e0959114de6692d75b6e61a7c8d8fd26}
+
+
+Were all the requests for a key-value pair successful? If any of the keys were not found in the file (after calling the access methods above), the status is set to FAILURE (0).
+
+\begin{Desc}
+\item[Returns:]Whether all requests were successful. \end{Desc}
+
+
+Definition at line 114 of file Config.h.
+
+References status.
+
+\subsection{Field Documentation}
+\index{Config@{Config}!mapping@{mapping}}
+\index{mapping@{mapping}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Map\-Type} \bf{mapping}\hspace{0.3cm}{\tt  [private]}}\label{classConfig_92935734f74efa42e183ac1428a034b1}
+
+
+The key-value map 
+
+Definition at line 48 of file Config.h.\index{Config@{Config}!status@{status}}
+\index{status@{status}!Config@{Config}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{status}\hspace{0.3cm}{\tt  [private]}}\label{classConfig_5f0580fcede736622ca05a2d4c34da44}
+
+
+Were all the requested fields found in the file? 
+
+Definition at line 51 of file Config.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\bf{Config.h}\item 
+Config.c++\end{CompactItemize}
