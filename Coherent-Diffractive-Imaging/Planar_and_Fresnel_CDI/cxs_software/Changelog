@@ -1,0 +1,41 @@
+---------------------------------------------------------------
+5/1/2011  Nadia Davidson
+	* rel_0
+	* First version. To be used for testing purposes. 
+	Only contains core functionality (planar and Fresnel
+	CDI reconstruction)
+	
+---------------------------------------------------------------
+25/1/2011 Nadia Davidson
+	* rel_0.1
+	* all: Some bug fixes to the last version. Most of them small.	
+	* io_tiff.c (read_tiff): a major bug causing seg. faults in
+	the file io_tiff.c was fixed.
+	* inteface/idl: interface for idl has been created, but remains 
+	to be documented and cleaned up.
+
+----------------------------------------------------------------
+24/2/2011 Nadia Davidson
+	* clean up of examples and code in inteface/idl
+	* optimisation of the PlanarCDI code. Fourier transforms
+	are now performed in the Complex_2D class.
+	* FresnelCDI_simulation_example.exe added and corresponding 
+	image files.
+	* write_tiff() written
+	* fixed the scaling of images when output using write_tiff
+	of write_ppm. The phase can not be viewed better.
+	* PlanarCDI::set_beam_stop() added so that a beam-stop region 
+	can be excluded when scaling the intensity in planar 
+	reconstruction.
+-----------------------------------------------------------------
+17/3/2011 Nadia Davidson
+	* Fixed an issue with Fresnel simulation. It previously wasn't
+	being done correctly. The simulation example has also been improved 
+	to demonstrate how a transmission function can be set up if the
+	material and maximum thickness are known.
+	* Initialisation in Fresnel and Fresnel_WF CDI is done slightly
+	differently now. This fixed a problem with speckle in the
+	white-field reconstuction, and also allows FresnelCDI to be
+	initialised (at least partially) randomly.
+	* Soft support edges are now allowed.
+------------------------------------------------------------------

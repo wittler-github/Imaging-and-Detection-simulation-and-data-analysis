@@ -1,0 +1,29 @@
+This directory contains wrapper code and examples for running the C++
+library code in IDL. It is assumed that the user has IDL installed and
+is familiar with the language.
+
+- IDL_interface.c is a C wrapper for the NADIA code functions.  Users
+  should not need to alter this file.
+
+- NADIA_interface.pro is a prolog wrapper to IDL_interface.c. It
+  consists of a list of "call_extern" functions and procedures.  Users
+  should not need to alter this file, but may wish to do so in order
+  to extend the functionality of the IDL procedures/functions
+  provided.
+
+- planar_example.pro shows which commands and in which order they
+  should be run for planar CDI reconstruction to be performed.
+
+- fresnel_example.pro shows which commands and in which order they
+  should be run for Fresnel CDI reconstruction to be performed.
+
+- phase_diverse_example.pro shows how phase-diverse/ptychographic
+  reconstruction can be perform. The example is based on Fresnel 
+  reconstruction, so it might be worth looking at fresnel_example.pro
+  before running this example.
+
+- partial_example.pro shows which commands and in which order they
+  should be run for partial CDI reconstruction to be performed.
+
+
+Last modified: 21st June 2011,    Nadia Davidson

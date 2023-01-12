@@ -1,0 +1,1584 @@
+% Copyright 2011 Nadia Davidson, 2012 T'Mir Julius 
+% for The ARC Centre of Excellence in Coherent X-ray Science. 
+
+\documentclass[]{nadia}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage{pifont}
+%\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{import}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{html}
+
+
+%\usepackage{dirtree}
+%\renewcommand*\DTstylecomment{\textsf}
+
+%\begin{htmlonly}
+%  \usepackage{verbatim}
+%  \providecommand{\lstlisting}[2][]{\verbatim{#2}}
+%  \renewcommand*{\lstlisting}{\verbatim}
+%\end{htmlonly}
+\lstnewenvironment{myverbatim}{}{}
+
+\RequirePackage[dvips]{color}
+
+\definecolor{mycolour}{rgb}{0.05,0.2,0.5}
+\definecolor{gray}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgray}{rgb}{0.3,0.3,0.3}
+
+%\usepackage{doxygen}
+\pagestyle{fancy}
+
+\lstset{
+language=C++,
+breakatwhitespace=true,
+basicstyle=\ttfamily\color{mycolour},     % Code font, Examples: \footnotesize, \ttfamily
+commentstyle=\color{darkgray},            % Comments font
+backgroundcolor=\color{gray},
+basewidth=0.5em,
+breaklines=true,
+}   
+
+\usetikzlibrary{shapes.arrows,chains,positioning}
+\def\pgfsysdriver{pgfsys-tex4ht.def}
+
+%\usepackage{color,fancyvrb}
+%\renewcommand\FancyVerbFormatLine[1]
+%{\colorbox{gray}{\makebox[\linewidth][l]{#1}}}
+
+%\DefineShortVerb{\!}
+
+%\makeatletter
+%\renewcommand*\l@section{\bf{\color{mycolour}\sffamily{#1}}}
+%\renewcommand*\l@subsection{\bf{\color{mycolour}\sffamily{#1}}}
+%\renewcommand*\l@subsubsection{\bf{\color{mycolour}\sffamily{#1}}}
+%\makeatother
+
+%\makeatletter
+%\newcommand{\mysection}[1]{%
+%  \section*{\bf{\color{mycolour}\sffamily{#1}}}}
+%\newcommand{\mysubsection}[1]{%
+%  \subsection*{\bf{\color{mycolour}\sffamily{#1}}}}
+%\newcommand{\mysubsubsection}[1]{%
+%  \subsubsection*{\color{mycolour}\sffamily{#1}}}
+%\makeatother
+
+\begin{document}
+\sffamily
+
+\vspace{6cm}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+%\tableofcontents\pdfbookmark[0]{Table of Contents}{toc}
+\tableofcontents
+
+\newpage
+
+
+%\section{Introduction}
+
+%The high resolution imaging of finite nano-scale objects has been
+%shown to be possible due to .........
+%the developement of Coherent Diffractive
+%Imaging (CDI) techniques~\cite{}.
+
+%Wavelength limited resolution...
+
+%lense-less X-ray imaging techniques have proved to
+%be a promising technique for imaging nano-scale biological objects.
+
+%The phase information is recovered computationally, through use of
+%iterative algorithms~\cite{}. 
+
+%The rapid developement in theory and experimentation in this field has
+%created a need for common software tools within the CDI community.
+%HAWKE~\cite{}, a plane-wave CDI reconstruction package, was was
+%developed for this purpose. The need for Fresnel coherent diffractive
+%imag
+
+
+
+%In this paper we describe a computer program 
+
+%.which provide a user
+%friendly, reliable and fast method for reconstructing X-ray
+%diffraction data.
+
+
+%The program extends upon this existing software, by providing:
+%\begin{itemize}
+%\item A full choice of iterative algorithms, including customised
+%  algorithms. In~\cite{} it was demonstrated that all reconstruction
+%  algorithms could be expressed through X combinations of projection
+%  operators. ......
+%\item Fresnel Coherent Diffractive Imaging algorithms~\cite{} have
+%  been implemented.
+%\item Ptychographic~\cite{} and Phase-Diverse~\cite{} CDI have also
+%  been implemented.
+%\end{itemize}
+
+
+%The software consists of a C++ library, interface to IDL, command-line
+%tools in addition to example code and documentation. 
+
+%......
+
+%- motivation
+%- review of similar software
+%- goals and users
+
+
+\section{Overview}
+
+In the development of experimental infrastructure, software is an
+important element which is often overlooked. For X-ray Coherent
+Diffractive Imaging (CDI), in particular, computational inversion of
+the measured diffraction intensity is an integral part of the image
+reconstruction process. The proliferation of phase retrieval
+algorithms has created the need for common software tools which
+encompass all these approaches. The NADIA (Nadia's Algorithms for 
+Diffractive Imaging Analysis) software package aims to provide a set of phase
+retrieval tools which are robust, efficient and available to the wider
+CDI community.
+
+In this documentation, we introduce the software package, NADIA, 
+which is able to reconstruct and simulate
+X-ray diffraction data for plane-wave, Fresnel, ptychographic,
+phase-diverse and partially coherent (both spatially and temporally) 
+CDI. To the best of our knowledge, this is the first
+standard software package which includes all of these different
+approaches. The software allows for any choice of iterative algorithm,
+including customised algorithms, and also includes the 'shrinkwrap'
+algorithm. For Fresnel CDI, additional complex constraints on the
+transmission function may also be used. The software consists of a C++
+library, binding to IDL and command-line tools, in addition to example
+code and documentation. It has been tested on the Mac, Windows and
+Ubuntu operating systems. It is issued under the GNU public license.
+
+It is assumed that readers of this manual are familiar with the
+relevant literature describing the CDI algorithms implemented in \name
+and we will therefore not repeat this information here. Please refer
+to any of the reviews~\cite{} for more information on CDI. We intend
+that this manual is used in the following ways:
+\begin{itemize}
+\item New users should follow the instructions provided for
+  installation, Section \ref{installation}, followed by ``Getting
+  Started'', Section \ref{getting started}.
+\item The remainder of the manual is provided as a reference for users
+  who are already familiar with the code. Section \ref{how to}, ``How
+  to'', gives instructions on how to complete specific tasks and
+  control the CDI reconstruction. The appendices document the
+  important routines, functions and classes provided by the \name
+  library.
+\end{itemize}
+This version of the software is a development (beta) version and we
+welcome feedback on any aspect of the software package: functionality,
+installation, documentation etc. Please email
+cxs-software@physics.unimelb.edu.au for questions or comments.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section{Installation Instructions}
+\label{installation}
+
+The software is available for download from the software website as either,
+\begin{itemize}
+\item a tar ball containing the software source code or
+\item a pre-compiled Windows 32 bit binary file.
+\end{itemize}
+
+For Windows users who only wish to use the IDL capabilities or
+command-line tools we recommend downloading the Windows binary file. For
+all other users, we recommend downloading the source code package.
+
+\subsection{Installing from Source Code}
+
+\subsubsection{Linux}
+
+Currently the code depends on several other libraries which will need to
+be installed prior to installing this package:
+\begin{itemize}
+\item g++\cite{} - for compilation of C++ source code (we have tested against version 4.4.3)
+\item fftw\cite{} - for fast Fourier transforms.
+\item libtiff\cite{} - for reading and writing to tiff files.
+\item HDF libraries\cite{} - for reading (and not yet writing to) hdf4
+  files. Note that the hdf library depends on a few other libraries,
+  which must also be installed.
+\item LAPACK\cite{} - for expanding paritally coherent data.
+\end{itemize}
+
+Ubuntu users can easily install the external packages using the
+synaptic package manager~\cite{}. The packages are named libfftw3-dev,
+libtiff4-dev, liblapack, and libhdf4-dev.
+
+Next, download our source code from the website and put it into an
+appropriate directory. Unzip and untar the source code:
+\begin{myverbatim}
+  gunzip NADIA.0.5.tar.gz 
+  tar -xvvf NADIA.0.5.tar
+\end{myverbatim}
+
+Change into the directory NADIA and compile the source code: 
+\begin{myverbatim}
+  cd NADIA
+  ./configure 
+  make
+\end{myverbatim}
+
+If ./configure doesn't finish by making a set of "Makefiles", the
+dependent libraries probably haven't been installed correctly or
+./configure does not know their location.
+
+The result of compilation (if successful) are libraries and header
+files (in the /lib and /include directories) and some example programs
+which are ready to execute.
+
+The source files in the examples/ directory e.g. PlanarCDI\_example.c
+demonstrate how the libraries can be used within a user's own
+code. The Makefile in examples/ shows how a user's code can be
+compiled and the \name libraries linked.
+
+\subsubsection{Mac}
+
+\begin{enumerate}
+\item Install Xcode\cite{}. This is a big download and you first have
+  to register as a developer. Once installed, this is a nice text
+  editor too.
+\item Install fink\cite{} but following their instructions exactly.
+  You can use fink like {\tt apt get} on Linux to install the fftw and
+  hdf packages. Make sure you select the correct releases of these.
+\item Get and build the fftw, libtiff and hdf packages using fink
+\item Download the \name source code from the website
+\item Follow the install instruction for Linux, except, replace ./configure with 
+\begin{myverbatim}
+  ./configure --with-fftw_inc=/sw/include --with-fftw_lib=/sw/lib CXX=''g++ -arch i386'' --with-mfhdf_inc=/sw/include --enable-checking
+\end{myverbatim}
+The ``--with'' flags will tell the compiler where to look for the
+external packages.  The CXX="g++ -arch i386" relates to your
+computer's architecture. This is for a late 2010 Macbook pro running
+10.6, try this, if it doesn't work, try looking up the relevant
+information for your computer. %--enable-checking is just in case.
+\item Type make, as in the Linux instructions.
+\end{enumerate}
+
+\subsubsection{Windows with Cygwin}
+
+Cygwin\cite{} provides a Linux/Unix type environment for Windows (the
+interface is basically a Unix style terminal). Installing the NADIA
+source code in this environment is very similar to installing it in
+Linux/Unix and (in my opinion) makes modifying and recompiling the
+code a bit easier than it would be in Windows otherwise. First you
+will need to install Cygwin. You can do this by going to
+http://www.cygwin.com/, scrolling to the bottom of the page and
+clicking on "Install or update now\ (using setup.exe)". Open setup.exe
+and follow the installation instructions. Apart from the "Package
+Selection" screen, used the default options. When you get to the
+"Package Selection" screen leave "All" on "Default" and add the
+additional packages by searching for them and then clicking on them:
+\begin{itemize}
+\item libhdf5-devel - These are libraries for reading hdf files.
+\item gcc4-g++ - This is the c/c++ compiler I like to use.
+\item make - This is used to automatically compile the package.
+\item xemacs or emacs - This is a text/code editor
+\item libfftw3-devel - This is a fast Fourier transform library.
+\item libtiff-devel - This is a library for reading/writing tiff image files.
+\item sunrpc
+\item libjpeg-devel
+\item zlib-devel
+\end{itemize}
+
+Note that you can update the packages which are installed after you've
+installed Cygwin just by clicking on setup.exe again (it remembers
+which are installed). If you get an error during the post-installation
+phase (error code 128) it maybe due to a virus checker interfering
+with the Cygwin installation.
+
+Install the HDF4 libraries. There is no package for this in the
+package manager so go to http://www.hdfgroup.org/release4/obtain.html
+and download their Windows binary for your system (32 or 64 bit). 
+Unzip the file using the standard Windows tool and install to a directory 
+without any spaces (Cygwin sometimes struggles with spaces)
+
+Some of the HDF files are named in such a way that the NADIA cannot 
+find them. So go in to the bin directory of your HDF install (something like 
+c:\textbackslash{}HDF\_Group\textbackslash{}HDF\textbackslash{}4.2.8\textbackslash{}bin)
+and create some dynamic links:
+
+ln -sf mfhdfdll.dll libmfhdf.dll
+ln -sf hdfdll.dll libdf.dll
+ln -sf szip.dll libsz.dll
+
+ 
+
+Next, download NADIA here and put it into your home
+directory on Cygwin \\
+(C:\textbackslash{}cygwin\textbackslash{}home\textbackslash{}your\_user\_name). Open Cygwin and
+unzip and untar the package:
+\begin{myverbatim}
+$ gunzip NADIA.0.5.tar.gz 
+$ tar -xvf NADIA.0.5.tar 
+\end{myverbatim}
+
+When you type ``ls'' you should see the directory "NADIA" plus a
+few others. Change into the NADIA directory:
+\begin{myverbatim}
+$ cd NADIA 
+\end{myverbatim}
+Tell the package where your hdf and szip libraries files are located
+(replace the "user\_name" with your cygwin user name):
+\begin{myverbatim}
+$ ./configure --with-mfhdf_lib=c:/HDF_Group/HDF/4.2.8/bin --with-mfhdf_inc=c:/HDF_Group/HDF/4.2.8/include --with-sz_lib=c:/HDF_Group/HDF/4.2.8/bin --with-df_lib=c:/HDF_Group/HDF/4.2.8/bin
+\end{myverbatim}
+
+If you get an error, check that the paths given to configure are
+correct; the lib directories should have files starting with "lib" and
+the include directory should have files ending in ".h". If configure
+worked correctly, compile the libraries and examples:
+\begin{myverbatim}
+$ make
+\end{myverbatim}
+
+Hopefully you won't get any errors and when you look in the lib/ and
+include/ directories you will see some files. The libraries can be
+useful if you ever need to create your own code (similar to the
+examples). The examples show how the libraries can be used. 
+
+\begin{comment}
+--------------------------------------
+Change into the example directory:
+\begin{myverbatim}
+$ cd examples 
+\end{myverbatim}
+and run one of the examples. e.g.: 
+\begin{myverbatim}
+$ ./PlanarCDI_example.exe
+\end{myverbatim}
+
+If everything is working correcting, you should see some text output
+(counting the iterations). If you look at this directory in the
+Windows browser you should see that some .ppm image files are created
+which give you the reconstruction image for various number of iterations.
+
+Have a look at the code in more detail to see what's going on: 
+\begin{myverbatim}
+$ xemacs PlanarCDI_example.c 
+\end{myverbatim}
+and edit some variables to see what happens (eg. change the reconstruction algorithm). 
+Then recompile and rerun the example: 
+\begin{myverbatim}
+$ make 
+$ ./PlanarCDI_example.exe
+\end{myverbatim}
+-------------------------
+\end{comment}
+
+\subsection{Installing from the Windows Binary}
+
+Download the package (binary file) from the main webpage. Executing
+the .msi file should automatically start the installation. Select
+which directory you want the files to be installed in (if it is not
+your own machine you probably won't have permission to install into
+``Program Files''). Once installed you can start using the library and
+command line executable files. Look at the README file which comes
+with the distribution to find out more. 
+
+To uninstall, go to "Control Panel", go to "Add/Remove program", find
+NADIA and remove it.
+
+
+\newpage
+
+\section{Tutorial for Getting Started}
+\label{getting started}
+
+\subsection{For Users on Osiris}
+
+Note: this section is only applicable to users who are members of
+the ARC Centre of Excellence in Coherent X-ray Science (CXS).
+
+If you want to quickly use the software without the hassle of
+installing many packages, the simplest way is by logging into Osiris
+and using it there. This will also be useful to know how to do in the
+long run because the computing power available there is more than your
+laptop/desktop. The first step is to ask for an account on OSIRIS if
+you don't already have one (and are a member of CXS). Then follow the
+steps below for logging in, and for setting up and running the
+software.
+
+\subsubsection{Logging into Osiris from a Linux/Unix/Mac Machine}
+
+Open a terminal and type: 
+\begin{myverbatim}
+  ssh -X11 -2 osiris.ph.unimelb.edu.au 
+\end{myverbatim}
+The "-X11 -2" enables you to view graphics on osiris.
+
+\subsubsection{Logging into Osiris from Windows}
+
+On Windows, you will need to install an ssh client. Many people
+(including me) recommend the program putty~\cite{} for this.  After
+you install it, test it works by logging into osiris:
+\begin{enumerate}
+\item Open putty 
+\item In the host name field type "@osiris.ph.unimelb.edu.au" 
+\item Make sure the connection type is set to "ssh" 
+\item Save these setting by typing in a saved session name. e.g
+  "osiris", and clicking on "Save". Next time you open putty you can load
+  these setting by clicking on "osiris" and then "Load".
+\item Now click on "Open". A terminal should open with a prompt asking
+  for you password. After you enter it correctly you are logged into
+  osiris.
+\item End your session by typing "exit"
+\end{enumerate}
+
+You are now half way there. You can log in, but you won't be able to
+view any images which are stored on osiris yet. To be able to do this,
+you need to install an X-windows server (graphical information can be
+passed back to your computer once you have this). I found
+Xming~\cite{} to be good. I installed it with the default options
+("normal Putty").
+
+I also found that I need to install Xming-fonts in order for the
+"emacs" text editor to display fonts correctly. During the set-up I
+ticked all the boxes so that all the fonts were installed.
+
+Now, each time you want to log into osiris you will need to run Xming
+first. It will run in the background, so all you'll see when it's
+running is a small icon on the tool bar. You can close it once you've
+finished with your putty session.
+
+Finally go into putty again, and load your "osiris" session. 
+\begin{enumerate}
+\item Configure it for X windows by clicking on "SSH" under "Connection" in the tree on the left hand side of the screen. 
+\item Click on "X11" 
+\item On the right hand side of the screen click on "Enable X11 forwarding". 
+\item Click on "session" in the left-hand tree. 
+\item And save these settings. 
+\item You are now ready to test it. Click on "Open" and log in. Type
+  "emacs test" and a window should pop up. Don't worry too much about
+  what this is for now. Close the window and you are ready to start.
+\end{enumerate}
+
+\subsubsection{Setting up your environment on Osiris}
+\label{osiris-setup}
+Once you have successfully logged in, append your PATH variable to the
+directory where the NADIA programs are located. This can be done by
+typing:
+\begin{myverbatim}
+  export PATH=$PATH:/data/DIXE/dixe/tags/rel_0.5/NADIA/bin 
+\end{myverbatim}
+
+You now have available all of the command line tools listed here. Note
+that this will only work for your current session on osiris. To make
+it permanent, open the file ".bash\_profile" in your home area:
+\begin{myverbatim}
+  emacs .bash_profile 
+\end{myverbatim}
+Add the line above to the end of the file, save and then close it (use
+the menu or type "xs" followed by "xc" while holding down the Ctrl
+key).
+
+If you plan to work with IDL you will also need to update your
+LD\_LIBRARY\_PATH with the wrapper library path:
+\begin{myverbatim}
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/DIXE/dixe/tags/rel_0.5/NADIA/interfaces/idl/ 
+\end{myverbatim}
+and update the IDL\_PATH with the IDL module location:
+\begin{myverbatim}
+  export IDL_PATH="${IDL_PATH}:\:/data/DIXE/dixe/tags/rel_0.5/NADIA/interfaces/idl/"
+\end{myverbatim}
+
+\subsubsection{Running the Commandline Tool}
+
+The simplest way to run reconstruction is to use the
+CDI\_reconstruction.exe command line tool. It takes three arguements as
+input:
+\begin{itemize}
+\item a configuration file, 
+\item the reconstruction type: planar, fresnel\_wf or fresnel and
+\item a seed for the initial random estimate. 
+\end{itemize}
+If you don't give the seed value, "0" is used as the default, and if
+you don't give the reconstuction type, "planar" is assumed.
+
+Test out the program by running it with one of the example
+configuration files: 
+\begin{myverbatim}
+   ./CDI_reconstruction.exe planar_example.config
+\end{myverbatim}
+You should see output telling you the iteration number and the
+error. The error is a measure of the difference between the
+diffraction data and the reconstructed diffraction (the usual chi
+squared given in the literature). You can kill the process at any time
+by typing Ctrl-C or you can wait for it to finish if you prefer.
+
+Now look into the configuration file by typing: 
+\begin{myverbatim}
+   emacs planar_example.config 
+\end{myverbatim}
+You can see that the data and support file names are given. Type: 
+\begin{myverbatim}
+   gthumb image_files/planar_support.tiff 
+\end{myverbatim}
+to view the support. The data file can't be viewed with gthumb because
+it's in binary format, however you can convert it to a .ppm file using
+one of the other command line tools and then view it: 
+\begin{myverbatim}
+   dbin2ppm.exe image_files/planar_data.dbin planar_data.ppm 1024 1024 
+   gthumb planar_data.ppm
+\end{myverbatim}
+
+The CDI\_reconstruction.exe program outputs a .ppm file of the current
+magnitude of the estimated exit surface wave every 40 iterations. Type
+``ls'' again to see a list of these files (they should look something like
+planar\_x.ppm, where x is the iteration number). View them using
+gthumb. The reconstruction is slowly converging. Note that it may not
+completely converge as the number of iterations performed in this
+example is a lot less than usually used. The exit surface wave of the
+final iteration is saved as a complex binary file (with the file
+extension .cplx). You can view the magnitude and phase of the wave, by
+using the cplx2ppm.exe command, followed by the gthumb command. You
+can also use this file as the starting point for another
+reconstruction (see planar\_example.config for instructions).
+
+Now, try editing the configuration file: 
+\begin{myverbatim}
+   emacs planar_example.config 
+\end{myverbatim}
+e.g. with a different combination of reconstuction algorithms, a
+different output rate, support file or shrink-wrap parameters etc. and
+see what happends.
+
+A similar example exists for the Fresnel case. This can be run by
+first reconstructing the white field using 3-plane propogation:
+\begin{myverbatim}
+   ./CDI_reconstruction.exe fresnel_example.config fresnel_wf 
+\end{myverbatim}
+Then reconstruct the sample: 
+\begin{myverbatim}
+   ./CDI_reconstruction.exe fresnel_example.config fresnel
+\end{myverbatim}
+
+\subsubsection{Using the C/C++ Library}
+
+The command line tools are useful to get started quickly, but if you
+want full flexibility with the code, it's best to learn a little bit
+of "c" and examples are provided for this as well. The same
+reconstruction as planar.config performs can be done using
+PlanarCDI\_example.c. Compile this code using the Makefile: 
+\begin{myverbatim}
+   make 
+\end{myverbatim}
+Now when you type ls you should see a filenamed PlanarCDI\_example.exe. Run this.
+\begin{myverbatim}
+   ./PlanarCDI_example.exe 
+\end{myverbatim}
+You should find it gives almost exactly the same output as the
+CDI\_reconstuction program did. Have a look at the source code: emacs
+PlanarCDI\_example.c edit it and recompile using make to see what
+happens. Similarly, have a look at and Fresnel example:
+FresnelCDI\_WF\_example.c and FresnelCDI\_example.c, and a simulation of
+the object from the planar example: PlanarCDI\_simulation\_example.c.
+
+Later, if you write your own "c" code, it's easy to compile and link
+it with the libraries using the "Makefile" from the examples
+directory. Edit the "EXAMPLE\_SRC" variable in the Makefile with the
+name of your ".c" file, then type "make" on the command line to
+compile it.
+
+\subsubsection{Using the Library in IDL}
+
+Some IDL wrappers have been written for the C++ library
+functions. This is useful for people who are more familiar with IDL
+than C, or want to take advantage of the graphing abilities of IDL.
+It will give greater flexibility than the command line program but
+doesn't allow you to use all the features of the C++ library.
+
+Begin by copying the IDL examples to your working directory, 
+\begin{myverbatim}
+   cp /data/DIXE/dixe/tags/rel_0.5/NADIA/interfaces/idl/*_example.pro ./ 
+\end{myverbatim}
+and run them: 
+\begin{myverbatim}
+   idl planar_example.pro
+\end{myverbatim}
+
+Look at the .pro files to see what they do. 
+
+
+\subsection{After Installing from Source}
+
+Open a terminal and follow the instruction given for ``Users on
+Osiris'', from Section \ref{osiris-setup} onwards. Replace the path to
+the software on osiris,
+``/data/DIXE/dixe/tags/rel\_0.5/NADIA/'' in the instructions,
+with the path where you installed the software.
+
+\subsection{After Installing from the Window's Binary}
+
+The software doesn't have a flash graphical user interface, but rather
+is a library and set of files which can be used to performing image
+reconstruction through various means: IDL, C++ and command lines
+tools. Brief instructions for how to get started for each of these
+options is described below.
+
+\subsubsection{IDL}
+If you have IDL installed, you can import the library routines by
+simply executing:
+\begin{myverbatim}
+   .Compile NADIA_interface.pro
+\end{myverbatim}
+in IDL. Documentation for each of the routines can be found in
+Appendix \ref{sec:idl_routines} and on the website and examples are
+provided in the {\tt examples} subdirectory of this distribution.
+
+To run the IDL examples:
+\begin{itemize}
+\item Open IDL (open in 32-bit mode if you are on a 64-bit machine).
+\item Open the file planar\_example.pro or fresnel\_example.pro
+\item Change the file names in the file to the directory where the
+  example image files are stored on your system. It should be
+  something like,
+  \begin{myverbatim}
+    C:\<path you installed the package>\NADIA\examples\image_files\<file_name>
+  \end{myverbatim}
+     Note how the "/"s should be changed to `''\textbackslash''s.
+   \item Run the examples by copying and pasting each line of the
+     example file into your IDL command prompt. Read the code comments
+     to work out what it's doing. Later you can write a single file to
+     execute. I got errors when I tried to execute the whole file at
+     once using the IDL workbench, although it's possible under
+     linux. If you work out how to, please let us know.
+\end{itemize}
+
+
+\subsubsection{Command Line Tools}
+
+Some command line tools are provided for image reconstruction and for
+converting between different image file formats. The image
+reconstruction tool (CDI\_reconstruction.exe) is not very flexible
+(for example it doesn't allow simulation to be carried out). So in
+general the IDL option is recommended.  However, it does not require
+any extra software to be installed, for example IDL or mingw, so maybe
+useful, to quickly demonstrate the concepts of the algorithms to new
+users.
+
+
+To use:
+\begin{itemize}
+\item copy the examples directory from the package to somehwere in
+  your home area. This will be the copy you work on.
+\item open a command line terminal: Click on "Start", click on "run",
+  type "cmd" in the open field and click on okay
+\item change into the directory where the examples are, using the "cd"
+  command, for example: "cd directory\_name\textbackslash examples" where
+  directory\_name is the directory where you copied the examples
+\item open the "planar\_example.config" file to see what options have
+  been set.
+\item run the planar example: 
+  \begin{myverbatim}
+    CDI_reconstruction.exe planar.config
+  \end{myverbatim}
+\item When it has finished look at the directory in windows explorer
+  or similar to see which files were created. You might need a program
+  like "IrfanView" to view the .ppm image files.
+\item the output of the reconstruction is a .cplx file (a 2D array of
+  complex numbers) which represents the exit-surface-wave of the
+  object. You can use this to get the magnitude, phase etc. of the
+  result using the cplx2ppm.exe program, or you can use it as the
+  input starting point for another reconstruction.
+\end{itemize}
+
+A description of each of the command line tools can be found 
+in Appendix \ref{sec:command_tools}.
+
+\subsubsection{C/C++}
+
+If you wish to run the software using C++ you should either be
+familiar with C/C++ or be willing to invest a bit of time to
+understand how to compile and write this type of code. For this reason
+it's not advised that a beginner attempts to run the C++ examples
+under Windows (unless in Cygwin). However, the benefit of using C/C++
+is that it is more powerful and you will have greater flexibility with
+the software library.  If your reconstruction requires a lot of
+computing power (for example you plan on run on osiris or similar,
+rather than a desktop), this is the best option in our opinion.
+
+Five examples showing how to write c code using the NADIA software for
+CDI reconstruction and simulation are given in the ``examples''
+directory.  The header files for the NADIA software project can be found
+in the "include" directory and the libraries in the "bin" (libraries
+which the NADIA software depends on are also provided in this directory.
+
+We will leave the details of how to compile in Windows to the users,
+as this will be compiler and system dependant. However, we do
+recommend compiling under mingw~\cite{} with msys~\cite{} because it
+is free; the code provided here was compiled with it, so I know it
+works; and because compilation is similar to linux/unix meaning you
+will be better trained for compiling on osiris or similar if the need
+arises.
+
+
+%Assuming you have mingw and mssys intalled you can compile and run the
+%examples in the following way:
+
+%\begin{itemize}
+%\item copy the examples directory from the package to somehwere in
+%  your home area. This will be the copy you work on.
+%\item open a command line terminal: click on "Start", click on "run",
+%  type "cmd" in the open field and click on okay
+%\item change into the directory where the examples are, using the "cd"
+%  command, for example: "cd <directory name>\\NADIA\\examples"
+%  where <directory name> is the directory where you copied the package
+%\item open "Makefile" in a text editor. Note that you might need a
+%  text editor for linux/unix style files, otherwise the new lines
+%  symbols will be missing. Change the directory path to you place the
+%  package is installed.
+%\item on the command line, type "make". You should see the five
+%  examples being compiled.
+%\item run the examples. e.g. by typing "PlanarCDI\_example.exe"
+%\item when it has finished look at the directory in windows explorer
+%  or similar to see which files were created. You might need a program
+%  like "IrfanView" to view the .ppm image files.
+%\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Examples and Demos}
+
+The package consits of a set of examples which demonstrate how to use
+the library and tools of the software package for various
+reconstructions and simulations. Most are located in the {\tt examples}
+subdirectory of the package.
+
+The examples should be compiled automatically after installation
+(Section \ref{installation}). To recompile (e.g.  after making
+modifications to the examples), you may type "make" in the {\tt
+  examples} directory.  To force a recompilation type "make clobber"
+followed by "make".
+
+\begin{description}
+
+\item[{\tt PlanarCDI\_example.c}] - \\ Reconstruction of plane-wave diffraction
+  data (data from L. Whitehead \cite{}). The shrinkwrap algorithm is
+  used to improve the reconstruction. A combination of the hybrid
+  input-out (HIO) and the error-reduction (ER) algorithms are used.
+
+\item[{\tt PlanarCDI\_example.sh}] - \\ The same reconstruction as
+  above will be performed using the {\tt CDI\_reconstruction.exe}
+  command line program. A simple bash script and configuration file
+  (planar\_example.config and fresnel\_example.config) shows how this
+  tool can be used. Parts of the bash script can be uncommented to run
+  Fresnel reconstruction or to run multiple times with a different
+  starting seed.
+
+\item[{\tt PlanarCDI\_simulation\_example.c}] - \\ An image of a sample (from
+  L. Whitehead \cite{}) is used to simulate a diffraction pattern for
+  planar CDI. The diffraction pattern is thresholded to make it more
+  realistic and then CDI reconstruction is performed.
+
+\item[{\tt FresnelCDI\_WF\_example.c }] - \\ This example demonstrates
+  how the phase of a white field can be recovered and saved for use in
+  Fresnel CDI reconstruction. The data set comes from C. Putkunz.
+
+\item[{\tt FresnelCDI\_example.c }]- \\ The result of the previous
+  example is used in Fresnel CDI reconstruction. The error-reduction
+  algorithm is used. The phase and magnitude of the transmission
+  function are output to file.
+
+\item[{\tt FresnelCDI\_simulation\_example.c }]- \\ This examples
+  demonstrates how a Fresnel experiment can be simulated. It makes use
+  of the object from the planar example and the white-field from the
+  fresnel example. Because it uses the fresnel white-field
+  reconstructed from data, you will need to run
+  FresnelCDI\_WF\_example.exe first.
+
+\item[{\tt ComplexConstraint\_example.c }]- \\ This example builds on
+  the Fresnel examples by demonstrating how complex and other
+  constraints on the transmission function can be included in a
+  reconstruction.
+
+\item[{\tt PhaseDiverse\_example.c }]- \\ This example shows how
+  phase-diverse/ptychographic reconstruction can be performed. The
+  example uses data from C. Putkunz which can be found on osiris at
+  /data/cputkunz/phase\_diverse\_cdi/example\_data.tar.gz It consists
+  of 7 Fresnel diffraction images of the same object.  For each image,
+  the sample position is altered with respect to the focal point
+  positions and/or transverse to the beam direction.
+
+\item[{\tt IDL examples}] - \\ Examples for performing planar, Fresnel
+  and phase-diverse/ptychographic reconstruction in IDL can be found
+  in the directory NADIA/interfaces/idl, with the filenames
+  planar\_example.pro, fresnel\_example.pro and
+  phase\_diverse\_example.pro.
+
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{How Tos}
+\label{how to}
+
+In this section, we describe how a number of common tasks can be
+achieved using the software. More detail of the functionality
+available can be found in the doxygen documentation () and IDL routine
+documentation (). 
+
+\begin{comment}
+
+In the rest of this section, each of these steps are described in more
+detail.
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}[h]{0.5\linewidth}
+  \begin{tikzpicture}[auto,mybox/.style={rectangle,draw=black!50,fill=yellow!20,thick},
+      mybox2/.style={rectangle,draw=black!50,fill=blue!20,thick},
+      mybox3/.style={rectangle,fill=black!10,minimum height=2cm,minimum width=5cm},
+      mybox4/.style={rectangle,fill=white!10,minimum height=7.5cm,minimum width=7.5cm},
+      mybox5/.style={rectangle}]
+  
+    \node[mybox] (load) {1. Load input data};
+    \node[mybox] (initialise)   [below=of load,text width=4cm,text centered] {2. Initialise the reconstruction library};
+    \node[mybox] (iterate)      [below=of initialise]    {3. Iterate};
+    \node[mybox] (result)  [below=of iterate]    {4. Save the result};
+              
+    \draw [->] (load.south) -- (initialise.north);
+    \draw [->] (initialise.south) -- (iterate.north);
+    \draw [->] (iterate.west) to [->,loop left,looseness=16,min distance=15mm](iterate.west);
+    \draw [->] (iterate.south) -- (result.north);              
+
+  \end{tikzpicture}  
+  \end{minipage}
+  \caption{\label{fig:reco}The basic steps involved in a CDI reconstruction}
+\end{figure}
+
+\begin{enumerate}
+
+
+
+\end{comment}
+
+
+\begin{comment}    
+  \begin{scope}[xshift=5.5cm,yshift=-2.5cm]
+    
+    \node [mybox4] (highlight){};
+         
+    %      \only<1>{
+    \node [mybox2] (intensity) at (-1.5,-0.5) {scale intensity};
+    \node [mybox2] (support) [right=of intensity] {apply support};
+    
+    \draw [->] (intensity.south) to [in=270,out=270] node [auto,swap] {propagate to sample plane}(support.south) ; 
+    \draw [<-] (intensity.north) to [in=90,out=90] node [auto] {propagate to detector plane} (support.north) ;
+    %      }
+    
+
+                  \uncover<2-5>{
+
+                    \node [mybox4] {
+                      
+                      \begin{minipage}{6cm}
+                        
+                        \only<2>{
+                          Functions are provided for reading hdf, tiff and ppm image
+                          files. \\
+                          
+                          {\bf In C++} 
+                          \begin{myverbatim}[language=C++]
+                            //read in the data
+                            Double_2D data;
+                            read_image(``data_file_name.tiff'', data);
+                            
+                            //read in the support shape
+                            Double_2D support;
+                            read_image(``support_file_name.tiff'', support);
+                          \end{myverbatim}
+                          
+                          {\bf In IDL}
+                          \begin{myverbatim}[language=IDL]
+                            data = NADIA_READ_PPM(1024, 1024, 'data_file.ppm')
+                          \end{myverbatim}
+                          etc. or use one of IDLs built in libraries to get
+                          the input in matrix form.
+                        }
+                        
+                        \only<3>{
+                          The reconstruction code must be initialised for either
+                          plane-wave, Fresnel white-field, Fresnel or phase diverse
+                          reconstruction. \\
+                          
+                          {\bf In C++} 
+                          \begin{myverbatim}[language=C++]
+                            //Create a complex 2D field which will
+                            //hold the result of the reconstruction.
+                            Complex_2D object_estimate(nx,ny);
+                            
+                            //Create the planar CDI object which will
+                            //be used to perform the reconstruction.
+                            PlanarCDI planar(object_estimate);
+                            
+                            //set the support and intensity
+                            planar.set_support(support,false);
+                            planar.set_intensity(data);
+                          \end{myverbatim}
+                              {\bf In IDL}
+                              \begin{myverbatim}[language=IDL]
+                                NADIA_INIT_PLANAR, data, support
+                              \end{myverbatim}
+                        }
+                          
+\end{comment}
+
+\subsection{Data Input/Output and Preparation}
+
+\subsubsection{Read Image Files}
+
+\label{subsec:read_images}
+
+The software is capable of accepting data in hdf, tiff or ppm image
+format. It can output as a grey scale tiff or ppm image with X bytes
+per pixel. In addition data can be read and stored as a binary file of
+doubles. This may be useful in situations where high prescision is
+required. Similarly, two dimensional arrays of complex numbers, such
+as those produced in the reconstruction, may be stored as a binary
+file of fftw~\cite{} complex number types.
+
+{\bf In C++} 
+\begin{myverbatim}[language=C++]
+  //read in the data
+  Double_2D data;
+  read_image(``data_file_name.tiff'', data);
+  
+  //read in the support shape
+  Double_2D support;
+  read_image(``support_file_name.tiff'', support);
+  \end{myverbatim}
+
+{\bf In IDL}
+\begin{myverbatim}[language=IDL]
+   data = NADIA_READ_PPM(1024, 1024, 'data_file.ppm')
+\end{myverbatim}
+etc. or use one of IDLs built in libraries to get
+the input in matrix form.
+
+
+\subsubsection{Write Image Files}
+\label{subsub:write_images}
+Save the result to file.\\
+                          
+{\bf In C++} 
+\begin{myverbatim}[language=C++]
+  //write out the result:
+  // - as a complex binary file
+  write_cplx(temp_str.str(),object_estimate);
+  // - just the magnitude as an image
+  Double_2D object_mag;
+  object_estimate.get_2d(MAG,object_mag);
+  write_image("mag.tiff",object_mag);
+\end{myverbatim}
+                          
+{\bf In IDL}
+\begin{myverbatim}[language=IDL]
+  ; Record the complex field to a binary file
+  NADIA_WRITE_CPLX, result, 'result_file.cplx'
+\end{myverbatim}
+The magnitude and phase of the complex matrix
+can be viewed and saved using the standard IDL
+routines.
+
+
+%\subsubsection{Plot the average intensity versus frame number, full-frame and ROI}
+%\subsubsection{Check for saturation/dead pixels}
+%\subsubsection{Run correlations on data and white-fields}
+%\subsubsection{Convert HDF files and extract header info}
+\subsubsection{Convert between different file formats}
+
+
+
+\subsubsection{Output Data on a Log Scale}
+
+\subsubsection{Subtract the darkfield}
+%\subsubsection{Check the beam stability in data over time}
+%\subsubsection{Check correlations after dark-field subtraction}
+
+\subsubsection{Merge (add or average) data files together}
+
+\subsubsection{Determine the normalisation of the white-field to data}
+
+\subsubsection{Get the autocorrelation function}
+
+
+\subsection{Perform Reconstruction}
+
+\subsubsection{Perform Plane-wave, Frensel and Fresnel White-Field Reconstruction}
+\label{subsubsec:rec}
+
+Whether it is performed in C++ or IDL, a plane-wave, Frensel and
+Fresnel white-field reconstruction consists of the following basic
+steps:
+
+\begin{enumerate}
+
+\item {\it Load input data} - Functions are provided for reading and
+  writing to various image formats. More information on this step is
+  given in Section \ref{subsubsec:read_images}. 
+  
+\item {\it Initialise the reconstruction library} - Whether you are
+  performing plane-wave, Fresnel or Phase-diverse/Ptycographic
+  reconstruction, you must initialise the library with a number of
+  input: the diffraction and support data, initial estimate, and
+  parameters which describe the experimental set-up. Please refer to
+  Sections \ref{subsubsec:rec_planar,subsubsec:rec_fresnel,subsubsec:rec_phase_div}
+  for specific instructions.
+      
+\item {\it Iterate} - At this stage the iterative algorithms developed by
+  \cite[] are run. In the software library, an iteration can be
+  performed simply by calling one function:
+      
+      {\bf In C++}
+      \begin{myverbatim}[language=C++]
+        planar.iterate();
+      \end{myverbatim}
+      
+      {\bf In IDL}
+      \begin{myverbatim}[language=IDL]
+        ; Perform one iteration. The exit-
+        ; surface-wave is return to 'result'  
+        result = NADIA_ITERATE()
+        
+        ; Perform 50 iterations
+        result = NADIA_ITERATE(50)
+      \end{myverbatim}
+
+      Various aspects of the reconstruction can be controlled, for
+      example, the algorithm, the relaxation parameter and the
+      shrinkwrap algorithm. How this can be achieve with the software
+      is described in this section. 
+
+
+    \item {\it Save the result} - Refer to Section \ref{subsubsec:write_images}.
+
+\end{enumerate}
+
+
+
+
+\subsubsection{Perform Phase-Diverse/Ptychographic Reconstruction}
+\label{subsubsec:rec_phase_div}
+
+\subsubsection{Select the algorithm}
+
+By default plane-wave CDI uses the ... algorithm and Fresnel CDI uses
+the ... algorithm. This can be easily changed at any point in the
+reconstruction using the method
+
+\begin{myverbatim}
+void PlanarCDI::set_algorithm(int alg) 	
+\end{myverbatim}
+Where the algorithm options are:
+\begin{description} 
+\item ER - error reduction 
+\item BIO - basic input-output 
+\item BOO - basic output-output 
+\item HIO - hybrid input-output 
+\item DM - difference map 
+\item SF - solvent-flipping 
+\item ASR - averaged successive reflections 
+\item HPR - hybrid projection reflection 
+\item RAAR - relaxed averaged alternating reflectors
+\end{description}
+
+For example, if you have an object of type FresnelCDI called ``fcdi'', and
+you wish to change the algorithm to HIO:
+\begin{myverbatim}
+fcdi.set_algorithm(HIO) 	
+\end{myverbatim}
+
+In addition to this extensive list, custom algorithms can be
+used. Iterative reconstruction algorithms can be expressed as a
+combination of the following 5 operators: , , , and Where is the
+support projection and is the intensity projection. These can be
+combined to form a basis of 10 vectors (see Harray's review). The
+parameters to this method set the coefficient for each of these
+vectors. Note: the vector set is linearly dependant.
+
+Please see page 22 of the H.M. Quiney review: TUTORIAL REVIEW,
+Coherent diffractive imaging using short wavelength light sources,
+Journal of Modern Optics, 2010, DOI: 10.1080/09500340.2010.495459
+
+\begin{myverbatim}
+void Planar::set_custom_algorithm (double m1,
+double 	m2,
+double 	m3,
+double 	m4,
+double 	m5,
+double 	m6,
+double 	m7,
+double 	m8,
+double 	m9,
+double 	m10	 
+)
+\end{myverbatim}
+			
+Parameters:
+m1 	Coefficient to the  term
+m2 	Coefficient to the  term
+m3 	Coefficient to the  term
+m4 	Coefficient to the  term
+m5 	Coefficient to the  term
+m6 	Coefficient to the  term
+m7 	Coefficient to the  term
+m8 	Coefficient to the  term
+m9 	Coefficient to the  term
+m10 	Coefficient to the  term
+
+
+
+
+In IDL, the routine ... can be called to select the algorithm.
+
+
+\subsubsection{Update the support or use the shrink-wrap algorithm}
+
+\subsubsection{Stop a reconstuction, save the result and restart at the same place}
+
+\subsubsection{Modify the reconstruction algorithm by adding a new constraint}
+
+\subsubsection{Refine the experimental parameters during reconstuction}
+
+\subsubsection{Nominate a beam-stop area in plane-wave reconstruction}
+
+
+
+\subsection{Perform a Simulation}
+
+
+
+
+
+\subsection{Installation Options}
+
+\subsubsection{Select Single or Double Precision}
+
+\subsubsection{Compile the IDL wrapper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Performance}
+
+In designing the code we have tried to find a good balance between
+optimising the speed, reducing the memory used, and keeping the code
+modulare and simple to read. There is always room to improve the
+performance and we provide the figures below as a benchmark of the
+current state of the software in version \ver. These values are
+independante of whether C/C++, IDL or the command-line tools are used.
+
+\subsection{Speed}
+
+\begin{table}[h!]
+\begin{tabular}[h!]{lcc}
+\toprule
+   & \multicolumn{2}{c}{Iteration per Second} \\
+   & Laptop & Desktop \\
+   & Intel U2500 @ 1.20GHz & i7-2600 CPU @ 3.40GHz \\
+   & 1.5 GB memory & 8 GB memory\\
+
+\midrule
+PlanarCDI (ER) & 3.3  &  16 \\
+PlanarCDI (HIO) & 2.7 & 13 \\
+FresnelCDI - white field & 2.0 & 7 \\
+FresnelCDI & 2.7 & 10 \\
+FresnelCDI with Complex Constraints & 1.8 & 7 \\
+Phase-Diverse/Ptychography & (X-0.6)/N  & (X-2)/N  \\
+\bottomrule
+\end{tabular}
+
+\caption{\label{table:speed} Iterations performed per second for a
+  1024$\times$1024 pixel reconstruction. For
+  phase-diverse/ptychography reconstruction, X is the number of
+  iterations which could be perform for a single frame,
+  non-phase-diverse/ptychography reconstruction of that type
+  (i.e. from the first five rows of the table). The start-up time is a
+  few seconds in each case. }
+\end{table}
+
+\subsection{Memory}
+
+By default the fast fourier transform library used with \name is
+single precision. We found no noticible lose in performance or
+correctness by using single precision, however users may choose to use
+double precision fast fourier transforms by adding the flag
+``--enable-double-precision'' to ``./configure'' during installation.
+The class Double\_2D, despite its name, will also use the same
+precision as the fourier transform library and is single precision by
+default.
+
+\begin{table}[h!]
+\begin{tabular}[h!]{lcc}
+\toprule
+&  Number of N$\times$N & With p=4, N=1024 \\
+&  pixel arrays used & (MB) \\
+\midrule
+PlanarCDI (ER) & 4 & 17 \\
+PlanarCDI (HIO) & 10 & 42  \\
+FresnelCDI - white field & 4.5 & 19 \\
+FresnelCDI & 8.5 & 36 \\
+FresnelCDI with complex constraints & 11.5+c & 57 (c=2) \\
+Phase-Diverse/Ptychography & I(1+X) + 2R & 30,000 (I=400,M = 1100$^2$, \\
+ &                 & X = FresnelCDI)  \\
+\bottomrule
+\end{tabular}
+
+\caption{\label{table:memory}The memory used. 
+In total the memory used will be the factor given in the second
+coloumn of Figure \ref{table:memory} multiplied by pN$^2$.
+(N - image side length in pixels, p - precision in bytes, 
+c - number of complex constraint regions, I - number of images, 
+R - ratio of the total phase-diverse image size to a single N$\times$N image,
+X - number of arrays needed for a single reconstruction). 
+}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Directory Structure}
+
+\begin{itemize}
+   \item[] {\tt NADIA/} ...... base directory, where ./configure and make should be executed from.
+   \begin{itemize}
+      \item[] {\tt bin/} ...... contains the command-line tool executable files after compilation.
+      \item[] {\tt doc/} ...... contains configuration files for doxygen.
+      \begin{itemize}
+         \item[] {\tt manual/} ...... contains the latex source for the software manual (this file).
+      \end{itemize}
+      \item[] {\tt examples/} ...... this directory stores all the examples.
+      \begin{itemize}
+         \item[] {\tt image\_files/} ...... stores images and data files used in the examples.
+      \end{itemize}
+      \item[] {\tt include/ }...... contains the source header files after compilation.
+      \item[] {\tt interfaces/} ...... a directory for wrapper code to languages other than C/C++.
+      \begin{itemize}
+         \item[] {\tt idl/} ...... contains all IDL related code (source and examples).
+      \end{itemize}
+      \item[] {\tt lib/} ...... contains the static and dynamic C++ library after compilation.
+      \item[] {\tt src/} ...... a directory for the library source code.
+      \item[] {\tt tools/} ...... contains the source code for the command-line tools.
+   \end{itemize}
+\end{itemize}
+
+
+%{
+%\section{Directory Structure}
+
+%\dirtree{% 
+%.1 NADIA/\DTcomment{base directory, where ./configure and make should be executed from}.
+%.2 bin/ \DTcomment{contains the tool executable files are compilation}.
+%.2 doc/ \DTcomment{contains configuration files for doxygen}.
+%.3 manual/\DTcomment{contains the latex source for the software manual (this file)}.
+%.2 examples/\DTcomment{this directory stores all the examples}.
+%.3 image\_files/\DTcomment{stores images and data files used in the examples}.
+%.2 include/\DTcomment{contains the source header files after compilation}.
+%.2 interfaces/\DTcomment{a directory for wrapper code to languages other than C/C++}.
+%.3 idl/\DTcomment{contains all IDL related code (source and examples)}.
+%.2 lib/\DTcomment{contains the static and dynamic C++ library after compilation}.
+%.2 src/\DTcomment{a directory for the library source code}.
+%.2 tools/\DTcomment{contains the source code for the command-line tools}.
+%}
+%}
+%{
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\appendix
+
+\section{C++ Class Description} 
+
+For the sake of advanced users we provide a description of the
+software library structure in this section. Figure
+\ref{fig:class_diagram} shows the relationship between the non-I/O
+class of the software, and lists the public member functions.
+
+The reconstruction classes PlanarCDI, FresnelCDI and FresnelCDI\_WF
+(shows in the shaded region of Figure \ref{fig:class_diagram}, all
+inherit from the abstract base class, BaseCDI. Common functionality,
+for example the definition of the reconstruction algorithms is
+provided in BaseCDI. The reconstruction type PhaseDiverseCDI, which is
+capable of performing phase-diverse and ptycographic reconstruction
+accepts multiple objects of type BaseCDI.
+
+
+
+\begin{figure}[htbp]
+\centering \includegraphics*[scale=0.32,viewport = 0 0 1500
+  1200]{nadia_class_diagram.eps}
+\caption[]{The relationship between classes of the \name package.
+\label{fig:class_diagram}}
+\end{figure}
+
+\subsection{BaseCDI}
+The fundamental class used for performing CDI reconstruction; an
+object of type "BaseCDI" allows planar CDI to be performed, and it is
+also used by the Fresnel reconstruction code (through inheritance).
+The reconstruction can be performed in the following way:
+
+\begin{itemize}
+
+\item The user should create an object to store the result (the exit
+  surface wave of type Complex\_2D). For example using: Complex\_2D
+  esw\_estimate(nx,ny) This can be initialise to a best guess, or can
+  be left for the BaseCDI object to initialise.
+
+\item The BaseCDI object should be created and the Complex\_2D
+  previously created should be passed as input. For example: BaseCDI
+  my\_planar\_recon(esw\_estimate)
+
+\item The support and intensity data should be set, and the exit
+  surface wave initialised to a first guess (if not already done):
+  \begin{myverbatim}
+my_planar_recon.set_support(support) 
+my_planar_recon.set_intensity(data) 
+my_planar_recon.initialise_estimate()
+\end{myverbatim}
+
+\item The reconstruction can be configured before, or at anytime
+  during the reconstruction using setter methods. For example the
+  algorithm choice and relaxation parameters:
+\begin{myverbatim}
+my_planar_recon.set_algorithm(HIO) 
+my_planar_recon.set_relaxation_parameter(0.95) 
+\end{myverbatim}
+The algorithm is fully customisable through the
+BaseCDI::set\_custom\_algorithm method. See page 22 of the H.M. Quiney
+review: TUTORIAL REVIEW, Coherent diffractive imaging using short
+wavelength light sources, Journal of Modern Optics, 2010, DOI:
+10.1080/09500340.2010.495459 for the formalism.
+
+\item The reconstruction is then performed with multiple calls to the
+  BaseCDI::iterate() method:
+\begin{myverbatim}
+my_planar_recon.iterate() 
+\end{myverbatim}
+This will automatically update the values in the Complex\_2D estimate
+and the current error. The error can be retrieved using
+BaseCDI::get\_current\_error().
+\end{itemize}
+
+For cases where the beam-stop region must be excluded during
+reconstruction, you should call the set\_beam\_stop() method, to define
+the beam-stop region before running iterate().
+
+
+\subsection{PlanarCDI}
+
+\subsection{FresnelCDI}
+The class used for performing Fresnel CDI reconstruction (for
+white-field reconstruction see FresnelCDI\_WF). It inherits most
+methods from BaseCDI, so please look at the documentation of this
+class also. Although there are some differences in the underlying code
+between this class and the planar case, the interface is generally
+unchanged. Therefore users should refer to the instructions for
+BaseCDI to understand how to use a FresnelCDI object in their own
+code. Only the differences relevant to users will be documented here.
+
+\subsection{FresnelCDI\_WF}
+This is the class used for reconstructing white-field data prior to
+running Fresnel reconstruction with FresnelCDI. It inherits most
+methods from BaseCDI, so please look at the documentation of this
+class also. Although there are some differences in the underlying code
+between this class and the planar case, the interface is generally
+unchanged. Therefore users should refer to the instructions for
+BaseCDI to understand how to use a FresnelCDI\_WF object in their own
+code. Only the differences relevant to users will be documented here.
+
+\subsection{PhaseDiverseCDI}
+
+This class can be used to perform phase diverse or ptychographic
+reconstruction of either Fresnel or plane-wave CDI data. Any number of
+frames (also called local/single frames or probes in this
+documentation) may be added to the reconstruction. In order to perform
+a reconstruction, you will need to create either a new FresnelCDI or
+PlanarCDI object for each of these 'local' datasets. The FresnelCDI or
+PlanarCDI objects must then be passed to a PhaseDiverseCDI
+object. Because the each sub-iteration (ie. each iteration of a local
+frame) is performed using the code in FresnelCDI/PlanarCDI, all the
+functionality available in these classes is also available here. For
+example complex constraint can be set, shrink-wrap can be used, the
+estimate can be initialised using the results from a previous
+reconstruction etc. An example can be found in the /examples
+directory, demonstrating how to use PhaseDiverseCDI.
+
+The displacement in position between 'local' frames may be either
+transverse to the beam direction, or longitudinal, along the beam
+direction. The longitudinal position (for FresnelCDI) is set when the
+FresnelCDI objects are initially constructed. Transverse positions are
+set when the FresnelCDI/PlanarCDI objects are added to the
+PhaseDiverseCDI object. This class allows the transverse positions to
+be automatically adjusted during reconstruction using the
+"adjust\_positions" function.
+
+The code allows for several options in the type of reconstruction
+which is done:
+
+\begin{itemize}
+
+\item The reconstruction can be performed in series or parallel.
+  \begin{itemize}
+
+    \item In the case of series (see for example the paper....), a
+      'local' frame will undergo one or more iterations, the result
+      will be updated to a 'global' estimate of the sample, and this
+      estimate will form the starting point for the next frame. For
+      each call to the method "iterate()" this process is repeated
+      until each local frame is used once. The algorithm can be
+      described by:
+      \[ T_{k+1} = (1-\beta w^n)T_k + \beta w^n T^n_k \] 
+      where $T_{k+1}$ is the updated global function, $T^n$ is the
+      updated local function for the nth local frame. $\beta$ is the
+      relaxation parameter and the weight is $ w^n(\rho) = \alpha^n
+      (\frac{|T^n(\rho)|}{max|T^n(\rho)|} )^\gamma $ for Fresnel CDI
+      or $w^n = \alpha^n$ for Plane-wave CDI. The weight is zero
+      outside of the support.
+
+   \item For a parallel reconstruction (see .....), each frame with
+     independently undergo one of more iteration, the result from all
+     frames will be merged to form a new estimate of the sample, this
+     estimate then becomes the starting point for the next iteration
+     of all frames. The algorithm can be described by:
+     \[T_{k+1} = (1-\beta)T_k + \beta \sum_n(w^n T^n_k)\]
+     where $T_{k+1}$, $T^n$, and $\beta$ were defined
+    earlier. The weight, w, is similar to that used for series
+    reconstruction, but the weight it normalised such that 
+    $ \sum_n w^n = 1 $.  i.e. $ w^n_{parallel}= w^n_{series} / \sum_n w^n_{series} $
+
+\end{itemize}
+
+\item The number of local iterations to perform before updating the
+  result to the 'global' function can be set.
+
+\item The feedback parameter, beta, may be set. This quantity is used
+  to set how much of the previous 'global' sample function will be
+  left after the next 'global' iteration.
+
+\item The amplification factor, gamma, and the probe scaling, alpha,
+  may also be see. These parameters control the weighting of one frame
+  (and pixels within a frame) with respect to each other.
+
+\end{itemize}
+
+\subsection{TransmissionConstraint}
+This class allows constraints on the transmission function
+(FresnelCDI) or exit-surface-wave (PlanarCDI), such as complex
+constraints to be used. To achieve this the user needs to: create an
+instance of this class configure it (for example by setting some
+ComplexConstraint objects and finally by passing this object to the
+reconstruction (through the PlanarCDI or FresnelCDI function
+"set\_complex\_constraint").
+
+\subsection{ComplexConstraint}
+
+This class is based on the paper "Use of a complex constraint in
+coherent diffractive imaging", J. N. Clark et. al., 2010. The notation
+used there is also used here. Users should have knowledge of this or
+similar papers before using this class.
+
+A section of the reconstructed transmission function will be updated
+according to a restriction on the value of c (c = beta/delta). If the
+material is of a known element, then c can be fixed to the know value,
+and the phase and magnitude of the transmission function updated
+accordingly. Alternatively, c can be left to float, and calculated for
+each iteration from a mean over the defined region. The parameters
+alpha1 and alpha2 are used to control the strength of the constraint.
+
+Instances of this class should be pass to a TransmissionConstraint
+object. If a sample consists of different regions which are locally
+homogeneous in element, multiple instances of this class should be
+created, each one defining a different region of the sample, and then
+each should be added to the TransmissionConstraint object.
+
+\subsection{Double\_2D}
+This class represents a 2D field of doubles. Setter and getter methods
+are provided along with some other useful functions. This is a
+convenient form to store and pass image data in the reconstruction
+software. A better implementation of this class would use templates,
+but restricting the type to double is sufficient our needs.
+
+\subsection{Complex\_2D}
+This class represents a 2D complex field. Setter and getter methods
+are provided along with some other useful functions (add, multiplying
+and fast Fourier transforming). Complex\_2D objects are used in the CDI
+reconstruction to represent the ESW in a single plane.
+
+\subsection{Config}
+This class allows simple text files to be read and is used by the
+command line tool programs. The parser takes a file name and
+constructs key-value pairs for each line with the syntax:\\ 
+key = value or \\
+key = value\_1 value\_2 value\_3 ... \\
+White spaces are ignored and everything to the right of a "\#" symbol
+is also ignored (this allows comments to be included in the config
+file. See example.config to see how it looks. If a key (as given by
+any of the methods below) is not found in the file, the status is set
+to FAILURE and the method returns either 0, an empty string or list.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{IDL Routine Descriptions}
+\label{sec:idl_routines}
+The complete list of IDL routines provided with release 0.5 of the
+DIXE software is described below. This documentation can also be found
+on the project website and will be updated with new releases of the
+software.
+
+
+\include{IDL_interface}
+
+\section{Command-Line Tools}
+
+\label{sec:command_tools}
+
+
+\section{License}
+
+Copyright (C) 2011 The ARC Centre of Excellence in Coherent X-ray
+Science.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published
+by the Free Software Foundation, either version 3 of the License,
+or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program (see COPYING).  If not, see
+<http://www.gnu.org/licenses/>.
+
+We also ask that you cite this software in publications where you made
+use of it for any part of the data analysis.
+
+\end{document}

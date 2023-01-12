@@ -1,0 +1,26 @@
+export LD_RUN_PATH=@LD_RUN_PATH@:@BASE@/lib
+
+SOURCE_TOOLS=hdf2ppm.c tiff2ppm.c CDI_reconstruction.c dbin2ppm.c \
+             cplx2ppm.c cplx2dbin.c dbin2tiff.c PhaseDiverseFresnelRec.c
+EXEC_TOOLS=$(SOURCE_TOOLS:.c=.exe)
+
+LIB_SO=../lib/libNADIA.so
+LIB_A=../lib/libNADIA.a
+
+all: $(LIB_A) $(LIB_SO) $(EXEC_TOOLS)
+
+$(LIB_A): ../src/*.c++ ../src/*.c
+	make -C ../src
+
+$(LIB_SO): ../src/*.c++ ../src/*.c
+	make -C ../src
+
+%.exe: %.c ../src/*.c++ ../src/*.c
+	@CXX@ @CXXFLAGS@ -I@BASE@/include $< -o $@ \
+	-L@BASE@/lib -lNADIA \
+	@LDFLAGS@ @LIBS@
+	cp $@ @BASE@/bin/$@
+
+clean:                                                     
+	rm -f *.o *.exe  *~ 
+

@@ -1,0 +1,1406 @@
+
+\subsection{NADIA\_ADD\_COMPLEX\_CONSTRAINT\_REGION}
+\begin{verbatim}
+
+ NAME:
+       NADIA_ADD_COMPLEX_CONSTRAINT_REGION
+
+ PURPOSE: For use with FresnelCDI reconstruction. Calling this
+       procedure will constrain the transmission function magnitude
+       and phase using the method from the paper "Use of a complex
+       constraint in coherent diffractive imaging", J. N. Clark
+       et. al., 2010. The notation used there is also used
+       here. Users should have knowledge of this or similar papers
+       before using the procedure.
+
+       A section of the reconstructed transmission function will be
+       updated according to a restriction on the value of c (c =
+       beta/delta). If the material is of a known element, then c can
+       be fixed to the know value, and the phase and magnitude of the
+       transmission function updated accordingly. Alternatively, c
+       can be left to float, and calculated for each iteration from a
+       mean over the defined region. The parameters alpha1 and alpha2
+       are used to control the strength of the constraint. This
+       procedure should be called once before each region of
+       homogenious material.
+
+ CALLING SEQUENCE:
+
+       NADIA_ADD_COMPLEX_CONSTRAINT_REGION, region, alpha1, alpha2 [, fixed_c]
+
+ INPUTS:
+
+       region:
+             A 2 array of doubles which is used to indicate which
+             pixels the constraint should be applied to. 0 -
+             indicated the array element does not belong to the
+             region. Any other value indicated that it does.
+
+       alpha1:
+             Constraint strength parameter for the amplitude (double
+             type).
+
+       alpha2:
+             Constraint strength parameter for the phase (double
+             type).
+             
+       fixed_c:
+             Optional parameter to fix the value of c = beta/delta
+             (double type).
+
+ EXAMPLE:
+       Setting a complex constraint for two image regions.
+       For the second, the value of c=beta/delta is fixed.
+
+       r1 =  nadia_read_tiff(1024,1024,'region_1.tiff')
+       r2 =  nadia_read_tiff(1024,1024,'region_2.tiff')
+
+       delta = 6.45e-4;
+       beta = 1.43e-4;
+
+       nadia_add_complex_constraint_region, r1, 0.5, 0.5
+       nadia_add_complex_constraint_region, r2,   1,   0, beta/delta
+
+\end{verbatim}
+
+
+
+  
+ 
+\subsection{NADIA\_APPLY\_SHRINKWRAP}
+\begin{verbatim}
+
+ NAME:
+       NADIA_APPLY_SHRINKWRAP
+
+ PURPOSE:
+       Apply the shrinkwrap algorithm. The current exit-surface-wave
+       magnitude is used to update the support; it is convoluted with
+       a Gaussian and then a threshold is applied. You can use the
+       nadia_get_support function to see how the support have been
+       modified after calling this procedure.
+
+ CALLING SEQUENCE:
+
+	NADIA_APPLY_SHRINKWRAP [,gauss_width, threshold ]
+
+ INPUTS:
+
+       gauss_width: 
+             The width (1-standard deviation. in pixels) of the Gaussian
+             used for smearing. If this parameter is not passed, 
+             a width of 1.5 pixels is used.
+
+       threshold:
+             All pixels which are below the threshold are set to zero 
+             (outside the support). The threshold should be given as
+             a fraction of the maximum pixel value (in double format). 
+             If this parameter is not passed a threshold of 0.1 (10%)
+             is used.
+
+ EXAMPLE:
+       Perform 1000 iterations in total, applying shrink-wrap at the 400th iteration:
+
+       ....
+       a = NADIA_ITERATE(400)
+       NADIA_APPLY_SHRINKWRAP
+       a = NADIA_ITERATE(600)
+
+\end{verbatim}
+
+
+\subsection{NADIA\_APPLY\_SUPPORT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_APPLY_SUPPORT
+
+ PURPOSE:
+       Apply the support constraint to the given complex array. All
+       elements outside the support with be reset to zero. Elements
+       within the support will be left as they are. The support must
+       have been previously set using either one of the NADIA_INIT 
+       functions or NADIA_SET_SUPPORT.
+
+       This function is called when using (NADIA_ITERATE) so generally
+       won't need to be call explicitly. An exception to this is if
+       the user wishes to extend their reconstruction with an
+       addition constraint.
+
+
+ CALLING SEQUENCE:
+
+	result = NADIA_APPLY_SUPPORT( complex_array [,/SUPPRESS_DISPLAY] )
+
+ INPUTS:
+
+       complex_array:
+             A 2D array of COMPLEX values which represents a wave in
+             either the sample plane (for planar and Fresnel
+             reconstruction) or the zone-plate plane for Fresnel 
+             white-field reconstruction.
+
+ KEYWORD PARAMETERS:
+
+       /SUPPRESS_DISPLAY:
+             Do not display the result on the screen. This maybe useful
+             if this function is used within a for loop. 
+
+ OUTPUTS:
+
+       result:
+             A COMPLEX 2D array after the support is applied.
+
+ EXAMPLE:
+       See the example for NADIA_PROPAGATE_FROM_DETECTOR
+
+\end{verbatim}
+
+
+
+
+\subsection{NADIA\_CLEAR\_MEMORY}
+\begin{verbatim}
+
+ NAME:
+       NADIA_CLEAR_MEMORY
+
+ PURPOSE:
+       Clean-up after a reconstruction has been performed. This 
+       procedure should be called at the very end of a program.
+       It will free up the memory that was allocated when one of 
+       the "NADIA_INIT_.." methods was called.
+
+ CALLING SEQUENCE:
+
+       NADIA_CLEAR_MEMORY
+
+ EXAMPLE:
+       NADIA_CLEAR_MEMORY
+
+\end{verbatim}
+
+\subsection{NADIA\_GET\_BEST\_RESULT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_BEST_RESULT
+
+ PURPOSE:
+       Get the best (lowest error) result found during the reconstruction.
+       The result is returned and the magnitude of the result is
+       displayed as a 512x512 pixel image on the screen.
+
+ CALLING SEQUENCE:
+
+       result = NADIA_GET_BEST_RESULT()
+
+ OUTPUTS:
+
+       result:
+             A 2D array of COMPLEX variables. For planar and Fresnel
+             reconstruction this will be the  exit-surface-wave for
+             the sample. For Fresnel white-field reconstruction, this
+             will be the complex white-field in the detector plane.
+
+
+ EXAMPLE:
+       Perform 1000 iterations and get the lowest error result.
+       ....
+       a = NADIA_ITERATE(1000)
+       a = NADIA_GET_BEST_RESULT()
+
+\end{verbatim}
+
+\subsection{NADIA\_GET\_ERROR}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_ERROR
+
+ PURPOSE:
+       Get the error metric. This is defined as the difference
+       between the estimated diffraction and the actual diffraction
+       pattern and is calculated as:
+           sum over pixels of ( M - sqrt(I) ) ^2 / sum(I) 
+       Where I is the detector data and M is the magnitude of the
+       estimate in the detector plane. Note that due to the way this
+       quantity is calculated, it actually corresponds to the
+       previous estimate rather than the current iteration.
+
+
+ CALLING SEQUENCE:
+
+       error = NADIA_GET_ERROR()
+
+ OUTPUTS:
+
+       error:
+             The error. 
+
+ EXAMPLE:
+
+       a = NADIA_GET_ERROR()
+
+\end{verbatim}
+
+ 
+\subsection{NADIA\_GET\_INTENSITY\_AUTOCORRELATION}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_INTENSITY_AUTOCORRELATION
+
+ PURPOSE:
+       Get the autocorrelation function from the intensity data.
+       This method is only useful for planar CDI reconstruction.
+
+ CALLING SEQUENCE:
+
+       a = NADIA_GET_INTENSITY_AUTOCORRELATION()
+
+ OUTPUTS:
+       a:
+             The autocorrelation function (a 2D array of doubles).
+
+ EXAMPLE:
+       a = NADIA_GET_INTENSITY_AUTOCORRELATION()
+
+\end{verbatim}
+
+\subsection{NADIA\_GET\_ROUND\_SUPPORT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_ROUND_SUPPORT
+
+ PURPOSE: 
+       This function will return a simple array with a central
+       circular region where each element has the value 1.0. Outside
+       the value returned is zero. This function has been written to
+       allow each create of the support array. For example when
+       reconstructing the white-field for Fresnel CDI reconstruction.
+       Note that it does not actually call any method from the NADIA
+       software library.
+
+ CALLING SEQUENCE:
+
+	NADIA_GET_ROUND_SUPPORT, nx, ny, radius
+
+ INPUTS:
+
+       n_x: 
+             The number of pixels in the horizontal direction of the
+             output array.
+       n_y: 
+             The number of pixels in the vertical direction of the
+             output array.
+       radius: 
+             The radius of the circle in pixels.
+
+ RETURN:
+       A two dimensional array which can be used to set the support
+       for any of the CDI reconstructions.
+
+ EXAMPLE:
+
+       nadia_get_round_support, 1024, 1024, 0.25*1024
+
+\end{verbatim}
+
+ 
+\subsection{NADIA\_GET\_SUPPORT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_SUPPORT
+
+ PURPOSE:
+       Get the support. This maybe useful to see how shrinkwrap has
+       effected the support. The result is displayed as a 512x512 
+       pixel image on the screen.
+
+ CALLING SEQUENCE:
+
+       support = NADIA_GET_SUPPORT()
+
+ OUTPUTS:
+
+       support:
+             The support. A 2D array of doubles. A pixel with value below 1
+             is outside the support and 1 and above is inside the support.
+
+ EXAMPLE:
+       View the support after applying shrink-wrap.
+ 
+       NADIA_APPLY_SHRINKWRAP
+       a = NADIA_GET_SUPPORT()
+
+\end{verbatim}
+
+\subsection{NADIA\_GET\_TRANSMISSION\_FUNCTION}
+\begin{verbatim}
+
+ NAME:
+       NADIA_GET_TRANSMISSION_FUNCTION
+
+ PURPOSE:
+       Get the transmission function from the current estimate of the
+       exit-surface-wave. The magnitude of the result will be
+       displayed on the screen. Note that this functions
+       is only available for Fresnel CDI reconstruction.
+
+ CALLING SEQUENCE:
+
+       result = NADIA_GET_TRANSMISSION_FUNCTION()
+
+ OUTPUTS:
+
+       result:
+             The transmission function for the sample. A 2D array of
+             COMPLEX variables is returned. 
+
+ EXAMPLE:
+       a = NADIA_GET_TRANSMISSION_FUNCTION()
+
+\end{verbatim}
+
+ 
+\subsection{NADIA\_INITIALISE\_ESW}
+\begin{verbatim}
+
+ NAME:
+       NADIA_INITIALISE_ESW
+
+ PURPOSE:
+       Initialise the exit-surface-wave guess. The initialisation
+       will depend on the reconstruction type (see the procedures
+       which begin "NADIA_INIT_" for a description). The "INIT" procedure  
+       will call this procedure if no starting guess is provided. 
+       It is useful if you wish to run the same reconstruction
+       several time with a different random starting point, or if 
+       you wish to reset the reconstruction back to the original guess.
+
+
+ CALLING SEQUENCE:
+
+	NADIA_INITIALISE_ESW, seed
+
+ INPUTS:
+
+       seed: 
+             Seed for the random number generator used to initialise
+             the guess. It should be an integer. This is ignored in 
+             the case of Fresnel CDI.
+
+
+ EXAMPLE:
+
+       nadia_initialise_esw, 6
+
+\end{verbatim}
+
+
+\subsection{NADIA\_INIT\_FRESNEL}
+\begin{verbatim}
+
+ NAME:
+       NADIA_INIT_FRESNEL
+
+ PURPOSE:
+       Set-up a Fresnel CDI reconstruction. This will
+       initialise the reconstruction using a previously reconstructed
+       white-field, detector data, sample support and experimental 
+       parameters. Some defaults will be set and memory will be
+       allocated ready for reconstructing the sample
+       exit-surface-wave. It is necessary to call this procedure before
+       attempting to call any of the reconstruction methods
+       (e.g. before setting the algorithm or calling NADIA_ITERATE).
+
+       Calling this procedure will initialise the reconstruction algorithm
+       to the error-reduction with a relaxation parameter of 0.9.
+
+ CALLING SEQUENCE:
+
+	NADIA_INIT_FRESNEL, data, support, white-field, beam_wavelength,
+	                  focal_detector_length, focal_sample_length, 
+                         pixel_size [, normalisation, starting_point ]
+
+ INPUTS:
+
+       You may use any length units for the experimental parameters
+       below, as long as all quantities are given in the same units.
+
+	data: 
+             The detector data with the sample in place. It should be
+             in the form of a 2D array.
+
+       support: 
+             A 2D array of integers or doubles which give the sample support.
+             Values or 1 or greater are considered inside
+             the support. All others are considered to be
+             outside the support.
+
+       white-field:
+             A COMPLEX 2D array of the reconstructed white-field in
+             the detector plane. This can be recovered using 
+             NADIA_INIT_FRESNEL_WF followed by NADIA_ITERATE.
+
+       beam_wavelength:
+             The beam wavelength.
+
+       focal_detector_length:
+             The distance between the focal point and the detector.
+
+       focal_sample_length:
+             The distance between the focal point and the sample.
+
+       pixel_size:
+             The side length of one detector pixel.
+
+       normalisation: 
+             The factor to scale the white-field before
+             performing FCDI. If this parameter is excluded, the
+             ratio of the square-root of the intensity data and the
+             white-field magnitude is used as the normalisation.
+
+       starting_point: 
+             As an option you may supply an initial 
+             guess of the exit-surface-wave for the sample. 
+             This maybe useful, for example, if you wish to 
+             start from the end point of a previous run. The
+             format of this parameter much be a 2D array of
+             COMPLEX variables. If this parameter is not supplied,
+             the initialisation described in Harry's review paper: 
+             page 29. (in particular e.q. 137) is used.
+
+ EXAMPLE:
+
+        nadia_init_fresnel, my_data, my_supports, my_white-field, $
+                          4.892e-10, 0.9078777, 2.16e-3, $
+                          13.5e-6
+
+\end{verbatim}
+
+\subsection{NADIA\_INIT\_FRESNEL\_WF}
+\begin{verbatim}
+
+ NAME:
+       NADIA_INIT_FRESNEL_WF
+
+ PURPOSE:
+       Set-up a Fresnel white-field CDI reconstruction. This will
+       initialise the reconstruction with the white-field intensity, 
+       zone-plate support and experimental parameters. Some defaults 
+       will be set and memory will be allocated ready for 
+       reconstructing the white-field (phase and magnitude) in the
+       detector plane. It is necessary to call this procedure before
+       attempting to call any of the reconstruction methods
+       (e.g. before setting the algorithm or calling NADIA_ITERATE).
+
+ CALLING SEQUENCE:
+
+	NADIA_INIT_FRESNEL_WF, data, support, beam_wavelength,
+                            zone_focal_length, focal_detector_length,
+                            pixel_size [,starting_point]
+
+ INPUTS:
+
+       You may use any length units for the experimental parameters
+       below, as long as all quantities are given in the same units.
+
+	data: 
+             The white-field illumination. It should be
+             in the form of a 2D array.
+
+       support: 
+             A 2D array of integers or doubles giving the zone-plate support.
+             Values or 1 or greater are considered inside
+             the support. All others are considered to be
+             outside the support.
+
+       beam_wavelength:
+             The beam wavelength.
+
+       zone_focal_length:
+             The distance between the zone plate and the focal point.
+
+       focal_detector_length:
+             The distance between the focal point and the detector.
+
+       pixel_size:
+             The side length of one detector pixel.
+
+       starting_point: 
+             As an option you may supply an initial guess of the 
+             white-field. This may be useful, for example, if you 
+             wish to start from the end point of a previous run. The
+             format of this parameter must be a 2D array of
+             COMPLEX variables. If this parameter is not supplied,
+             the starting point is initialised to be zero outside
+             the support, a random number inside the support 
+             for the magnitude and zero for the phase.
+
+ EXAMPLE:
+
+        An example of loading two 2D arrays from file and using
+        them to initialise the white-field reconstruction for FCDI:
+
+        my_support = nadia_read_tiff(1024,1024,'support.tiff')
+        my_data = nadia_read_tiff(1024,1024,'data.tiff')
+        nadia_init_fresnel_wf, my_data, my_support, $
+                   4.892e-10, 16.353e-3, 0.9078777,13.5e-6
+
+\end{verbatim}
+
+\subsection{NADIA\_INIT\_PLANAR}
+\begin{verbatim}
+
+ NAME:
+       NADIA_INIT_PLANAR
+
+ PURPOSE:
+       Set-up a planar CDI reconstruction. This will
+       initialise the reconstruction with the data
+       and support. Some defaults will be set and
+       memory will be allocated ready for reconstruction.
+       It is necessary to call this procedure before
+       attempting to call any of the reconstruction methods
+       (e.g. before setting the algorithm or 
+       calling NADIA_ITERATE).
+
+       Calling this procedure will initialise the reconstruction 
+       algorithm to hybrid-input-output with a relaxation parameter of 0.9.
+
+
+ CALLING SEQUENCE:
+
+	NADIA_INIT_PLANAR, Data, Support [,Starting_point]
+
+
+ INPUTS:
+
+	Data: 
+             The detector illumination. It should be
+             in the form of a 2D array
+
+       Support: 
+             A 2D Array giving the sample support.
+             Values or 1 or greater are considered inside
+             the support. All others are considered to be
+             outside the support.
+
+       Starting_point: 
+             As an option you may supply an initial 
+             guess of the exit-surface-wave for the sample. 
+             This maybe useful, for example, if you wish to 
+             start from the end point of a previous run. The
+             format of this parameter much be a 2D array of
+             COMPLEX variables. If this parameter is not supplied,
+             the starting point is initialised to be zero outside
+             the support and a random number inside the support, 
+             for both the magnitude and phase.
+
+ EXAMPLE:
+        An example of loading two 2D arrays from file and using
+        them to initialise the planar reconstruction:
+
+        my_support = nadia_read_tiff(1024,1024,'planar_support.tiff')
+        my_data = nadia_read_tiff(1024,1024,'planar_data.tiff')
+        NADIA_INIT_PLANAR, my_data, my_support
+
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_ITERATE}
+\begin{verbatim}
+
+ NAME:
+       NADIA_ITERATE
+
+ PURPOSE:
+       Perform the iterative reconstruction. The number of iterations
+       to perform should be given and the result of the final
+       iteration is returned. For planar and Fresnel CDI this will be
+       the exit surface wave of the sample. For Fresnel white-field
+       reconstruction it will be the white-field at the detector surface.
+       The magnitude of the result is also displayed on the screen as
+       a 512x512 pixel image. The iteration number and corresponding
+       error (see NADIA_GET_ERROR) will be printed on the screen.
+
+       NADIA_ITERATE may be called several time and the reconstruction
+       will start from where is ended. i.e. calling NADIA_ITERATE(50),
+       followed by a second NADIA_ITERATE(50) is equivalent to calling
+       NADIA_ITERATE(100).
+
+       During the reconstruction, the best (lowest error) result is
+       also stored. It maybe retrieved by calling NADIA_GET_BEST_RESULT.
+ 
+
+ CALLING SEQUENCE:
+
+	result = NADIA_ITERATE([iterations])
+
+ INPUTS:
+
+       iterations: 
+             The number of iterations to perform (an integer). 
+             If left empty, one iteration is performed.
+
+ OUTPUTS:
+
+       result:
+             A COMPLEX 2D array. For planar and Fresnel CDI this will be
+             the exit surface wave of the sample. For Fresnel white-field
+             reconstruction it will be the white-field at the detector surface.
+
+
+ EXAMPLE:
+
+       my_result = nadia_iterate(100)
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_PRINT\_ALGORITHM}
+\begin{verbatim}
+
+ NAME:
+       NADIA_PRINT_ALGORITHM
+
+ PURPOSE:
+       Output the form of the current algorithm to the screen. 
+       It will be written in terms of the support and intensity
+       projection operators.
+
+
+ CALLING SEQUENCE:
+       NADIA_PRINT_ALGORITHM
+
+
+ EXAMPLE:
+       NADIA_SET_ALGORITHM, 'RAAR'
+       NADIA_PRINT_ALGORITHM
+
+\end{verbatim}
+
+
+
+  
+ 
+\subsection{NADIA\_PROPAGATE\_FROM\_DETECTOR}
+\begin{verbatim}
+
+ NAME:
+       NADIA_PROPAGATE_FROM_DETECTOR
+
+ PURPOSE:
+       Propagate the given wave field from the detector plane to the 
+       sample plane (planar and Fresnel) or zone-plate plane (Fresnel
+       white-field reconstruction). The result will be returned and
+       displayed on the screen by default.
+
+       This function is called when using (NADIA_ITERATE) so generally
+       won't need to be call explicitly. An exception to this is if
+       the user wishes to extend the reconstruction with an addition
+       constraint (see the example below).
+
+
+ CALLING SEQUENCE:
+
+	result = NADIA_PROPAGATE_FROM_DETECTOR( complex_array [,/SUPPRESS_DISPLAY] )
+
+ INPUTS:
+
+       complex_array:
+             A 2D array of COMPLEX values which represents a wave in
+             the detector plane.
+
+ KEYWORD PARAMETERS:
+
+       /SUPPRESS_DISPLAY:
+             Do not display the result on the screen. This maybe useful
+             if this function is used within a for loop. 
+
+ OUTPUTS:
+
+       result:
+             A COMPLEX 2D array which is either the field in the
+             sample plane (for planar and Fresnel reconstruction) or
+             the zone-plate plane for Fresnel white-field reconstruction.
+
+ EXAMPLE:
+       Performing the reconstruction with a new constraint applied in the
+       sample plane (e.g. called "NEW_SUPPORT"):
+
+              FOR K = 0, 100 DO BEGIN 
+                  a = NADIA_PROPAGATE_TO_DETECTOR(a,/SUPPRESS_DISPLAY)
+                  a = NADIA_SCALE_INTENSITY(a,/SUPPRESS_DISPLAY)
+                  a = NADIA_PROPAGATE_FROM_DETECTOR(a,/SUPPRESS_DISPLAY)
+                  a = NADIA_APPLY_SUPPORT(a,/SUPPRESS_DISPLAY)
+                  a = NEW_SUPPORT(a)
+              ENDFOR 
+
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_PROPAGATE\_TO\_DETECTOR}
+\begin{verbatim}
+
+ NAME:
+       NADIA_PROPAGATE_TO_DETECTOR
+
+ PURPOSE:
+       Propagate the given wave field to the detector plane from the 
+       sample plane (planar and Fresnel) or zone-plate plane (Fresnel
+       white-field reconstruction). The result will be returned and
+       displayed on the screen by default.
+
+       This function is called when using (NADIA_ITERATE) so generally
+       won't need to be call explicitly. An exception to this is if
+       the user wishes to perform simulation or to extend their
+       reconstruction with an addition constraint (see the previous
+       example).
+
+
+ CALLING SEQUENCE:
+
+	result = NADIA_PROPAGATE_TO_DETECTOR( complex_array [,/SUPPRESS_DISPLAY] )
+
+ INPUTS:
+
+       complex_array:
+             A 2D array of COMPLEX values which represents a wave in
+             either the sample plane (for planar and Fresnel
+             reconstruction) or the zone-plate plane for Fresnel 
+             white-field reconstruction.
+
+ KEYWORD PARAMETERS:
+
+       /SUPPRESS_DISPLAY:
+             Do not display the result on the screen. This maybe useful
+             if this function is used within a for loop. 
+
+ OUTPUTS:
+
+       result:
+             A COMPLEX 2D array which is the field in the detector plane.
+
+ EXAMPLE:
+       Performing Fresnel simulation (assuming you already have a
+       complex white-field called "white_field" and the transmission
+       function of the object, "trans").
+
+       white_field_at_sample = NADIA_PROPAGATE_FROM_DETECTOR(white_field)
+       esw_at_sample = trans*white_field_at_sample
+       esw_at_detector = NADIA_PROPAGATE_TO_DETECTOR(esw_at_sample)
+       diffraction_pattern = abs(esw_at_detector)^2
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_READ\_CPLX}
+\begin{verbatim}
+
+ NAME:
+       NADIA_READ_CPLX
+
+ PURPOSE:
+       Read a binary file of fftw complex numbers. This is
+       useful for storing and restoring the result of a reconstruction.
+
+ CALLING SEQUENCE:
+
+       complex_array = NADIA_READ_CPLX( nx, ny, filename)
+
+ INPUTS:
+
+       nx:
+             The number of pixels horizontally (need to be checked?)
+
+       ny:
+             The number of pixels vertically (need to be checked?)
+
+       filename:
+             A string containing the name of the file to read.
+
+ OUTPUTS:
+       complex_array:
+             A 2D array of COMPLEX numbers.
+
+ EXAMPLE:
+       white_field = NADIA_READ_CPLX(1024, 1024, 'white_field_file.cplx')
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_READ\_DBIN}
+\begin{verbatim}
+
+ NAME:
+       NADIA_READ_DBIN
+
+ PURPOSE:
+       Read a double binary file (a binary file of doubles).
+
+ CALLING SEQUENCE:
+
+       image = NADIA_READ_DBIN( nx, ny, filename)
+
+ INPUTS:
+
+       nx:
+             The number of pixels horizontally (need to be checked?)
+
+       ny:
+             The number of pixels vertically (need to be checked?)
+
+       filename:
+             A string containing the name of the file to read.
+
+ OUTPUTS:
+       image:
+             The image in the format of a 2D array of doubles.
+
+ EXAMPLE:
+       data = NADIA_READ_DBIN(1024, 1024, 'data_file.dbin')
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_READ\_PPM}
+\begin{verbatim}
+
+ NAME:
+       NADIA_READ_PPM
+
+ PURPOSE:
+       Read a ppm file.
+
+ CALLING SEQUENCE:
+
+       image = NADIA_READ_PPM( nx, ny, filename)
+
+ INPUTS:
+
+       nx:
+             The number of pixels horizontally (need to be checked?)
+
+       ny:
+             The number of pixels vertically (need to be checked?)
+
+       filename:
+             A string containing the name of the file to read.
+
+ OUTPUTS:
+       image:
+             The image in the format of a 2D array of doubles.
+
+ EXAMPLE:
+       data = NADIA_READ_PPM(1024, 1024, 'data_file.ppm')
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_READ\_TIFF}
+\begin{verbatim}
+
+ NAME:
+       NADIA_READ_TIFF
+
+ PURPOSE:
+       Read a tiff image file. Note that there are other IDL commands
+       which perform this same function.
+
+ CALLING SEQUENCE:
+
+       image = NADIA_READ_TIFF( nx, ny, filename)
+
+ INPUTS:
+
+       nx:
+             The number of pixels horizontally (need to be checked?)
+
+       ny:
+             The number of pixels vertically (need to be checked?)
+
+       filename:
+             A string containing the name of the file to read.
+
+ OUTPUTS:
+       image:
+             The image in the format of a 2D array of doubles.
+
+ EXAMPLE:
+       data = NADIA_READ_TIFF(1024, 1024, 'data_file.tif')
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SCALE\_INTENSITY}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SCALE_INTENSITY
+
+ PURPOSE:
+       Scale the intensity (magnitude squared) of the given complex
+       array to the data. The intensity data must have been
+       previously set using either one of the NADIA_INIT functions or
+       NADIA_SET_INTENSITY.
+
+       If Fresnel reconstruction is being done, the white-field will
+       automatically be added to the complex array prior to scaling,
+       and will be subtracted afterward.
+       
+       This function is called when using (NADIA_ITERATE) so generally
+       won't need to be call explicitly. An exception to this is if
+       the user wishes to extend their reconstruction with an
+       addition constraint.
+
+
+ CALLING SEQUENCE:
+
+	result = NADIA_SCALE_INTENSITY( complex_array [,/SUPPRESS_DISPLAY] )
+
+ INPUTS:
+
+       complex_array:
+             A 2D array of COMPLEX values which represents a wave in
+             the detector plane.
+
+ KEYWORD PARAMETERS:
+
+       /SUPPRESS_DISPLAY:
+             Do not display the result on the screen. This maybe useful
+             if this function is used within a for loop. 
+
+ OUTPUTS:
+
+       result:
+             A COMPLEX 2D array after the intensity has been scaled
+             to data.
+
+ EXAMPLE:
+       See the example for NADIA_PROPAGATE_FROM_DETECTOR
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_ALGORITHM}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_ALGORITHM
+
+ PURPOSE:
+       Select the reconstruction algorithm to use. Options are:
+       'ER' - error reduction 
+       'BIO' - basic input-output 
+       'BOO' - basic output-output 
+       'HIO' - hybrid input-output 
+       'DM' - difference map 
+       'SF' - solvent-flipping 
+       'ASR' - averaged successive reflections 
+       'HPR' - hybrid projection reflection 
+       'RAAR' - relaxed averaged alternating reflectors
+
+ CALLING SEQUENCE:
+
+       NADIA_SET_ALGORITHM, algorithm
+
+ INPUTS:
+
+       algorithm:
+             Set the reconstruction algorithm. It should be
+             one of the options listed above. Note that it is
+             passed as a string.
+
+ EXAMPLE:
+       Perform 1000 iterations in total, changing to 
+       error-reduction at the 400th iteration:
+       ....
+       a = NADIA_ITERATE(400)
+       NADIA_SET_ALGORITHM, 'ER'
+       a = NADIA_ITERATE(600)
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_BEAM\_STOP}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_BEAM_STOP
+
+ PURPOSE: 
+       For PlanarCDI, you may set the beam stop region in the
+       detector plane. This region will be left to float (i.e. left
+       unscaled) when the intensity scaling in performed. Zeros in
+       the array (which is passed) indicate the beam-stop region,
+       all other values indicate that those pixel should be scaled.
+
+ CALLING SEQUENCE:
+
+	NADIA_SET_BEAM_STOP, beam_stop_region
+
+ INPUTS:
+
+       beam_stop_region: 
+             A 2D array of doubles or integers. Values of 0 are
+             considered inside the beam-stop region. All others are
+             considered to be outside the beam-stop region.
+
+ EXAMPLE:
+
+       nadia_set_beam_stop, my_beam_stop_regio
+
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_CHARGE\_FLIPPING}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_CHARGE_FLIPPING
+
+ PURPOSE: For use with FresnelCDI reconstruction. Enabeling this
+       procedure will constrain the transmission function phase to
+       lie between -PI and 0. During each iteration (directly after
+       applying the support constraint), the phase of the
+       transmission function will be flipped if it is positive
+       (i.e. if the phase, phi, lies between 0 and PI it will be
+       reset to -phi). If this procedure is called for a PlanarCDI
+       reconstruction, the contraint will be applied to the
+       exit-surface-wave.
+
+ CALLING SEQUENCE:
+
+       NADIA_SET_CHARGE_FLIPPING, enable
+
+ INPUTS:
+
+       enable:
+             This should be either 0 - turn off or 1 - turn on.
+
+ EXAMPLE:
+       NADIA_SET_CHARGE_FLIPPING, 1
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_CUSTOM\_ALGORITHM}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_CUSTOM_ALGORITHM
+
+ PURPOSE:
+       Set a custom reconstruction algorithm.
+       
+       Iterative reconstruction algorithms can be expressed as a
+       combination of several operators. The parameters to this
+       procedure set the coefficients for combinations of these
+       operators. For a description, please see page 22 of the
+       H.M. Quiney review: TUTORIAL REVIEW, Coherent diffractive
+       imaging using short wavelength light sources, Journal of
+       Modern Optics, 2010, DOI: 10.1080/09500340.2010.495459.  Some
+       description is also given in the C++ doxygen documentation
+       for PlanarCDI::set_custom_algorithm.
+
+
+ CALLING SEQUENCE:
+
+       NADIA_SET_CUSTOM_ALGORITHM, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10
+
+ INPUTS:
+
+       m1-m10:
+             Coefficients to the operator combinations.
+
+ EXAMPLE:
+       Perform 1000 iterations in total, changing to a custom
+       algorithm at the 400th iteration and print the algorithm to screen:
+
+       ....
+       a = NADIA_ITERATE(400)
+       NADIA_SET_ALGORITHM, 0.5, 0.5, 0.5, 0.5, 0.5, $ 
+                          0.5, 0.5, 0.5, 0.5, 0.5
+       NADIA_PRINT_ALGORITHM                    
+       a = NADIA_ITERATE(600)
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_INTENSITY}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_INTENSITY
+
+ PURPOSE:
+       Set the detector intensity data. This will override 
+       the intensity given to any of the NADIA_INIT methods.
+       In general, users should not need to call this method.
+
+ CALLING SEQUENCE:
+
+	NADIA_SET_INTENSITY, data
+
+ INPUTS:
+
+       data: 
+             The detector data. It should be in the form of a 2D
+             array or doubles or integers.
+
+
+ EXAMPLE:
+
+       nadia_set_intensity, my_data
+
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_RELAXATION\_PARAMETER}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_RELAXATION_PARAMETER
+
+ PURPOSE:
+       Set the relaxation parameter. The default relaxation
+       parameter used in Planar and Fresnel reconstruction is 0.9.
+       In Fresnel white-field reconstruction, this parameter is 
+       not used.
+
+ CALLING SEQUENCE:
+
+	NADIA_SET_RELAXATION_PARAMETER, beta
+
+ INPUTS:
+
+       beta: 
+             The relaxation parameter.
+
+ EXAMPLE:
+
+       nadia_set_relaxation_parameter, 0.9
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_SUPPORT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_SUPPORT
+
+ PURPOSE:
+       Set the support shape to be used in reconstruction. This with override 
+       the support given to any of the NADIA_INIT methods and maybe called
+       at any time during the reconstruction.  
+
+ CALLING SEQUENCE:
+
+	NADIA_SET_SUPPORT, support
+
+ INPUTS:
+
+       support: 
+             A 2D array of doubles or integers giving the sample's 
+             (or zone-plate's) support. Values of 1 or greater are 
+             considered inside the support. All others are considered 
+             to be outside the support.
+
+ EXAMPLE:
+
+       nadia_set_support, my_support
+
+
+\end{verbatim}
+
+
+
+
+
+
+  
+ 
+\subsection{NADIA\_SET\_TRANS\_UNITY\_CONSTRAINT}
+\begin{verbatim}
+
+ NAME:
+       NADIA_SET_TRANS_UNITY_CONSTRAINT
+
+ PURPOSE: For use with FresnelCDI reconstruction. Enabeling this
+       procedure will constrain the transmission function magnitude
+       to lie 0 and 1. During each iteration (directly after applying
+       the support constraint), the magnitude of the transmission
+       function will be reset to 1 at locations where it is greater
+       than 1.
+
+ CALLING SEQUENCE:
+
+       NADIA_SET_TRANS_UNITY_CONSTRAINT, enable
+
+ INPUTS:
+
+       enable:
+             This should be either 0 - turn off or 1 - turn on.
+
+ EXAMPLE:
+       NADIA_SET_TRANS_UNITY_CONSTRAINT, 1
+
+\end{verbatim}
+
+  
+ 
+\subsection{NADIA\_WRITE\_CPLX}
+\begin{verbatim}
+
+ NAME:
+       NADIA_WRITE_CPLX
+
+ PURPOSE:
+       Write a binary file of fftw complex numbers. This is
+       useful for storing and restoring the result of a reconstruction.
+
+ CALLING SEQUENCE:
+
+       NADIA_WRITE_CPLX( complex_array, filename )
+
+ INPUTS:
+
+       complex_array:
+             A 2D array of COMPLEX numbers
+
+       filename:
+             A string containing the name of the file to write.
+
+ EXAMPLE:
+       NADIA_WRITE_CPLX, white_field, 'white_field_file.cplx'
+
+\end{verbatim}
+
+  
+ 
+\subsection{NADIA\_WRITE\_DBIN}
+\begin{verbatim}
+
+ NAME:
+       NADIA_WRITE_DBIN
+
+ PURPOSE:
+       Write a binary file of doubles. 
+
+ CALLING SEQUENCE:
+
+       NADIA_WRITE_DBIN( image, filename )
+
+ INPUTS:
+
+       image:
+             A 2D array of numbers
+
+       filename:
+             A string containing the name of the file to write.
+
+ EXAMPLE:
+       NADIA_WRITE_DBIN, result, 'reco_magnitude.dbin'
+
+\end{verbatim}
+

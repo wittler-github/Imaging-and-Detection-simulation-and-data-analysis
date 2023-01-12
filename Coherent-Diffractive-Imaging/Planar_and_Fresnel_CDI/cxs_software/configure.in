@@ -1,0 +1,248 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+#AC_PREREQ([2.65])
+AC_INIT([CXS_Software], [0.0], [Nadia Davidson <nadiamd@unimelb.edu.au>])
+#AC_CONFIG_SRCDIR([examples/real_example.c])
+#AC_CONFIG_HEADERS([config.h])
+
+# Checks for programs.
+#AC_PROG_CC
+CXXFLAGS="-O3 $CXXFLAGS"
+
+AC_PROG_CXX()
+AC_LANG(C++)
+AC_PROG_MAKE_SET
+
+AC_ARG_WITH(fftw-lib, [  --with-fftw_lib     
+		  specify the directory where the fftw libraries can be found])
+AC_ARG_WITH(fftw-inc, [  --with-fftw_inc     
+		  specify the directory where the fftw headers can be found])
+AC_ARG_WITH(tiff-lib, [  --with-tiff_lib     
+		  specify the directory where the tiff libraries can be found])
+AC_ARG_WITH(tiff-inc, [  --with-tiff_inc     
+		  specify the directory where the tiff headers can be found])
+AC_ARG_WITH(mfhdf-lib, [  --with-mfhdf_lib     
+		  specify the directory where the mfhdf libraries can be found])
+AC_ARG_WITH(mfhdf-inc, [  --with-mfhdf_inc     
+		  specify the directory where the mfhdf headers can be found])
+AC_ARG_WITH(z-lib, [  --with-z_lib     
+		  specify the directory where the z libraries can be found])
+AC_ARG_WITH(df-lib, [  --with-df_lib     
+		  specify the directory where the df libraries can be found])
+AC_ARG_WITH(sz-lib, [  --with-sz_lib     
+		  specify the directory where the sz libraries can be found])
+AC_ARG_WITH(jpeg-lib, [  --with-jpeg_lib     
+		  specify the directory where the jpeg libraries can be found])
+
+#Check to see if the user wants the IDL wrappers compiled
+#and check that the idl_export.h header can be found
+#AC_ARG_ENABLE([idl_lib], [ --enable-idl_lib
+#			build IDL wrappers for the cxs software library ])
+#AC_ARG_WITH(idl-inc, [  --with-idl_inc     
+#		  specify the directory where the file idl_export.h can be found])
+#AC_ARG_WITH(idl-lib, [  --with-idl_lib     
+#		  specify the directory where the idl library can be found])
+
+
+
+#enable_idl_lib=yes
+
+#IDL_FLAG=
+
+#if test "$enable_idl_lib" = "yes"
+#then
+	IDL_FLAG="DO_IDL=TRUE"
+	AC_SUBST(do_idl,$IDL_FLAG)	
+#	if test "$with_idl_inc" != ""
+#	then
+#		CXXFLAGS="-I$with_idl_inc $CXXFLAGS"	
+#	fi	
+#	AC_CHECK_HEADER([idl_export.h], [], [
+#	  echo "" &&
+#  	  echo "ERROR: Could not find the idl_export.h header." &&
+#  	  echo "       Please specify the location with: " &&
+#  	  echo "       './configure --with-idl_inc=<path_to_idl_export.h> " &&
+#  	  exit -1
+#	  ])
+#	if test "$with_idl_lib" != ""
+#	then
+#		LDFLAGS="-L$with_idl_lib $LDFLAGS"
+#		LD_RUN_PATH="$LD_RUN_PATH:$with_idl_lib"
+#	fi
+#	AC_CHECK_LIB([idl], [IDL_Message], [], [
+# 	  echo "" &&
+#  	  echo "ERROR: Could not find the idl library." &&
+#  	  echo "       Please specify the location with: " &&
+#  	  echo "       './configure --with-idl_lib=<path_to_idl_library> " &&
+#  	  exit -1
+#	  ])
+#fi
+
+LD_LIBRARY_PATH="$PWD/lib $LD_LIBRARY_PATH"
+
+if test "$with_mfhdf_inc" != ""
+then
+	CXXFLAGS="-I$with_mfhdf_inc $CXXFLAGS"	
+fi
+
+if test "$with_mfhdf_lib" != ""
+then
+	LDFLAGS="-L$with_mfhdf_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_mfhdf_lib"
+fi
+
+if test "$with_fftw_inc" != ""
+then
+	CXXFLAGS="-I$with_fftw_inc $CXXFLAGS"
+fi
+
+if test "$with_fftw_lib" != ""
+then
+	LDFLAGS="-L$with_fftw_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_fftw_lib"
+fi
+
+if test "$with_tiff_inc" != ""
+then
+	CXXFLAGS="-I$with_tiff_inc $CXXFLAGS"
+fi
+
+if test "$with_tiff_lib" != ""
+then
+	LDFLAGS="-L$with_tiff_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_tiff_lib"
+fi
+
+
+if test "$with_z_lib" != ""
+then
+	LDFLAGS="-L$with_z_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_z_lib"
+fi
+
+if test "$with_sz_lib" != ""
+then
+	LDFLAGS="-L$with_sz_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_sz_lib"
+fi
+
+if test "$with_df_lib" != ""
+then
+	LDFLAGS="-L$with_df_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_df_lib"
+fi
+
+if test "$with_jpeg_lib" != ""
+then
+	LDFLAGS="-L$with_jpeg_lib $LDFLAGS"
+	LD_RUN_PATH="$LD_RUN_PATH:$with_jpeg_lib"
+fi
+
+
+### Finished setting up the variables. Now check the libraries and headers.
+
+AC_CHECK_LIB([stdc++], [main], [], [
+  echo "" &&
+  echo "ERROR: Could not find the stdc++ library." &&
+  echo "       Please fix before proceeding " &&
+  exit -1
+])
+
+
+#Checks for fftw3
+AC_CHECK_HEADER([fftw3.h], [], [
+  echo "" &&
+  echo "ERROR: Could not find the fftw headers." &&
+  echo "       Please specify the location with: " &&
+  echo "       './configure --with-fftw_inc=<path_to_fftw3.h> " &&
+  exit -1
+])
+
+AC_CHECK_LIB([fftw3], [fftw_plan_dft_2d], [], [
+  echo "" &&
+  echo "ERROR: Could not find the fftw library." &&
+  echo "       Please specify the location with: " &&
+  echo "       './configure --with-fftw_lib=<path_to_fftw3_library> " &&
+  exit -1
+])
+
+AC_CHECK_LIB([m], [main])
+
+#Checks for mfhdf
+mfhdf_headers=false
+AC_CHECK_HEADERS([mfhdf.h hdf/mfhdf.h], [mfhdf_headers=true])
+if test "$mfhdf_headers" != "true"
+then
+  echo ""
+  echo "ERROR: Could not find the hdf headers."
+  echo "       Please specify the location with: "
+  echo "       './configure --with-mfhdf_inc=<path_to_hdf_headers> "
+  exit -1
+fi
+
+AC_CHECK_LIB([jpeg], [main])
+AC_CHECK_LIB([z], [main]) 
+AC_CHECK_LIB([sz], [main])
+AC_CHECK_LIB([df], [main])
+
+mfhdf_okay=true
+
+AC_CHECK_LIB([mfhdf], [SDreaddata], [], [
+  mfhdf_okay=false &&		      
+  echo "" &&
+  echo "ERROR: Could not find/use the mfhdf library." &&
+  echo "       First try to specify its location with: " &&
+  echo "       './configure --with-mfhdf_lib=<path_to_mfhdf_library>' " &&
+  echo "       If this still fails, check that the libraries it depends "
+  echo "       on are installed.... "
+])
+
+if test "$mfhdf_okay" != "true"
+then
+	AC_CHECK_LIB([df], [main])
+	AC_CHECK_LIB([jpeg], [main])
+	AC_CHECK_LIB([z], [main]) 
+	AC_CHECK_LIB([sz], [main])
+	echo "" 
+	echo "The library location can be given with:" 
+	echo "./configure --with-<lib-name>_lib=<the_library_path>"
+	exit -1
+fi
+
+
+#Checks for tiff
+AC_CHECK_LIB([tiff], [TIFFOpen], [], [
+  echo "" &&
+  echo "ERROR: Could not find the tiff library." &&
+  echo "       Please specify the location with: " &&
+  echo "       './configure --with-tiff_lib=<path_to_tiff_library> " &&
+  exit -1
+])
+
+AC_CHECK_HEADER([tiffio.h], [], [
+  echo "" &&
+  echo "ERROR: Could not find the tiff headers." &&
+  echo "       Please specify the location with: " &&
+  echo "       './configure --with-tiff_inc=<path_to_tiffio.h> " &&
+  exit -1
+])
+
+
+#Checks for typedefs, structures, and compiler characteristics.
+#AC_HEADER_STDBOOL
+#AC_C_INLINE
+
+# Checks for library functions.
+AC_CHECK_FUNCS([pow sqrt])
+
+AC_CONFIG_FILES([Makefile
+                 examples/Makefile
+                 src/Makefile
+                 tools/Makefile
+		 interfaces/idl/Makefile])
+
+AC_SUBST(LD_RUN_PATH,$LD_RUN_PATH)
+AC_SUBST(BASE,$PWD)
+
+AC_OUTPUT
