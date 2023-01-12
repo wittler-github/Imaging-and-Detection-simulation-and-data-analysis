@@ -1,0 +1,61 @@
+
+This directory contains a set of examples which demonstrate how to use
+the library and tools of this software package. Data file needed to
+run the examples can be found in the "image_files" directory.
+
+The examples should be compiled automatically after "make" is executed
+in the base directory of this package. To recompile (e.g.  after
+making modifications to the examples), type "make" in this directory.
+To force a recompilation type "make clobber" followed by "make".
+
+The current examples available are:
+
+PlanarCDI_example.c
+--------------------
+This reconstructs some planar diffraction data (Lachie's data). The
+shrinkwrap algorithm is used to improve the reconstruction. A combination
+of HIO and the error-reduction algorithm are used.
+
+PlanarCDI_example.sh
+--------------------
+The same reconstruction as above will be performed using the
+CDI_reconstruction.exe command line program. A simple bash script and
+configuration file (planar_example.config & fresnel_example.config)
+shows how this tool can be used. Other parts of the bash script can be
+uncommented to run Fresnel reconstruction or to run multiple times
+with a different starting seed.
+
+
+PlanarCDI_simulation_example.c
+------------------------------
+The object from the PlanarCDI_example (in fact I used the reconstructed
+image as the object) is used to simulate a diffraction pattern for
+planar CDI. The diffraction pattern is thresholded to make it more
+realistic and then CDI reconstruction is performed.
+
+FresnelCDI_WF_example.c
+-----------------------
+This example demonstrates how the phase of a white field can be
+recovered and saved for use in Fresnel CDI reconstruction. The data set
+comes from Corey.
+
+FresnelCDI_example.c
+--------------------
+The result of the previous example is used in Fresnel CDI
+reconstruction. The error-reduction algorithm is used. The phase and
+magnitude of the transmission function are output to file.
+
+FresnelCDI_simulation_example.c
+-------------------------------
+This examples demonstrates how a Fresnel experiment can be
+simulated. It makes use of the object from the planar example and the
+white-field from the fresnel example. Because it uses the fresnel 
+white-field reconstructed from data, you will need to run 
+FresnelCDI_WF_example.exe first.
+
+
+IDL examples
+------------
+These can be found in the directory cxs_software/interfaces/idl
+
+Nadia Davidson - nadiamd@unimelb.edu.au - 1/3/2011

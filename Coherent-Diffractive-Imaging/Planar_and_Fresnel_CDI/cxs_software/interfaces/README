@@ -1,0 +1,10 @@
+This directory contains the code for binding the libCOECXS library
+to code in languages other than C/C++. Currently implemented is:
+
+- A wrapper for IDL with examples.
+
+
+
+
+
+Last Modified: 25th Jan. 2011, Nadia Davidson

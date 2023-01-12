@@ -1,0 +1,23 @@
+export LD_RUN_PATH=@LD_RUN_PATH@:@BASE@/lib
+
+IDL_SRC=IDL_interface.c
+IDL_O=IDL_interface.o
+LIB=libIDLCOECXS.so
+
+all: $(LIB)
+
+$(LIB): $(IDL_O)
+	gcc -shared @CXXFLAGS@ -o $(LIB) $(IDL_O) \
+	-L@BASE@/lib/ -lCOECXS \
+	@LDFLAGS@ @LIBS@
+
+$(IDL_O): $(IDL_SRC)
+	g++ @CXXFLAGS@ -c \
+	-I@BASE@/include \
+	$(IDL_SRC)
+
+clean:                                                     
+	rm -f *~ $(IDL_O)
+
+clobber: clean
+	rm -f $(LIB)

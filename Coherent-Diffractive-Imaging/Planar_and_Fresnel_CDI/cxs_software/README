@@ -1,0 +1,28 @@
+The instructions for how to install the software are changing
+frequently at the moment, so it is best to check the website for the
+latest details (http://www.ph.unimelb.edu.au/~ndavidson/cxs/).
+
+Instructions for installing on a Linux/Unix system.
+---------------------------------------------------
+
+Currently the code depends on a few other libraries which will need to
+be installed prior to installing this package:
+
+fftw - for fast fourier transforms.  
+libtiff - for reading (and not yet writing to) tiff files.
+HDF libraries - for reading (and not yet writing to) hdf4 files.
+
+In the base cxs_software directory type "./configure" followed by "make" 
+
+The result of compiling (if successful) are libraries and header files
+(in the \lib and \include directories), some example programs and
+tools which are ready to execute.
+
+The Makefile in examples/ shows how the libraries can be linked and
+the source files in this directory e.g. real_example.c show how the
+libraries can be used.
+
+
+
+
+Nadia Davidson - nadiamd@unimelb.edu.au - 5/1/2011
