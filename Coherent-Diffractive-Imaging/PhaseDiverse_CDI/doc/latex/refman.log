@@ -1,0 +1,5430 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2011.11.4)  24 JAN 2013 16:54
+entering extended mode
+**refman.tex
+(./refman.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk10.clo
+File: bk10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count96
+\float@exts=\toks15
+\float@box=\box52
+\@float@everytoks=\toks16
+\@floatcapt=\box53
+)
+(/usr/share/texmf/tex/latex/base/textcomp.sty
+Package: textcomp 2004/02/22 v1.99f Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count97
+\calc@Bcount=\count98
+\calc@Adimen=\dimen113
+\calc@Bdimen=\dimen114
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count99
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 2003/12/17 v2.4a Tabular extension package (FMi)
+\col@sep=\dimen115
+\extrarowheight=\dimen116
+\NC@list=\toks17
+\extratabsurround=\skip56
+\backup@length=\skip57
+)
+\tmplength=\skip58
+)
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+No file refman.aux.
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
+(/usr/share/texmf/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 14.
+ [1
+
+
+] [2
+
+]
+No file refman.toc.
+\tf@toc=\write4
+\openout4 = `refman.toc'.
+
+[1
+
+] [2
+
+]
+Chapter 1.
+(./index.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1.
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+
+LaTeX Warning: Reference `PlanarCDI__example_8c' on page 1 undefined on input l
+ine 9.
+
+
+LaTeX Warning: Reference `PlanarCDI__simulation__example_8c' on page 1 undefine
+d on input line 9.
+
+
+LaTeX Warning: Reference `FresnelCDI__WF__example_8c' on page 1 undefined on in
+put line 9.
+
+
+LaTeX Warning: Reference `FresnelCDI__example_8c' on page 1 undefined on input 
+line 9.
+
+
+LaTeX Warning: Reference `PartialCDI__example_8c' on page 1 undefined on input 
+line 9.
+
+
+LaTeX Warning: Reference `PartialCDI__simulation__example_8c' on page 1 undefin
+ed on input line 9.
+
+
+LaTeX Warning: Reference `PolyCDI__example_8c' on page 1 undefined on input lin
+e 9.
+
+[1
+
+]
+
+LaTeX Warning: Reference `PlanarCDI__example_8sh-source' on page 2 undefined on
+ input line 9.
+
+
+LaTeX Warning: Reference `planar__example_8config-source' on page 2 undefined o
+n input line 9.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 20.
+[2]
+
+LaTeX Warning: Reference `cplx2dbin_8c' on page 3 undefined on input line 73.
+
+) [3] [4
+
+]
+Chapter 2.
+(./hierarchy.tex
+
+LaTeX Warning: Reference `classBaseCDI' on page 5 undefined on input line 3.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 5 undefined on input line 5.
+
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 5 undefined on input lin
+e 6.
+
+
+LaTeX Warning: Reference `classPartialCDI' on page 5 undefined on input line 7.
+
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Reference `classPolyCDI' on page 5 undefined on input line 9.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 5 undefined on input line 1
+5.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 5 undefined on input 
+line 16.
+
+
+LaTeX Warning: Reference `classConfig' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 5 undefined on input line 18
+.
+
+[5]
+
+LaTeX Warning: Reference `classhdf__anonymous__array' on page 6 undefined on in
+put line 25.
+
+[6]
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 7 undefined on input li
+ne 76.
+
+
+LaTeX Warning: Reference `classReal__2D' on page 7 undefined on input line 77.
+
+
+LaTeX Warning: Reference `classtiff__anonymous__array' on page 7 undefined on i
+nput line 78.
+
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 7 undefined on i
+nput line 79.
+
+) [7] [8
+
+]
+Chapter 3.
+(./annotated.tex
+
+LaTeX Warning: Reference `classBaseCDI' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 9 undefined on input line 4
+.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 9 undefined on input 
+line 5.
+
+
+LaTeX Warning: Reference `classConfig' on page 9 undefined on input line 6.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 9 undefined on input line 7.
+
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 9 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 9 undefined on input lin
+e 9.
+
+
+LaTeX Warning: Reference `classhdf__anonymous__array' on page 9 undefined on in
+put line 10.
+
+
+LaTeX Warning: Reference `classPartialCDI' on page 9 undefined on input line 11
+.
+
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 9 undefined on input li
+ne 12.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 9 undefined on input line 13.
+
+
+
+LaTeX Warning: Reference `classPolyCDI' on page 9 undefined on input line 14.
+
+
+LaTeX Warning: Reference `classReal__2D' on page 9 undefined on input line 15.
+
+
+LaTeX Warning: Reference `classtiff__anonymous__array' on page 9 undefined on i
+nput line 16.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 9 undefined on input line 17
+.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 9 undefined on input line 17.
+
+
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 9 undefined on i
+nput line 17.
+
+) [9] [10
+
+]
+Chapter 4.
+(./files.tex
+
+LaTeX Warning: Reference `BaseCDI_8c++' on page 11 undefined on input line 3.
+
+
+LaTeX Warning: Reference `BaseCDI_8h' on page 11 undefined on input line 4.
+
+
+LaTeX Warning: Reference `CDI__reconstruction_8c' on page 11 undefined on input
+ line 5.
+
+
+LaTeX Warning: Reference `Complex__2D_8c++' on page 11 undefined on input line 
+6.
+
+
+LaTeX Warning: Reference `Complex__2D_8h' on page 11 undefined on input line 7.
+
+
+
+LaTeX Warning: Reference `ComplexConstraints__example_8c' on page 11 undefined 
+on input line 8.
+
+
+LaTeX Warning: Reference `Config_8c++' on page 11 undefined on input line 9.
+
+
+LaTeX Warning: Reference `Config_8h' on page 11 undefined on input line 10.
+
+
+LaTeX Warning: Reference `cplx2dbin_8c' on page 11 undefined on input line 11.
+
+
+LaTeX Warning: Reference `cplx2ppm_8c' on page 11 undefined on input line 12.
+
+
+LaTeX Warning: Reference `dbin2ppm_8c' on page 11 undefined on input line 13.
+
+
+LaTeX Warning: Reference `dbin2tiff_8c' on page 11 undefined on input line 14.
+
+
+LaTeX Warning: Reference `Double__2D_8h' on page 11 undefined on input line 15.
+
+
+
+LaTeX Warning: Reference `fresnel__example_8config' on page 11 undefined on inp
+ut line 16.
+
+
+LaTeX Warning: Reference `fresnel__example_8pro' on page 11 undefined on input 
+line 17.
+
+
+LaTeX Warning: Reference `FresnelCDI_8c++' on page 11 undefined on input line 1
+8.
+
+
+LaTeX Warning: Reference `FresnelCDI_8h' on page 11 undefined on input line 19.
+
+
+
+LaTeX Warning: Reference `FresnelCDI__example_8c' on page 11 undefined on input
+ line 20.
+
+
+LaTeX Warning: Reference `FresnelCDI__simulation__example_8c' on page 11 undefi
+ned on input line 21.
+
+
+LaTeX Warning: Reference `FresnelCDI__WF_8c++' on page 11 undefined on input li
+ne 22.
+
+
+LaTeX Warning: Reference `FresnelCDI__WF_8h' on page 11 undefined on input line
+ 23.
+
+
+LaTeX Warning: Reference `FresnelCDI__WF__example_8c' on page 11 undefined on i
+nput line 24.
+
+
+LaTeX Warning: Reference `hdf2ppm_8c' on page 11 undefined on input line 25.
+
+
+LaTeX Warning: Reference `IDL__interface_8c' on page 11 undefined on input line
+ 26.
+
+
+LaTeX Warning: Reference `io_8h' on page 11 undefined on input line 27.
+
+
+LaTeX Warning: Reference `io__cplx_8c' on page 11 undefined on input line 28.
+
+
+LaTeX Warning: Reference `io__dbin_8c' on page 11 undefined on input line 29.
+
+
+LaTeX Warning: Reference `io__hdf_8c' on page 11 undefined on input line 30.
+
+
+LaTeX Warning: Reference `io__ppm_8c' on page 11 undefined on input line 31.
+
+
+LaTeX Warning: Reference `io__spec_8c' on page 11 undefined on input line 32.
+
+
+LaTeX Warning: Reference `io__tiff_8c' on page 11 undefined on input line 33.
+
+
+LaTeX Warning: Reference `mainpage_8h' on page 11 undefined on input line 34.
+
+
+LaTeX Warning: Reference `doc_2latex_2Makefile' on page 11 undefined on input l
+ine 35.
+
+
+LaTeX Warning: Reference `doc_2Makefile' on page 11 undefined on input line 36.
+
+
+[11]
+
+LaTeX Warning: Reference `doc_2manual_2Makefile' on page 12 undefined on input 
+line 37.
+
+
+LaTeX Warning: Reference `examples_2Makefile' on page 12 undefined on input lin
+e 38.
+
+
+LaTeX Warning: Reference `interfaces_2idl_2Makefile' on page 12 undefined on in
+put line 39.
+
+
+LaTeX Warning: Reference `Makefile' on page 12 undefined on input line 40.
+
+
+LaTeX Warning: Reference `src_2Makefile' on page 12 undefined on input line 41.
+
+
+
+LaTeX Warning: Reference `tools_2Makefile' on page 12 undefined on input line 4
+2.
+
+
+LaTeX Warning: Reference `NADIA__interface_8pro' on page 12 undefined on input 
+line 43.
+
+
+LaTeX Warning: Reference `partial__example_8pro' on page 12 undefined on input 
+line 44.
+
+
+LaTeX Warning: Reference `PartialCDI_8c++' on page 12 undefined on input line 4
+5.
+
+
+LaTeX Warning: Reference `PartialCDI_8h' on page 12 undefined on input line 46.
+
+
+
+LaTeX Warning: Reference `PartialCDI__example_8c' on page 12 undefined on input
+ line 47.
+
+
+LaTeX Warning: Reference `PartialCDI__simulation__example_8c' on page 12 undefi
+ned on input line 48.
+
+
+LaTeX Warning: Reference `phase__diverse__example_8pro' on page 12 undefined on
+ input line 49.
+
+
+LaTeX Warning: Reference `PhaseDiverse__example_8c' on page 12 undefined on inp
+ut line 50.
+
+
+LaTeX Warning: Reference `PhaseDiverseCDI_8c++' on page 12 undefined on input l
+ine 51.
+
+
+LaTeX Warning: Reference `PhaseDiverseCDI_8h' on page 12 undefined on input lin
+e 52.
+
+
+LaTeX Warning: Reference `PhaseDiverseFresnelRec_8c' on page 12 undefined on in
+put line 53.
+
+
+LaTeX Warning: Reference `planar__example_8config' on page 12 undefined on inpu
+t line 54.
+
+
+LaTeX Warning: Reference `planar__example_8pro' on page 12 undefined on input l
+ine 55.
+
+
+LaTeX Warning: Reference `PlanarCDI_8c++' on page 12 undefined on input line 56
+.
+
+
+LaTeX Warning: Reference `PlanarCDI_8h' on page 12 undefined on input line 57.
+
+
+LaTeX Warning: Reference `PlanarCDI__example_8c' on page 12 undefined on input 
+line 58.
+
+
+LaTeX Warning: Reference `PlanarCDI__example_8sh' on page 12 undefined on input
+ line 59.
+
+
+LaTeX Warning: Reference `PlanarCDI__simulation__example_8c' on page 12 undefin
+ed on input line 60.
+
+
+LaTeX Warning: Reference `poly__example_8pro' on page 12 undefined on input lin
+e 61.
+
+
+LaTeX Warning: Reference `PolyCDI_8c++' on page 12 undefined on input line 62.
+
+
+LaTeX Warning: Reference `PolyCDI_8h' on page 12 undefined on input line 63.
+
+
+LaTeX Warning: Reference `PolyCDI__example_8c' on page 12 undefined on input li
+ne 64.
+
+
+LaTeX Warning: Reference `PolyCDI__simulation__example_8c' on page 12 undefined
+ on input line 65.
+
+
+LaTeX Warning: Reference `tiff2ppm_8c' on page 12 undefined on input line 66.
+
+
+LaTeX Warning: Reference `TransmissionConstraint_8c++' on page 12 undefined on 
+input line 67.
+
+
+LaTeX Warning: Reference `TransmissionConstraint_8h' on page 12 undefined on in
+put line 68.
+
+
+LaTeX Warning: Reference `utils_8c' on page 12 undefined on input line 69.
+
+
+LaTeX Warning: Reference `utils_8h' on page 12 undefined on input line 70.
+
+) [12]
+Chapter 5.
+(./classBaseCDI.tex
+File: classBaseCDI.eps Graphic file (type eps)
+ <classBaseCDI.eps> [13
+
+]
+Underfull \hbox (badness 1701) in paragraph at lines 55--57
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[14]
+
+LaTeX Warning: Reference `classComplex__2D' on page 15 undefined on input line 
+163.
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 164.
+
+LaTeX Warning: Reference `classComplex__2D' on page 15 undefined on input line 
+164.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 15 undefined on input line 165.
+
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 15 undefined on input line 167.
+
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 15 undefined on input line 
+167.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 15 undefined on input line 168.
+
+
+
+LaTeX Warning: Reference `classBaseCDI_bef3f7cf18631094a2ed122e5a9902f6' on pag
+e 15 undefined on input line 178.
+
+
+LaTeX Warning: Reference `classBaseCDI_9e3435f91897cd401e77d56919e51da2' on pag
+e 15 undefined on input line 180.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 15 undefined on input line 
+182.
+
+[15]
+
+LaTeX Warning: Reference `classBaseCDI_9d062b4fd0397006d3238db8e3144f42' on pag
+e 16 undefined on input line 184.
+
+
+LaTeX Warning: Reference `classBaseCDI_9e3435f91897cd401e77d56919e51da2' on pag
+e 16 undefined on input line 184.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 16 undefined on input line 204.
+
+
+
+LaTeX Warning: Reference `classBaseCDI_9ca82195dc0f0adcd79fa391ae3ef821' on pag
+e 16 undefined on input line 204.
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 210--212
+\T1/cmr/m/n/10 temp_-complex_-PF, temp_-complex_-PFS, temp_-complex_-PS, temp_-
+complex_-PSF, and
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 219--220
+[]\T1/cmr/m/n/10 References algorithm_-structure, best_-array, best_-error_-arr
+ay, n_-best, NTERMS, and
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 16 undefined on input line 
+227.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.231 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.231 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 16 undefined on input line 231.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.231 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.231 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.231 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 16 undefined on input line 231.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.231 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.231 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.231 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 16 undefined on input line 231.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.232 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void initia...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void initia...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.237 ...t 0})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_367600...
+
+? 
+
+Overfull \hbox (2702.90407pt too wide) in paragraph at lines 231--237
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI_-WF p. (\T1/cmr/m
+/n/10 classFresnelCDI$[] []\OT1/cmr/m/n/10 )[][][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 16 undefined on input line 
+240.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 16 undefined on input line 240.
+
+
+[16]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 ...nelCDI_9f865b7d630be93ac2146b956197f224},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.249 ...nelCDI_9f865b7d630be93ac2146b956197f224},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+
+LaTeX Warning: Reference `,' on page 17 undefined on input line 249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 ...DI__WF_9f865b7d630be93ac2146b956197f224},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.249 ...DI__WF_9f865b7d630be93ac2146b956197f224},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.249 ...DI__WF_9f865b7d630be93ac2146b956197f224},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 17 undefined on input line 249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 ...ialCDI_d629e919fe33674df03157370190d32e},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.249 ...ialCDI_d629e919fe33674df03157370190d32e},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.249 ...ialCDI_d629e919fe33674df03157370190d32e},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+
+LaTeX Warning: Reference `,' on page 17 undefined on input line 249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 ...narCDI_9f865b7d630be93ac2146b956197f224},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.249 ...narCDI_9f865b7d630be93ac2146b956197f224},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.249 ...narCDI_9f865b7d630be93ac2146b956197f224},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 17 undefined on input line 249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 ...olyCDI_d629e919fe33674df03157370190d32e}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.249 ...olyCDI_d629e919fe33674df03157370190d32e}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.249 ...olyCDI_d629e919fe33674df03157370190d32e}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+
+LaTeX Warning: Reference `.' on page 17 undefined on input line 249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ... {\em error}, int {\em index} = {\tt 0})}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+
+Overfull \hbox (1593.99791pt too wide) in paragraph at lines 249--251
+[]\T1/cmr/m/n/10 Implemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/10 
+classFresnelCDI$[]\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 865\OML/cmm/m/it/10 b\OT1/c
+mr/m/n/10 7\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 630\OML/cmm/m/it/10 be\OT1/cmr/m/n
+/10 93\OML/cmm/m/it/10 ac\OT1/cmr/m/n/10 2146\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 
+956197\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 224 [])[][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 17 undefined on input line 
+254.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 17 undefined on input line 2
+70.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 17 undefined on input line 2
+70.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 17 undefined on input line 2
+90.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 17 undefined on input line 2
+90.
+
+[17]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.351 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.351 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 18 undefined on input line 351.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.352 
+      
+? 
+[18]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.397 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.397 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 19 undefined on input line 397.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.398 
+      
+? 
+[19]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.433 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.433 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 20 undefined on input line 433.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.434 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.455 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.455 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 20 undefined on input line 455.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.456 
+      
+? 
+[20]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.467 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.467 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 21 undefined on input line 467.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.468 
+      
+? 
+[21]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.549 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.549 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 22 undefined on input line 549.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.550 
+      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--555
+[]\T1/cmr/m/n/10 References Transmission-Constraint::apply_-constraint(), suppo
+rt_-constraint(), and
+ []
+
+[22]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.599 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.599 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 599.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 23 undefined on input line 599.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.600 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.605 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void propag...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.605 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void propag...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.605 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_a8b594...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.605 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_a8b594...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.605 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_a8b594...
+
+? 
+
+Overfull \hbox (1423.08148pt too wide) in paragraph at lines 599--605
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/1
+0 classFresnelCDI$[]\OML/cmm/m/it/10 aacc\OT1/cmr/m/n/10 20\OML/cmm/m/it/10 f\O
+T1/cmr/m/n/10 278648\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 eba\OT1
+/cmr/m/n/10 9648026\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 762\OML/cmm/m/it/10 b\OT1/
+cmr/m/n/10 8 [])\OML/cmm/m/it/10 and[][]\OT1/cmr/m/n/10 ([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 23 undefined on input line 
+613.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 ...nelCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.617 ...nelCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 617.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 ...DI__WF_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.617 ...DI__WF_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.617 ...DI__WF_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 617.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 ...ialCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.617 ...ialCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.617 ...ialCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 617.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 ...narCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.617 ...narCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.617 ...narCDI_5adde93a2b66b1bf8597fdb2e120c9b7},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 617.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 ...olyCDI_5adde93a2b66b1bf8597fdb2e120c9b7}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.617 ...olyCDI_5adde93a2b66b1bf8597fdb2e120c9b7}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.617 ...olyCDI_5adde93a2b66b1bf8597fdb2e120c9b7}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+
+LaTeX Warning: Reference `.' on page 23 undefined on input line 617.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.619 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void propag...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void propag...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}virtual void propag...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.619 ...m c})\hspace{0.3cm}{\tt  [pure virtual]}}
+                                                  \label{classBaseCDI_1f673f...
+
+? 
+
+Overfull \hbox (1648.54242pt too wide) in paragraph at lines 617--619
+[]\T1/cmr/m/n/10 Implemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/10 
+classFresnelCDI$[]\OML/cmm/m/it/10 adde\OT1/cmr/m/n/10 93\OML/cmm/m/it/10 a\OT1
+/cmr/m/n/10 2\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 66\OML/cmm/m/it/10 b\OT1/cmr/m/n
+/10 1\OML/cmm/m/it/10 bf\OT1/cmr/m/n/10 8597\OML/cmm/m/it/10 fdb\OT1/cmr/m/n/10
+ 2\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 120\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 9\OML/
+cmm/m/it/10 b\OT1/cmr/m/n/10 7 [])[][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 23 undefined on input line 
+625.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...nelCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.629 ...nelCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Fresnel\-CDI\_\-WF} \...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...DI__WF_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.629 ...DI__WF_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.629 ...DI__WF_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...ialCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.629 ...ialCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.629 ...ialCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   \bf{Planar\-CDI} \doxyref...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...narCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.629 ...narCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.629 ...narCDI_c98ac38c2b63e5f7deba5316e772db9f},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 23 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...olyCDI_c98ac38c2b63e5f7deba5316e772db9f}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.629 ...olyCDI_c98ac38c2b63e5f7deba5316e772db9f}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.629 ...olyCDI_c98ac38c2b63e5f7deba5316e772db9f}.
+                                                  \index{BaseCDI@{Base\-CDI}...
+
+? 
+
+LaTeX Warning: Reference `.' on page 23 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.631 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.631 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.631 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.631 ...oid set\_\-fftw\_\-type (int {\em type})}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+
+Overfull \hbox (1416.54189pt too wide) in paragraph at lines 629--631
+[]\T1/cmr/m/n/10 Implemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/10 
+classFresnelCDI$[]\OT1/cmr/m/n/10 98\OML/cmm/m/it/10 ac\OT1/cmr/m/n/10 38\OML/c
+mm/m/it/10 c\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 63\OML/cmm/m/it/
+10 e\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 7\OML/cmm/m/it/10 deba\O
+T1/cmr/m/n/10 5316\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 772\OML/cmm/m/it/10 db\OT1/
+cmr/m/n/10 9\OML/cmm/m/it/10 f []\OT1/cmr/m/n/10 )[][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 23 undefined on input line 
+650.
+
+[23] [24]
+Underfull \hbox (badness 1371) in paragraph at lines 727--729
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 25 undefined on input line 
+751.
+
+[25]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.781 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.781 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 26 undefined on input line 781.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.782 
+      
+? 
+[26]) [27]
+\openout2 = `classComplex__2D.aux'.
+
+ (./classComplex__2D.tex [28
+
+]
+
+LaTeX Warning: Reference `classComplex__2D' on page 29 undefined on input line 
+111.
+
+[29] [30] [31]
+
+LaTeX Warning: Reference `classComplex__2D' on page 32 undefined on input line 
+303.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+[]\T1/cmr/m/n/10 Which type of value is wanted. The op-tions are ei-ther:
+ []
+
+[33]
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+397.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+397.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+402.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+402.
+
+
+LaTeX Warning: Reference `classComplex__2D_ea42a2dfb5010bf5d52d577438b24e0e' on
+ page 34 undefined on input line 402.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+402.
+
+
+LaTeX Warning: Reference `classComplex__2D_08d442bedb52b5e9a32415d9ab848d58' on
+ page 34 undefined on input line 402.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+413.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+413.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+418.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+418.
+
+
+LaTeX Warning: Reference `classComplex__2D_ea42a2dfb5010bf5d52d577438b24e0e' on
+ page 34 undefined on input line 418.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+418.
+
+
+LaTeX Warning: Reference `classComplex__2D_57d44a021ec68f7f30eabee134cf366a' on
+ page 34 undefined on input line 418.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 34 undefined on input line 
+429.
+
+[34]
+
+LaTeX Warning: Reference `classComplex__2D' on page 35 undefined on input line 
+442.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 35 undefined on input line 
+445.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 35 undefined on input line 
+455.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 35 undefined on input line 
+460.
+
+[35]
+
+LaTeX Warning: Reference `classComplex__2D' on page 36 undefined on input line 
+495.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 36 undefined on input line 
+495.
+
+
+LaTeX Warning: Reference `classComplex__2D_fc11339d954638fd173648ca4fc01f44' on
+ page 36 undefined on input line 495.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 36 undefined on input line 
+504.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 36 undefined on input line 
+504.
+
+
+LaTeX Warning: Reference `classComplex__2D_fc11339d954638fd173648ca4fc01f44' on
+ page 36 undefined on input line 504.
+
+[36]) [37]
+\openout2 = `classComplexConstraint.aux'.
+
+ (./classComplexConstraint.tex
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 38 undefined on 
+input line 51.
+
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 38 undefined on 
+input line 51.
+
+[38
+
+
+]
+
+LaTeX Warning: Reference `classDouble__2D' on page 39 undefined on input line 6
+8.
+
+
+LaTeX Warning: Reference `classComplexConstraint_f0d7f8969fce40c6fb51cc6fa040cc
+27' on page 39 undefined on input line 82.
+
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 39 undefined on 
+input line 98.
+
+
+LaTeX Warning: Reference `classTransmissionConstraint_4277e187c5b61d84756ade7f3
+405c628' on page 39 undefined on input line 98.
+
+[39]
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 40 undefined on 
+input line 163.
+
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 40 undefined on 
+input line 180.
+
+[40]
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 41 undefined on 
+input line 193.
+
+[41]) [42]
+\openout2 = `classConfig.aux'.
+
+ (./classConfig.tex [43
+
+
+] [44] [45]) [46]
+\openout2 = `classDouble__2D.aux'.
+
+ (./classDouble__2D.tex)
+[47
+
+
+]
+\openout2 = `classFresnelCDI.aux'.
+
+ (./classFresnelCDI.tex
+File: classFresnelCDI.eps Graphic file (type eps)
+ <classFresnelCDI.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+[]\T1/cmr/bx/n/10 virtual void set_-transmission_-function (Complex_-2D &trans-
+mis-sion,
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 80--82
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+[48
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[49]
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 50 undefined on input li
+ne 202.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 50 undefined on input line 202.
+
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 50 undefined on input line 202.
+
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 50 undefined on input line 2
+02.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 50 undefined on input line 2
+14.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 50 undefined on input line 2
+19.
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 50 undefined on input li
+ne 219.
+
+[50]
+Underfull \hbox (badness 1735) in paragraph at lines 225--227
+[]\T1/cmr/m/n/10 References Complex_-2D::copy(), il-lu-mi-na-tion, illumination
+_-at_-sample, norm, Complex_-
+ []
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 51 undefined on input line 2
+51.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.263 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.263 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 51 undefined on input line 263.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.264 
+      
+? 
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
+[]\T1/cmr/m/n/10 References Complex_-2D::add(), Transmission-Constraint::apply_
+-constraint(), check_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
+\T1/cmr/m/n/10 real(), illumination_-at_-sample, Base-CDI::nx, Base-CDI::ny, Co
+mplex_-2D::set_-imag(),
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.297 ...aseCDI_479c3b3c6c00d87ef7e9532cf9820364}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.297 ...aseCDI_479c3b3c6c00d87ef7e9532cf9820364}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 52 undefined on input line 297.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.298 
+      
+? 
+
+Underfull \hbox (badness 1448) in paragraph at lines 301--303
+[]\T1/cmr/m/n/10 References Complex_-2D::Complex_-2D(), get_-transmission_-func
+tion(), Base-CDI::nx, Base-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+[]\T1/cmr/m/n/10 if(!illumination_-at_-sample){ illumination_-at_-sample = new 
+Complex_-2D(nx,ny);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+\T1/cmr/m/n/10 illumination_-at_-sample-$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 copy
+(illumination); propagate_-from_-detector($\OMS/cmsy/m/n/10 ^^C$\T1/cmr/m/n/10 
+illumination_-at_-
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 319--321
+[]\T1/cmr/m/n/10 References check_-illumination_-at_-sample(), Base-CDI::comple
+x, Complex_-2D::get_-imag(),
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 319--321
+\T1/cmr/m/n/10 Complex_-2D::get_-real(), illumination_-at_-sample, Base-CDI::nx
+, Complex_-2D::set_-imag(),
+ []
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 52 undefined on input line 324.
+
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 52 undefined on input line 
+329.
+
+[52]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.333 ...aseCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.333 ...aseCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 53 undefined on input line 333.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.334 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 53 undefined on input line 
+345.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.349 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.349 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 53 undefined on input line 349.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.350 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 53 undefined on input line 
+361.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.365 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.365 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 53 undefined on input line 365.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.366 
+      
+? 
+[53]
+Underfull \hbox (badness 8132) in paragraph at lines 399--401
+[]\T1/cmr/m/n/10 References co-ef-fi-cient, Complex_-2D::Complex_-2D(), Complex
+_-2D::copy(), il-lu-mi-na-tion,
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 54 undefined on input line 
+413.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.417 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.417 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 54 undefined on input line 417.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.417 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.417 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.417 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 54 undefined on input line 417.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.417 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.417 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.417 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 54 undefined on input line 417.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.418 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.423 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+
+Overfull \hbox (3323.86612pt too wide) in paragraph at lines 417--423
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI_-WF p. (\T1/cmr/m
+/n/10 classFresnelCDI$[] []\OT1/cmr/m/n/10 )[][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 54 undefined on input line 
+426.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 54 undefined on input line 4
+42.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 54 undefined on input line 4
+42.
+
+[54]
+
+LaTeX Warning: Reference `classDouble__2D' on page 55 undefined on input line 4
+62.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 55 undefined on input line 4
+62.
+
+[55]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.523 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.523 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 56 undefined on input line 523.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.524 
+      
+? 
+[56]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.569 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.569 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 57 undefined on input line 569.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.605 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.605 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 57 undefined on input line 605.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.606 
+      
+? 
+[57]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.627 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.627 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 58 undefined on input line 627.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.628 
+      
+? 
+
+Underfull \hbox (badness 3792) in paragraph at lines 631--633
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, and Base-CDI::reallocate_-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.639 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.639 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 58 undefined on input line 639.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.640 
+      
+? 
+[58]
+Underfull \hbox (badness 1502) in paragraph at lines 694--696
+[]\T1/cmr/m/n/10 References Base-CDI::apply_-support_-init(), Base-CDI::apply_-
+threshold(), Base-CDI::complex,
+ []
+
+[59]
+
+LaTeX Warning: Reference `classComplex__2D' on page 60 undefined on input line 
+760.
+
+[60] [61]
+Underfull \hbox (badness 1371) in paragraph at lines 837--839
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 837--839
+\T1/cmr/m/n/10 Complex_-2D::get_-size_-y(), Complex_-2D::set_-imag(), Complex_-
+2D::set_-real(), and Base-
+ []
+
+[62]
+
+LaTeX Warning: Reference `classComplex__2D' on page 63 undefined on input line 
+910.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.940 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.940 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 63 undefined on input line 940.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.941 
+      
+? 
+[63] [64]) [65]
+\openout2 = `classFresnelCDI__WF.aux'.
+
+ (./classFresnelCDI__WF.tex
+File: classFresnelCDI__WF.eps Graphic file (type eps)
+ <classFresnelCDI__WF.eps>
+Underfull \hbox (badness 1701) in paragraph at lines 66--68
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[66
+
+
+] [67]
+
+LaTeX Warning: Reference `classFresnelCDI' on page 68 undefined on input line 1
+79.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 68 undefined on input line 179.
+
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 68 undefined on input line 179.
+
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 68 undefined on input li
+ne 179.
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 68 undefined on input li
+ne 191.
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 68 undefined on input li
+ne 196.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 68 undefined on input line 2
+00.
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 204--206
+[]\T1/cmr/m/n/10 References co-ef-fi-cient, focal_-to_-detector_-length, Base-C
+DI::nx, Base-CDI::ny, pixel_-length,
+ []
+
+
+LaTeX Warning: Reference `classFresnelCDI__WF_9e3435f91897cd401e77d56919e51da2'
+ on page 68 undefined on input line 219.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 68 undefined on input line 219.
+
+
+[68]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.221 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.221 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 69 undefined on input line 221.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.222 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 69 undefined on input line 
+233.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.237 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.237 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 69 undefined on input line 237.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.238 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 69 undefined on input line 
+249.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.253 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.253 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 69 undefined on input line 253.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.254 
+      
+? 
+
+LaTeX Warning: Reference `classBaseCDI' on page 69 undefined on input line 262.
+
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.271 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.271 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 69 undefined on input line 271.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.272 
+      
+? 
+
+Underfull \hbox (badness 1466) in paragraph at lines 275--277
+[]\T1/cmr/m/n/10 References Base-CDI::complex, IMAG, Base-CDI::intensity_-sqrt,
+ Base-CDI::nx, Base-CDI::ny,
+ []
+
+[69]
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 70 undefined on input li
+ne 296.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.298 ...aseCDI_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.298 ...aseCDI_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 70 undefined on input line 298.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.299 
+      
+? 
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 70 undefined on input li
+ne 305.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.307 ...aseCDI_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.307 ...aseCDI_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 70 undefined on input line 307.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.308 
+      
+? 
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 70 undefined on input li
+ne 314.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.316 ...aseCDI_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.316 ...aseCDI_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 70 undefined on input line 316.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.317 
+      
+? 
+
+LaTeX Warning: Reference `classFresnelCDI__WF' on page 70 undefined on input li
+ne 323.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.325 ...aseCDI_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.325 ...aseCDI_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 70 undefined on input line 325.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.326 
+      
+? 
+[70]
+
+LaTeX Warning: Reference `classComplex__2D' on page 71 undefined on input line 
+341.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 71 undefined on input line 3
+57.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 71 undefined on input line 3
+57.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 71 undefined on input line 3
+77.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 71 undefined on input line 3
+77.
+
+[71] [72]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.466 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.466 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 73 undefined on input line 466.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.467 
+      
+? 
+[73]
+Underfull \hbox (badness 1502) in paragraph at lines 530--532
+[]\T1/cmr/m/n/10 References Base-CDI::apply_-support_-init(), Base-CDI::apply_-
+threshold(), Base-CDI::complex,
+ []
+
+[74]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.557 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.557 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 75 undefined on input line 557.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.558 
+      
+? 
+
+Underfull \hbox (badness 2443) in paragraph at lines 561--563
+[]\T1/cmr/m/n/10 References Transmission-Constraint::apply_-constraint(), Base-
+CDI::support_-constraint(), and
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.607 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.607 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 75 undefined on input line 607.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.607 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.607 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.607 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 75 undefined on input line 607.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.608 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.613 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.613 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.613 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.613 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.613 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+
+Overfull \hbox (1494.02107pt too wide) in paragraph at lines 607--613
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/1
+0 classFresnelCDI$[]\OML/cmm/m/it/10 aacc\OT1/cmr/m/n/10 20\OML/cmm/m/it/10 f\O
+T1/cmr/m/n/10 278648\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 eba\OT1
+/cmr/m/n/10 9648026\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 762\OML/cmm/m/it/10 b\OT1/
+cmr/m/n/10 8 [])\OML/cmm/m/it/10 and[][]\OT1/cmr/m/n/10 ([]$ 
+ []
+
+[75]
+
+LaTeX Warning: Reference `classComplex__2D' on page 76 undefined on input line 
+632.
+
+[76]
+Underfull \hbox (badness 1371) in paragraph at lines 709--711
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 709--711
+\T1/cmr/m/n/10 Complex_-2D::get_-size_-y(), Complex_-2D::set_-imag(), Complex_-
+2D::set_-real(), and Base-
+ []
+
+[77]
+
+LaTeX Warning: Reference `classComplex__2D' on page 78 undefined on input line 
+775.
+
+[78]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.805 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.805 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 79 undefined on input line 805.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.806 
+      
+? 
+[79]) [80]
+\openout2 = `classhdf__anonymous__array.aux'.
+
+ (./classhdf__anonymous__array.tex) [81
+
+
+]
+\openout2 = `classPartialCDI.aux'.
+
+ (./classPartialCDI.tex
+File: classPartialCDI.eps Graphic file (type eps)
+
+<classPartialCDI.eps>
+Underfull \hbox (badness 1701) in paragraph at lines 83--85
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+[82
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[83] [84]
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 85 undefined on input l
+ine 261.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 85 undefined on input line 
+276.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 85 undefined on input line 276.
+
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.285 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.285 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 85 undefined on input line 285.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.286 
+      
+? 
+
+LaTeX Warning: Reference `classBaseCDI' on page 85 undefined on input line 294.
+
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.296 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.296 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 85 undefined on input line 296.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.297 
+      
+? 
+
+Underfull \hbox (badness 5036) in paragraph at lines 300--302
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, Base-CDI::apply_-support(),
+ []
+
+[85]
+
+LaTeX Warning: Reference `classFresnelCDI' on page 86 undefined on input line 3
+17.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 86 undefined on input line 31
+7.
+
+[86]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.389 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.389 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 87 undefined on input line 389.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.390 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 87 undefined on input line 
+403.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.407 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.407 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 87 undefined on input line 407.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.408 
+      
+? 
+[87]
+
+LaTeX Warning: Reference `classBaseCDI' on page 88 undefined on input line 425.
+
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 436--438
+[]\T1/cmr/m/n/10 References Base-CDI::beam_-stop, Base-CDI::current_-error, Bas
+e-CDI::intensity_-sqrt, Base-
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 472--474
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-real(), nleg, nmode, Complex_-2D:
+:set_-imag(), Complex_-
+ []
+
+[88]
+
+LaTeX Warning: Reference `classComplex__2D' on page 89 undefined on input line 
+477.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 89 undefined on input line 
+486.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 89 undefined on input line 5
+02.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 89 undefined on input line 5
+02.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 89 undefined on input line 5
+22.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 89 undefined on input line 5
+22.
+
+[89] [90]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.583 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.583 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 91 undefined on input line 583.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.584 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.629 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 91 undefined on input line 629.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.630 
+      
+? 
+[91]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.665 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.665 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 92 undefined on input line 665.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.666 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.687 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.687 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 92 undefined on input line 687.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.688 
+      
+? 
+
+Underfull \hbox (badness 3792) in paragraph at lines 691--693
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, and Base-CDI::reallocate_-
+ []
+
+[92]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.699 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.699 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 93 undefined on input line 699.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.700 
+      
+? 
+[93]
+Underfull \hbox (badness 1502) in paragraph at lines 754--756
+[]\T1/cmr/m/n/10 References Base-CDI::apply_-support_-init(), Base-CDI::apply_-
+threshold(), Base-CDI::complex,
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.781 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.781 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 94 undefined on input line 781.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.782 
+      
+? 
+
+Underfull \hbox (badness 2443) in paragraph at lines 785--787
+[]\T1/cmr/m/n/10 References Transmission-Constraint::apply_-constraint(), Base-
+CDI::support_-constraint(), and
+ []
+
+[94]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.831 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.831 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 95 undefined on input line 831.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.831 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.831 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.831 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 95 undefined on input line 831.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.832 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.837 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.837 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.837 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.837 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.837 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+
+Overfull \hbox (1494.02107pt too wide) in paragraph at lines 831--837
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/1
+0 classFresnelCDI$[]\OML/cmm/m/it/10 aacc\OT1/cmr/m/n/10 20\OML/cmm/m/it/10 f\O
+T1/cmr/m/n/10 278648\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 eba\OT1
+/cmr/m/n/10 9648026\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 762\OML/cmm/m/it/10 b\OT1/
+cmr/m/n/10 8 [])\OML/cmm/m/it/10 and[][]\OT1/cmr/m/n/10 ([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 95 undefined on input line 
+856.
+
+[95] [96]
+Underfull \hbox (badness 1371) in paragraph at lines 933--935
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 933--935
+\T1/cmr/m/n/10 Complex_-2D::get_-size_-y(), Complex_-2D::set_-imag(), Complex_-
+2D::set_-real(), and Base-
+ []
+
+[97] [98]
+
+LaTeX Warning: Reference `classComplex__2D' on page 99 undefined on input line 
+1097.
+
+[99]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1127 ...lyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1127 ...lyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 100 undefined on input line 1127.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1128 
+       
+? 
+[100]) [101]
+\openout2 = `classPhaseDiverseCDI.aux'.
+
+ (./classPhaseDiverseCDI.tex
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+[]\T1/cmr/bx/n/10 void adjust_-positions (int type=CROSS_-CORRELATION, bool for
+-
+ []
+
+[102
+
+
+]
+
+LaTeX Warning: Reference `classFresnelCDI' on page 103 undefined on input line 
+133.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 103 undefined on input line 1
+33.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 103 undefined on input line 
+133.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 103 undefined on input line 1
+33.
+
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 103 undefined on input 
+line 133.
+
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 103 undefined on input 
+line 133.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 103 undefined on input line 
+135.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 103 undefined on input line 
+135.
+
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 103 undefined on input 
+line 135.
+
+[103]
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 104 undefined on input 
+line 165.
+
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 104 undefined on input 
+line 179.
+
+[104]
+
+LaTeX Warning: Reference `classDouble__2D' on page 105 undefined on input line 
+202.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 105 undefined on input line
+ 202.
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 202--203
+[]\T1/cmr/m/n/10 static bool flag = false; if(!flag){ char buf[50]; \T1/cmr/bx/
+n/10 Double_-2D \T1/cmr/m/n/10 (p.[]) re-sult(nx,ny);
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 202--203
+\T1/cmr/m/n/10 CDI.at(i))-$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 get_-transmission_
+-function(trans); trans.copy($\OMS/cmsy/m/n/10 ^^C$\T1/cmr/m/n/10 get_-transmis
+sion()); trans.get_-
+ []
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 105 undefined on input line 
+246.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 105 undefined on input line 2
+46.
+
+[105]
+
+LaTeX Warning: Reference `classFresnelCDI' on page 106 undefined on input line 
+261.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 106 undefined on input line 2
+61.
+
+
+Underfull \hbox (badness 5475) in paragraph at lines 277--277
+[]\T1/cmr/m/n/10 Phase-Diverse::CROSS_-CORRELATION - im-ple-ments the cross-cor
+relation method
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 277--277
+\T1/cmr/m/n/10 us-ing the mag-ni-tude of the transmission/exit-surface-wave. Th
+ere is pleanty of
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 277--277
+\T1/cmr/m/n/10 doc-u-men-ta-tion de-scrib-ing how cross-correlation can be used
+ for align-ment. see
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\T1/cmtt/m/n/10 http://en.wikipedia.org/wiki/Cross-correlation for example. We 
+use the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\T1/cmtt/m/n/10 fourier transform implementation. This method is useful if the 
+relative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\T1/cmtt/m/n/10 positions are unknown to great than 10 pixels. It is also much 
+faster than
+ []
+
+
+LaTeX Warning: Reference `PlanarCDI_8h' on page 106 undefined on input line 281
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
+[]\T1/cmr/m/n/10 either Phase-Diverse::CROSS_-CORRELATION or Phase-Diverse::MIN
+IMUM_-
+ []
+
+[106]
+
+LaTeX Warning: Reference `classPhaseDiverseCDI_d2a277e6b89ec8fcc5124fc683b22b8e
+' on page 107 undefined on input line 291.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 107 undefined on input line 
+293.
+
+[107]
+
+LaTeX Warning: Reference `classDouble__2D' on page 108 undefined on input line 
+355.
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 355--356
+[]\T1/cmr/bx/n/10 Double_-2D \T1/cmr/m/n/10 (p.[]) temp(nx,ny); object-$\OML/cm
+m/m/it/10 >$\T1/cmr/m/n/10 get_-2d(MAG,temp); write_-image("before_-
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 375--376
+[]\T1/cmr/m/n/10 for(int di=0; di $\OML/cmm/m/it/10 <$ \T1/cmr/m/n/10 scale; di
+++){ for(int dj=0; dj $\OML/cmm/m/it/10 <$ \T1/cmr/m/n/10 scale; dj++){ object-
+$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 set_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+\T1/cmr/m/n/10 real(i+di,j+dj,weight_-r$\OMS/cmsy/m/n/10 ^^C$\T1/cmr/m/n/10 obj
+ect-$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 get_-real(i+di,j+dj)); object-$\OML/cmm/
+m/it/10 >$\T1/cmr/m/n/10 set_-imag(i+di,j+dj,weight_-
+ []
+
+[108]
+
+LaTeX Warning: Reference `classBaseCDI' on page 109 undefined on input line 400
+.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 109 undefined on input line 4
+05.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 109 undefined on input line 
+405.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 109 undefined on input line 418
+.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 109 undefined on input line 4
+23.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 109 undefined on input line 
+423.
+
+[109]
+Underfull \hbox (badness 2478) in paragraph at lines 454--456
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), get_-local_-x_-pos(), get
+_-local_-y_-pos(), Complex_-
+ []
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 110 undefined on input line 
+479.
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 479--480
+[]\T1/cmr/m/n/10 if(n_-probe==4&&new_-x==3294&&new_-y==2917){ static int h = 0;
+ char blah[80];
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 479--480
+\T1/cmr/bx/n/10 Double_-2D \T1/cmr/m/n/10 (p.[]) temp(1024,1024); single_-resul
+t.at(n_-probe)-$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 get_-2d(PHASE,temp);
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 481--482
+[]\T1/cmr/m/n/10 object-$\OML/cmm/m/it/10 >$\T1/cmr/m/n/10 get_-2d(PHASE,temp);
+ sprintf(blah,"object_-prob%i_-try%i.tiff",n_-probe,h); write_-
+ []
+
+[110]
+Underfull \hbox (badness 1248) in paragraph at lines 493--495
+[]\T1/cmr/m/n/10 References add_-to_-object(), beta, Complex_-2D::copy(), FAIL-
+URE, Base-CDI::get_-error(),
+ []
+
+[111] [112]) [113]
+\openout2 = `classPlanarCDI.aux'.
+
+ (./classPlanarCDI.tex
+File: classPlanarCDI.eps Graphic file (type eps)
+ <classPlanarCDI.eps>
+Underfull \hbox (badness 1701) in paragraph at lines 60--62
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[114
+
+
+] [115]
+Underfull \hbox (badness 1331) in paragraph at lines 184--186
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-2d(), IMAG, Base-CDI::intensity_-
+sqrt, Complex_-2D::invert(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+\T1/cmr/m/n/10 MAG, Base-CDI::nx, Base-CDI::ny, Complex_-2D::perform_-backward_
+-fft(), REAL, and
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 116 undefined on input line
+ 189.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 116 undefined on input line 189
+.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.198 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.198 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 116 undefined on input line 198.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.199 
+      
+? 
+
+Underfull \hbox (badness 1466) in paragraph at lines 202--204
+[]\T1/cmr/m/n/10 References Base-CDI::complex, IMAG, Base-CDI::intensity_-sqrt,
+ Base-CDI::nx, Base-CDI::ny,
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 116 undefined on input line
+ 212.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.216 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.216 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 116 undefined on input line 216.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.217 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 116 undefined on input line
+ 228.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.232 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.232 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 116 undefined on input line 232.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.233 
+      
+? 
+[116]
+
+LaTeX Warning: Reference `classComplex__2D' on page 117 undefined on input line
+ 241.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.245 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.245 ...DI__WF_9e3435f91897cd401e77d56919e51da2},
+                                                   \bf{Partial\-CDI} \doxyre...
+
+? 
+
+LaTeX Warning: Reference `,' on page 117 undefined on input line 245.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.245 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.245 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.245 ...ialCDI_9e3435f91897cd401e77d56919e51da2},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 117 undefined on input line 245.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.245 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.245 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.245 ...olyCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 117 undefined on input line 245.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.246 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}\bf{Complex\_\-2D} ...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.251 ...{\tt 0})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_9ca821...
+
+? 
+
+Overfull \hbox (3323.86612pt too wide) in paragraph at lines 245--251
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI_-WF p. (\T1/cmr/m
+/n/10 classFresnelCDI$[] []\OT1/cmr/m/n/10 )[][]([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 117 undefined on input line
+ 254.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 117 undefined on input line 
+270.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 117 undefined on input line 
+270.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 117 undefined on input line 
+290.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 117 undefined on input line 
+290.
+
+[117] [118]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.351 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.351 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 119 undefined on input line 351.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.352 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.397 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.397 ...olyCDI_13ae86002408ac17080dc0c9a5da5f47}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 119 undefined on input line 397.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.398 
+      
+? 
+[119]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.433 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.433 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 120 undefined on input line 433.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.434 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.455 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.455 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 120 undefined on input line 455.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.456 
+      
+? 
+
+Underfull \hbox (badness 3792) in paragraph at lines 459--461
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, and Base-CDI::reallocate_-
+ []
+
+[120]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.467 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.467 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 121 undefined on input line 467.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.468 
+      
+? 
+[121]
+Underfull \hbox (badness 1502) in paragraph at lines 522--524
+[]\T1/cmr/m/n/10 References Base-CDI::apply_-support_-init(), Base-CDI::apply_-
+threshold(), Base-CDI::complex,
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.549 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.549 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 122 undefined on input line 549.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.550 
+      
+? 
+
+Underfull \hbox (badness 2443) in paragraph at lines 553--555
+[]\T1/cmr/m/n/10 References Transmission-Constraint::apply_-constraint(), Base-
+CDI::support_-constraint(), and
+ []
+
+[122]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.599 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.599 ...nelCDI_8aacc20f278648d3eba9648026d762b8},
+                                                   and \bf{Poly\-CDI} \doxyr...
+
+? 
+
+LaTeX Warning: Reference `,' on page 123 undefined on input line 599.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+\nfss@text #1->{\mbox {#1}}
+                           
+l.599 ...olyCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 123 undefined on input line 599.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.600 
+      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.605 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.605 \subsubsection
+                    {\setlength{\rightskip}{0pt plus 5cm}void set\_\-fftw\_\...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.605 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.605 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.605 ...m type})\hspace{0.3cm}{\tt  [inherited]}}
+                                                  \label{classBaseCDI_5bf461...
+
+? 
+
+Overfull \hbox (1499.76967pt too wide) in paragraph at lines 599--605
+[]\T1/cmr/m/n/10 Reimplemented in \T1/cmr/bx/n/10 Fresnel-CDI p. (\T1/cmr/m/n/1
+0 classFresnelCDI$[]\OML/cmm/m/it/10 aacc\OT1/cmr/m/n/10 20\OML/cmm/m/it/10 f\O
+T1/cmr/m/n/10 278648\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 eba\OT1
+/cmr/m/n/10 9648026\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 762\OML/cmm/m/it/10 b\OT1/
+cmr/m/n/10 8 [])\OML/cmm/m/it/10 and[][]\OT1/cmr/m/n/10 ([]$ 
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 123 undefined on input line
+ 624.
+
+[123] [124]
+Underfull \hbox (badness 1371) in paragraph at lines 701--703
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 701--703
+\T1/cmr/m/n/10 Complex_-2D::get_-size_-y(), Complex_-2D::set_-imag(), Complex_-
+2D::set_-real(), and Base-
+ []
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 125 undefined on input line
+ 725.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.755 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.755 ...olyCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 125 undefined on input line 755.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.756 
+      
+? 
+[125] [126]) [127]
+\openout2 = `classPolyCDI.aux'.
+
+ (./classPolyCDI.tex
+File: classPolyCDI.eps Graphic file (type eps)
+ <classPolyCDI.eps> [128
+
+
+]
+Underfull \hbox (badness 1701) in paragraph at lines 109--111
+[]\T1/cmr/bx/n/10 virtual void apply_-shrinkwrap (dou-ble gauss_-width=1.5, dou
+-ble thresh-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+[]\T1/cmr/bx/n/10 virtual void set_-complex_-constraint (Transmission-Constrain
+t &trans_-
+ []
+
+[129] [130]
+
+LaTeX Warning: Reference `classPhaseDiverseCDI' on page 131 undefined on input 
+line 268.
+
+
+LaTeX Warning: Reference `classComplex__2D' on page 131 undefined on input line
+ 283.
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 131 undefined on input line 283
+.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.292 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.292 ...aseCDI_367600727763c6b5aef7ff6d7016b3fa}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 131 undefined on input line 292.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.293 
+      
+? 
+
+Underfull \hbox (badness 1466) in paragraph at lines 296--298
+[]\T1/cmr/m/n/10 References Base-CDI::complex, IMAG, Base-CDI::intensity_-sqrt,
+ Base-CDI::nx, Base-CDI::ny,
+ []
+
+
+LaTeX Warning: Reference `classBaseCDI' on page 131 undefined on input line 311
+.
+
+[131]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.313 ...aseCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.313 ...aseCDI_8aacc20f278648d3eba9648026d762b8}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 132 undefined on input line 313.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.314 
+      
+? 
+
+LaTeX Warning: Reference `classBaseCDI' on page 132 undefined on input line 340
+.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.342 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.342 ...aseCDI_9e3435f91897cd401e77d56919e51da2}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 132 undefined on input line 342.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.343 
+      
+? 
+
+Underfull \hbox (badness 5036) in paragraph at lines 346--348
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, Base-CDI::apply_-support(),
+ []
+
+[132]
+
+LaTeX Warning: Reference `classComplex__2D' on page 133 undefined on input line
+ 371.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 133 undefined on input line 
+395.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 133 undefined on input line 3
+95.
+
+
+LaTeX Warning: Reference `Double__2D_8h_5779de4782f879e627137c31aea683ea' on pa
+ge 133 undefined on input line 413.
+
+
+LaTeX Warning: Reference `Double__2D_8h_5779de4782f879e627137c31aea683ea' on pa
+ge 133 undefined on input line 418.
+
+[133]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.447 ...aseCDI_b76b493a5e453b2d1e173bdade9a3653}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.447 ...aseCDI_b76b493a5e453b2d1e173bdade9a3653}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 134 undefined on input line 447.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.448 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.468 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.468 ...aseCDI_1f673f0f756def2e645a5c6dc654803d}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 134 undefined on input line 468.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.469 
+      
+? 
+
+LaTeX Warning: Reference `classComplex__2D' on page 134 undefined on input line
+ 482.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.486 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.486 ...aseCDI_a8b5944739fc612a5c495804b7587686}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 134 undefined on input line 486.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.487 
+      
+? 
+[134]
+
+LaTeX Warning: Reference `classComplex__2D' on page 135 undefined on input line
+ 517.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 135 undefined on input line 
+533.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 135 undefined on input line 
+533.
+
+[135]
+
+LaTeX Warning: Reference `classDouble__2D' on page 136 undefined on input line 
+553.
+
+
+LaTeX Warning: Reference `classDouble__2D' on page 136 undefined on input line 
+553.
+
+[136]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.614 ...DI__WF_ae6d45b70404e602344fddadb389a3d9}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 137 undefined on input line 614.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.615 
+      
+? 
+[137]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.683 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.683 ...DI__WF_0f38f0faa7b34f3331d5591cac58b598}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 138 undefined on input line 683.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.684 
+      
+? 
+[138]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.705 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.705 ...DI__WF_bef3f7cf18631094a2ed122e5a9902f6}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 139 undefined on input line 705.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.706 
+      
+? 
+
+Underfull \hbox (badness 3792) in paragraph at lines 709--711
+[]\T1/cmr/m/n/10 References Base-CDI::algorithm, Base-CDI::algorithm_-structure
+, and Base-CDI::reallocate_-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.717 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.717 ...DI__WF_8df60e88c8f12cc220608fa620419326}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 139 undefined on input line 717.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.718 
+      
+? 
+[139]
+Underfull \hbox (badness 1502) in paragraph at lines 772--774
+[]\T1/cmr/m/n/10 References Base-CDI::apply_-support_-init(), Base-CDI::apply_-
+threshold(), Base-CDI::complex,
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.799 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.799 ...nelCDI_d754847bcf0151ffcc0c52682c017120}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 140 undefined on input line 799.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.800 
+      
+? 
+
+Underfull \hbox (badness 2443) in paragraph at lines 803--805
+[]\T1/cmr/m/n/10 References Transmission-Constraint::apply_-constraint(), Base-
+CDI::support_-constraint(), and
+ []
+
+[140]
+
+LaTeX Warning: Reference `classComplex__2D' on page 141 undefined on input line
+ 856.
+
+[141] [142]
+Underfull \hbox (badness 1371) in paragraph at lines 933--935
+[]\T1/cmr/m/n/10 References Complex_-2D::get_-imag(), Complex_-2D::get_-real(),
+ Complex_-2D::get_-size_-x(),
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 933--935
+\T1/cmr/m/n/10 Complex_-2D::get_-size_-y(), Complex_-2D::set_-imag(), Complex_-
+2D::set_-real(), and Base-
+ []
+
+[143]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.994 ...aseCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.994 ...aseCDI_176bb7d2686d3fa6877f67812e905f7b}.
+                                                  
+? 
+
+LaTeX Warning: Reference `.' on page 144 undefined on input line 994.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.995 
+      
+? 
+[144]
+
+LaTeX Warning: Reference `classComplex__2D' on page 145 undefined on input line
+ 1071.
+
+[145] [146]) [147]
+\openout2 = `classReal__2D.aux'.
+
+ (./classReal__2D.tex [148
+
+
+]
+
+LaTeX Warning: Reference `classReal__2D' on page 149 undefined on input line 12
+8.
+
+[149] [150] [151]) [152]
+\openout2 = `classtiff__anonymous__array.aux'.
+
+ (./classtiff__anonymous__array.tex) [153
+
+
+]
+\openout2 = `classTransmissionConstraint.aux'.
+
+
+(./classTransmissionConstraint.tex
+
+LaTeX Warning: Reference `classFresnelCDI' on page 154 undefined on input line 
+3.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 154 undefined on input line 3
+.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 154 undefined on input line 
+45.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 154 undefined on input line 4
+5.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 154 undefined on inpu
+t line 46.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 154 undefined on input line 4
+6.
+
+
+LaTeX Warning: Reference `classFresnelCDI' on page 154 undefined on input line 
+46.
+
+[154
+
+
+]
+
+LaTeX Warning: Reference `classTransmissionConstraint' on page 155 undefined on
+ input line 84.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 155 undefined on inpu
+t line 93.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 155 undefined on inpu
+t line 93.
+
+[155]
+
+LaTeX Warning: Reference `classFresnelCDI' on page 156 undefined on input line 
+141.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 156 undefined on input line 1
+41.
+
+
+LaTeX Warning: Reference `classComplexConstraint' on page 156 undefined on inpu
+t line 159.
+
+[156]
+Underfull \hbox (badness 7133) in paragraph at lines 171--172
+\T1/cmr/m/n/10 flip_-sign, Complex_-2D::get_-imag(), Complex_-2D::get_-mag(), C
+omplex-Constraint::get_-
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 171--172
+\T1/cmr/m/n/10 new_-mag(), Complex-Constraint::get_-new_-phase(), Complex_-2D::
+get_-phase(), Complex_-
+ []
+
+) [157] [158
+
+
+]
+Chapter 6.
+(./BaseCDI_8h.tex
+File: BaseCDI_8h__dep__incl.eps Graphic file (type eps)
+ <BaseCDI_8h__dep__incl.eps> [159]) [160]
+\openout2 = `CDI__reconstruction_8c.aux'.
+
+
+(./CDI__reconstruction_8c.tex [161
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 92--56
+[]\T1/cmr/bx/n/10 References Base-CDI::apply_-shrinkwrap(), Complex_-2D::clone(
+), FAIL-URE,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--56
+\T1/cmr/bx/n/10 Complex_-2D::get_-value(), Base-CDI::get-Alg-From-Name(), Confi
+g::get-Double(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--56
+\T1/cmr/bx/n/10 Config::get-Int(), Config::get-Int-List(), Config::get-Status()
+, Config::get-String(),
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 92--56
+\T1/cmr/bx/n/10 string, poly_-string, print_-usage(), Base-CDI::propagate_-to_-
+detector(), Base-
+ []
+
+[162]
+\openout2 = `Complex__2D_8h.aux'.
+
+ (./Complex__2D_8h.tex
+File: Complex__2D_8h__dep__incl.eps Graphic file (type eps)
+ <Complex__2D_8h__dep__incl.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [163
+
+
+]
+[164] [165]) [166]
+\openout2 = `ComplexConstraints__example_8c.aux'.
+
+ (./ComplexConstraints__example_8c.tex
+
+LaTeX Warning: Reference `FresnelCDI__simulation__example_8c' on page 167 undef
+ined on input line 25.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 set_-norm(), Complex_-2D::get_-2d(), Complex-Constraint::get_-c
+_-mean(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 Base-CDI::get_-error(), Fresnel-CDI::get_-transmission_-functio
+n(), Fresnel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 CDI::initialise_-estimate(), Base-CDI::iterate(), MAG, my_-char
+ge_-flipping(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 PHASE, Base-CDI::set_-algorithm(), Transmission-Constraint::set
+_-charge_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 flipping(), Base-CDI::set_-complex_-constraint(), Transmission-
+Constraint::set_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--58
+\T1/cmr/bx/n/10 custom_-constraint(), Transmission-Constraint::set_-enforce_-un
+ity(), Complex-
+ []
+
+[167
+
+
+] [168]
+\openout2 = `Config_8h.aux'.
+
+ (./Config_8h.tex
+File: Config_8h__dep__incl.eps Graphic file (type eps)
+ <Config_8h__dep__incl.eps>) [169
+
+
+]
+\openout2 = `cplx2dbin_8c.aux'.
+
+
+(./cplx2dbin_8c.tex) [170
+
+
+]
+\openout2 = `cplx2ppm_8c.aux'.
+
+ (./cplx2ppm_8c.tex) [171
+
+
+]
+\openout2 = `dbin2ppm_8c.aux'.
+
+ (./dbin2ppm_8c.tex)
+[172
+
+
+]
+\openout2 = `dbin2tiff_8c.aux'.
+
+ (./dbin2tiff_8c.tex) [173
+
+
+]
+\openout2 = `Double__2D_8h.aux'.
+
+ (./Double__2D_8h.tex
+File: Double__2D_8h__dep__incl.eps Graphic file (type eps)
+
+<Double__2D_8h__dep__incl.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [174
+
+
+]
+Overfull \vbox (105.84335pt too high) has occurred while \output is active []
+
+
+[175]) [176]
+\openout2 = `FresnelCDI_8h.aux'.
+
+ (./FresnelCDI_8h.tex
+File: FresnelCDI_8h__dep__incl.eps Graphic file (type eps)
+ <FresnelCDI_8h__dep__incl.eps>) [177
+
+
+]
+\openout2 = `FresnelCDI__example_8c.aux'.
+
+
+(./FresnelCDI__example_8c.tex
+
+LaTeX Warning: Reference `FresnelCDI__example_8c' on page 178 undefined on inpu
+t line 19.
+
+) [178
+
+
+]
+\openout2 = `FresnelCDI__simulation__example_8c.aux'.
+
+ (./FresnelCDI__simulation__example_8c.tex
+
+LaTeX Warning: Reference `FresnelCDI__example_8c' on page 179 undefined on inpu
+t line 22.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]\T1/cmr/bx/n/10 Michael Jones $\OML/cmm/m/it/10 <$\T1/cmtt/m/n/10 michael.jon
+es@latrobe.edu.au$\OML/cmm/m/it/10 >$\T1/cmtt/m/n/10 , Nadia Davidson
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 40--67
+[]\T1/cmr/bx/n/10 References Complex_-2D::get_-2d(), Base-CDI::get_-error(), Fr
+esnel-CDI::get_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--67
+\T1/cmr/bx/n/10 transmission_-function(), Fresnel-CDI::initialise_-estimate(), 
+Base-CDI::iterate(),
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 40--67
+\T1/cmr/bx/n/10 MAG, MAG_-SQ, Complex_-2D::multiply(), PHASE, Fresnel-CDI::prop
+agate_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--67
+\T1/cmr/bx/n/10 Transmission-Constraint::set_-charge_-flipping(), Transmission-
+Constraint::set_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--67
+\T1/cmr/bx/n/10 enforce_-unity(), Base-CDI::set_-intensity(), Base-CDI::set_-su
+pport(), and
+ []
+
+[179
+
+
+]
+\openout2 = `FresnelCDI__WF_8h.aux'.
+
+ (./FresnelCDI__WF_8h.tex
+File: FresnelCDI__WF_8h__dep__incl.eps Graphic file (type eps)
+ <FresnelCDI__WF_8h__dep__incl.eps>) [180
+
+
+]
+\openout2 = `FresnelCDI__WF__example_8c.aux'.
+
+
+(./FresnelCDI__WF__example_8c.tex
+
+LaTeX Warning: Reference `FresnelCDI__WF__example_8c' on page 181 undefined on 
+input line 19.
+
+) [181
+
+
+]
+\openout2 = `hdf2ppm_8c.aux'.
+
+ (./hdf2ppm_8c.tex) [182
+
+
+]
+\openout2 = `PartialCDI_8h.aux'.
+
+ (./PartialCDI_8h.tex
+File: PartialCDI_8h__dep__incl.eps Graphic file (type eps)
+
+<PartialCDI_8h__dep__incl.eps>) [183
+
+
+]
+\openout2 = `PartialCDI__example_8c.aux'.
+
+ (./PartialCDI__example_8c.tex
+
+LaTeX Warning: Reference `PartialCDI__example_8c' on page 184 undefined on inpu
+t line 24.
+
+) [184
+
+
+]
+\openout2 = `PartialCDI__simulation__example_8c.aux'.
+
+ (./PartialCDI__simulation__example_8c.tex
+
+LaTeX Warning: Reference `PartialCDI__simulation__example_8c' on page 185 undef
+ined on input line 21.
+
+) [185
+
+
+]
+\openout2 = `PhaseDiverse__example_8c.aux'.
+
+ (./PhaseDiverse__example_8c.tex) [186
+
+
+]
+\openout2 = `PhaseDiverseCDI_8h.aux'.
+
+ (./PhaseDiverseCDI_8h.tex
+File: PhaseDiverseCDI_8h__dep__incl.eps Graphic file (type eps)
+
+<PhaseDiverseCDI_8h__dep__incl.eps>) [187
+
+
+]
+\openout2 = `PhaseDiverseFresnelRec_8c.aux'.
+
+ (./PhaseDiverseFresnelRec_8c.tex)
+[188
+
+
+]
+\openout2 = `PlanarCDI_8h.aux'.
+
+ (./PlanarCDI_8h.tex
+File: PlanarCDI_8h__dep__incl.eps Graphic file (type eps)
+ <PlanarCDI_8h__dep__incl.eps>) [189
+
+
+]
+\openout2 = `PlanarCDI__example_8c.aux'.
+
+
+(./PlanarCDI__example_8c.tex
+
+LaTeX Warning: Reference `PlanarCDI__example_8c' on page 190 undefined on input
+ line 25.
+
+) [190
+
+
+]
+\openout2 = `PlanarCDI__simulation__example_8c.aux'.
+
+ (./PlanarCDI__simulation__example_8c.tex
+
+LaTeX Warning: Reference `PlanarCDI__simulation__example_8c' on page 191 undefi
+ned on input line 21.
+
+) [191
+
+
+]
+\openout2 = `PolyCDI_8h.aux'.
+
+ (./PolyCDI_8h.tex
+File: PolyCDI_8h__dep__incl.eps Graphic file (type eps)
+ <PolyCDI_8h__dep__incl.eps>) [192
+
+
+]
+\openout2 = `PolyCDI__example_8c.aux'.
+
+
+(./PolyCDI__example_8c.tex
+
+LaTeX Warning: Reference `PolyCDI__example_8c' on page 193 undefined on input l
+ine 24.
+
+) [193
+
+
+]
+\openout2 = `PolyCDI__simulation__example_8c.aux'.
+
+ (./PolyCDI__simulation__example_8c.tex) [194
+
+
+]
+\openout2 = `tiff2ppm_8c.aux'.
+
+ (./tiff2ppm_8c.tex)
+[195
+
+
+]
+\openout2 = `TransmissionConstraint_8h.aux'.
+
+ (./TransmissionConstraint_8h.tex
+File: TransmissionConstraint_8h__dep__incl.eps Graphic file (type eps)
+
+<TransmissionConstraint_8h__dep__incl.eps>
+
+LaTeX Warning: Reference `classFresnelCDI' on page 196 undefined on input line 
+21.
+
+
+LaTeX Warning: Reference `classPlanarCDI' on page 196 undefined on input line 2
+1.
+
+) [196
+
+
+]
+No file refman.ind.
+(./refman.aux (./classComplex__2D.aux) (./classComplexConstraint.aux)
+(./classConfig.aux) (./classDouble__2D.aux) (./classFresnelCDI.aux)
+(./classFresnelCDI__WF.aux) (./classhdf__anonymous__array.aux)
+(./classPartialCDI.aux) (./classPhaseDiverseCDI.aux) (./classPlanarCDI.aux)
+(./classPolyCDI.aux) (./classReal__2D.aux) (./classtiff__anonymous__array.aux)
+(./classTransmissionConstraint.aux) (./CDI__reconstruction_8c.aux)
+(./Complex__2D_8h.aux) (./ComplexConstraints__example_8c.aux) (./Config_8h.aux)
+(./cplx2dbin_8c.aux) (./cplx2ppm_8c.aux) (./dbin2ppm_8c.aux)
+(./dbin2tiff_8c.aux) (./Double__2D_8h.aux) (./FresnelCDI_8h.aux)
+(./FresnelCDI__example_8c.aux) (./FresnelCDI__simulation__example_8c.aux)
+(./FresnelCDI__WF_8h.aux) (./FresnelCDI__WF__example_8c.aux) (./hdf2ppm_8c.aux)
+(./PartialCDI_8h.aux) (./PartialCDI__example_8c.aux)
+(./PartialCDI__simulation__example_8c.aux) (./PhaseDiverse__example_8c.aux)
+(./PhaseDiverseCDI_8h.aux) (./PhaseDiverseFresnelRec_8c.aux)
+(./PlanarCDI_8h.aux) (./PlanarCDI__example_8c.aux)
+(./PlanarCDI__simulation__example_8c.aux) (./PolyCDI_8h.aux)
+(./PolyCDI__example_8c.aux) (./PolyCDI__simulation__example_8c.aux)
+(./tiff2ppm_8c.aux) (./TransmissionConstraint_8h.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 72)
+
+### simple group (level 72) entered at line 994 ({)
+### simple group (level 71) entered at line 799 ({)
+### simple group (level 70) entered at line 717 ({)
+### simple group (level 69) entered at line 705 ({)
+### simple group (level 68) entered at line 683 ({)
+### simple group (level 67) entered at line 614 ({)
+### simple group (level 66) entered at line 486 ({)
+### simple group (level 65) entered at line 468 ({)
+### simple group (level 64) entered at line 447 ({)
+### simple group (level 63) entered at line 342 ({)
+### simple group (level 62) entered at line 313 ({)
+### simple group (level 61) entered at line 292 ({)
+### simple group (level 60) entered at line 755 ({)
+### simple group (level 59) entered at line 599 ({)
+### simple group (level 58) entered at line 549 ({)
+### simple group (level 57) entered at line 467 ({)
+### simple group (level 56) entered at line 455 ({)
+### simple group (level 55) entered at line 433 ({)
+### simple group (level 54) entered at line 397 ({)
+### simple group (level 53) entered at line 351 ({)
+### simple group (level 52) entered at line 245 ({)
+### simple group (level 51) entered at line 232 ({)
+### simple group (level 50) entered at line 216 ({)
+### simple group (level 49) entered at line 198 ({)
+### simple group (level 48) entered at line 1127 ({)
+### simple group (level 47) entered at line 831 ({)
+### simple group (level 46) entered at line 781 ({)
+### simple group (level 45) entered at line 699 ({)
+### simple group (level 44) entered at line 687 ({)
+### simple group (level 43) entered at line 665 ({)
+### simple group (level 42) entered at line 629 ({)
+### simple group (level 41) entered at line 583 ({)
+### simple group (level 40) entered at line 407 ({)
+### simple group (level 39) entered at line 389 ({)
+### simple group (level 38) entered at line 296 ({)
+### simple group (level 37) entered at line 285 ({)
+### simple group (level 36) entered at line 805 ({)
+### simple group (level 35) entered at line 607 ({)
+### simple group (level 34) entered at line 557 ({)
+### simple group (level 33) entered at line 466 ({)
+### simple group (level 32) entered at line 325 ({)
+### simple group (level 31) entered at line 316 ({)
+### simple group (level 30) entered at line 307 ({)
+### simple group (level 29) entered at line 298 ({)
+### simple group (level 28) entered at line 271 ({)
+### simple group (level 27) entered at line 253 ({)
+### simple group (level 26) entered at line 237 ({)
+### simple group (level 25) entered at line 221 ({)
+### simple group (level 24) entered at line 940 ({)
+### simple group (level 23) entered at line 639 ({)
+### simple group (level 22) entered at line 627 ({)
+### simple group (level 21) entered at line 605 ({)
+### simple group (level 20) entered at line 569 ({)
+### simple group (level 19) entered at line 523 ({)
+### simple group (level 18) entered at line 417 ({)
+### simple group (level 17) entered at line 365 ({)
+### simple group (level 16) entered at line 349 ({)
+### simple group (level 15) entered at line 333 ({)
+### simple group (level 14) entered at line 297 ({)
+### simple group (level 13) entered at line 263 ({)
+### simple group (level 12) entered at line 781 ({)
+### simple group (level 11) entered at line 629 ({)
+### simple group (level 10) entered at line 617 ({)
+### simple group (level 9) entered at line 599 ({)
+### simple group (level 8) entered at line 549 ({)
+### simple group (level 7) entered at line 467 ({)
+### simple group (level 6) entered at line 455 ({)
+### simple group (level 5) entered at line 433 ({)
+### simple group (level 4) entered at line 397 ({)
+### simple group (level 3) entered at line 351 ({)
+### simple group (level 2) entered at line 249 ({)
+### simple group (level 1) entered at line 231 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2460 strings out of 94501
+ 50096 string characters out of 1176789
+ 73628 words of memory out of 1000000
+ 5375 multiletter control sequences out of 10000+50000
+ 19536 words of font info for 39 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 34i,15n,43p,2862b,3744s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on refman.dvi (200 pages, 481812 bytes).

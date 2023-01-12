@@ -1,0 +1,687 @@
+\contentsline {chapter}{\numberline {1}The NADIA Project }{1}
+\contentsline {section}{\numberline {1.1}Examples}{1}
+\contentsline {section}{\numberline {1.2}Command Line Tools}{2}
+\contentsline {chapter}{\numberline {2}CXSSoftware Hierarchical Index}{5}
+\contentsline {section}{\numberline {2.1}CXSSoftware Class Hierarchy}{5}
+\contentsline {chapter}{\numberline {3}CXSSoftware Data Structure Index}{9}
+\contentsline {section}{\numberline {3.1}CXSSoftware Data Structures}{9}
+\contentsline {chapter}{\numberline {4}CXSSoftware File Index}{11}
+\contentsline {section}{\numberline {4.1}CXSSoftware File List}{11}
+\contentsline {chapter}{\numberline {5}CXSSoftware Data Structure Documentation}{13}
+\contentsline {section}{\numberline {5.1}Base\discretionary {-}{}{}CDI Class Reference}{13}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{15}
+\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.1.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Base\discretionary {-}{}{}CDI} (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em complex}, unsigned int {\em n\_\discretionary {-}{}{}best} = {\tt 0})}{16}
+\contentsline {subsubsection}{\numberline {5.1.2.2}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Base\discretionary {-}{}{}CDI} ()\hspace {0.3cm}{\tt [virtual]}}{16}
+\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.1.3.1}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual]}}{16}
+\contentsline {subsubsection}{\numberline {5.1.3.2}\setlength {\rightskip }{0pt plus 5cm}virtual void initialise\_\discretionary {-}{}{}estimate (int {\em seed} = {\tt 0})\hspace {0.3cm}{\tt [pure virtual]}}{17}
+\contentsline {subsubsection}{\numberline {5.1.3.3}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})}{17}
+\contentsline {subsubsection}{\numberline {5.1.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})}{17}
+\contentsline {subsubsection}{\numberline {5.1.3.5}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})}{17}
+\contentsline {subsubsection}{\numberline {5.1.3.6}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})}{18}
+\contentsline {subsubsection}{\numberline {5.1.3.7}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})}{18}
+\contentsline {subsubsection}{\numberline {5.1.3.8}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline]}}{18}
+\contentsline {subsubsection}{\numberline {5.1.3.9}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline]}}{19}
+\contentsline {subsubsection}{\numberline {5.1.3.10}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline]}}{19}
+\contentsline {subsubsection}{\numberline {5.1.3.11}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline]}}{19}
+\contentsline {subsubsection}{\numberline {5.1.3.12}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline]}}{19}
+\contentsline {subsubsection}{\numberline {5.1.3.13}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline]}}{19}
+\contentsline {subsubsection}{\numberline {5.1.3.14}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})}{20}
+\contentsline {subsubsection}{\numberline {5.1.3.15}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})}{20}
+\contentsline {subsubsection}{\numberline {5.1.3.16}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()}{21}
+\contentsline {subsubsection}{\numberline {5.1.3.17}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()}{21}
+\contentsline {subsubsection}{\numberline {5.1.3.18}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static]}}{21}
+\contentsline {subsubsection}{\numberline {5.1.3.19}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual]}}{22}
+\contentsline {subsubsection}{\numberline {5.1.3.20}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline]}}{22}
+\contentsline {subsubsection}{\numberline {5.1.3.21}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{22}
+\contentsline {subsubsection}{\numberline {5.1.3.22}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{22}
+\contentsline {subsubsection}{\numberline {5.1.3.23}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{23}
+\contentsline {subsubsection}{\numberline {5.1.3.24}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{23}
+\contentsline {subsubsection}{\numberline {5.1.3.25}\setlength {\rightskip }{0pt plus 5cm}virtual void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [pure virtual]}}{23}
+\contentsline {subsubsection}{\numberline {5.1.3.26}\setlength {\rightskip }{0pt plus 5cm}virtual void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [pure virtual]}}{23}
+\contentsline {subsubsection}{\numberline {5.1.3.27}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})}{23}
+\contentsline {subsubsection}{\numberline {5.1.3.28}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual]}}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.29}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline]}}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.30}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.31}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected]}}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.32}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected]}}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.33}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected]}}{24}
+\contentsline {subsubsection}{\numberline {5.1.3.34}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected]}}{25}
+\contentsline {subsubsection}{\numberline {5.1.3.35}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected]}}{25}
+\contentsline {subsection}{\numberline {5.1.4}Field Documentation}{25}
+\contentsline {subsubsection}{\numberline {5.1.4.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected]}}{25}
+\contentsline {subsubsection}{\numberline {5.1.4.2}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected]}}{25}
+\contentsline {subsubsection}{\numberline {5.1.4.3}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected]}}{25}
+\contentsline {subsubsection}{\numberline {5.1.4.4}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.5}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.6}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.8}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.9}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.10}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.11}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected]}}{26}
+\contentsline {subsubsection}{\numberline {5.1.4.12}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected]}}{27}
+\contentsline {subsubsection}{\numberline {5.1.4.13}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected]}}{27}
+\contentsline {subsubsection}{\numberline {5.1.4.14}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected]}}{27}
+\contentsline {subsubsection}{\numberline {5.1.4.15}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected]}}{27}
+\contentsline {subsubsection}{\numberline {5.1.4.16}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected]}}{27}
+\contentsline {subsubsection}{\numberline {5.1.4.17}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected]}}{27}
+\contentsline {section}{\numberline {5.2}Complex\_\discretionary {-}{}{}2D Class Reference}{28}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{29}
+\contentsline {subsection}{\numberline {5.2.2}Constructor \& Destructor Documentation}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} (int {\em x\_\discretionary {-}{}{}size}, int {\em y\_\discretionary {-}{}{}size})}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.2}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Complex\_\discretionary {-}{}{}2D} ()}{29}
+\contentsline {subsubsection}{\numberline {5.2.2.3}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} (const \bf {Complex\_\discretionary {-}{}{}2D} \& {\em object})}{29}
+\contentsline {subsection}{\numberline {5.2.3}Member Function Documentation}{30}
+\contentsline {subsubsection}{\numberline {5.2.3.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& operator= (const \bf {Complex\_\discretionary {-}{}{}2D} \& {\em rhs})\hspace {0.3cm}{\tt [inline]}}{30}
+\contentsline {subsubsection}{\numberline {5.2.3.2}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}value (int {\em x}, int {\em y}, int {\em type}, double {\em value})}{30}
+\contentsline {subsubsection}{\numberline {5.2.3.3}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}real (int {\em x}, int {\em y}, double {\em value})\hspace {0.3cm}{\tt [inline]}}{30}
+\contentsline {subsubsection}{\numberline {5.2.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}imag (int {\em x}, int {\em y}, double {\em value})\hspace {0.3cm}{\tt [inline]}}{30}
+\contentsline {subsubsection}{\numberline {5.2.3.5}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}mag (int {\em x}, int {\em y}, double {\em value})\hspace {0.3cm}{\tt [inline]}}{31}
+\contentsline {subsubsection}{\numberline {5.2.3.6}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}phase (int {\em x}, int {\em y}, double {\em value})\hspace {0.3cm}{\tt [inline]}}{31}
+\contentsline {subsubsection}{\numberline {5.2.3.7}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}real (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [inline]}}{31}
+\contentsline {subsubsection}{\numberline {5.2.3.8}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}imag (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [inline]}}{32}
+\contentsline {subsubsection}{\numberline {5.2.3.9}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}mag (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [inline]}}{32}
+\contentsline {subsubsection}{\numberline {5.2.3.10}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}phase (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [inline]}}{32}
+\contentsline {subsubsection}{\numberline {5.2.3.11}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}value (int {\em x}, int {\em y}, int {\em type}) const}{33}
+\contentsline {subsubsection}{\numberline {5.2.3.12}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x () const\hspace {0.3cm}{\tt [inline]}}{33}
+\contentsline {subsubsection}{\numberline {5.2.3.13}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y () const\hspace {0.3cm}{\tt [inline]}}{33}
+\contentsline {subsubsection}{\numberline {5.2.3.14}\setlength {\rightskip }{0pt plus 5cm}void get\_\discretionary {-}{}{}2d (int {\em type}, \bf {Double\_\discretionary {-}{}{}2D} \& {\em result}) const}{33}
+\contentsline {subsubsection}{\numberline {5.2.3.15}\setlength {\rightskip }{0pt plus 5cm}void scale (double {\em scale\_\discretionary {-}{}{}factor})}{34}
+\contentsline {subsubsection}{\numberline {5.2.3.16}\setlength {\rightskip }{0pt plus 5cm}void add (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c2}, double {\em scale} = {\tt 1})}{34}
+\contentsline {subsubsection}{\numberline {5.2.3.17}\setlength {\rightskip }{0pt plus 5cm}void multiply (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c2}, double {\em scale} = {\tt 1})}{34}
+\contentsline {subsubsection}{\numberline {5.2.3.18}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}norm () const}{35}
+\contentsline {subsubsection}{\numberline {5.2.3.19}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ clone () const}{35}
+\contentsline {subsubsection}{\numberline {5.2.3.20}\setlength {\rightskip }{0pt plus 5cm}void copy (const \bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})}{35}
+\contentsline {subsubsection}{\numberline {5.2.3.21}\setlength {\rightskip }{0pt plus 5cm}void invert (bool {\em scale} = {\tt false})}{35}
+\contentsline {subsubsection}{\numberline {5.2.3.22}\setlength {\rightskip }{0pt plus 5cm}void perform\_\discretionary {-}{}{}forward\_\discretionary {-}{}{}fft ()}{36}
+\contentsline {subsubsection}{\numberline {5.2.3.23}\setlength {\rightskip }{0pt plus 5cm}void perform\_\discretionary {-}{}{}backward\_\discretionary {-}{}{}fft ()}{36}
+\contentsline {subsubsection}{\numberline {5.2.3.24}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inline]}}{36}
+\contentsline {subsubsection}{\numberline {5.2.3.25}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}padded (int {\em x\_\discretionary {-}{}{}add}, int {\em y\_\discretionary {-}{}{}add})}{36}
+\contentsline {subsubsection}{\numberline {5.2.3.26}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}unpadded (int {\em x\_\discretionary {-}{}{}add}, int {\em y\_\discretionary {-}{}{}add})}{36}
+\contentsline {subsubsection}{\numberline {5.2.3.27}\setlength {\rightskip }{0pt plus 5cm}int check\_\discretionary {-}{}{}bounds (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [private]}}{37}
+\contentsline {subsubsection}{\numberline {5.2.3.28}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}fft ()\hspace {0.3cm}{\tt [private]}}{37}
+\contentsline {subsection}{\numberline {5.2.4}Field Documentation}{37}
+\contentsline {subsubsection}{\numberline {5.2.4.1}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [private]}}{37}
+\contentsline {subsubsection}{\numberline {5.2.4.2}\setlength {\rightskip }{0pt plus 5cm}fftwf\_\discretionary {-}{}{}complex$\ast $ \bf {array}\hspace {0.3cm}{\tt [private]}}{37}
+\contentsline {section}{\numberline {5.3}Complex\discretionary {-}{}{}Constraint Class Reference}{38}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{38}
+\contentsline {subsection}{\numberline {5.3.2}Constructor \& Destructor Documentation}{39}
+\contentsline {subsubsection}{\numberline {5.3.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\discretionary {-}{}{}Constraint} (\bf {Double\_\discretionary {-}{}{}2D} \& {\em region}, double {\em alpha1}, double {\em alpha2})\hspace {0.3cm}{\tt [inline]}}{39}
+\contentsline {subsection}{\numberline {5.3.3}Member Function Documentation}{39}
+\contentsline {subsubsection}{\numberline {5.3.3.1}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fixed\_\discretionary {-}{}{}c (double {\em c\_\discretionary {-}{}{}mean})\hspace {0.3cm}{\tt [inline]}}{39}
+\contentsline {subsubsection}{\numberline {5.3.3.2}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}c\_\discretionary {-}{}{}mean (double {\em c\_\discretionary {-}{}{}mean})\hspace {0.3cm}{\tt [inline]}}{39}
+\contentsline {subsubsection}{\numberline {5.3.3.3}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}c\_\discretionary {-}{}{}mean ()\hspace {0.3cm}{\tt [inline]}}{40}
+\contentsline {subsubsection}{\numberline {5.3.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}alpha1 (double {\em alpha1})\hspace {0.3cm}{\tt [inline]}}{40}
+\contentsline {subsubsection}{\numberline {5.3.3.5}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}alpha2 (double {\em alpha2})\hspace {0.3cm}{\tt [inline]}}{40}
+\contentsline {subsubsection}{\numberline {5.3.3.6}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}new\_\discretionary {-}{}{}mag (double {\em old\_\discretionary {-}{}{}mag}, double {\em old\_\discretionary {-}{}{}phase})\hspace {0.3cm}{\tt [inline]}}{40}
+\contentsline {subsubsection}{\numberline {5.3.3.7}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}new\_\discretionary {-}{}{}phase (double {\em old\_\discretionary {-}{}{}mag}, double {\em old\_\discretionary {-}{}{}phase})\hspace {0.3cm}{\tt [inline]}}{41}
+\contentsline {subsubsection}{\numberline {5.3.3.8}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ get\_\discretionary {-}{}{}region ()\hspace {0.3cm}{\tt [inline]}}{41}
+\contentsline {subsection}{\numberline {5.3.4}Field Documentation}{41}
+\contentsline {subsubsection}{\numberline {5.3.4.1}\setlength {\rightskip }{0pt plus 5cm}double \bf {alpha1}\hspace {0.3cm}{\tt [protected]}}{41}
+\contentsline {subsubsection}{\numberline {5.3.4.2}\setlength {\rightskip }{0pt plus 5cm}double \bf {alpha2}\hspace {0.3cm}{\tt [protected]}}{41}
+\contentsline {subsubsection}{\numberline {5.3.4.3}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {region}\hspace {0.3cm}{\tt [protected]}}{41}
+\contentsline {subsubsection}{\numberline {5.3.4.4}\setlength {\rightskip }{0pt plus 5cm}double \bf {c\_\discretionary {-}{}{}mean}\hspace {0.3cm}{\tt [protected]}}{42}
+\contentsline {subsubsection}{\numberline {5.3.4.5}\setlength {\rightskip }{0pt plus 5cm}bool \bf {fixed\_\discretionary {-}{}{}c}\hspace {0.3cm}{\tt [protected]}}{42}
+\contentsline {section}{\numberline {5.4}Config Class Reference}{43}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{43}
+\contentsline {subsection}{\numberline {5.4.2}Constructor \& Destructor Documentation}{43}
+\contentsline {subsubsection}{\numberline {5.4.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Config} (std::string {\em file\_\discretionary {-}{}{}name})}{43}
+\contentsline {subsection}{\numberline {5.4.3}Member Function Documentation}{44}
+\contentsline {subsubsection}{\numberline {5.4.3.1}\setlength {\rightskip }{0pt plus 5cm}string get\discretionary {-}{}{}String (std::string {\em key})}{44}
+\contentsline {subsubsection}{\numberline {5.4.3.2}\setlength {\rightskip }{0pt plus 5cm}double get\discretionary {-}{}{}Double (std::string {\em key})}{44}
+\contentsline {subsubsection}{\numberline {5.4.3.3}\setlength {\rightskip }{0pt plus 5cm}int get\discretionary {-}{}{}Int (std::string {\em key})}{44}
+\contentsline {subsubsection}{\numberline {5.4.3.4}\setlength {\rightskip }{0pt plus 5cm}list$<$ int $>$ $\ast $ get\discretionary {-}{}{}Int\discretionary {-}{}{}List (std::string {\em key})}{45}
+\contentsline {subsubsection}{\numberline {5.4.3.5}\setlength {\rightskip }{0pt plus 5cm}list$<$ string $>$ $\ast $ get\discretionary {-}{}{}String\discretionary {-}{}{}List (std::string {\em key})}{45}
+\contentsline {subsubsection}{\numberline {5.4.3.6}\setlength {\rightskip }{0pt plus 5cm}int get\discretionary {-}{}{}Status ()\hspace {0.3cm}{\tt [inline]}}{45}
+\contentsline {subsection}{\numberline {5.4.4}Field Documentation}{45}
+\contentsline {subsubsection}{\numberline {5.4.4.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Map\discretionary {-}{}{}Type} \bf {mapping}\hspace {0.3cm}{\tt [private]}}{45}
+\contentsline {subsubsection}{\numberline {5.4.4.2}\setlength {\rightskip }{0pt plus 5cm}int \bf {status}\hspace {0.3cm}{\tt [private]}}{46}
+\contentsline {section}{\numberline {5.5}Double\_\discretionary {-}{}{}2D Class Reference}{47}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{47}
+\contentsline {section}{\numberline {5.6}Fresnel\discretionary {-}{}{}CDI Class Reference}{48}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{50}
+\contentsline {subsection}{\numberline {5.6.2}Constructor \& Destructor Documentation}{50}
+\contentsline {subsubsection}{\numberline {5.6.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Fresnel\discretionary {-}{}{}CDI} (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em initial\_\discretionary {-}{}{}guess}, \bf {Complex\_\discretionary {-}{}{}2D} \& {\em white\_\discretionary {-}{}{}field}, double {\em beam\_\discretionary {-}{}{}wavelength}, double {\em focal\_\discretionary {-}{}{}detector\_\discretionary {-}{}{}length}, double {\em focal\_\discretionary {-}{}{}sample\_\discretionary {-}{}{}length}, double {\em pixel\_\discretionary {-}{}{}size}, double {\em normalisation} = {\tt 1.0}, int {\em n\_\discretionary {-}{}{}best} = {\tt 0})}{50}
+\contentsline {subsubsection}{\numberline {5.6.2.2}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Fresnel\discretionary {-}{}{}CDI} ()\hspace {0.3cm}{\tt [virtual]}}{51}
+\contentsline {subsection}{\numberline {5.6.3}Member Function Documentation}{51}
+\contentsline {subsubsection}{\numberline {5.6.3.1}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate (int {\em seed} = {\tt 0})\hspace {0.3cm}{\tt [virtual]}}{51}
+\contentsline {subsubsection}{\numberline {5.6.3.2}\setlength {\rightskip }{0pt plus 5cm}void get\_\discretionary {-}{}{}transmission\_\discretionary {-}{}{}function (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em result}, \bf {Complex\_\discretionary {-}{}{}2D} $\ast $ {\em esw} = {\tt 0})\hspace {0.3cm}{\tt [virtual]}}{52}
+\contentsline {subsubsection}{\numberline {5.6.3.3}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em complex})\hspace {0.3cm}{\tt [virtual]}}{52}
+\contentsline {subsubsection}{\numberline {5.6.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}transmission\_\discretionary {-}{}{}function (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em transmission}, \bf {Complex\_\discretionary {-}{}{}2D} $\ast $ {\em esw} = {\tt 0})\hspace {0.3cm}{\tt [virtual]}}{52}
+\contentsline {subsubsection}{\numberline {5.6.3.5}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{52}
+\contentsline {subsubsection}{\numberline {5.6.3.6}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{53}
+\contentsline {subsubsection}{\numberline {5.6.3.7}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{53}
+\contentsline {subsubsection}{\numberline {5.6.3.8}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}normalisation (double {\em normalisation})\hspace {0.3cm}{\tt [inline]}}{53}
+\contentsline {subsubsection}{\numberline {5.6.3.9}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}experimental\_\discretionary {-}{}{}parameters (double {\em beam\_\discretionary {-}{}{}wavelength}, double {\em focal\_\discretionary {-}{}{}detector\_\discretionary {-}{}{}length}, double {\em focal\_\discretionary {-}{}{}sample\_\discretionary {-}{}{}length}, double {\em pixel\_\discretionary {-}{}{}size})}{53}
+\contentsline {subsubsection}{\numberline {5.6.3.10}\setlength {\rightskip }{0pt plus 5cm}void multiply\_\discretionary {-}{}{}factors (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c}, int {\em direction})\hspace {0.3cm}{\tt [protected]}}{54}
+\contentsline {subsubsection}{\numberline {5.6.3.11}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual, inherited]}}{54}
+\contentsline {subsubsection}{\numberline {5.6.3.12}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})\hspace {0.3cm}{\tt [inherited]}}{54}
+\contentsline {subsubsection}{\numberline {5.6.3.13}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{54}
+\contentsline {subsubsection}{\numberline {5.6.3.14}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{55}
+\contentsline {subsubsection}{\numberline {5.6.3.15}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})\hspace {0.3cm}{\tt [inherited]}}{55}
+\contentsline {subsubsection}{\numberline {5.6.3.16}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})\hspace {0.3cm}{\tt [inherited]}}{56}
+\contentsline {subsubsection}{\numberline {5.6.3.17}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline, inherited]}}{56}
+\contentsline {subsubsection}{\numberline {5.6.3.18}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline, inherited]}}{56}
+\contentsline {subsubsection}{\numberline {5.6.3.19}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline, inherited]}}{56}
+\contentsline {subsubsection}{\numberline {5.6.3.20}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline, inherited]}}{56}
+\contentsline {subsubsection}{\numberline {5.6.3.21}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline, inherited]}}{57}
+\contentsline {subsubsection}{\numberline {5.6.3.22}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline, inherited]}}{57}
+\contentsline {subsubsection}{\numberline {5.6.3.23}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})\hspace {0.3cm}{\tt [inherited]}}{57}
+\contentsline {subsubsection}{\numberline {5.6.3.24}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace {0.3cm}{\tt [inherited]}}{57}
+\contentsline {subsubsection}{\numberline {5.6.3.25}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()\hspace {0.3cm}{\tt [inherited]}}{58}
+\contentsline {subsubsection}{\numberline {5.6.3.26}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()\hspace {0.3cm}{\tt [inherited]}}{58}
+\contentsline {subsubsection}{\numberline {5.6.3.27}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static, inherited]}}{59}
+\contentsline {subsubsection}{\numberline {5.6.3.28}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual, inherited]}}{59}
+\contentsline {subsubsection}{\numberline {5.6.3.29}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline, inherited]}}{59}
+\contentsline {subsubsection}{\numberline {5.6.3.30}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{60}
+\contentsline {subsubsection}{\numberline {5.6.3.31}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{60}
+\contentsline {subsubsection}{\numberline {5.6.3.32}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inherited]}}{60}
+\contentsline {subsubsection}{\numberline {5.6.3.33}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual, inherited]}}{60}
+\contentsline {subsubsection}{\numberline {5.6.3.34}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline, inherited]}}{61}
+\contentsline {subsubsection}{\numberline {5.6.3.35}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [inherited]}}{61}
+\contentsline {subsubsection}{\numberline {5.6.3.36}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected, inherited]}}{61}
+\contentsline {subsubsection}{\numberline {5.6.3.37}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected, inherited]}}{61}
+\contentsline {subsubsection}{\numberline {5.6.3.38}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected, inherited]}}{61}
+\contentsline {subsubsection}{\numberline {5.6.3.39}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{62}
+\contentsline {subsubsection}{\numberline {5.6.3.40}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{62}
+\contentsline {subsection}{\numberline {5.6.4}Field Documentation}{62}
+\contentsline {subsubsection}{\numberline {5.6.4.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} \bf {illumination}\hspace {0.3cm}{\tt [protected]}}{62}
+\contentsline {subsubsection}{\numberline {5.6.4.2}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {illumination\_\discretionary {-}{}{}at\_\discretionary {-}{}{}sample}\hspace {0.3cm}{\tt [protected]}}{62}
+\contentsline {subsubsection}{\numberline {5.6.4.3}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {transmission}\hspace {0.3cm}{\tt [protected]}}{62}
+\contentsline {subsubsection}{\numberline {5.6.4.4}\setlength {\rightskip }{0pt plus 5cm}double \bf {wavelength}\hspace {0.3cm}{\tt [protected]}}{62}
+\contentsline {subsubsection}{\numberline {5.6.4.5}\setlength {\rightskip }{0pt plus 5cm}double \bf {pixel\_\discretionary {-}{}{}length}\hspace {0.3cm}{\tt [protected]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.6}\setlength {\rightskip }{0pt plus 5cm}double \bf {norm}\hspace {0.3cm}{\tt [protected]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} \bf {coefficient}\hspace {0.3cm}{\tt [protected]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.8}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected, inherited]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.9}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected, inherited]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.10}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected, inherited]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.11}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected, inherited]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.12}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected, inherited]}}{63}
+\contentsline {subsubsection}{\numberline {5.6.4.13}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.14}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.15}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.16}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.17}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.18}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.19}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.20}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.21}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{64}
+\contentsline {subsubsection}{\numberline {5.6.4.22}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{65}
+\contentsline {subsubsection}{\numberline {5.6.4.23}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected, inherited]}}{65}
+\contentsline {subsubsection}{\numberline {5.6.4.24}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected, inherited]}}{65}
+\contentsline {section}{\numberline {5.7}Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}WF Class Reference}{66}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{68}
+\contentsline {subsection}{\numberline {5.7.2}Constructor \& Destructor Documentation}{68}
+\contentsline {subsubsection}{\numberline {5.7.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}WF} (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em initial\_\discretionary {-}{}{}guess}, double {\em beam\_\discretionary {-}{}{}wavelength}, double {\em zone\_\discretionary {-}{}{}focal\_\discretionary {-}{}{}length}, double {\em focal\_\discretionary {-}{}{}detector\_\discretionary {-}{}{}length}, double {\em pixel\_\discretionary {-}{}{}size}, int {\em n\_\discretionary {-}{}{}best} = {\tt 1})}{68}
+\contentsline {subsubsection}{\numberline {5.7.2.2}\setlength {\rightskip }{0pt plus 5cm}virtual $\sim $\bf {Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}WF} ()\hspace {0.3cm}{\tt [inline, virtual]}}{68}
+\contentsline {subsection}{\numberline {5.7.3}Member Function Documentation}{69}
+\contentsline {subsubsection}{\numberline {5.7.3.1}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual]}}{69}
+\contentsline {subsubsection}{\numberline {5.7.3.2}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{69}
+\contentsline {subsubsection}{\numberline {5.7.3.3}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{69}
+\contentsline {subsubsection}{\numberline {5.7.3.4}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate (int {\em seed} = {\tt 0})\hspace {0.3cm}{\tt [virtual]}}{69}
+\contentsline {subsubsection}{\numberline {5.7.3.5}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (double {\em z\_\discretionary {-}{}{}diameter}, double {\em size} = {\tt 1.01})\hspace {0.3cm}{\tt [virtual]}}{70}
+\contentsline {subsubsection}{\numberline {5.7.3.6}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})\hspace {0.3cm}{\tt [inline]}}{70}
+\contentsline {subsubsection}{\numberline {5.7.3.7}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()\hspace {0.3cm}{\tt [inline]}}{70}
+\contentsline {subsubsection}{\numberline {5.7.3.8}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline]}}{70}
+\contentsline {subsubsection}{\numberline {5.7.3.9}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace {0.3cm}{\tt [inline]}}{70}
+\contentsline {subsubsection}{\numberline {5.7.3.10}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}detector ()\hspace {0.3cm}{\tt [inline]}}{71}
+\contentsline {subsubsection}{\numberline {5.7.3.11}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})\hspace {0.3cm}{\tt [inherited]}}{71}
+\contentsline {subsubsection}{\numberline {5.7.3.12}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{71}
+\contentsline {subsubsection}{\numberline {5.7.3.13}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{72}
+\contentsline {subsubsection}{\numberline {5.7.3.14}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})\hspace {0.3cm}{\tt [inherited]}}{72}
+\contentsline {subsubsection}{\numberline {5.7.3.15}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})\hspace {0.3cm}{\tt [inherited]}}{72}
+\contentsline {subsubsection}{\numberline {5.7.3.16}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline, inherited]}}{72}
+\contentsline {subsubsection}{\numberline {5.7.3.17}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline, inherited]}}{73}
+\contentsline {subsubsection}{\numberline {5.7.3.18}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline, inherited]}}{73}
+\contentsline {subsubsection}{\numberline {5.7.3.19}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline, inherited]}}{73}
+\contentsline {subsubsection}{\numberline {5.7.3.20}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline, inherited]}}{73}
+\contentsline {subsubsection}{\numberline {5.7.3.21}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()\hspace {0.3cm}{\tt [inherited]}}{73}
+\contentsline {subsubsection}{\numberline {5.7.3.22}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static, inherited]}}{74}
+\contentsline {subsubsection}{\numberline {5.7.3.23}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual, inherited]}}{74}
+\contentsline {subsubsection}{\numberline {5.7.3.24}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline, inherited]}}{74}
+\contentsline {subsubsection}{\numberline {5.7.3.25}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{75}
+\contentsline {subsubsection}{\numberline {5.7.3.26}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{75}
+\contentsline {subsubsection}{\numberline {5.7.3.27}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{75}
+\contentsline {subsubsection}{\numberline {5.7.3.28}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{75}
+\contentsline {subsubsection}{\numberline {5.7.3.29}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inherited]}}{75}
+\contentsline {subsubsection}{\numberline {5.7.3.30}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual, inherited]}}{76}
+\contentsline {subsubsection}{\numberline {5.7.3.31}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline, inherited]}}{76}
+\contentsline {subsubsection}{\numberline {5.7.3.32}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [inherited]}}{76}
+\contentsline {subsubsection}{\numberline {5.7.3.33}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected, inherited]}}{76}
+\contentsline {subsubsection}{\numberline {5.7.3.34}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected, inherited]}}{76}
+\contentsline {subsubsection}{\numberline {5.7.3.35}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected, inherited]}}{77}
+\contentsline {subsubsection}{\numberline {5.7.3.36}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{77}
+\contentsline {subsubsection}{\numberline {5.7.3.37}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{77}
+\contentsline {subsection}{\numberline {5.7.4}Field Documentation}{77}
+\contentsline {subsubsection}{\numberline {5.7.4.1}\setlength {\rightskip }{0pt plus 5cm}double \bf {wavelength}\hspace {0.3cm}{\tt [protected]}}{77}
+\contentsline {subsubsection}{\numberline {5.7.4.2}\setlength {\rightskip }{0pt plus 5cm}double \bf {zone\_\discretionary {-}{}{}to\_\discretionary {-}{}{}focal\_\discretionary {-}{}{}length}\hspace {0.3cm}{\tt [protected]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.3}\setlength {\rightskip }{0pt plus 5cm}double \bf {focal\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector\_\discretionary {-}{}{}length}\hspace {0.3cm}{\tt [protected]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.4}\setlength {\rightskip }{0pt plus 5cm}double \bf {pixel\_\discretionary {-}{}{}length}\hspace {0.3cm}{\tt [protected]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.5}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} \bf {coefficient}\hspace {0.3cm}{\tt [protected]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.6}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} \bf {complex\_\discretionary {-}{}{}detector}\hspace {0.3cm}{\tt [protected]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected, inherited]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.8}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected, inherited]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.9}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected, inherited]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.10}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected, inherited]}}{78}
+\contentsline {subsubsection}{\numberline {5.7.4.11}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.12}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.13}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.14}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.15}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.16}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.17}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.18}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected, inherited]}}{79}
+\contentsline {subsubsection}{\numberline {5.7.4.19}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected, inherited]}}{80}
+\contentsline {subsubsection}{\numberline {5.7.4.20}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{80}
+\contentsline {subsubsection}{\numberline {5.7.4.21}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{80}
+\contentsline {subsubsection}{\numberline {5.7.4.22}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected, inherited]}}{80}
+\contentsline {subsubsection}{\numberline {5.7.4.23}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected, inherited]}}{80}
+\contentsline {section}{\numberline {5.8}hdf\_\discretionary {-}{}{}anonymous\_\discretionary {-}{}{}array Class Reference}{81}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{81}
+\contentsline {section}{\numberline {5.9}Partial\discretionary {-}{}{}CDI Class Reference}{82}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{85}
+\contentsline {subsection}{\numberline {5.9.2}Constructor \& Destructor Documentation}{85}
+\contentsline {subsubsection}{\numberline {5.9.2.1}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Partial\discretionary {-}{}{}CDI} ()}{85}
+\contentsline {subsection}{\numberline {5.9.3}Member Function Documentation}{85}
+\contentsline {subsubsection}{\numberline {5.9.3.1}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate ()}{85}
+\contentsline {subsubsection}{\numberline {5.9.3.2}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate (int {\em seed})\hspace {0.3cm}{\tt [virtual]}}{85}
+\contentsline {subsubsection}{\numberline {5.9.3.3}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual]}}{85}
+\contentsline {subsubsection}{\numberline {5.9.3.4}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}matrices (int {\em leg}, int {\em modes})}{86}
+\contentsline {subsubsection}{\numberline {5.9.3.5}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}transmission ()}{86}
+\contentsline {subsubsection}{\numberline {5.9.3.6}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}transmission (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em new\_\discretionary {-}{}{}transmission})}{86}
+\contentsline {subsubsection}{\numberline {5.9.3.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} propagate\_\discretionary {-}{}{}modes\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector ()}{86}
+\contentsline {subsubsection}{\numberline {5.9.3.8}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}mode (int {\em mode})}{86}
+\contentsline {subsubsection}{\numberline {5.9.3.9}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}threshold (double {\em d})\hspace {0.3cm}{\tt [inline]}}{87}
+\contentsline {subsubsection}{\numberline {5.9.3.10}\setlength {\rightskip }{0pt plus 5cm}void reallocate\_\discretionary {-}{}{}transmission\_\discretionary {-}{}{}memory (int {\em new\_\discretionary {-}{}{}nx}, int {\em new\_\discretionary {-}{}{}ny})\hspace {0.3cm}{\tt [private]}}{87}
+\contentsline {subsubsection}{\numberline {5.9.3.11}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}object (double {\em factor})\hspace {0.3cm}{\tt [private]}}{87}
+\contentsline {subsubsection}{\numberline {5.9.3.12}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [private, virtual]}}{87}
+\contentsline {subsubsection}{\numberline {5.9.3.13}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [private, virtual]}}{87}
+\contentsline {subsubsection}{\numberline {5.9.3.14}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}transmission (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.15}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (std::vector$<$ \bf {Complex\_\discretionary {-}{}{}2D} $>$ \& {\em c})\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.16}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} sum\_\discretionary {-}{}{}intensity (std::vector$<$ \bf {Complex\_\discretionary {-}{}{}2D} $>$ \& {\em c})\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.17}\setlength {\rightskip }{0pt plus 5cm}void update\_\discretionary {-}{}{}transmission ()\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.18}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}jmatrix (\bf {Double\_\discretionary {-}{}{}2D} {\em legmatrix}, \bf {Double\_\discretionary {-}{}{}2D} {\em roots})\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.19}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}smatrix (\bf {Double\_\discretionary {-}{}{}2D} {\em legmatrix}, \bf {Double\_\discretionary {-}{}{}2D} {\em roots})\hspace {0.3cm}{\tt [private]}}{88}
+\contentsline {subsubsection}{\numberline {5.9.3.20}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}modes (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [private]}}{89}
+\contentsline {subsubsection}{\numberline {5.9.3.21}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})\hspace {0.3cm}{\tt [inherited]}}{89}
+\contentsline {subsubsection}{\numberline {5.9.3.22}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{89}
+\contentsline {subsubsection}{\numberline {5.9.3.23}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{90}
+\contentsline {subsubsection}{\numberline {5.9.3.24}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})\hspace {0.3cm}{\tt [inherited]}}{90}
+\contentsline {subsubsection}{\numberline {5.9.3.25}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})\hspace {0.3cm}{\tt [inherited]}}{90}
+\contentsline {subsubsection}{\numberline {5.9.3.26}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline, inherited]}}{90}
+\contentsline {subsubsection}{\numberline {5.9.3.27}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline, inherited]}}{91}
+\contentsline {subsubsection}{\numberline {5.9.3.28}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline, inherited]}}{91}
+\contentsline {subsubsection}{\numberline {5.9.3.29}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline, inherited]}}{91}
+\contentsline {subsubsection}{\numberline {5.9.3.30}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline, inherited]}}{91}
+\contentsline {subsubsection}{\numberline {5.9.3.31}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline, inherited]}}{91}
+\contentsline {subsubsection}{\numberline {5.9.3.32}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})\hspace {0.3cm}{\tt [inherited]}}{92}
+\contentsline {subsubsection}{\numberline {5.9.3.33}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace {0.3cm}{\tt [inherited]}}{92}
+\contentsline {subsubsection}{\numberline {5.9.3.34}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()\hspace {0.3cm}{\tt [inherited]}}{93}
+\contentsline {subsubsection}{\numberline {5.9.3.35}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()\hspace {0.3cm}{\tt [inherited]}}{93}
+\contentsline {subsubsection}{\numberline {5.9.3.36}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static, inherited]}}{93}
+\contentsline {subsubsection}{\numberline {5.9.3.37}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual, inherited]}}{94}
+\contentsline {subsubsection}{\numberline {5.9.3.38}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline, inherited]}}{94}
+\contentsline {subsubsection}{\numberline {5.9.3.39}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{94}
+\contentsline {subsubsection}{\numberline {5.9.3.40}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{94}
+\contentsline {subsubsection}{\numberline {5.9.3.41}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{95}
+\contentsline {subsubsection}{\numberline {5.9.3.42}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{95}
+\contentsline {subsubsection}{\numberline {5.9.3.43}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inherited]}}{95}
+\contentsline {subsubsection}{\numberline {5.9.3.44}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual, inherited]}}{95}
+\contentsline {subsubsection}{\numberline {5.9.3.45}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline, inherited]}}{95}
+\contentsline {subsubsection}{\numberline {5.9.3.46}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [inherited]}}{96}
+\contentsline {subsubsection}{\numberline {5.9.3.47}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected, inherited]}}{96}
+\contentsline {subsubsection}{\numberline {5.9.3.48}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected, inherited]}}{96}
+\contentsline {subsubsection}{\numberline {5.9.3.49}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected, inherited]}}{96}
+\contentsline {subsubsection}{\numberline {5.9.3.50}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{96}
+\contentsline {subsubsection}{\numberline {5.9.3.51}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{97}
+\contentsline {subsection}{\numberline {5.9.4}Field Documentation}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.1}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Complex\_\discretionary {-}{}{}2D}$>$ \bf {single\discretionary {-}{}{}CDI}\hspace {0.3cm}{\tt [protected]}}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.2}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Complex\_\discretionary {-}{}{}2D}$>$ \bf {singlemode}\hspace {0.3cm}{\tt [protected]}}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.3}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Double\_\discretionary {-}{}{}2D} $\ast $ $>$ \bf {weights}\hspace {0.3cm}{\tt [protected]}}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.4}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {x\_\discretionary {-}{}{}position}\hspace {0.3cm}{\tt [protected]}}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.5}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {y\_\discretionary {-}{}{}position}\hspace {0.3cm}{\tt [protected]}}{97}
+\contentsline {subsubsection}{\numberline {5.9.4.6}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} \bf {transmission}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.7}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {eigen}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.8}\setlength {\rightskip }{0pt plus 5cm}int \bf {iterations\_\discretionary {-}{}{}per\_\discretionary {-}{}{}cycle}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.9}\setlength {\rightskip }{0pt plus 5cm}int \bf {nleg}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.10}\setlength {\rightskip }{0pt plus 5cm}int \bf {nmode}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.11}\setlength {\rightskip }{0pt plus 5cm}double \bf {lcy}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.12}\setlength {\rightskip }{0pt plus 5cm}double \bf {lcx}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.13}\setlength {\rightskip }{0pt plus 5cm}double \bf {pxsize}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.14}\setlength {\rightskip }{0pt plus 5cm}double \bf {pysize}\hspace {0.3cm}{\tt [protected]}}{98}
+\contentsline {subsubsection}{\numberline {5.9.4.15}\setlength {\rightskip }{0pt plus 5cm}double \bf {zsd}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.16}\setlength {\rightskip }{0pt plus 5cm}double \bf {energy}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.17}\setlength {\rightskip }{0pt plus 5cm}double \bf {threshold}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.18}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {jmatrix}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.19}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {hmatrix}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.20}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {smatrix}\hspace {0.3cm}{\tt [protected]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.21}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected, inherited]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.22}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected, inherited]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.23}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected, inherited]}}{99}
+\contentsline {subsubsection}{\numberline {5.9.4.24}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.25}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.26}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.27}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.28}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.29}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.30}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.31}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected, inherited]}}{100}
+\contentsline {subsubsection}{\numberline {5.9.4.32}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected, inherited]}}{101}
+\contentsline {subsubsection}{\numberline {5.9.4.33}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected, inherited]}}{101}
+\contentsline {subsubsection}{\numberline {5.9.4.34}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{101}
+\contentsline {subsubsection}{\numberline {5.9.4.35}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{101}
+\contentsline {subsubsection}{\numberline {5.9.4.36}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected, inherited]}}{101}
+\contentsline {subsubsection}{\numberline {5.9.4.37}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected, inherited]}}{101}
+\contentsline {section}{\numberline {5.10}Phase\discretionary {-}{}{}Diverse\discretionary {-}{}{}CDI Class Reference}{102}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{103}
+\contentsline {subsection}{\numberline {5.10.2}Constructor \& Destructor Documentation}{104}
+\contentsline {subsubsection}{\numberline {5.10.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Phase\discretionary {-}{}{}Diverse\discretionary {-}{}{}CDI} (double {\em beta} = {\tt 1.0}, double {\em gamma} = {\tt 1.0}, bool {\em parallel} = {\tt false}, int {\em granularity} = {\tt 1})}{104}
+\contentsline {subsubsection}{\numberline {5.10.2.2}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Phase\discretionary {-}{}{}Diverse\discretionary {-}{}{}CDI} ()}{104}
+\contentsline {subsection}{\numberline {5.10.3}Member Function Documentation}{104}
+\contentsline {subsubsection}{\numberline {5.10.3.1}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate ()}{104}
+\contentsline {subsubsection}{\numberline {5.10.3.2}\setlength {\rightskip }{0pt plus 5cm}void iterate ()}{105}
+\contentsline {subsubsection}{\numberline {5.10.3.3}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}iterations\_\discretionary {-}{}{}per\_\discretionary {-}{}{}cycle (int {\em iterations})\hspace {0.3cm}{\tt [inline]}}{105}
+\contentsline {subsubsection}{\numberline {5.10.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}feedback\_\discretionary {-}{}{}parameter (double {\em beta})\hspace {0.3cm}{\tt [inline]}}{105}
+\contentsline {subsubsection}{\numberline {5.10.3.5}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}transmission ()}{105}
+\contentsline {subsubsection}{\numberline {5.10.3.6}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}transmission (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em new\_\discretionary {-}{}{}transmission})}{106}
+\contentsline {subsubsection}{\numberline {5.10.3.7}\setlength {\rightskip }{0pt plus 5cm}void adjust\_\discretionary {-}{}{}positions (int {\em type} = {\tt CROSS\_\discretionary {-}{}{}CORRELATION}, bool {\em forwards} = {\tt true}, int {\em x\_\discretionary {-}{}{}min} = {\tt -50}, int {\em x\_\discretionary {-}{}{}max} = {\tt +50}, int {\em y\_\discretionary {-}{}{}min} = {\tt -50}, int {\em y\_\discretionary {-}{}{}max} = {\tt +50}, double {\em step\_\discretionary {-}{}{}size} = {\tt 4})}{106}
+\contentsline {subsubsection}{\numberline {5.10.3.8}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}final\_\discretionary {-}{}{}x\_\discretionary {-}{}{}position (int {\em n\_\discretionary {-}{}{}probe})\hspace {0.3cm}{\tt [inline]}}{107}
+\contentsline {subsubsection}{\numberline {5.10.3.9}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}final\_\discretionary {-}{}{}y\_\discretionary {-}{}{}position (int {\em n\_\discretionary {-}{}{}probe})\hspace {0.3cm}{\tt [inline]}}{107}
+\contentsline {subsubsection}{\numberline {5.10.3.10}\setlength {\rightskip }{0pt plus 5cm}void add\_\discretionary {-}{}{}to\_\discretionary {-}{}{}object (int {\em n\_\discretionary {-}{}{}probe})\hspace {0.3cm}{\tt [private]}}{108}
+\contentsline {subsubsection}{\numberline {5.10.3.11}\setlength {\rightskip }{0pt plus 5cm}void update\_\discretionary {-}{}{}from\_\discretionary {-}{}{}object (int {\em n\_\discretionary {-}{}{}probe})\hspace {0.3cm}{\tt [private]}}{108}
+\contentsline {subsubsection}{\numberline {5.10.3.12}\setlength {\rightskip }{0pt plus 5cm}void get\_\discretionary {-}{}{}result (\bf {Base\discretionary {-}{}{}CDI} $\ast $ {\em local}, \bf {Complex\_\discretionary {-}{}{}2D} \& {\em result})\hspace {0.3cm}{\tt [private]}}{109}
+\contentsline {subsubsection}{\numberline {5.10.3.13}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}result (\bf {Base\discretionary {-}{}{}CDI} $\ast $ {\em local}, \bf {Complex\_\discretionary {-}{}{}2D} \& {\em result})\hspace {0.3cm}{\tt [private]}}{109}
+\contentsline {subsubsection}{\numberline {5.10.3.14}\setlength {\rightskip }{0pt plus 5cm}void reallocate\_\discretionary {-}{}{}object\_\discretionary {-}{}{}memory (int {\em new\_\discretionary {-}{}{}nx}, int {\em new\_\discretionary {-}{}{}ny})\hspace {0.3cm}{\tt [private]}}{109}
+\contentsline {subsubsection}{\numberline {5.10.3.15}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}object (double {\em factor})\hspace {0.3cm}{\tt [private]}}{110}
+\contentsline {subsubsection}{\numberline {5.10.3.16}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}weights ()\hspace {0.3cm}{\tt [private]}}{110}
+\contentsline {subsubsection}{\numberline {5.10.3.17}\setlength {\rightskip }{0pt plus 5cm}int check\_\discretionary {-}{}{}position (int {\em n\_\discretionary {-}{}{}probe}, double {\em step\_\discretionary {-}{}{}size} = {\tt 4}, int {\em min\_\discretionary {-}{}{}x} = {\tt -50}, int {\em max\_\discretionary {-}{}{}x} = {\tt 50}, int {\em min\_\discretionary {-}{}{}y} = {\tt -50}, int {\em max\_\discretionary {-}{}{}y} = {\tt 50}, int {\em tries} = {\tt 0})\hspace {0.3cm}{\tt [private]}}{110}
+\contentsline {subsubsection}{\numberline {5.10.3.18}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}global\_\discretionary {-}{}{}x\_\discretionary {-}{}{}pos (int {\em x}, double {\em x\_\discretionary {-}{}{}offset})\hspace {0.3cm}{\tt [inline, private]}}{111}
+\contentsline {subsubsection}{\numberline {5.10.3.19}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}global\_\discretionary {-}{}{}y\_\discretionary {-}{}{}pos (int {\em y}, double {\em y\_\discretionary {-}{}{}offset})\hspace {0.3cm}{\tt [inline, private]}}{111}
+\contentsline {subsubsection}{\numberline {5.10.3.20}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}local\_\discretionary {-}{}{}x\_\discretionary {-}{}{}pos (int {\em x}, double {\em x\_\discretionary {-}{}{}offset})\hspace {0.3cm}{\tt [inline, private]}}{111}
+\contentsline {subsubsection}{\numberline {5.10.3.21}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}local\_\discretionary {-}{}{}y\_\discretionary {-}{}{}pos (int {\em y}, double {\em y\_\discretionary {-}{}{}offset})\hspace {0.3cm}{\tt [inline, private]}}{111}
+\contentsline {subsection}{\numberline {5.10.4}Field Documentation}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.1}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Double\_\discretionary {-}{}{}2D} $\ast $$>$ \bf {weights}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.2}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {object}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.3}\setlength {\rightskip }{0pt plus 5cm}int \bf {iterations\_\discretionary {-}{}{}per\_\discretionary {-}{}{}cycle}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.4}\setlength {\rightskip }{0pt plus 5cm}int \bf {scale}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.5}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.6}\setlength {\rightskip }{0pt plus 5cm}int \bf {x\_\discretionary {-}{}{}min}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.7}\setlength {\rightskip }{0pt plus 5cm}bool \bf {parallel}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {subsubsection}{\numberline {5.10.4.8}\setlength {\rightskip }{0pt plus 5cm}bool \bf {weights\_\discretionary {-}{}{}set}\hspace {0.3cm}{\tt [protected]}}{112}
+\contentsline {section}{\numberline {5.11}Planar\discretionary {-}{}{}CDI Class Reference}{114}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{115}
+\contentsline {subsection}{\numberline {5.11.2}Member Function Documentation}{116}
+\contentsline {subsubsection}{\numberline {5.11.2.1}\setlength {\rightskip }{0pt plus 5cm}void get\_\discretionary {-}{}{}intensity\_\discretionary {-}{}{}autocorrelation (\bf {Double\_\discretionary {-}{}{}2D} \& {\em autoc})\hspace {0.3cm}{\tt [virtual]}}{116}
+\contentsline {subsubsection}{\numberline {5.11.2.2}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate (int {\em seed} = {\tt 0})\hspace {0.3cm}{\tt [virtual]}}{116}
+\contentsline {subsubsection}{\numberline {5.11.2.3}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{116}
+\contentsline {subsubsection}{\numberline {5.11.2.4}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{116}
+\contentsline {subsubsection}{\numberline {5.11.2.5}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual, inherited]}}{117}
+\contentsline {subsubsection}{\numberline {5.11.2.6}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})\hspace {0.3cm}{\tt [inherited]}}{117}
+\contentsline {subsubsection}{\numberline {5.11.2.7}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{117}
+\contentsline {subsubsection}{\numberline {5.11.2.8}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{118}
+\contentsline {subsubsection}{\numberline {5.11.2.9}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})\hspace {0.3cm}{\tt [inherited]}}{118}
+\contentsline {subsubsection}{\numberline {5.11.2.10}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})\hspace {0.3cm}{\tt [inherited]}}{118}
+\contentsline {subsubsection}{\numberline {5.11.2.11}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline, inherited]}}{118}
+\contentsline {subsubsection}{\numberline {5.11.2.12}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline, inherited]}}{119}
+\contentsline {subsubsection}{\numberline {5.11.2.13}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline, inherited]}}{119}
+\contentsline {subsubsection}{\numberline {5.11.2.14}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline, inherited]}}{119}
+\contentsline {subsubsection}{\numberline {5.11.2.15}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline, inherited]}}{119}
+\contentsline {subsubsection}{\numberline {5.11.2.16}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline, inherited]}}{119}
+\contentsline {subsubsection}{\numberline {5.11.2.17}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})\hspace {0.3cm}{\tt [inherited]}}{120}
+\contentsline {subsubsection}{\numberline {5.11.2.18}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace {0.3cm}{\tt [inherited]}}{120}
+\contentsline {subsubsection}{\numberline {5.11.2.19}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()\hspace {0.3cm}{\tt [inherited]}}{121}
+\contentsline {subsubsection}{\numberline {5.11.2.20}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()\hspace {0.3cm}{\tt [inherited]}}{121}
+\contentsline {subsubsection}{\numberline {5.11.2.21}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static, inherited]}}{121}
+\contentsline {subsubsection}{\numberline {5.11.2.22}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual, inherited]}}{122}
+\contentsline {subsubsection}{\numberline {5.11.2.23}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline, inherited]}}{122}
+\contentsline {subsubsection}{\numberline {5.11.2.24}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{122}
+\contentsline {subsubsection}{\numberline {5.11.2.25}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{122}
+\contentsline {subsubsection}{\numberline {5.11.2.26}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{123}
+\contentsline {subsubsection}{\numberline {5.11.2.27}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{123}
+\contentsline {subsubsection}{\numberline {5.11.2.28}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inherited]}}{123}
+\contentsline {subsubsection}{\numberline {5.11.2.29}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual, inherited]}}{123}
+\contentsline {subsubsection}{\numberline {5.11.2.30}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline, inherited]}}{123}
+\contentsline {subsubsection}{\numberline {5.11.2.31}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [inherited]}}{124}
+\contentsline {subsubsection}{\numberline {5.11.2.32}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected, inherited]}}{124}
+\contentsline {subsubsection}{\numberline {5.11.2.33}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected, inherited]}}{124}
+\contentsline {subsubsection}{\numberline {5.11.2.34}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected, inherited]}}{124}
+\contentsline {subsubsection}{\numberline {5.11.2.35}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{124}
+\contentsline {subsubsection}{\numberline {5.11.2.36}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsection}{\numberline {5.11.3}Field Documentation}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.2}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.3}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.4}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.5}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected, inherited]}}{125}
+\contentsline {subsubsection}{\numberline {5.11.3.6}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.8}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.9}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.10}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.11}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.12}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.13}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.14}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{126}
+\contentsline {subsubsection}{\numberline {5.11.3.15}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{127}
+\contentsline {subsubsection}{\numberline {5.11.3.16}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected, inherited]}}{127}
+\contentsline {subsubsection}{\numberline {5.11.3.17}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected, inherited]}}{127}
+\contentsline {section}{\numberline {5.12}Poly\discretionary {-}{}{}CDI Class Reference}{128}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{131}
+\contentsline {subsection}{\numberline {5.12.2}Constructor \& Destructor Documentation}{131}
+\contentsline {subsubsection}{\numberline {5.12.2.1}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Poly\discretionary {-}{}{}CDI} ()}{131}
+\contentsline {subsection}{\numberline {5.12.3}Member Function Documentation}{131}
+\contentsline {subsubsection}{\numberline {5.12.3.1}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate ()}{131}
+\contentsline {subsubsection}{\numberline {5.12.3.2}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}estimate (int {\em seed})\hspace {0.3cm}{\tt [virtual]}}{131}
+\contentsline {subsubsection}{\numberline {5.12.3.3}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}matrices (int {\em leg}, int {\em modes})}{131}
+\contentsline {subsubsection}{\numberline {5.12.3.4}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}transmission (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})}{131}
+\contentsline {subsubsection}{\numberline {5.12.3.5}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.6}\setlength {\rightskip }{0pt plus 5cm}void expand\_\discretionary {-}{}{}wl (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.7}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} sum\_\discretionary {-}{}{}intensity (std::vector$<$ \bf {Complex\_\discretionary {-}{}{}2D} $>$ \& {\em c})}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.8}\setlength {\rightskip }{0pt plus 5cm}int iterate ()\hspace {0.3cm}{\tt [virtual]}}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.9}\setlength {\rightskip }{0pt plus 5cm}void update\_\discretionary {-}{}{}transmission ()}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.10}\setlength {\rightskip }{0pt plus 5cm}void initialse\_\discretionary {-}{}{}matrices (int {\em leg}, int {\em modes})}{132}
+\contentsline {subsubsection}{\numberline {5.12.3.11}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}jmatrix (\bf {Double\_\discretionary {-}{}{}2D} {\em legmatrix}, \bf {Double\_\discretionary {-}{}{}2D} {\em roots})}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.12}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}smatrix (\bf {Double\_\discretionary {-}{}{}2D} {\em legmatrix}, \bf {Double\_\discretionary {-}{}{}2D} {\em roots})}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.13}\setlength {\rightskip }{0pt plus 5cm}void fill\_\discretionary {-}{}{}modes (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.14}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}iterations\_\discretionary {-}{}{}per\_\discretionary {-}{}{}cycle (int {\em iterations})\hspace {0.3cm}{\tt [inline]}}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.15}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}transmission ()}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.16}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}transmission (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em new\_\discretionary {-}{}{}transmission})}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.17}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}spectrum (\bf {Double\_\discretionary {-}{}{}2D} {\em spectrum\_\discretionary {-}{}{}in})}{133}
+\contentsline {subsubsection}{\numberline {5.12.3.18}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}spectrum (std::string {\em file\_\discretionary {-}{}{}name})}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.19}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}intensity ()\hspace {0.3cm}{\tt [inline]}}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.20}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} propagate\_\discretionary {-}{}{}modes\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector ()}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.21}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} get\_\discretionary {-}{}{}mode (int {\em mode})}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.22}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}from\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.23}\setlength {\rightskip }{0pt plus 5cm}void propagate\_\discretionary {-}{}{}to\_\discretionary {-}{}{}detector (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual]}}{134}
+\contentsline {subsubsection}{\numberline {5.12.3.24}\setlength {\rightskip }{0pt plus 5cm}void reallocate\_\discretionary {-}{}{}transmission\_\discretionary {-}{}{}memory (int {\em new\_\discretionary {-}{}{}nx}, int {\em new\_\discretionary {-}{}{}ny})\hspace {0.3cm}{\tt [private]}}{135}
+\contentsline {subsubsection}{\numberline {5.12.3.25}\setlength {\rightskip }{0pt plus 5cm}void scale\_\discretionary {-}{}{}object (double {\em factor})\hspace {0.3cm}{\tt [private]}}{135}
+\contentsline {subsubsection}{\numberline {5.12.3.26}\setlength {\rightskip }{0pt plus 5cm}void pad\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [private]}}{135}
+\contentsline {subsubsection}{\numberline {5.12.3.27}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D} $\ast $ get\_\discretionary {-}{}{}best\_\discretionary {-}{}{}result (double \& {\em error}, int {\em index} = {\tt 0})\hspace {0.3cm}{\tt [inherited]}}{135}
+\contentsline {subsubsection}{\numberline {5.12.3.28}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{135}
+\contentsline {subsubsection}{\numberline {5.12.3.29}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}support\_\discretionary {-}{}{}new (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em object\_\discretionary {-}{}{}support}, bool {\em soften} = {\tt false})\hspace {0.3cm}{\tt [inherited]}}{136}
+\contentsline {subsubsection}{\numberline {5.12.3.30}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}intensity (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em detector\_\discretionary {-}{}{}intensity})\hspace {0.3cm}{\tt [inherited]}}{136}
+\contentsline {subsubsection}{\numberline {5.12.3.31}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}beam\_\discretionary {-}{}{}stop (const \bf {Double\_\discretionary {-}{}{}2D} \& {\em beam\_\discretionary {-}{}{}stop\_\discretionary {-}{}{}region})\hspace {0.3cm}{\tt [inherited]}}{137}
+\contentsline {subsubsection}{\numberline {5.12.3.32}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}relaxation\_\discretionary {-}{}{}parameter (double {\em relaxation\_\discretionary {-}{}{}parameter})\hspace {0.3cm}{\tt [inline, inherited]}}{137}
+\contentsline {subsubsection}{\numberline {5.12.3.33}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x ()\hspace {0.3cm}{\tt [inline, inherited]}}{137}
+\contentsline {subsubsection}{\numberline {5.12.3.34}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y ()\hspace {0.3cm}{\tt [inline, inherited]}}{137}
+\contentsline {subsubsection}{\numberline {5.12.3.35}\setlength {\rightskip }{0pt plus 5cm}const \bf {Complex\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave ()\hspace {0.3cm}{\tt [inline, inherited]}}{137}
+\contentsline {subsubsection}{\numberline {5.12.3.36}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}exit\_\discretionary {-}{}{}surface\_\discretionary {-}{}{}wave (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em esw})\hspace {0.3cm}{\tt [inline, inherited]}}{138}
+\contentsline {subsubsection}{\numberline {5.12.3.37}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}algorithm (int {\em alg})\hspace {0.3cm}{\tt [inherited]}}{138}
+\contentsline {subsubsection}{\numberline {5.12.3.38}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}algorithm (double {\em m1}, double {\em m2}, double {\em m3}, double {\em m4}, double {\em m5}, double {\em m6}, double {\em m7}, double {\em m8}, double {\em m9}, double {\em m10})\hspace {0.3cm}{\tt [inherited]}}{138}
+\contentsline {subsubsection}{\numberline {5.12.3.39}\setlength {\rightskip }{0pt plus 5cm}void print\_\discretionary {-}{}{}algorithm ()\hspace {0.3cm}{\tt [inherited]}}{139}
+\contentsline {subsubsection}{\numberline {5.12.3.40}\setlength {\rightskip }{0pt plus 5cm}double get\_\discretionary {-}{}{}error ()\hspace {0.3cm}{\tt [inherited]}}{139}
+\contentsline {subsubsection}{\numberline {5.12.3.41}\setlength {\rightskip }{0pt plus 5cm}static int get\discretionary {-}{}{}Alg\discretionary {-}{}{}From\discretionary {-}{}{}Name (std::string {\em algorithm\_\discretionary {-}{}{}name})\hspace {0.3cm}{\tt [inline, static, inherited]}}{139}
+\contentsline {subsubsection}{\numberline {5.12.3.42}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}shrinkwrap (double {\em gauss\_\discretionary {-}{}{}width} = {\tt 1.5}, double {\em threshold} = {\tt 0.1})\hspace {0.3cm}{\tt [virtual, inherited]}}{140}
+\contentsline {subsubsection}{\numberline {5.12.3.43}\setlength {\rightskip }{0pt plus 5cm}const \bf {Double\_\discretionary {-}{}{}2D}\& get\_\discretionary {-}{}{}support ()\hspace {0.3cm}{\tt [inline, inherited]}}{140}
+\contentsline {subsubsection}{\numberline {5.12.3.44}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{140}
+\contentsline {subsubsection}{\numberline {5.12.3.45}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}support\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{141}
+\contentsline {subsubsection}{\numberline {5.12.3.46}\setlength {\rightskip }{0pt plus 5cm}void project\_\discretionary {-}{}{}intensity (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [virtual, inherited]}}{141}
+\contentsline {subsubsection}{\numberline {5.12.3.47}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}fftw\_\discretionary {-}{}{}type (int {\em type})\hspace {0.3cm}{\tt [inherited]}}{141}
+\contentsline {subsubsection}{\numberline {5.12.3.48}\setlength {\rightskip }{0pt plus 5cm}virtual void set\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Transmission\discretionary {-}{}{}Constraint} \& {\em trans\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline, virtual, inherited]}}{141}
+\contentsline {subsubsection}{\numberline {5.12.3.49}\setlength {\rightskip }{0pt plus 5cm}void reset\_\discretionary {-}{}{}best ()\hspace {0.3cm}{\tt [inline, inherited]}}{142}
+\contentsline {subsubsection}{\numberline {5.12.3.50}\setlength {\rightskip }{0pt plus 5cm}void initialise\_\discretionary {-}{}{}guess (\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [inherited]}}{142}
+\contentsline {subsubsection}{\numberline {5.12.3.51}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map ()\hspace {0.3cm}{\tt [static, protected, inherited]}}{142}
+\contentsline {subsubsection}{\numberline {5.12.3.52}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}threshold (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em threshold})\hspace {0.3cm}{\tt [protected, inherited]}}{142}
+\contentsline {subsubsection}{\numberline {5.12.3.53}\setlength {\rightskip }{0pt plus 5cm}void convolve (\bf {Double\_\discretionary {-}{}{}2D} \& {\em array}, double {\em gauss\_\discretionary {-}{}{}width}, int {\em pixel\_\discretionary {-}{}{}cut\_\discretionary {-}{}{}off} = {\tt 4})\hspace {0.3cm}{\tt [protected, inherited]}}{142}
+\contentsline {subsubsection}{\numberline {5.12.3.54}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{143}
+\contentsline {subsubsection}{\numberline {5.12.3.55}\setlength {\rightskip }{0pt plus 5cm}void support\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}init (\bf {Double\_\discretionary {-}{}{}2D} \& {\em c})\hspace {0.3cm}{\tt [protected, inherited]}}{143}
+\contentsline {subsection}{\numberline {5.12.4}Field Documentation}{143}
+\contentsline {subsubsection}{\numberline {5.12.4.1}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Complex\_\discretionary {-}{}{}2D}$>$ \bf {single\discretionary {-}{}{}CDI}\hspace {0.3cm}{\tt [protected]}}{143}
+\contentsline {subsubsection}{\numberline {5.12.4.2}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Complex\_\discretionary {-}{}{}2D}$>$ \bf {singlemode}\hspace {0.3cm}{\tt [protected]}}{143}
+\contentsline {subsubsection}{\numberline {5.12.4.3}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Double\_\discretionary {-}{}{}2D} $\ast $ $>$ \bf {weights}\hspace {0.3cm}{\tt [protected]}}{143}
+\contentsline {subsubsection}{\numberline {5.12.4.4}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {x\_\discretionary {-}{}{}position}\hspace {0.3cm}{\tt [protected]}}{143}
+\contentsline {subsubsection}{\numberline {5.12.4.5}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {y\_\discretionary {-}{}{}position}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.6}\setlength {\rightskip }{0pt plus 5cm}double \bf {beta}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.7}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$double$>$ \bf {eigen}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.8}\setlength {\rightskip }{0pt plus 5cm}int \bf {iterations\_\discretionary {-}{}{}per\_\discretionary {-}{}{}cycle}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.9}\setlength {\rightskip }{0pt plus 5cm}int \bf {nleg}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.10}\setlength {\rightskip }{0pt plus 5cm}int \bf {nmode}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.11}\setlength {\rightskip }{0pt plus 5cm}double \bf {nlambda}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.12}\setlength {\rightskip }{0pt plus 5cm}int \bf {paddingx}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.13}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {spectrum}\hspace {0.3cm}{\tt [protected]}}{144}
+\contentsline {subsubsection}{\numberline {5.12.4.14}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt\_\discretionary {-}{}{}calc}\hspace {0.3cm}{\tt [protected]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.15}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {magnitude}\hspace {0.3cm}{\tt [protected]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.16}\setlength {\rightskip }{0pt plus 5cm}bool \bf {parallel}\hspace {0.3cm}{\tt [protected]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.17}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}\& \bf {complex}\hspace {0.3cm}{\tt [protected, inherited]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.18}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected, inherited]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.19}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected, inherited]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.20}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $ \bf {temp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}PFS}\hspace {0.3cm}{\tt [protected, inherited]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.21}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support}\hspace {0.3cm}{\tt [protected, inherited]}}{145}
+\contentsline {subsubsection}{\numberline {5.12.4.22}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {support\_\discretionary {-}{}{}init}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.23}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D} \bf {intensity\_\discretionary {-}{}{}sqrt}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.24}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {beam\_\discretionary {-}{}{}stop}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.25}\setlength {\rightskip }{0pt plus 5cm}int \bf {algorithm}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.26}\setlength {\rightskip }{0pt plus 5cm}double \bf {algorithm\_\discretionary {-}{}{}structure}[NTERMS]\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.27}\setlength {\rightskip }{0pt plus 5cm}double \bf {current\_\discretionary {-}{}{}error}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.28}\setlength {\rightskip }{0pt plus 5cm}int \bf {n\_\discretionary {-}{}{}best}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.29}\setlength {\rightskip }{0pt plus 5cm}\bf {Complex\_\discretionary {-}{}{}2D}$\ast $$\ast $ \bf {best\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.30}\setlength {\rightskip }{0pt plus 5cm}double$\ast $ \bf {best\_\discretionary {-}{}{}error\_\discretionary {-}{}{}array}\hspace {0.3cm}{\tt [protected, inherited]}}{146}
+\contentsline {subsubsection}{\numberline {5.12.4.31}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint}$\ast $ \bf {transmission\_\discretionary {-}{}{}constraint}\hspace {0.3cm}{\tt [protected, inherited]}}{147}
+\contentsline {subsubsection}{\numberline {5.12.4.32}\setlength {\rightskip }{0pt plus 5cm}map$<$ string, int $>$ $\ast $ \bf {alg\discretionary {-}{}{}Name\discretionary {-}{}{}Map} = Base\discretionary {-}{}{}CDI::set\_\discretionary {-}{}{}up\_\discretionary {-}{}{}algorithm\_\discretionary {-}{}{}name\_\discretionary {-}{}{}map()\hspace {0.3cm}{\tt [static, protected, inherited]}}{147}
+\contentsline {section}{\numberline {5.13}Real\_\discretionary {-}{}{}2D Class Template Reference}{148}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{148}
+\contentsline {subsection}{\numberline {5.13.2}Constructor \& Destructor Documentation}{148}
+\contentsline {subsubsection}{\numberline {5.13.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Real\_\discretionary {-}{}{}2D} ()\hspace {0.3cm}{\tt [inline]}}{148}
+\contentsline {subsubsection}{\numberline {5.13.2.2}\setlength {\rightskip }{0pt plus 5cm}\bf {Real\_\discretionary {-}{}{}2D} (int {\em x\_\discretionary {-}{}{}size}, int {\em y\_\discretionary {-}{}{}size})\hspace {0.3cm}{\tt [inline]}}{148}
+\contentsline {subsubsection}{\numberline {5.13.2.3}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Real\_\discretionary {-}{}{}2D} ()\hspace {0.3cm}{\tt [inline]}}{149}
+\contentsline {subsubsection}{\numberline {5.13.2.4}\setlength {\rightskip }{0pt plus 5cm}\bf {Real\_\discretionary {-}{}{}2D} (const \bf {Real\_\discretionary {-}{}{}2D}$<$ T $>$ \& {\em object})\hspace {0.3cm}{\tt [inline]}}{149}
+\contentsline {subsection}{\numberline {5.13.3}Member Function Documentation}{149}
+\contentsline {subsubsection}{\numberline {5.13.3.1}\setlength {\rightskip }{0pt plus 5cm}void allocate\_\discretionary {-}{}{}memory (int {\em x\_\discretionary {-}{}{}size}, int {\em y\_\discretionary {-}{}{}size})\hspace {0.3cm}{\tt [inline]}}{149}
+\contentsline {subsubsection}{\numberline {5.13.3.2}\setlength {\rightskip }{0pt plus 5cm}void copy (const \bf {Real\_\discretionary {-}{}{}2D}$<$ T $>$ \& {\em other\_\discretionary {-}{}{}array})\hspace {0.3cm}{\tt [inline]}}{149}
+\contentsline {subsubsection}{\numberline {5.13.3.3}\setlength {\rightskip }{0pt plus 5cm}void set (int {\em x}, int {\em y}, T {\em value})\hspace {0.3cm}{\tt [inline]}}{149}
+\contentsline {subsubsection}{\numberline {5.13.3.4}\setlength {\rightskip }{0pt plus 5cm}T get (int {\em x}, int {\em y}) const\hspace {0.3cm}{\tt [inline]}}{150}
+\contentsline {subsubsection}{\numberline {5.13.3.5}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}x () const\hspace {0.3cm}{\tt [inline]}}{150}
+\contentsline {subsubsection}{\numberline {5.13.3.6}\setlength {\rightskip }{0pt plus 5cm}int get\_\discretionary {-}{}{}size\_\discretionary {-}{}{}y () const\hspace {0.3cm}{\tt [inline]}}{150}
+\contentsline {subsubsection}{\numberline {5.13.3.7}\setlength {\rightskip }{0pt plus 5cm}T get\_\discretionary {-}{}{}sum () const\hspace {0.3cm}{\tt [inline]}}{151}
+\contentsline {subsubsection}{\numberline {5.13.3.8}\setlength {\rightskip }{0pt plus 5cm}T get\_\discretionary {-}{}{}max () const\hspace {0.3cm}{\tt [inline]}}{151}
+\contentsline {subsubsection}{\numberline {5.13.3.9}\setlength {\rightskip }{0pt plus 5cm}T get\_\discretionary {-}{}{}min () const\hspace {0.3cm}{\tt [inline]}}{151}
+\contentsline {subsubsection}{\numberline {5.13.3.10}\setlength {\rightskip }{0pt plus 5cm}\bf {Real\_\discretionary {-}{}{}2D}\& operator= (const \bf {Real\_\discretionary {-}{}{}2D}$<$ T $>$ \& {\em rhs})\hspace {0.3cm}{\tt [inline]}}{151}
+\contentsline {subsection}{\numberline {5.13.4}Field Documentation}{151}
+\contentsline {subsubsection}{\numberline {5.13.4.1}\setlength {\rightskip }{0pt plus 5cm}T$\ast $ \bf {array}\hspace {0.3cm}{\tt [protected]}}{151}
+\contentsline {subsubsection}{\numberline {5.13.4.2}\setlength {\rightskip }{0pt plus 5cm}int \bf {nx}\hspace {0.3cm}{\tt [protected]}}{151}
+\contentsline {subsubsection}{\numberline {5.13.4.3}\setlength {\rightskip }{0pt plus 5cm}int \bf {ny}\hspace {0.3cm}{\tt [protected]}}{152}
+\contentsline {section}{\numberline {5.14}tiff\_\discretionary {-}{}{}anonymous\_\discretionary {-}{}{}array Class Reference}{153}
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{153}
+\contentsline {section}{\numberline {5.15}Transmission\discretionary {-}{}{}Constraint Class Reference}{154}
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{154}
+\contentsline {subsection}{\numberline {5.15.2}Constructor \& Destructor Documentation}{155}
+\contentsline {subsubsection}{\numberline {5.15.2.1}\setlength {\rightskip }{0pt plus 5cm}\bf {Transmission\discretionary {-}{}{}Constraint} ()}{155}
+\contentsline {subsubsection}{\numberline {5.15.2.2}\setlength {\rightskip }{0pt plus 5cm}$\sim $\bf {Transmission\discretionary {-}{}{}Constraint} ()}{155}
+\contentsline {subsection}{\numberline {5.15.3}Member Function Documentation}{155}
+\contentsline {subsubsection}{\numberline {5.15.3.1}\setlength {\rightskip }{0pt plus 5cm}void delete\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}regions ()\hspace {0.3cm}{\tt [inline]}}{155}
+\contentsline {subsubsection}{\numberline {5.15.3.2}\setlength {\rightskip }{0pt plus 5cm}void add\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}constraint (\bf {Complex\discretionary {-}{}{}Constraint} \& {\em new\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [virtual]}}{155}
+\contentsline {subsubsection}{\numberline {5.15.3.3}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}charge\_\discretionary {-}{}{}flipping (bool {\em enable}, int {\em flip\_\discretionary {-}{}{}sign} = {\tt 1})\hspace {0.3cm}{\tt [inline]}}{155}
+\contentsline {subsubsection}{\numberline {5.15.3.4}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}enforce\_\discretionary {-}{}{}unity (bool {\em enable})\hspace {0.3cm}{\tt [inline]}}{156}
+\contentsline {subsubsection}{\numberline {5.15.3.5}\setlength {\rightskip }{0pt plus 5cm}void set\_\discretionary {-}{}{}custom\_\discretionary {-}{}{}constraint (void($\ast $)(\bf {Complex\_\discretionary {-}{}{}2D} \&transmission) {\em custom\_\discretionary {-}{}{}constraint})\hspace {0.3cm}{\tt [inline]}}{156}
+\contentsline {subsubsection}{\numberline {5.15.3.6}\setlength {\rightskip }{0pt plus 5cm}void apply\_\discretionary {-}{}{}constraint (\bf {Complex\_\discretionary {-}{}{}2D} \& {\em transmission})\hspace {0.3cm}{\tt [virtual]}}{156}
+\contentsline {subsection}{\numberline {5.15.4}Field Documentation}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.1}\setlength {\rightskip }{0pt plus 5cm}std::vector$<$\bf {Complex\discretionary {-}{}{}Constraint}$\ast $$>$ \bf {complex\_\discretionary {-}{}{}constraint\_\discretionary {-}{}{}list}\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.2}\setlength {\rightskip }{0pt plus 5cm}\bf {Double\_\discretionary {-}{}{}2D}$\ast $ \bf {region\_\discretionary {-}{}{}map}\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.3}\setlength {\rightskip }{0pt plus 5cm}bool \bf {do\_\discretionary {-}{}{}enforce\_\discretionary {-}{}{}unity}\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.4}\setlength {\rightskip }{0pt plus 5cm}bool \bf {do\_\discretionary {-}{}{}charge\_\discretionary {-}{}{}flip}\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.5}\setlength {\rightskip }{0pt plus 5cm}int \bf {flip\_\discretionary {-}{}{}sign}\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {subsubsection}{\numberline {5.15.4.6}\setlength {\rightskip }{0pt plus 5cm}void($\ast $ \bf {custom\_\discretionary {-}{}{}constraint})(\bf {Complex\_\discretionary {-}{}{}2D} \&)\hspace {0.3cm}{\tt [protected]}}{157}
+\contentsline {chapter}{\numberline {6}CXSSoftware File Documentation}{159}
+\contentsline {section}{\numberline {6.1}Base\discretionary {-}{}{}CDI.h File Reference}{159}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{160}
+\contentsline {subsection}{\numberline {6.1.2}Define Documentation}{160}
+\contentsline {subsubsection}{\numberline {6.1.2.1}\setlength {\rightskip }{0pt plus 5cm}\#define NALGORITHMS\nobreakspace {}9}{160}
+\contentsline {subsubsection}{\numberline {6.1.2.2}\setlength {\rightskip }{0pt plus 5cm}\#define NTERMS\nobreakspace {}5}{160}
+\contentsline {subsubsection}{\numberline {6.1.2.3}\setlength {\rightskip }{0pt plus 5cm}\#define NVECTORS\nobreakspace {}10}{160}
+\contentsline {subsection}{\numberline {6.1.3}Enumeration Type Documentation}{160}
+\contentsline {subsubsection}{\numberline {6.1.3.1}\setlength {\rightskip }{0pt plus 5cm}anonymous enum}{160}
+\contentsline {subsubsection}{\numberline {6.1.3.2}\setlength {\rightskip }{0pt plus 5cm}anonymous enum}{160}
+\contentsline {section}{\numberline {6.2}CDI\_\discretionary {-}{}{}reconstruction.c File Reference}{161}
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{162}
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{162}
+\contentsline {subsubsection}{\numberline {6.2.2.1}\setlength {\rightskip }{0pt plus 5cm}int main (int {\em argc}, char $\ast $ {\em argv}[$\,$])}{162}
+\contentsline {section}{\numberline {6.3}Complex\_\discretionary {-}{}{}2D.h File Reference}{163}
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{165}
+\contentsline {subsection}{\numberline {6.3.2}Define Documentation}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.1}\setlength {\rightskip }{0pt plus 5cm}\#define FAILURE\nobreakspace {}0}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.2}\setlength {\rightskip }{0pt plus 5cm}\#define SUCCESS\nobreakspace {}1}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.3}\setlength {\rightskip }{0pt plus 5cm}\#define REAL\nobreakspace {}0}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.4}\setlength {\rightskip }{0pt plus 5cm}\#define IMAG\nobreakspace {}1}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.5}\setlength {\rightskip }{0pt plus 5cm}\#define MAG\nobreakspace {}2}{165}
+\contentsline {subsubsection}{\numberline {6.3.2.6}\setlength {\rightskip }{0pt plus 5cm}\#define PHASE\nobreakspace {}3}{166}
+\contentsline {subsubsection}{\numberline {6.3.2.7}\setlength {\rightskip }{0pt plus 5cm}\#define MAG\_\discretionary {-}{}{}SQ\nobreakspace {}4}{166}
+\contentsline {section}{\numberline {6.4}Complex\discretionary {-}{}{}Constraints\_\discretionary {-}{}{}example.c File Reference}{167}
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{167}
+\contentsline {subsection}{\numberline {6.4.2}Function Documentation}{167}
+\contentsline {subsubsection}{\numberline {6.4.2.1}\setlength {\rightskip }{0pt plus 5cm}int main (int {\em argc}, char $\ast $ {\em argv}[$\,$])}{167}
+\contentsline {section}{\numberline {6.5}Config.h File Reference}{169}
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{169}
+\contentsline {section}{\numberline {6.6}cplx2dbin.c File Reference}{170}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{170}
+\contentsline {section}{\numberline {6.7}cplx2ppm.c File Reference}{171}
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{171}
+\contentsline {section}{\numberline {6.8}dbin2ppm.c File Reference}{172}
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{172}
+\contentsline {section}{\numberline {6.9}dbin2tiff.c File Reference}{173}
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{173}
+\contentsline {section}{\numberline {6.10}Double\_\discretionary {-}{}{}2D.h File Reference}{174}
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{176}
+\contentsline {section}{\numberline {6.11}Fresnel\discretionary {-}{}{}CDI.h File Reference}{177}
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{177}
+\contentsline {section}{\numberline {6.12}Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}example.c File Reference}{178}
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{178}
+\contentsline {section}{\numberline {6.13}Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}simulation\_\discretionary {-}{}{}example.c File Reference}{179}
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{179}
+\contentsline {subsection}{\numberline {6.13.2}Function Documentation}{179}
+\contentsline {subsubsection}{\numberline {6.13.2.1}\setlength {\rightskip }{0pt plus 5cm}int main (int {\em argc}, char $\ast $ {\em argv}[$\,$])}{179}
+\contentsline {section}{\numberline {6.14}Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}WF.h File Reference}{180}
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{180}
+\contentsline {section}{\numberline {6.15}Fresnel\discretionary {-}{}{}CDI\_\discretionary {-}{}{}WF\_\discretionary {-}{}{}example.c File Reference}{181}
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{181}
+\contentsline {section}{\numberline {6.16}hdf2ppm.c File Reference}{182}
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{182}
+\contentsline {section}{\numberline {6.17}Partial\discretionary {-}{}{}CDI.h File Reference}{183}
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{183}
+\contentsline {section}{\numberline {6.18}Partial\discretionary {-}{}{}CDI\_\discretionary {-}{}{}example.c File Reference}{184}
+\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{184}
+\contentsline {section}{\numberline {6.19}Partial\discretionary {-}{}{}CDI\_\discretionary {-}{}{}simulation\_\discretionary {-}{}{}example.c File Reference}{185}
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{185}
+\contentsline {section}{\numberline {6.20}Phase\discretionary {-}{}{}Diverse\_\discretionary {-}{}{}example.c File Reference}{186}
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{186}
+\contentsline {section}{\numberline {6.21}Phase\discretionary {-}{}{}Diverse\discretionary {-}{}{}CDI.h File Reference}{187}
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{187}
+\contentsline {section}{\numberline {6.22}Phase\discretionary {-}{}{}Diverse\discretionary {-}{}{}Fresnel\discretionary {-}{}{}Rec.c File Reference}{188}
+\contentsline {subsection}{\numberline {6.22.1}Detailed Description}{188}
+\contentsline {section}{\numberline {6.23}Planar\discretionary {-}{}{}CDI.h File Reference}{189}
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{189}
+\contentsline {section}{\numberline {6.24}Planar\discretionary {-}{}{}CDI\_\discretionary {-}{}{}example.c File Reference}{190}
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{190}
+\contentsline {section}{\numberline {6.25}Planar\discretionary {-}{}{}CDI\_\discretionary {-}{}{}simulation\_\discretionary {-}{}{}example.c File Reference}{191}
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{191}
+\contentsline {section}{\numberline {6.26}Poly\discretionary {-}{}{}CDI.h File Reference}{192}
+\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{192}
+\contentsline {section}{\numberline {6.27}Poly\discretionary {-}{}{}CDI\_\discretionary {-}{}{}example.c File Reference}{193}
+\contentsline {subsection}{\numberline {6.27.1}Detailed Description}{193}
+\contentsline {section}{\numberline {6.28}Poly\discretionary {-}{}{}CDI\_\discretionary {-}{}{}simulation\_\discretionary {-}{}{}example.c File Reference}{194}
+\contentsline {subsection}{\numberline {6.28.1}Detailed Description}{194}
+\contentsline {section}{\numberline {6.29}tiff2ppm.c File Reference}{195}
+\contentsline {subsection}{\numberline {6.29.1}Detailed Description}{195}
+\contentsline {section}{\numberline {6.30}Transmission\discretionary {-}{}{}Constraint.h File Reference}{196}
+\contentsline {subsection}{\numberline {6.30.1}Detailed Description}{196}

@@ -1,0 +1,91 @@
+Instruction on how to install and begin using the software package are provided on the {\tt main website}. The doxygen documentation provided here is aimed at more advanced users who are comfortable with c++ and this style of reference documentation.
+
+
+
+ \section{Examples}\label{index_examples}
+All examples and there associated data files are provided in the examples directory. A brief description of each is listed below.
+
+\begin{itemize}
+\item {\em \doxyref{Planar\-CDI\_\-example.c}{p.}{PlanarCDI__example_8c}\/} This example reconstructs some planar diffraction data (Lachie's data). The shrinkwrap algorithm is used to improve the reconstruction. A combination of HIO and the error-reduction algorithm are used. \item {\em \doxyref{Planar\-CDI\_\-simulation\_\-example.c}{p.}{PlanarCDI__simulation__example_8c}\/} The object from the Planar\-CDI\_\-example (in fact I used the reconstructed image as the object) is used to simulate a diffraction pattern for planar CDI. The diffraction pattern is thresholded to make it more realistic and then CDI reconstruction is performed. \item {\em \doxyref{Fresnel\-CDI\_\-WF\_\-example.c}{p.}{FresnelCDI__WF__example_8c}\/} - This example demonstrates how the phase of a white field can be recovered and saved for use in Fresnel CDI reconstruction. The data set comes from Corey. \item {\em \doxyref{Fresnel\-CDI\_\-example.c}{p.}{FresnelCDI__example_8c}\/} - This file provides an example of running the Fresnel CDI reconstruction on real data (from Corey's data). The white-field result from the Fresnel\-CDI\_\-wf\_\-example.c is required as input. The error-reduction algorithm is used. The phase and magnitude of the transmission function are output to file. \item {\em \doxyref{Partial\-CDI\_\-example.c}{p.}{PartialCDI__example_8c}\/} This example reconstructs some Partial diffraction data (Diffractive imaging using partially coherent X rays Whitehead, L W, Physical review letters, 2009, v 103, 24, 243902). The shrinkwrap algorithm is used to improve the reconstruction. A combination of HIO and the error-reduction algorithm are used. \item {\em \doxyref{Partial\-CDI\_\-simulation\_\-example.c}{p.}{PartialCDI__simulation__example_8c}\/} The object from the Partial\-CDI\_\-example (in fact I used the reconstructed image as the object) is used to simulate a diffraction pattern for partial CDI. The diffraction pattern is thresholded to make it more realistic and then CDI reconstruction is performed. \item \doxyref{Poly\-CDI\_\-example.c}{p.}{PolyCDI__example_8c} This example reconstructs some poly diffraction data (Bo's data). The shrinkwrap algorithm is used to improve the reconstruction. A combination of HIO and the error-reduction algorithm are used. \item {\em \doxyref{Planar\-CDI\_\-example.sh}{p.}{PlanarCDI__example_8sh-source}\/} - Some of the same reconstuctions as above will be performed using the CDI\_\-reconstruction.exe command line program. A simple bash script and configuration file (\doxyref{planar\_\-example.config}{p.}{planar__example_8config-source}) shows how this tool can be used. Other parts of the bash script can be uncommented to run Fresnel reconstruction or to run multiple times with a different starting seed. \end{itemize}
+
+
+
+
+\section{Command Line Tools}\label{index_clt}
+
+
+ {\em CDI\_\-reconstruction.exe\/} A tool for performing Planar, Fresnel or Partial Coherent (spatial and temporal) ESW reconstruction. This tool is provided as a demonstrative tool and to obtain results quickly.
+
+\begin{Desc}
+\item[Usage: CDI\_\-reconstruction.exe $<$config filename$>$ $<$reco\_\-type$>$ $<$seed$>$]\end{Desc}
+where reco\_\-type may be:\begin{itemize}
+\item \char`\"{}planar\char`\"{} - planar\item \char`\"{}fresnel\_\-wf\char`\"{} - fresnel white-field reconstruction (3-plane propagation)\item \char`\"{}fresnel\char`\"{} - fresnel object reconstruction. with the white-field previously reconstructed.\item \char`\"{}partial\char`\"{} - partial spatial reconstruction.\item \char`\"{}poly\char`\"{} - polychromatic or partially temporally coherent reconstruction.\end{itemize}
+
+
+The seed should be an integer. If the seed is excluded from the command line arguments, it is assumed to be \char`\"{}0\char`\"{}. If reco\_\-type is also excluded, it is assumed to be \char`\"{}planar\char`\"{}.
+
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}CDI_reconstruction.exe planar_example.config "planar" 3 \end{verbatim}
+\normalsize
+ Perform planar CDI reconstruction using the configuration given in the file, \char`\"{}planar\_\-example.config\char`\"{}. The random number generator (used to initial the first guess) is given a seed value of 3.\end{Desc}
+ 
+
+ {\em dbin2ppm.exe\/} - Convert a binary file (2D double / 64 bit, format) to a ppm (grey-scale, 16 bit file). Note that this conversion loses information.
+
+\begin{Desc}
+\item[Usage: dbin2ppm.exe $<$input dbin file$>$ $<$output ppm file$>$]$<$pixels in x$>$ $<$pixels in y$>$\end{Desc}
+\begin{Desc}
+\item[]\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}dbin2ppm.exe my_reconstruction.dbin my_reconstruction.ppm 1024 1024 \end{verbatim}
+\normalsize
+\end{Desc}
+ 
+
+ {\em hdf2ppm.exe\/} - Extract the data from a HDF4 file and save as a ppm (grey-scale, 16 bit file).
+
+Usage: hdf2ppm.exe $<$input hdf file$>$ $<$output ppm file$>$ $<$optional: data block name$>$\begin{Desc}
+\item[]\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}hdf2ppm.exe my_data.hdf my_data.ppm  \end{verbatim}
+\normalsize
+\end{Desc}
+ 
+
+ {\em tiff2ppm.exe\/} - Convert a tiff image file into a ppm file (grey-scale, 16 bit file). Note that this conversion may lose information.
+
+\begin{Desc}
+\item[Usage: tiff2ppm.exe $<$input tiff file$>$ $<$output ppm file$>$ ]\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}tiff2ppm.exe my_reconstruction.tif my_reconstruction.ppm \end{verbatim}
+\normalsize
+\end{Desc}
+ 
+
+  \doxyref{cplx2dbin.c}{p.}{cplx2dbin_8c} 
+
+ {\em cplx2ppm.exe\/} - Extract part of a complex binary file (2D fftw format) and save as a ppm file (grey scale P2 which is 16 bit per pixel). The real, imaginary, magnitude, phase and magnitude squared can be extracted.
+
+\begin{Desc}
+\item[Usage: cplx2ppm.exe $<$input cplx file$>$ $<$output ppm file$>$ $<$component type$>$ $<$size in x$>$ $<$size in y$>$ ]\end{Desc}
+\begin{Desc}
+\item[]where component type is one of:\begin{itemize}
+\item 0: REAL\item 1: IMAG\item 2: MAG\item 3: PHASE\item 4: MAG\_\-SQ\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[Example:]
+
+\footnotesize\begin{verbatim}cplx2ppm.exe my_white_field.cplx my_white_field_illum.pgm 4 1024 1024 \end{verbatim}
+\normalsize
+ Extract the magnitude squared from a reconstucted white-field file. \end{Desc}
+ 
+
+ 
