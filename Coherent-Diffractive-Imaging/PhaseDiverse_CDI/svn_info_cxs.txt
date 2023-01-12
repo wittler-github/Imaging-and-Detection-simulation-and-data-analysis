@@ -1,0 +1,15 @@
+NADIA.daily_temp.tar.gz created: 
+Fri May  3 16:32:17 EST 2013
+**********************************
+Output from svn info: 
+Path: .
+URL: svn+ssh://osiris/data/DIXE/nadia_repository/trunk/NADIA
+Repository Root: svn+ssh://osiris/data/DIXE/nadia_repository
+Repository UUID: e2443e7a-f055-4d1b-89e6-b9f8f3df07da
+Revision: 342
+Node Kind: directory
+Schedule: normal
+Last Changed Author: tjulius
+Last Changed Rev: 342
+Last Changed Date: 2013-05-03 16:31:33 +1000 (Fri, 03 May 2013)
+
